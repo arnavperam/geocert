@@ -1,0 +1,115 @@
+{
+  "title": "Certified Expression Intervals under Shared Segmentation Uncertainty",
+  "version": "1.1.0",
+  "scientific_source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
+  "scientific_source_url": "https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas",
+  "source_scope": "Algorithms, inputs and results. These PDFs are rebuilt separately after the source commit.",
+  "main_title_pages": 1,
+  "main_body_pages": 10,
+  "main_reference_pages": 2,
+  "supplement_pages": 16,
+  "abstract_matches_tex_and_rendered_pdf": true,
+  "abstract_words_whitespace": 224,
+  "abstract_sha256": "7068872ef36ded0ece1767a32201a4f8260f65f8d49d83d3e13402b0a62993b8",
+  "registration_or_submission_performed": false,
+  "pdfs": {
+    "main.pdf": {
+      "pages": 13,
+      "letter_pages": true,
+      "actual_source_commit_link_present": true,
+      "sha256": "bf7d681208178daabe44626814cae372af649cf28b407bd1556fc08f56f31bca",
+      "source_url_visibly_printed": true
+    },
+    "supplement.pdf": {
+      "pages": 16,
+      "letter_pages": true,
+      "actual_source_commit_link_present": true,
+      "sha256": "d21293858f793519beddb81ce323e5616d7238fdd4b34ce0f9de1645dd0ebf98"
+    }
+  },
+  "visual_qa": {
+    "all_13_main_pages_reviewed": true,
+    "all_16_supplement_pages_reviewed": true,
+    "render_long_edge_pixels": 1400,
+    "clipping_or_overlap": false,
+    "figure_legends_and_labels_readable": true,
+    "numbering_correct": true
+  },
+  "latex_checks": {
+    "undefined_citations_or_references": false,
+    "overfull_boxes": false,
+    "underfull_main_table_cells": 2,
+    "underfull_note": "Inherited Table1 phrase wrapping; visually inspected and benign.",
+    "supplement_warnings": 0
+  },
+  "stale_availability_and_placeholder_scan": "passed",
+  "minimal_edits": [
+    "Two requested abstract text fixes",
+    "Actual immutable source link in both PDFs",
+    "Exact chart clearance description",
+    "Breast-specific baseline column labels",
+    "Main Table3 cross-reference",
+    "All-question denominators alongside eligible-question denominators",
+    "Runtime input and source-binding statement",
+    "Restored missing generated original_saturation_table.tex from original CSVs"
+  ],
+  "sha256": {
+    "figures/atlas_reference.pdf": "a3cb38999948ec3a251520bfcdba423697a43e351e6ea322ecf7e3d80bbd637e",
+    "figures/atlas_reference.png": "f9bd29e856261f2cfb52ab0a216e73a04603d3364f97a4e2bd14024b06f44239",
+    "figures/cell_witness.pdf": "323363e4e54b8e5d95f0013b44cc339edd3fece74f3b0bf51f7e9b5830c2005c",
+    "figures/cell_witness.png": "a0d747a811bdb0a6908ac2c20b0ea82b8a2fec109c05a047284d5df674985e67",
+    "figures/chain_scaling.pdf": "aef2f2db3d5d5204a3421e0e22942af0cd571966b7b2aedf22aebdae8d193385",
+    "figures/chain_scaling.png": "7a5147a4ccc9fe2b3290f9d1ff5048467233bf0a1cb98dace3be36dbd17bc458",
+    "figures/count_curve.pdf": "f82920c9cdada88c21a8f2c8e52c51a1ccee660b0bc169cbc17ef6c484f95fd6",
+    "figures/count_curve.png": "b57d642b38e0703f8f6baf85dbdf4de24e3c2a6b291a47ea6454f3142086819a",
+    "figures/reach_coverage.pdf": "8989009c1085fcbf3bcd70ce6fc0aea07233028b7df83e24eb867d9805be62c9",
+    "figures/reach_coverage.png": "ef4ec1b571d351bb1f9e1703e19c78ff240e388baf7f3291e48c54439fa1a2e5",
+    "figures/width_budget.pdf": "052b3353149eb0ece044121c0b8fe87c3ec08350021ff0848fc062ef9da9b17c",
+    "figures/width_budget.png": "e01547e54bb26cf92c1f88e261b5d182a95a58bf12da15f850f9708f35e5af1c",
+    "main.pdf": "bf7d681208178daabe44626814cae372af649cf28b407bd1556fc08f56f31bca",
+    "main.tex": "4bb70e3bdf7d83f95300ff6d702844ee4db837650b37abe012198e87597f6728",
+    "original_saturation_table.tex": "f13988f5cdf10dcac79a5d33b9ef291133c5f2a3aaf827c7a9ce8186e63da2a6",
+    "reach_budget_tables.tex": "2bc5f592e653ef823c58ef1a7436a8ff989eb7f87e2bb9a3c1174369d2516ad5",
+    "reach_table.tex": "6d2465a080f7b7b2753e45a8dd6b6df1aeb528ddf682326074f6756fae1b0868",
+    "references.tex": "715eeb8dd5526bf353a094468028e610902463a575c9d6e265932b14d35c6693",
+    "supp_references.tex": "9f00bb8ebeadc73be680af3ecc6801095bc04bf3e205f18b41f72eab4c8f9c85",
+    "supplement.pdf": "d21293858f793519beddb81ce323e5616d7238fdd4b34ce0f9de1645dd0ebf98",
+    "supplement.tex": "9dc8b81cf125ca5987045299ee77149253b588dda143db700d5526262b921c5d"
+  },
+  "package_include": [
+    "*.tex",
+    "main.pdf",
+    "supplement.pdf",
+    "figures/*.pdf",
+    "figures/*.png",
+    "manuscript_validation.json"
+  ],
+  "package_exclude": [
+    "*.aux",
+    "*.out",
+    "*.log",
+    "QA contact sheets and rendered pages"
+  ],
+  "final_github_edit": {
+    "date": "2026-10-28",
+    "changes": [
+      "Print full immutable source URL in main paper Software and disclosure paragraph",
+      "Remove supplied before Proseg 3.2.0 executions in section 5.5"
+    ],
+    "only_changed_pdf_pages": [
+      10,
+      11
+    ],
+    "body_pages": 10,
+    "abstract_tex_and_rendered_page_unchanged": true,
+    "supplement_and_figures_byte_identical": true,
+    "source_diff_exactly_requested_edits": true,
+    "affected_pages_visually_checked": true,
+    "clipping_or_overlap": false,
+    "source_url_visibly_printed_and_clickable": true,
+    "overfull_boxes": false,
+    "undefined_references_or_citations": false,
+    "underfull_boxes": 2,
+    "underfull_note": "Same inherited benign Table 1 cells as prior build."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "candidate": "GeoCert Atlas 1.1.0",
+  "scientific_source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
+  "scientific_source_url": "https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas",
+  "scientific_archive": {
+    "sha256": "1b08829e7e80a1e966a1bc39920dc4509af99f79ffd11dadfaa71b8338ca59d5",
+    "bytes": 74715174,
+    "manifest_entries": 366,
+    "files": 367,
+    "source_guards_match": true
+  },
+  "source_public_anonymously_verified": true,
+  "scientific_implementation_and_results_unchanged_since_source_commit": true,
+  "document_sha256": {
+    "main.pdf": "bf7d681208178daabe44626814cae372af649cf28b407bd1556fc08f56f31bca",
+    "supplement.pdf": "d21293858f793519beddb81ce323e5616d7238fdd4b34ce0f9de1645dd0ebf98"
+  },
+  "body_pages": 10,
+  "supplement_pages": 16,
+  "abstract_words": 224,
+  "abstract_matches_rendered_pdf": true,
+  "ci_scope": "Dedicated read-only workflow validates the public scientific archive and code; use actual GitHub Actions results for completion status.",
+  "document_corrections": [
+    "Print the full immutable source URL in the main paper",
+    "Remove supplied before Proseg executions in Section 5.5"
+  ],
+  "previous_document_commit": "d804f70e0296d13ed694457ab92d067b16ad8b24",
+  "last_completed_scientific_ci": [
+    "https://github.com/arnavperam/geocert/actions/runs/40779065551",
+    "https://github.com/arnavperam/geocert/actions/runs/40779065656"
+  ]
+}

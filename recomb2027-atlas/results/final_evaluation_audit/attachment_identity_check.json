@@ -1,0 +1,26 @@
+[
+  {
+    "package_path": "manuscript/main.pdf",
+    "attachment": "GeoCert_RECOMB_Final_Manuscript(1).pdf",
+    "byte_identical": true,
+    "sha256": "74f31f74f3c2dfb6873b5da8c9f27cb4b9b7bfefbb566820a3e7aa80d03e260d"
+  },
+  {
+    "package_path": "manuscript/supplement.pdf",
+    "attachment": "GeoCert_RECOMB_Final_Supplement(1).pdf",
+    "byte_identical": true,
+    "sha256": "8e863bc4a2c10debbb9540b268bdca5b0d3f5a9636bf27e3b940ed29deb2e1ff"
+  },
+  {
+    "package_path": "ABSTRACT.txt",
+    "attachment": "GeoCert_RECOMB_Final_Abstract(1).txt",
+    "byte_identical": true,
+    "sha256": "1a793e9511406422d78128674e137d47cbe00ef5643f7578a78258ea6fe8ba0b"
+  },
+  {
+    "package_path": "results/reach/budget_summary.csv",
+    "attachment": "GeoCert_RECOMB_Budget_Summary(1).csv",
+    "byte_identical": true,
+    "sha256": "32710fb9deeaf2105cbf48654651ee14b89cd42b38a0bb313b23a0490f50c1dd"
+  }
+]

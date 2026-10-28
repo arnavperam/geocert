@@ -1,0 +1,13 @@
+{
+  "reference": "Nearest labelled nuclear pixel within 5 physical micrometres on the supplied raster; background otherwise",
+  "purpose": "A deliberately distinct image-only sensitivity reference, not Proseg, a vendor segmentation reimplementation, or true ownership",
+  "fixed_before_outputs": true,
+  "radius_um": 5,
+  "labels": "Source cell labels at nuclear-mask pixels, not separate nucleus IDs",
+  "coordinates": "Recorded original RNA positions; lookup at their original raster pixel",
+  "exclusions": "Crop-contained source cells only; transcripts within 5 micrometres of crop boundary excluded from the paired comparison to avoid unobserved external nuclei",
+  "count_scope": "All eligible retained molecules; subtract excluded source records consistently from atlas count spectra",
+  "outputs": "Alternative-count feasibility and minimum area per cell/gene; complete alternative owner vector compatibility tested separately",
+  "calibration": "Agreement with a deterministic alternative, not probabilistic coverage or biological accuracy",
+  "mutation": "No changes to atlas rules, physical constraints, gene queries, or reference labels after outputs"
+}

@@ -1,0 +1,50 @@
+name: Acquire paired segmentation inputs
+on:
+  workflow_dispatch:
+    inputs:
+      dataset:
+        description: Public dataset to retrieve
+        type: choice
+        options: [breast, lung]
+        required: true
+      project_directory:
+        description: Path to the Atlas source in this repository
+        default: recomb2027-atlas
+        required: true
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install analysis and external method
+        run: |
+          python -m pip install numpy pandas pyarrow
+          cargo install proseg --version 3.2.0 --locked
+      - name: Selectively retrieve data
+        working-directory: ${{ inputs.project_directory }}
+        env:
+          DATASET: ${{ inputs.dataset }}
+        run: |
+          URL=$(python -c 'import json,os; print(json.load(open("acquisition/sources.json"))[os.environ["DATASET"]])')
+          python acquisition/fetch_members.py --url "$URL" --out run/acquired
+      - name: Select fixed crops and run five stochastic replicates
+        working-directory: ${{ inputs.project_directory }}
+        env:
+          DATASET: ${{ inputs.dataset }}
+        run: |
+          python acquisition/crop_and_proseg.py --input run/acquired --out run/external-comparison --dataset "$DATASET"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: external-${{ inputs.dataset }}-comparison
+          path: |
+            ${{ inputs.project_directory }}/run/external-comparison/
+            ${{ inputs.project_directory }}/run/acquired/download.json
+          retention-days: 90

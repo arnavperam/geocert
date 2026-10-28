@@ -1,0 +1,30 @@
+FINAL COLD-READ HANDOFF
+
+Paper: Certified Expression Intervals under Shared Segmentation Uncertainty
+Author: Arnav Peram
+Candidate: Atlas 1.1.0, strict physical-width study
+
+This is Agent 1's scientific paper, finalized with Agent 2's checked input guards and publication route. It retains four required support halfwidths (0.5, 1, 2, 3 micrometres), no narrower fallback, both input collections and seventeen budgets. It does not use the separate public fallback-width import branch.
+
+Immutable scientific source:
+https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas
+
+That commit includes browsable implementation/protocols and a checked scientific archive containing the exact inputs, compressed results and witnesses. The paper and supplement cite this source revision. Rebuilt documents are published in the subsequent document commit on submission/atlas-1.1.0.
+
+Finalization changes:
+1. Aligned the abstract: cell–gene and Proseg executions.
+2. Carried forward tested point-input and source/atlas/geometry-audit guards, including the strict-width entry point.
+3. Fixed the supplement's main-table reference, chart-clearance wording and breast-only column labels.
+4. Restored the missing original_saturation_table.tex from the unchanged original interval tables.
+5. Added explicit all-question denominators alongside eligible-question results.
+6. Corrected report rounding for lung support-2 coverage to 23.5%.
+7. Replaced publication placeholders with the actual source URL and rebuilt the documents.
+
+Evidence check:
+Both primary collections reproduce all 210240 intervals and 26280 spectra after the guard changes. The strict-width records pass full composition checking of 106351 global spectra, 131376 witness traces and 1807967 rows, with the independent scalar sample explicitly limited to 246 local spectra/1628 assignments. Widest-support geometry replays pass for 616 patches. The final release record separates new verification from Agent 1's original execution and timing records; it does not claim the full eight-width optimization study was rerun.
+
+Please cold-read the rebuilt PDFs for mathematical correctness, theorem/application scope, readable figures and tables, actual source availability, and any remaining inconsistent claims or broken cross-references. The final public-CI status and document/archive hashes are reported with the deliverables.
+
+Remaining limitations are intentional and visible: uncalibrated fixed-seam families, limited alternative-reference count reach, breast format-test material, and adapted same-donor Proseg diagnostics. Entrywise reach is not simultaneous realization of the alternative count matrix. No new donor, anatomical truth or biological accuracy result was acquired.
+
+No conference registration or submission has been performed by this finalization. The software version does not assert a stable release tag or acceptance.

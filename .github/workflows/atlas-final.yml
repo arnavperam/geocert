@@ -1,0 +1,112 @@
+name: Atlas final exact replay
+
+on:
+  push:
+    paths:
+      - 'recomb2027-atlas/**'
+      - '.github/workflows/atlas-final.yml'
+  pull_request:
+    paths:
+      - 'recomb2027-atlas/**'
+      - '.github/workflows/atlas-final.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13']
+    env:
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify scientific archive parts and extract
+        run: >-
+          python recomb2027-atlas/reassemble.py
+          --output "${{ runner.temp }}/GeoCert_RECOMB_1.1.0_Source.zip"
+          --extract "${{ runner.temp }}/atlas-final-replay"
+      - name: Match public scientific code to immutable archive
+        env:
+          ATLAS_PACKAGE: ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          public = Path('recomb2027-atlas')
+          package = Path(os.environ['ATLAS_PACKAGE'])
+          directories = ['atlas', 'geocert_expression', 'analysis', 'tests', 'release', 'acquisition']
+          paths = {Path('atlas_cli.py'), Path('requirements-analysis.txt'), Path('VERSION')}
+          for directory in directories:
+              exposed = {p.relative_to(public) for p in (public / directory).rglob('*.py')}
+              archived = {p.relative_to(package) for p in (package / directory).rglob('*.py')}
+              if exposed != archived:
+                  raise ValueError(f'public/archive code inventory differs in {directory}: {exposed ^ archived}')
+              paths |= exposed
+          for path in sorted(paths):
+              if (public / path).read_bytes() != (package / path).read_bytes():
+                  raise ValueError(f'public/archive source mismatch: {path}')
+          print(f'Matched {len(paths)} scientific source and environment files')
+          PY
+      - name: Verify source manifest, restore records and verify all interval identities
+        working-directory: ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas
+        run: |
+          python atlas_cli.py verify-manifest
+          python release/restore_results.py
+          python release/check_interval_hashes.py
+      - name: Check exact algorithms, source guards, forced-state reduction and showcase
+        working-directory: ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas
+        run: |
+          python atlas_cli.py validate
+          python analysis/reach/test_forced_reduction.py
+          python atlas_cli.py showcase --output run/ci-showcase.json
+      - name: Recompute both primary collections and a strict-width family
+        working-directory: ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas
+        run: |
+          python atlas_cli.py reproduce --dataset lung --output-dir run/ci-lung
+          python atlas_cli.py reproduce --dataset breast --output-dir run/ci-breast
+          python analysis/reach/reproduce.py --dataset lung --width 1 --output-dir run/ci-lung-width1
+      - name: Check all recorded strict-width compositions, traces and interval rows
+        working-directory: ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas
+        run: |
+          python analysis/reach/check_outputs.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows = json.loads(Path('results/reach/output_validation.json').read_text())
+          assert len(rows) == 8
+          assert all(r['failures'] == 0 and r['sample_resource_limits'] == 0 for r in rows)
+          assert sum(r['global_spectra_checked'] for r in rows) == 106351
+          assert sum(r['global_witness_traces_checked'] for r in rows) == 131376
+          assert sum(r['interval_rows_checked'] for r in rows) == 1807967
+          print('All eight recorded strict-width families checked; no independent-sample resource limits')
+          PY
+      - name: Audit imported Proseg identities, coordinates and count matrices
+        working-directory: ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas
+        run: python analysis/reach/audit_proseg.py
+      - name: Save exact-replay records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-final-replay-python-${{ matrix.python-version }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/run/ci-showcase.json
+            ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/run/ci-lung/cell_expression_summary.json
+            ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/run/ci-breast/cell_expression_summary.json
+            ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/run/ci-lung-width1/cell_expression_summary.json
+            ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/results/atlas_binding_tests.json
+            ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/results/width_binding_tests.json
+            ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/results/chain_contract_tests.json
+            ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/results/reach/forced_reduction_validation.json
+            ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/results/reach/output_validation.json
+            ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/results/reach/proseg_audit.json
