@@ -1,0 +1,45 @@
+name: Atlas publication snapshot audit
+on:
+  push:
+    branches: ['verification/atlas-cold-read']
+    paths: ['.github/workflows/atlas-cold-read.yml']
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: d804f70e0296d13ed694457ab92d067b16ad8b24
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Reassemble and verify the public scientific snapshot
+        run: |
+          mkdir -p audit-output
+          python recomb2027-atlas/reassemble.py --output audit-output/GeoCert_RECOMB_1.1.0_Source.zip --extract audit-extracted
+          cd audit-extracted/recomb2027-atlas
+          python atlas_cli.py verify-manifest
+      - name: Save the public documents and source identities
+        run: |
+          cp -r recomb2027-atlas/manuscript audit-output/
+          cp recomb2027-atlas/ABSTRACT.txt audit-output/
+          cp recomb2027-atlas/README.md audit-output/PUBLIC_README.md
+          cp recomb2027-atlas/ARCHIVE.md audit-output/
+          git rev-parse HEAD > audit-output/PUBLIC_COMMIT.txt
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          root=Path('recomb2027-atlas')
+          hashes={p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in root.rglob('*.py')}
+          Path('audit-output/public_source_hashes.json').write_text(json.dumps(hashes,indent=2)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atlas-publication-snapshot
+          path: audit-output/
+          retention-days: 14
+          compression-level: 0
