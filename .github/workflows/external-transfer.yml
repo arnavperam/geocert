@@ -26,6 +26,11 @@ jobs:
           key: breast-2fov-4632914eca973a1d532231ea646e10cc
       - name: Install data readers
         run: python -m pip install numpy==2.2.6 pandas==2.2.3 pyarrow==20.0.0 zarr==2.18.7 numcodecs==0.15.1
+      - name: Download using the vendor's documented client
+        run: |
+          if [ ! -f /tmp/geocert-breast-2fov.zip ]; then
+            curl --fail --location --max-time 180 --output /tmp/geocert-breast-2fov.zip https://cf.10xgenomics.com/samples/xenium/2.0.0/Xenium_V1_human_Breast_2fov/Xenium_V1_human_Breast_2fov_outs.zip || { rm -f /tmp/geocert-breast-2fov.zip; exit 1; }
+          fi
       - name: Inspect the fixed source
         run: python evaluation/inspect_external.py
       - name: Run extraction and analysis when present
@@ -42,3 +47,11 @@ jobs:
             git commit -m 'Record external transfer-check outputs'
             git push origin HEAD:evaluation/breast-transfer
           fi
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: external-transfer-inputs
+          path: |
+            run/external
+            evaluation/results
+          retention-days: 7
