@@ -1,43 +1,36 @@
-# Immutable scientific source archive
+# Scientific source archive
 
-The browsable files provide the exact implementation and protocols. The checked parts in `artifact_parts/` contain `GeoCert_RECOMB_1.1.0_Source.zip`, whose top-level directory is `recomb2027-atlas/`. This archive contains the scientific code, original inputs, compressed exact results, retained Proseg outputs, protocols and abstract. Its SHA-256 and every part's SHA-256 and byte count are recorded in `artifact_parts/manifest.json`.
+The browsable code and protocols accompany the scientific archive cited in the paper at [commit `6581f628`](https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas). The archive contains the implementation, prepared inputs, compressed exact results, Proseg execution records and protocols. Its top-level directory is `recomb2027-atlas/`.
 
-The scientific archive intentionally excludes manuscript PDFs and LaTeX. The paper cites the immutable commit publishing this scientific source. The subsequent publication commit adds the final PDFs and LaTeX under `recomb2027-atlas/manuscript/`; its source code and scientific results remain identical. The separate complete evaluation ZIP includes those final documents as well. These are distinct archive identities and should retain their separate checksums.
+| Archive | Value |
+|---|---|
+| Filename | `GeoCert_RECOMB_1.1.0_Source.zip` |
+| Size | 74,715,174 bytes |
+| Parts | 18 |
+| SHA-256 | `1b08829e7e80a1e966a1bc39920dc4509af99f79ffd11dadfaa71b8338ca59d5` |
 
-From a clone or complete download of this publication branch, run:
+[artifact_parts/manifest.json](artifact_parts/manifest.json) records the assembly order, byte count and SHA-256 of each part. All parts are stored in this repository; reassembly requires no external service. [ARCHIVE_SHA256SUMS.txt](ARCHIVE_SHA256SUMS.txt) lists the files inside the reconstructed archive. It is the archive manifest, not a manifest of the browsable checkout; extraction restores it under the name `SHA256SUMS.txt` for the verification command below.
+
+## Extract and verify
+
+Run from the repository root using Python 3.12 or 3.13:
 
 ```sh
-python recomb2027-atlas/reassemble.py --output GeoCert_RECOMB_1.1.0_Source.zip --extract atlas-replay
+python3 recomb2027-atlas/reassemble.py --output GeoCert_RECOMB_1.1.0_Source.zip --extract atlas-replay
 cd atlas-replay/recomb2027-atlas
-python atlas_cli.py verify-manifest
-python release/restore_results.py
-python release/check_interval_hashes.py
-python atlas_cli.py validate
-python analysis/reach/test_forced_reduction.py
-python atlas_cli.py showcase --output run/showcase.json
-python atlas_cli.py reproduce --dataset lung --output-dir run/lung
-python atlas_cli.py reproduce --dataset breast --output-dir run/breast
-python analysis/reach/reproduce.py --dataset lung --width 1 --output-dir run/lung-width1
-python analysis/reach/check_outputs.py
-python analysis/reach/audit_proseg.py
+python3 atlas_cli.py verify-manifest
+python3 release/restore_results.py
+python3 release/check_interval_hashes.py
+python3 atlas_cli.py validate
+python3 atlas_cli.py showcase --output run/showcase.json
 ```
 
-Use Python 3.12 or later with assertions enabled. All commands above use the Python standard library; optional source extraction and figure generation have separate analysis dependencies. Allow approximately 1.2 GB for restored records, plus fresh replay outputs.
+Keep Python assertions enabled. These commands need only the standard library. Allow about 1.2 GB for the expanded records, plus space for fresh replay outputs. The [reproduction instructions](README.md) cover the primary datasets, width study, geometry and figures.
 
-Reassembly verifies each part and the complete archive before installing the ZIP. Optional extraction requires an absent or empty destination and accepts only regular files and directories inside the declared package root. Omitting `--extract` produces only the verified ZIP. Existing unrelated extraction contents are preserved by rejecting a nonempty destination.
+Reassembly checks every part and the complete ZIP. Extraction requires an absent or empty destination, checks ZIP integrity, and accepts only regular files and directories within the package root. Omit `--extract` to produce only the verified ZIP. Result restoration checks both compressed and expanded file hashes.
 
-The read-only CI workflow tests Python 3.12 and 3.13. It checks public/archive scientific-source equality, all archived file and interval identities, algorithm and source-contract tests, both primary datasets, the strict one-micrometre lung family, all recorded strict-width compositions and interval rows, and imported Proseg arithmetic. It does not execute Proseg, acquire new data, rerun all eight width extractions, or repeat the historical timing studies. Independent scalar checks cover a declared sample of local spectra; their coverage is distinguished from the complete global composition check.
+## Paper files and CI
 
-The manifest structure is:
+The scientific archive is fixed and excludes the PDFs and LaTeX. Current [paper files](manuscript/) are stored separately in the repository; document corrections leave the archived code, inputs and numerical results unchanged.
 
-```json
-{
-  "archive": "GeoCert_RECOMB_1.1.0_Source.zip",
-  "root": "recomb2027-atlas",
-  "sha256": "<complete archive SHA-256>",
-  "size": 123,
-  "parts": [{"name": "part000", "sha256": "<part SHA-256>", "size": 123}]
-}
-```
-
-The actual manifest contains computed values. The part list specifies assembly order. This transport format uses no external download service and makes no claim that an uncreated version tag or conference submission exists.
+The [CI workflow](../.github/workflows/atlas-final.yml) checks Python 3.12 and 3.13. It compares the browsable scientific code with the archive, checks file and interval identities, runs algorithm and input-contract tests, recomputes both primary datasets and the one-micrometre lung family, checks all recorded width-study compositions and interval rows, and audits Proseg transcript joins and count arithmetic. Independent scalar checks cover a deterministic sample of local spectra. Proseg execution, new data acquisition, all-width geometry extraction and historical timing measurements are outside this CI replay.

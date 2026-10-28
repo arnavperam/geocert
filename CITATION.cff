@@ -1,10 +1,11 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying manuscript when using this implementation."
+message: "Please cite the accompanying manuscript and identify the source revision used."
 type: software
-title: "GeoCert-ST: Exact Joint Deformation Costs for Continuous RNA-Ownership Sensitivity"
+title: "GeoCert Atlas: Certified Expression Intervals under Shared Segmentation Uncertainty"
 authors:
   - family-names: Peram
     given-names: Arnav
-version: 1.0.0
+version: 1.1.0
 repository-code: "https://github.com/arnavperam/geocert"
-abstract: "Exact ownerwise integrated-deformation representations and reproducible local-corridor sensitivity experiments."
+url: "https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas"
+abstract: "Exact transcript-count intervals and attaining boundaries under a shared segmentation-deformation budget."

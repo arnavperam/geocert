@@ -1,9 +1,9 @@
-# Public evaluation candidate
+# Published files
 
-The canonical candidate is the `submission/atlas-1.1.0` branch of `arnavperam/geocert`, in `recomb2027-atlas/`. Its scientific source, prepared inputs and checked results are published together. The manuscript cites the immutable scientific source commit; a later document commit contains the rebuilt PDFs. No stable tag or conference submission is implied by the version label.
+The paper uses the scientific source, prepared inputs and checked results at [commit 6581f628](https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas). This immutable revision is the reproducibility reference.
 
-The browsable code matches the checked scientific archive. `ARCHIVE.md` in the public source folder explains how to reconstruct that archive and verify each part. Restore large records with `python release/restore_results.py`, then run the commands in the README. The read-only CI checks the exact candidate under Python 3.12 and 3.13. Consult the actual workflow result before claiming public CI success.
+The [main paper](../manuscript/main.pdf), [supplement](../manuscript/supplement.pdf) and [abstract](../ABSTRACT.txt) are stored beside their LaTeX sources in the current checkout. Paper and documentation revisions are separate from the frozen scientific archive. [PUBLICATION.json](PUBLICATION.json) records the source identity and document hashes.
 
-The final evaluation package contains the same scientific code and result records plus the corrected manuscript, supplement, aligned abstract and all LaTeX inputs. Build both PDFs with two pdflatex passes from `manuscript/`; the main body remains ten pages. `docs/FINAL_EVALUATION.txt` and the final publication record describe changes from Agent 1's original archive. The original archive identity is retained for provenance.
+Use the [archive instructions](../ARCHIVE.md) to reconstruct the scientific package and the [README](../README.md) to run it. The archive includes its own file manifest; the checked parts reconstruct the same archive without a network request. Prepared inputs and compressed result records are restored within the extracted package.
 
-A specialist cold read and the author's understanding of the proofs remain part of evaluation. This work does not fill EasyChair, submit a paper or certify anatomical accuracy. The author-reviewed stable tag and conference submission are separate finalization steps.
+[Validation status](../docs/VALIDATION_STATUS.md) links the completed Python 3.12/3.13 CI runs and states what was recomputed. The main and supplemental PDFs can be rebuilt by running `pdflatex main.tex` and `pdflatex supplement.tex` twice each from `manuscript/`.
