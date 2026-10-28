@@ -1,0 +1,437 @@
+{
+  "url": "https://cf.10xgenomics.com/samples/xenium/2.0.0/Xenium_V1_human_Breast_2fov/Xenium_V1_human_Breast_2fov_outs.zip",
+  "md5": "4632914eca973a1d532231ea646e10cc",
+  "sha256": "cc1e987b06aa748a6b24d3d6f51fc0d6765daa4836c483f14ec4f1bd18b1779b",
+  "archive_bytes": 379018013,
+  "members": [
+    {
+      "name": "analysis_summary.html",
+      "bytes": 9113057
+    },
+    {
+      "name": "analysis.zarr.zip",
+      "bytes": 74311
+    },
+    {
+      "name": "cell_boundaries.csv.gz",
+      "bytes": 1801833
+    },
+    {
+      "name": "cell_boundaries.parquet",
+      "bytes": 700126
+    },
+    {
+      "name": "cell_feature_matrix.h5",
+      "bytes": 415952
+    },
+    {
+      "name": "cell_feature_matrix.zarr.zip",
+      "bytes": 602745
+    },
+    {
+      "name": "cells.csv.gz",
+      "bytes": 461057
+    },
+    {
+      "name": "cells.parquet",
+      "bytes": 166771
+    },
+    {
+      "name": "cells.zarr.zip",
+      "bytes": 5891872
+    },
+    {
+      "name": "experiment.xenium",
+      "bytes": 1701
+    },
+    {
+      "name": "metrics_summary.csv",
+      "bytes": 1919
+    },
+    {
+      "name": "morphology_focus/",
+      "bytes": 0
+    },
+    {
+      "name": "morphology_focus/morphology_focus_0000.ome.tif",
+      "bytes": 19991291
+    },
+    {
+      "name": "morphology_focus/morphology_focus_0001.ome.tif",
+      "bytes": 16937049
+    },
+    {
+      "name": "morphology_focus/morphology_focus_0002.ome.tif",
+      "bytes": 17724603
+    },
+    {
+      "name": "morphology_focus/morphology_focus_0003.ome.tif",
+      "bytes": 17705361
+    },
+    {
+      "name": "morphology.ome.tif",
+      "bytes": 189031711
+    },
+    {
+      "name": "nucleus_boundaries.csv.gz",
+      "bytes": 1746336
+    },
+    {
+      "name": "nucleus_boundaries.parquet",
+      "bytes": 657067
+    },
+    {
+      "name": "transcripts.csv.gz",
+      "bytes": 46568066
+    },
+    {
+      "name": "transcripts.parquet",
+      "bytes": 20923989
+    },
+    {
+      "name": "transcripts.zarr.zip",
+      "bytes": 24811019
+    },
+    {
+      "name": "gene_panel.json",
+      "bytes": 153362
+    },
+    {
+      "name": "analysis.tar.gz",
+      "bytes": 1769054
+    },
+    {
+      "name": "aux_outputs.tar.gz",
+      "bytes": 6612850
+    },
+    {
+      "name": "cell_feature_matrix.tar.gz",
+      "bytes": 1499672
+    }
+  ],
+  "selected": {
+    "cells.parquet": "run/external/cells.parquet",
+    "cells.zarr.zip": "run/external/cells.zarr.zip",
+    "experiment.xenium": "run/external/experiment.xenium",
+    "transcripts.parquet": "run/external/transcripts.parquet",
+    "gene_panel.json": "run/external/gene_panel.json"
+  },
+  "cells.parquet": {
+    "schema": "<pyarrow._parquet.ParquetSchema object at 0x7f8f00f30bc0>\nrequired group field_id=-1 schema {\n  optional binary field_id=-1 cell_id (String);\n  optional double field_id=-1 x_centroid;\n  optional double field_id=-1 y_centroid;\n  optional int64 field_id=-1 transcript_counts;\n  optional int64 field_id=-1 control_probe_counts;\n  optional int64 field_id=-1 control_codeword_counts;\n  optional int64 field_id=-1 unassigned_codeword_counts;\n  optional int64 field_id=-1 deprecated_codeword_counts;\n  optional int64 field_id=-1 total_counts;\n  optional double field_id=-1 cell_area;\n  optional double field_id=-1 nucleus_area;\n}\n",
+    "rows": 7275,
+    "row_groups": 1
+  },
+  "transcripts.parquet": {
+    "schema": "<pyarrow._parquet.ParquetSchema object at 0x7f8eec116a80>\nrequired group field_id=-1 schema {\n  optional int64 field_id=-1 transcript_id (Int(bitWidth=64, isSigned=false));\n  optional binary field_id=-1 cell_id (String);\n  optional int32 field_id=-1 overlaps_nucleus (Int(bitWidth=8, isSigned=false));\n  optional binary field_id=-1 feature_name (String);\n  optional float field_id=-1 x_location;\n  optional float field_id=-1 y_location;\n  optional float field_id=-1 z_location;\n  optional float field_id=-1 qv;\n  optional binary field_id=-1 fov_name (String);\n  optional float field_id=-1 nucleus_distance;\n  optional int32 field_id=-1 codeword_index;\n}\n",
+    "rows": 1113950,
+    "row_groups": 2
+  },
+  "cell_columns": [
+    "cell_id",
+    "x_centroid",
+    "y_centroid",
+    "transcript_counts",
+    "control_probe_counts",
+    "control_codeword_counts",
+    "unassigned_codeword_counts",
+    "deprecated_codeword_counts",
+    "total_counts",
+    "cell_area",
+    "nucleus_area"
+  ],
+  "locked_crop_centers": [
+    {
+      "quantile": 0.25,
+      "cell_id": "kmapljei-1",
+      "center_um": [
+        366.72137451171875,
+        205.60533142089844
+      ]
+    },
+    {
+      "quantile": 0.75,
+      "cell_id": "mhchnfjj-1",
+      "center_um": [
+        909.8566284179688,
+        551.55712890625
+      ]
+    }
+  ],
+  "zarr_tree": "/\n \u251c\u2500\u2500 cell_id (7275, 2) uint32\n \u251c\u2500\u2500 cell_summary (7275, 8) float64\n \u251c\u2500\u2500 masks\n \u2502   \u251c\u2500\u2500 0 (3529, 5792) uint32\n \u2502   \u251c\u2500\u2500 1 (3529, 5792) uint32\n \u2502   \u2514\u2500\u2500 homogeneous_transform (4, 4) float32\n \u2514\u2500\u2500 polygon_sets\n     \u251c\u2500\u2500 0\n     \u2502   \u251c\u2500\u2500 cell_index (7312,) uint32\n     \u2502   \u251c\u2500\u2500 method (7312,) uint32\n     \u2502   \u251c\u2500\u2500 num_vertices (7312,) int32\n     \u2502   \u2514\u2500\u2500 vertices (7312, 50) float32\n     \u2514\u2500\u2500 1\n         \u251c\u2500\u2500 cell_index (7275,) uint32\n         \u251c\u2500\u2500 method (7275,) uint32\n         \u251c\u2500\u2500 num_vertices (7275,) int32\n         \u2514\u2500\u2500 vertices (7275, 50) float32",
+  "zarr_root_attributes": {
+    "major_version": 6,
+    "minor_version": 2,
+    "name": "CellSegmentationDataset",
+    "number_cells": 7275,
+    "polygon_set_descriptions": [
+      "DAPI-based nuclei segmentation",
+      "Cell Segmentation"
+    ],
+    "polygon_set_display_names": [
+      "Nucleus boundaries",
+      "Cell boundaries"
+    ],
+    "polygon_set_names": [
+      "nucleus",
+      "cell"
+    ],
+    "segmentation_methods": [
+      "Segmented by boundary stain (ATP1A1/CD45/E-Cadherin)",
+      "Segmented by interior stain (18S)",
+      "Segmented by nucleus expansion of 5.0\u00b5m",
+      "Segmented by nuclear stain (DAPI)"
+    ],
+    "spatial_units": "microns"
+  },
+  "zarr_details": {
+    "cell_id": {
+      "attributes": {},
+      "shape": [
+        7275,
+        2
+      ],
+      "dtype": "uint32",
+      "chunks": [
+        7275,
+        2
+      ]
+    },
+    "cell_summary": {
+      "attributes": {
+        "column_descriptions": [
+          "Cell centroid in X",
+          "Cell centroid in Y",
+          "Cell area",
+          "Nucleus centroid in X",
+          "Nucleus centroid in Y",
+          "Nucleus area",
+          "z_level",
+          "Nucleus count"
+        ],
+        "column_names": [
+          "cell_centroid_x",
+          "cell_centroid_y",
+          "cell_area",
+          "nucleus_centroid_x",
+          "nucleus_centroid_y",
+          "nucleus_area",
+          "z_level",
+          "nucleus_count"
+        ]
+      },
+      "shape": [
+        7275,
+        8
+      ],
+      "dtype": "float64",
+      "chunks": [
+        7275,
+        1
+      ]
+    },
+    "masks": {
+      "attributes": {}
+    },
+    "masks/0": {
+      "attributes": {},
+      "shape": [
+        3529,
+        5792
+      ],
+      "dtype": "uint32",
+      "chunks": [
+        442,
+        724
+      ]
+    },
+    "masks/1": {
+      "attributes": {},
+      "shape": [
+        3529,
+        5792
+      ],
+      "dtype": "uint32",
+      "chunks": [
+        442,
+        724
+      ]
+    },
+    "masks/homogeneous_transform": {
+      "attributes": {},
+      "shape": [
+        4,
+        4
+      ],
+      "dtype": "float32",
+      "chunks": [
+        4,
+        4
+      ],
+      "small_values": [
+        [
+          4.7058820724487305,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.7058820724487305,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "polygon_sets": {
+      "attributes": {}
+    },
+    "polygon_sets/0": {
+      "attributes": {}
+    },
+    "polygon_sets/0/cell_index": {
+      "attributes": {},
+      "shape": [
+        7312
+      ],
+      "dtype": "uint32",
+      "chunks": [
+        7312
+      ]
+    },
+    "polygon_sets/0/method": {
+      "attributes": {},
+      "shape": [
+        7312
+      ],
+      "dtype": "uint32",
+      "chunks": [
+        7312
+      ]
+    },
+    "polygon_sets/0/num_vertices": {
+      "attributes": {},
+      "shape": [
+        7312
+      ],
+      "dtype": "int32",
+      "chunks": [
+        7312
+      ]
+    },
+    "polygon_sets/0/vertices": {
+      "attributes": {},
+      "shape": [
+        7312,
+        50
+      ],
+      "dtype": "float32",
+      "chunks": [
+        3656,
+        25
+      ]
+    },
+    "polygon_sets/1": {
+      "attributes": {}
+    },
+    "polygon_sets/1/cell_index": {
+      "attributes": {},
+      "shape": [
+        7275
+      ],
+      "dtype": "uint32",
+      "chunks": [
+        7275
+      ]
+    },
+    "polygon_sets/1/method": {
+      "attributes": {},
+      "shape": [
+        7275
+      ],
+      "dtype": "uint32",
+      "chunks": [
+        7275
+      ]
+    },
+    "polygon_sets/1/num_vertices": {
+      "attributes": {},
+      "shape": [
+        7275
+      ],
+      "dtype": "int32",
+      "chunks": [
+        7275
+      ]
+    },
+    "polygon_sets/1/vertices": {
+      "attributes": {},
+      "shape": [
+        7275,
+        50
+      ],
+      "dtype": "float32",
+      "chunks": [
+        3638,
+        25
+      ]
+    }
+  },
+  "experiment_format": {
+    "major_version": 4,
+    "minor_version": 0,
+    "pixel_size": 0.2125,
+    "analysis_sw_version": "xenium-2.0.0.10",
+    "panel_name": "Xenium Human Breast Gene Expression",
+    "panel_tissue_type": "Breast",
+    "segmentation_stain": "Xenium Multi-Tissue Stain"
+  },
+  "panel_top_keys": [
+    "metadata",
+    "payload"
+  ],
+  "panel_payload_keys": [
+    "chemistry",
+    "customer",
+    "designer",
+    "panel",
+    "spec_version",
+    "targets"
+  ],
+  "panel_example_target": [
+    {
+      "codewords": [
+        288
+      ],
+      "info": {
+        "gene_coverage": 7
+      },
+      "source": {
+        "category": "current",
+        "identity": {
+          "design_id": "hBreast_v1",
+          "name": "Xenium Human Breast Gene Expression",
+          "version": "1.0.0"
+        }
+      },
+      "type": {
+        "data": {
+          "id": "ENSG00000121270",
+          "name": "ABCC11"
+        },
+        "descriptor": "gene"
+      }
+    }
+  ]
+}
