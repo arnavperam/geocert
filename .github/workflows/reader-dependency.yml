@@ -1,0 +1,21 @@
+name: Optional reader dependency
+on:
+  push:
+    branches: [research/expression-certificates]
+    paths: ['.github/workflows/reader-dependency.yml']
+permissions:
+  contents: read
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip download --no-deps --only-binary=:all: --platform manylinux_2_28_x86_64 --python-version 313 --implementation cp --abi cp313 pyarrow==21.0.0 --dest wheels
+      - uses: actions/upload-artifact@v4
+        with:
+          name: optional-pyarrow-reader
+          path: wheels/
+          retention-days: 1
