@@ -226,7 +226,7 @@ For co-detection, retain a two-dimensional score and compose vector spectra. Mar
 \section{Data, extraction and complete experimental denominators}
 The lung inputs are two 200-micrometre lung crops of a public Xenium lung-cancer specimen, containing 7,370 retained Q20 measured-gene RNA records. Their 42 historical overlapping corridors are not used as independent atlas patches. The current atlas is re-extracted from the source masks, with whole reference-cell containment checked directly.
 
-The breast inputs are the two previously acquired source crops in the public workflow artifact identified in the provenance record. The artifact's SHA-256 is \nolinkurl{f53bee7d82a385a320c14a180049e66bf6f60963dda8d7a75574fda90c28febf}. It contains 81,182 retained RNA records and corresponding masks. The source is the vendor's two-field-of-view breast format-test dataset. The vendor explicitly cautions against biological conclusions from those trimmed test data. This is a fixed-rule external-data transfer test, not newly measured ground truth or a held-out biological cohort. Existing prior workflow analyses make it inappropriate to call the dataset pristine or independently preregistered.
+The breast inputs are the two previously acquired source crops in the public workflow artifact identified in the provenance record. The artifact's SHA-256 is \nolinkurl{f53bee7d82a385a320c14a180049e66bf6f60963dda8d7a75574fda90c28febf}. It contains 81,182 retained RNA records and corresponding masks. The source is the vendor's two-field-of-view breast format-test dataset. The vendor explicitly cautions against biological conclusions from those trimmed test data. This is a fixed-rule external-data transfer test, not newly measured ground truth or a held-out biological cohort. The data had been analyzed in prior workflows and were not independently preregistered.
 
 \begin{table}[ht]\centering
 \begin{tabular}{lrrrr}\toprule
@@ -293,7 +293,7 @@ Every rejected candidate and accepted patch is retained in extraction summaries.
 
 \input{reach_table.tex}
 
-The last endpoint-saturation areas across Adaptive, 0.5, 1, 2 and 3 are, respectively, 0.240525, 0.154063, 1.497699, 3.090472 and 4.878380 for lung; and 0.573939, 0.376462, 1.281168, 5.095884 and 13.782726 for breast. Larger support permits genuinely larger movement, but fewer patches fit the same segmentation. The largest local gene multiplicity is 17; the largest patch contains 136 retained molecules. None of the eight new count runs terminates unresolved.
+The last endpoint-saturation areas across Adaptive, 0.5, 1, 2 and 3 are, respectively, 0.240525, 0.154063, 1.497699, 3.090472 and 4.878380 for lung; and 0.573939, 0.376462, 1.281168, 5.095884 and 13.782726 for breast. Larger support permits larger movement, but fewer patches fit the same segmentation. The largest local gene multiplicity is 17; the largest patch contains 136 retained molecules. None of the eight new count runs terminates unresolved.
 
 For like-for-like budget comparisons, the original adaptive-width spectra are also projected onto the 17-budget grid. This uses unchanged rational minima and individually affordable-transfer minima, and every original CSV row matches its earlier value exactly. On this finer grid, 12 of 46 lung and 361 of 1,026 breast questions tighten, versus the primary eight-grid results of 4 of 46 and 203 of 1,026. These are grid-dependent counts of transient differences, not additional biological observations. New width columns use the same fine grid.
 
@@ -307,18 +307,18 @@ For like-for-like budget comparisons, the original adaptive-width spectra are al
 \subsection{Image-only nuclear reference}
 The image-only reference assigns each retained RNA to the nearest labelled nuclear pixel within five physical micrometres, or to background. Nuclear pixels carry their source cell-mask label. RNA coordinates stay fixed. A five-micrometre crop-edge guard excludes points whose nearest nucleus could lie outside the observed crop. This is a deterministic comparison rule, separate from Proseg and from an anatomical truth standard.
 
-\subsection{Supplied Proseg executions}
-The supplied revision includes actual Proseg 3.2.0 executions on the two lung crops. Its initial default-factorization run on crop 1 failed during feature selection with an empty-input error. One completed stochastic run per crop used factorization disabled; remaining sampler settings were 200 burn-in iterations, 200 sampling iterations and 50 hill-climb steps, with two requested threads. Diffusion and source reassignment remained enabled. This version exposes no seed argument. Commands, input/output hashes, exclusions and the initial failed log are preserved alongside the raw results. We reanalyzed those outputs; the width study does not represent new Proseg runs.
+\subsection{Proseg executions}
+Proseg 3.2.0 was run on the two lung crops. The initial default-factorization run on crop 1 failed during feature selection with an empty-input error. One completed stochastic run per crop used factorization disabled; remaining sampler settings were 200 burn-in iterations, 200 sampling iterations and 50 hill-climb steps, with two requested threads. Diffusion and source reassignment remained enabled. This version exposes no seed argument. Commands, input/output hashes, exclusions and the initial failed log are preserved alongside the raw results. We reanalyzed those outputs; the width study does not represent new Proseg runs.
 
 \begin{table}[ht]\centering\begin{tabular}{lrr}\toprule
 Proseg execution quantity&Lung crop 1&Lung crop 2\\\midrule
-Supplied RNA&5,847&1,523\\
+Input RNA&5,847&1,523\\
 Output RNA&5,774&1,482\\
 Excluded RNA&73&41\\
 Changed source owner&3,242&765\\
 Output background/unassigned&2,484&1,335\\
 Verified nonzero output-count entries&1,443&67\\\bottomrule\end{tabular}
-\caption{Independent ingestion and count-matrix reconstruction of the supplied executions. Small clipped crops omit surrounding tissue and can omit nuclear transcripts needed for cell initialization; high background assignment, particularly in crop 2, limits any accuracy interpretation.}
+\caption{Independent ingestion and count-matrix reconstruction of the Proseg executions. Small clipped crops omit surrounding tissue and can omit nuclear transcripts needed for cell initialization; high background assignment, particularly in crop 2, limits any accuracy interpretation.}
 \end{table}
 
 The check joins exact transcript identifiers, verifies gene names and source assignments, maps Proseg cell labels using the original-cell mapping, and treats the output background flag explicitly. Observed-coordinate serialization residuals are at most 0.000243 and 0.000485 micrometres, respectively. Every saved sparse count entry is reconstructed exactly from the returned assignments. This arithmetic check is independent of the original comparison script; source data and Proseg executions are shared.
@@ -328,7 +328,7 @@ All five width families use a common set of comparison keys per reference. Retai
 
 The common comparison has 2,798 changed lung Proseg count keys, 1,114 changed lung nuclear keys and 10,965 changed breast nuclear keys. These differ from the original adaptive-only nuclear comparison (1,128 and 11,151 changed keys) because the new exclusion guard covers the union of editable observations over every width. Included/excluded keys and reasons are supplied explicitly.
 
-At each budget a reference count is attainable exactly when its count-specific minimum area is within budget. Unbounded-budget reach tests membership in the entire finite count spectrum. Main Table~3 gives the latter results; all 17 finite budgets are exported. The complete supplied alternative assignment vector is ruled out in each crop at every width by at least one changed fixed RNA or unavailable destination. This exclusion is stronger than merely observing that some count misses its interval. Conversely, countwise inclusion cannot establish a jointly realizable reference matrix.
+At each budget a reference count is attainable exactly when its count-specific minimum area is within budget. Unbounded-budget reach tests membership in the entire finite count spectrum. Main Table~3 gives the latter results; all 17 finite budgets are exported. The complete reference assignment vector is ruled out in each crop at every width by at least one changed fixed RNA or unavailable destination. This exclusion is stronger than merely observing that some count misses its interval. Conversely, countwise inclusion cannot establish a jointly realizable reference matrix.
 
 A widening ribbon need not improve aggregate reach because its required support removes other patches. The observed reductions are results of the stated extractor and fixed-seam family, rather than evidence that Proseg or nuclear expansion is inaccurate. Anatomical coverage would require independently justified true owners or boundaries and an appropriate calibration design.
 
@@ -386,6 +386,7 @@ RNA&Count levels&Mesh nodes&Height candidates&Visited states&Median total(s)\\\m
 The 128-RNA totals range from 40.189 to 42.704 seconds. Median mesh compilation is approximately 2.033 seconds and dynamic programming plus all witness output/checking approximately 40.152 seconds; separate medians need not sum exactly. The tested limits are 300,000 retained candidate heights, one million visited states, 60 seconds for preparation, 90 seconds for dynamic programming, and 160 seconds for a complete process. Requested single-thread environment variables are recorded, but the arithmetic is Python integer/Fraction work. Peak whole-process RSS at the largest size is approximately 205 MiB and includes imports. Raw process records contain the exact environment and wall/memory measurements.
 
 \FloatBarrier
+\clearpage
 \section{Reproduction, data rights and assistance}
 The prepared-input exact workflow uses Python's standard library. Geometry extraction, raster reference analysis and plotting additionally use the declared analysis dependencies. The main commands are:
 \begin{verbatim}
@@ -399,7 +400,7 @@ python analysis/reach/report.py
 \end{verbatim}
 The README lists separate commands for each main table and figure, the original full count computations and each width-specific recomputation. Compressed result files are restored only after their stored and expanded checksums agree. Source packages retain all original and new spectra, witnesses, comparison keys, Proseg records, selection rules and reference masks. Scientific validation is separate from historical timing measurements.
 
-The MIT software license is inherited from the supplied public revision. Original 10x data retain CC BY 4.0 attribution and the breast format-test limitation. Proseg retains its upstream rights; its executable is not redistributed. Source code, inputs and exact results for the 1.1.0 companion are publicly archived at \url{https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas}. This immutable source revision is distinguished from the separately rebuilt PDF artifacts in the release record.
+The GeoCert software is released under the MIT License. Original 10x data retain CC BY 4.0 attribution and the breast format-test limitation. Proseg retains its upstream rights; its executable is not redistributed. Source code, inputs and exact results for the 1.1.0 companion are publicly archived at \url{https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas}. This immutable source revision is distinguished from the separately rebuilt PDF artifacts in the release record.
 
 Generative AI assisted mathematical development, code, experiments, checking and drafting. The named author is responsible for the submitted claims and their explanation. Separate computational checks are described by the primitives they share; they do not constitute independent biological validation or external mathematical certification.
 \input{supp_references.tex}
