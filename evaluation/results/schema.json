@@ -117,12 +117,12 @@
     "gene_panel.json": "run/external/gene_panel.json"
   },
   "cells.parquet": {
-    "schema": "<pyarrow._parquet.ParquetSchema object at 0x7f980ed3e2c0>\nrequired group field_id=-1 schema {\n  optional binary field_id=-1 cell_id (String);\n  optional double field_id=-1 x_centroid;\n  optional double field_id=-1 y_centroid;\n  optional int64 field_id=-1 transcript_counts;\n  optional int64 field_id=-1 control_probe_counts;\n  optional int64 field_id=-1 control_codeword_counts;\n  optional int64 field_id=-1 unassigned_codeword_counts;\n  optional int64 field_id=-1 deprecated_codeword_counts;\n  optional int64 field_id=-1 total_counts;\n  optional double field_id=-1 cell_area;\n  optional double field_id=-1 nucleus_area;\n}\n",
+    "schema": "<pyarrow._parquet.ParquetSchema object at 0x7f46ca11da00>\nrequired group field_id=-1 schema {\n  optional binary field_id=-1 cell_id (String);\n  optional double field_id=-1 x_centroid;\n  optional double field_id=-1 y_centroid;\n  optional int64 field_id=-1 transcript_counts;\n  optional int64 field_id=-1 control_probe_counts;\n  optional int64 field_id=-1 control_codeword_counts;\n  optional int64 field_id=-1 unassigned_codeword_counts;\n  optional int64 field_id=-1 deprecated_codeword_counts;\n  optional int64 field_id=-1 total_counts;\n  optional double field_id=-1 cell_area;\n  optional double field_id=-1 nucleus_area;\n}\n",
     "rows": 7275,
     "row_groups": 1
   },
   "transcripts.parquet": {
-    "schema": "<pyarrow._parquet.ParquetSchema object at 0x7f980f38b480>\nrequired group field_id=-1 schema {\n  optional int64 field_id=-1 transcript_id (Int(bitWidth=64, isSigned=false));\n  optional binary field_id=-1 cell_id (String);\n  optional int32 field_id=-1 overlaps_nucleus (Int(bitWidth=8, isSigned=false));\n  optional binary field_id=-1 feature_name (String);\n  optional float field_id=-1 x_location;\n  optional float field_id=-1 y_location;\n  optional float field_id=-1 z_location;\n  optional float field_id=-1 qv;\n  optional binary field_id=-1 fov_name (String);\n  optional float field_id=-1 nucleus_distance;\n  optional int32 field_id=-1 codeword_index;\n}\n",
+    "schema": "<pyarrow._parquet.ParquetSchema object at 0x7f46c92b6fc0>\nrequired group field_id=-1 schema {\n  optional int64 field_id=-1 transcript_id (Int(bitWidth=64, isSigned=false));\n  optional binary field_id=-1 cell_id (String);\n  optional int32 field_id=-1 overlaps_nucleus (Int(bitWidth=8, isSigned=false));\n  optional binary field_id=-1 feature_name (String);\n  optional float field_id=-1 x_location;\n  optional float field_id=-1 y_location;\n  optional float field_id=-1 z_location;\n  optional float field_id=-1 qv;\n  optional binary field_id=-1 fov_name (String);\n  optional float field_id=-1 nucleus_distance;\n  optional int32 field_id=-1 codeword_index;\n}\n",
     "rows": 1113950,
     "row_groups": 2
   },

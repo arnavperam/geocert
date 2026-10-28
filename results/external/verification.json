@@ -1,0 +1,8 @@
+{
+  "optional_records": 174,
+  "readouts": 1432,
+  "witness_records": 3212,
+  "unique_model_witnesses": 292,
+  "hash_selected_height_objective_checks": 36,
+  "failures": 0
+}

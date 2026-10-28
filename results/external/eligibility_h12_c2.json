@@ -1,0 +1,32 @@
+{
+  "breast_01": {
+    "source_RNA": 43366,
+    "source_owner_mismatches": 0,
+    "raw_triples": 1550,
+    "topology_reject": 801,
+    "rail_reject": 33,
+    "nuclear_band_reject": 0,
+    "nuclear_interpolant_reject": 27,
+    "RNA_count_reject": 625,
+    "interpolation_owner_reject": 7,
+    "clearance_reject": 0,
+    "eligible": 57,
+    "selected": 12,
+    "selection_rule": "lexicographic SHA256, nonoverlapping, at most 12 per ROI"
+  },
+  "breast_02": {
+    "source_RNA": 37816,
+    "source_owner_mismatches": 0,
+    "raw_triples": 1139,
+    "topology_reject": 598,
+    "rail_reject": 27,
+    "nuclear_band_reject": 0,
+    "nuclear_interpolant_reject": 22,
+    "RNA_count_reject": 468,
+    "interpolation_owner_reject": 2,
+    "clearance_reject": 0,
+    "eligible": 22,
+    "selected": 12,
+    "selection_rule": "lexicographic SHA256, nonoverlapping, at most 12 per ROI"
+  }
+}
