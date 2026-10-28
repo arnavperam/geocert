@@ -1,0 +1,98 @@
+{
+  "recorded_before_width_runs": true,
+  "recorded_utc": "2026-10-28T19:08:03.859680+00:00",
+  "study_role": "Post-review sensitivity study. No claim of pre-registration before the earlier Atlas results.",
+  "datasets": [
+    "roi_01",
+    "roi_02"
+  ],
+  "scope": "Two original lung crops from one development donor; no breast width sweep.",
+  "caps_chart_units": [
+    4,
+    12,
+    28
+  ],
+  "width_ladders": {
+    "4": [
+      "4",
+      "2",
+      "1",
+      "1/2"
+    ],
+    "12": [
+      "12",
+      "4",
+      "2",
+      "1",
+      "1/2"
+    ],
+    "28": [
+      "28",
+      "4",
+      "2",
+      "1",
+      "1/2"
+    ]
+  },
+  "physical_displacement": "p*|h|/sqrt(2); band |h|<=3B/4. Caps are proposed maxima; actual accepted widths are reported.",
+  "budgets_um2": [
+    "0",
+    "1/100",
+    "1/40",
+    "1/20",
+    "3/40",
+    "1/10",
+    "3/20",
+    "1/5",
+    "1/4",
+    "3/10",
+    "2/5",
+    "1/2",
+    "3/4",
+    "1",
+    "2",
+    "4"
+  ],
+  "extraction": "Existing geometry-only candidate ordering, source half-ribbon containment, disjointness, nuclear constraints and fallback widths; repeated exact rational geometry verification. Atlases need not be nested.",
+  "proseg": "Reuse actual3.2.0 no-factorization outputs. Exact transcript-ID intersection; compare retained shared molecules only. Map cell indices through original_cell_id and input mask_label. Ignore diffused coordinates and retain original observed coordinates.",
+  "nuclear": "Five micrometre nearest labelled nuclear pixel with existing five micrometre crop-border guard. Excluded molecules carry zero score but remain as geometric collateral.",
+  "guarantee": "Exact cell/gene marginal count reach, including holes in score spectrum. No full assignment-vector, accuracy or calibration claim.",
+  "limits": "Chain per-call timeout120s; timeout/error causes explicit incomplete result, never a certified interval. No outcome-based parameter changes.",
+  "primary_outputs": [
+    "patch acceptance",
+    "editable edge coverage",
+    "actual maximum displacement",
+    "changed-count reach by budget and unlimited",
+    "non-singleton and marginal-width>=2 denominators",
+    "all exact count minima and witnesses"
+  ],
+  "source_hashes": {
+    "analysis/build_atlas.py": "a6a71a4bfa2497d78b92fd8627472bb0ee546d07badfcfb0c2bd1a2ebc71f725",
+    "analysis/revision_reach.py": "2f13d33ac0ccdae13f235aebc3da238964cc41713a2f8f9117b243ef347c3f39",
+    "analysis/revision_reach_verify.py": "b410dea846ae29eede4f4555eff61dc48f8e5096cbdfe1741903aa6bea1c57c0",
+    "atlas/chain_spectrum.py": "09e13982641cb9c2c46d31c510c0b672fa1b04269e2cf641d93238f2012d41ef"
+  },
+  "portability_amendment": "Previously executed Proseg outputs are copied byte-for-byte into results/proseg; runner default is package-relative. No scientific parameters/results changed.",
+  "proseg_file_hashes": {
+    "provenance.json": "000d142ce42985140fc688cc2ce56ec4271e556ff3507d5c1214cbbfeb7307d3",
+    "roi_01_default_failure.log": "d5d9d287968521b98cc876944c088cfccbb44d842df9bcdec1849f4bc1ed352b",
+    "roi_02/counts.mtx.gz": "1eaca665e970d025f82a2731be7e47497ccd05239e2050e1cb471d8fa2bd61f6",
+    "roi_02/gene-metadata.csv.gz": "96ea1373eb40f26ad61f701ec0b6b65e8e65853572590b236fd96b3af3095f3b",
+    "roi_02/run.json": "51493b041cfe1e750fd0585fdc0898447bd72994e19eac3495e2258600aaa04e",
+    "roi_02/transcript-metadata.csv.gz": "1c1c6213bc59549142235ccb74e8383adda92a64a349a3ea4f6f1d3031d91779",
+    "roi_02/proseg-output.zarr.zip": "7af92e51daeca3baab5eef93cd17f3d54958cd92c6b0c931b77b1a2fd933734a",
+    "roi_02/run.log": "bce201a486a105d5a97889b899dae211be3eed31a1c88f0d4a8ba209154195db",
+    "roi_02/cell-metadata.csv.gz": "f106bf641f73d3c0ee0061dae9a94fb33d1b0bee18894421a9d9cd89f3b0122d",
+    "roi_02/input.csv.gz": "5ebcae1c35f07e09ed33fba263b74e7e960ea14d3ae9954c2d88e9432be8f9fd",
+    "roi_01/counts.mtx.gz": "4035b9f060b18ad00d704b2ca50fc6badc0da0a957e919a9c78d28081e708de1",
+    "roi_01/gene-metadata.csv.gz": "717655c1006ff9515756cf1d794cd33a12270646b9bfdd0b3fb7507d321f1922",
+    "roi_01/run.json": "ec924617b6b16e7b47116f8b2bbad596d1ca42dc1bf89486bdc03de56f5256a6",
+    "roi_01/transcript-metadata.csv.gz": "8f83a13d7d7a53a374c2454fb594f30642359083cf55f744509736dd03e8efe9",
+    "roi_01/proseg-output.zarr.zip": "669328149a87e6b379b70816eee265151ec33a8ef31ae5ba9661869eefaba15e",
+    "roi_01/run.log": "f83f208cb6b5d460068c3a0b948414ff36c6c033c3d30c8c7586555bf3a92f4b",
+    "roi_01/cell-metadata.csv.gz": "e82cc134261c12ff261457e232c2bbe770fe84fb41a37a1a87cc6de516d927f3",
+    "roi_01/input.csv.gz": "d1dcc859b16252352dfc6ce805582859eea1491cf6cf35697a6409cadfac53c3"
+  },
+  "final_replay_recorded_utc": "2026-10-28T19:20:09.580992+00:00",
+  "final_replay_scope": "Same caps, fallback ladders, observed populations, geometry and budget grid. Final source includes explicit point-input contract checking; all study free RNA were already points. Every recorded numerical spectrum/CSV/witness will be compared with the initial runs. This is a software replay, not an independent experiment."
+}

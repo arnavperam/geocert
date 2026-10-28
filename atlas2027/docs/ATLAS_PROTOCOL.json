@@ -1,0 +1,49 @@
+{
+  "recorded_before_new_atlas_queries": true,
+  "data": "All retained observations in the two supplied development crops; no new donor",
+  "primary_object": "One common patch-atlas model per crop and one unique count interval per cell/gene/budget",
+  "reference": "Exact raster pixel-edge partition; no interpolated alternative source segmentation",
+  "eligibility": "Positive source cells must be connected and avoid crop borders; background pieces may participate as label0. Every proposed patch must lie inside the supplied crop.",
+  "candidate_arcs": "All shared raster interfaces between eligible labels, traced into paths, then maximal coordinate-monotone runs; maximum 128 unit edges per run; trim one edge at each end; retain at least four remaining edges",
+  "coordinate_system": "t=sx*x+sy*y, u=sx*x-sy*y in pixel coordinates, then subtract exact source graph f0(t); physical Jacobian p^2/2",
+  "ribbon_halfwidth_ladder_pixels": [
+    4,
+    2,
+    1,
+    0.5
+  ],
+  "displacement_band_fraction": "3/4",
+  "displacement_slope": "1",
+  "clearance_micrometres": "1/1000000",
+  "selection": "Longest remaining reference arc first, then deterministic label/coordinate order; widest feasible width. No RNA count, gene, effect or solver outcome is used for candidate ranking.",
+  "conditions": "Each side of ribbon wholly inside its reference cell, pairwise interior-disjoint patches, fixed endpoint and rail traces; every intersecting nuclear pixel retained through conservative exact structural bounds in the shear chart; all rejected candidates recorded.",
+  "budgets_square_micrometres": [
+    0,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    1,
+    2,
+    4
+  ],
+  "target_enumeration_cap": 65536,
+  "markers": [
+    [
+      "EPCAM",
+      "PTPRC"
+    ],
+    [
+      "EPCAM",
+      "CD3D"
+    ],
+    [
+      "EPCAM",
+      "PECAM1"
+    ]
+  ],
+  "interpretation": "Conditional extrema of observed molecule counts under this global atlas. Marker co-detection is not proof of cell type, signaling, error or doublets.",
+  "exterior": "All unselected boundaries, crop-border cells, nuclei and junction neighborhoods fixed; reports mutable shared-boundary coverage",
+  "amendment_before_count_queries": "Replace nucleus-free eligibility by universally fixed nuclear-owner inequalities. Initial nucleus-free extraction is archived; no interval or marker outcome informed this amendment. Include cell-background interfaces so count changes may include originally unassigned observations, rather than silently freeze most exposed perimeters.",
+  "boundary_scope": "Every eligible complete-cell interface, including shared cell-cell interfaces and cell-background interfaces; background remains reference label 0 and is not a biological cell."
+}

@@ -1,0 +1,21 @@
+{
+  "version": "0.3.0a2",
+  "title": "Certified Expression Intervals under Shared Segmentation Uncertainty",
+  "scientific_source_commit": "1cdbb9e0b4ea386c210fd231372900b2844dddba",
+  "public_branch": "https://github.com/arnavperam/geocert/tree/atlas-merged-revision/atlas2027",
+  "release_kind": "public review candidate, not stable tag",
+  "baseline_intervals_exactly_reproduced": 210240,
+  "baseline_spectra_exactly_reproduced": 26280,
+  "reach_interval_rows_independently_checked": 348432,
+  "width_study_outputs_exactly_replayed": 36,
+  "local_witnesses_verified": 8270,
+  "global_traces_verified": 25610,
+  "registration_or_submission_performed": false,
+  "limitations": [
+    "Breast vendor format-test data, not a new biological cohort",
+    "Lung-only Proseg diagnostic on development crops",
+    "Fixed seams and junctions; no anatomical calibration",
+    "General multi-interface theorem distinct from scalar Atlas experiments"
+  ],
+  "prior_release_records": "docs/legacy/"
+}

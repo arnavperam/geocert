@@ -1,0 +1,38 @@
+{
+  "archive": "GeoCert_Atlas_Merged_0.3.0a2.zip",
+  "root": "GeoCert_Atlas_Merged_0.3.0a2",
+  "sha256": "749e55845d9f5d47f2b0f4ff17bda3a0cd33b7c40775223dd32e42d1f813f383",
+  "size": 24431242,
+  "parts": [
+    {
+      "name": "part000",
+      "sha256": "2ffe0e09202c96c18d2e699989530dc019736d8e8bc64ce1ec6ef1b13988d2af",
+      "size": 4194304
+    },
+    {
+      "name": "part001",
+      "sha256": "e6e8aefe6219100dd3059f214d2286961d8a010db6eae766f2ccceeb43d5df3e",
+      "size": 4194304
+    },
+    {
+      "name": "part002",
+      "sha256": "70b070c2841dc8b86da28b94607c70d7a7bfd2e61e6e746745f668c87db137c7",
+      "size": 4194304
+    },
+    {
+      "name": "part003",
+      "sha256": "d18badbdfdbbd824c796085a8295d34413ec8dd33100bcbc9dac719767422bdf",
+      "size": 4194304
+    },
+    {
+      "name": "part004",
+      "sha256": "5cda66249554e781da5355badab9fd018705420832f15295b3b80d185f37b2dc",
+      "size": 4194304
+    },
+    {
+      "name": "part005",
+      "sha256": "6a5ddb3b83467c42af4af649d345f10d4ef091cf5347fc25628e0175a172e6b8",
+      "size": 3459722
+    }
+  ]
+}

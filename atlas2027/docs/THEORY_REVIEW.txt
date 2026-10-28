@@ -1,0 +1,38 @@
+Atlas versus corridor revision: mathematical and implementation audit
+
+Verdict
+The Atlas version is the stronger methodological base for the requested expression-interval paper, provided its restricted uncertainty family and scalar application are stated clearly. It adds two genuine capabilities absent from the corridor-only revision: a simultaneously realizable fixed-seam atlas on the reference partition, and a polynomial count-spectrum algorithm for explicitly represented point transcripts on one-interface patches. Our earlier revision supplies useful release engineering, verified Proseg execution, identity safeguards and cleaner distinctions between conditional geometry and biological truth. Historical novelty still requires expert literature assessment; this is an internal mathematical sanity audit, not formal proof verification or peer review.
+
+1. Gluing and physical area
+The transverse map is continuous, strictly increasing and invertible because |h(t)|<B. It fixes both rails and is identity at patch endpoints. Conjugating by an injective ribbon chart gives a patch homeomorphism fixing its full boundary. Finite patches with disjoint interiors therefore extend and glue consistently by identity. This preserves the topology of the reference labelled partition, including connectivity and fixed junction incidences. It does not require freely moving whole perimeters or guarantee anatomical realism.
+
+For the stated sheared diagonal chart, the determinant is exactly -sx*sy*p^2/2 on each affine segment. The absolute Jacobian is p^2/2, independently of the source path slope. Thus changed-label area is (p^2/2) integral |h(t)|dt, counted once because physical patch interiors are disjoint. The actual isotropic source transform is required; arbitrary coordinate transforms cannot reuse this conversion.
+
+The homeomorphism need not fix each nuclear material point. The actual structural claim is preservation of the prescribed cell label at every protected nuclear pixel. The conservative clipped-fragment bounds establish that narrower property.
+
+2. Count-chain theorem
+The common mesh contains every switch of a canonical nearest realization, including source intersections and constraint endpoints. Canonical witnesses achieve equality between the exact integral and the nodal trapezoidal cost. Other candidate paths can cross the source between events, making the trapezoid an upper bound; this does not invalidate exact minimization because every assignment retains its equal-cost canonical path. Nodal owner scores are local only when free groups have one point and positive separated ownership thresholds.
+
+The count-state shortest-path recurrence and sliding-window minima are standard. Their application here is justified by an exact continuum mesh rather than an arbitrary discretization. The stated O((W+1) sum_j H_j) DP and conservative O((W+1)P^3) arithmetic bounds are consistent with the construction. Unit molecule count range W is polynomial in explicit input size; binary-encoded weights yield only a pseudo-polynomial count dependence. Full reconstruction and rational encoding costs must remain disclosed. The implementation also enforces resource limits without presenting truncated work as an exact answer.
+
+3. Composition
+Min-plus composition is exact for these disjoint, compatible, cost-preserving patches with unique transcript membership and a zero-cost source state. The source count is included once and patch contributions are changes; nonincident patches can stay at source. Every composed endpoint has a global attaining partition, and restriction of any allowed global state gives the reverse inequality. This does not imply that different cell/gene marginal endpoints coexist.
+
+The low-level compose function remains an algebraic operation, not a verifier of physical gluing. Certification must require the previously checked atlas. Accordingly this revision adds mandatory content identity, source hash, membership/count and recorded geometry-audit checks before any count solve. New atlases must run the exact polygon/nuclear validator first. A saved audit is a reproducibility attestation, not a cryptographic proof against a party forging inputs and audit records together.
+
+4. Actual implementation defect found and fixed
+The old compile_chain implementation checked only the time interval returned by the obligation adapter, not whether the original free RNA was a point. In possible_outer mode, a horizontal location box x in [-1/5,1/5] at t=1, clearance 1/10, source zero on [0,2], slope1 and band[-1,1], has overlapping owner obligations. Both owners have zero minimum area. The old chain returned score0 cost1 and score1 cost0, because it forced a unique nodal owner where the semantics permitted both.
+
+The revised compiler rejects raw free boxes and free multisite groups, and requires strictly separated point thresholds. This brings accepted inputs into the stated theorem contract. The evaluated Atlas transcripts are explicit points, so their count results are unaffected. Tests reject seven unsupported region/multisite cases and confirm all three point quantifier modes. Existing 201 spectrum comparisons and 80 nonflat models with 1,644 owner assignments pass.
+
+5. Other supplied critique corrections
+Identical numbers of non-singleton questions for budgets >=0.25 do not prove that the budget stops binding there. The highlighted LDHB interval itself changes from [19,23] at0.25 to [17,23] at0.5. Report full endpoint/frontier saturation separately from the onset of non-singleton intervals.
+
+For the present p=1048576/4934475 and B<=4, the chart-aligned Euclidean displacement bound is p*(3B/4)/sqrt(2), at most approximately0.450781 micrometres. This genuinely limits reach. It is not evidence that real membrane errors satisfy this family.
+
+The general coupled-interface theorem is not exercised by scalar Atlas patches. Retaining it as the broader engine is defensible only with explicit application alignment. The scalar count-chain and gluing contribution should lead the expression paper. A new three-label experiment would need a separately validated geometric extraction and count solver.
+
+Breast format-test transfer is useful computational evidence and a second data source. It is not independent biological ground truth, and vendor restrictions must remain explicit. Proseg source-disagreement comparisons likewise measure reach/sensitivity, not accuracy.
+
+6. New checks implemented
+Four supplied prepared atlases pass. Seventeen invalid inputs are rejected: stale/missing/duplicated geometry identities, failed audits, duplicate patch or transcript identifiers, incorrect fixed counts, transcript gene/owner/coordinate mismatches, physical area or rail violations, altered source bytes, anisotropic transforms and optimized Python mode. Certification refuses a tampered atlas before writing intervals. All current point-based scientific results are preserved; root will replay the full interval tables after integration.

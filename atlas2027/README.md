@@ -92,6 +92,10 @@ AI assistance contributed to mathematics, algorithms, code, experiments, verific
 
 The Atlas is the scientific base because its disjoint supports give one compatible fixed-seam count family and its scalar count-chain algorithm handles explicit unit molecules in polynomial time. The preceding corridor revision contributes actual Proseg outputs, MIT licensing and release checks. Its old pair-census totals are not a new discovery; the original supplement already contained them. See docs/COMPARISON_AUDIT.md.
 
-Both denominators matter: joint geometry changes 203/1,026 breast questions with marginal width at least two, but 203/22,976 questions overall. Constant numbers of non-singleton intervals do not imply fixed endpoints: on the supplied grid, lung endpoints plateau from0.25 square micrometres, breast endpoints from1. The breast data remain explicitly vendor format-test data.
+Both denominators matter: joint geometry changes 203/1,026 breast questions with marginal width at least two, but 203/22,976 questions overall. Constant numbers of non-singleton intervals do not imply fixed endpoints: on the supplied grid, lung endpoints plateau from 0.25 square micrometres, breast endpoints from 1. The breast data remain explicitly vendor format-test data.
 
 `python analysis/audit_revision_csv.py` recomputes these denominator and saturation checks. New width/reach results are in results/revision_reach; their protocol was fixed before execution. The study uses lung crops only, and external-method reach is not accuracy or anatomical calibration.
+
+## Complete public artifact
+
+The public branch stores the complete archive in checked parts; see `ARCHIVE.md` beside the repository source and run `python atlas2027/reassemble.py --extract atlas-replay` from the repository root. This extracted package already includes every prepared input and result. The scientific source revision is `1cdbb9e0b4ea386c210fd231372900b2844dddba`. Main and supplement sources compile from `manuscript/`.

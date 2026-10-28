@@ -1,0 +1,25 @@
+{
+  "version": "0.3.0a1",
+  "archive": "GeoCert_ST_Atlas_Package.zip",
+  "archive_bytes": 19690390,
+  "archive_sha256": "3b5e92552335709e6602aa1e56f659e0eda87244f31e592f0dc288a3528cc9c0",
+  "manifest_entries": 183,
+  "archive_files": 184,
+  "publication_status": "local candidate; not pushed, tagged or submitted",
+  "frozen_input_root": "/mnt/data/GeoCert_ST_Atlas_Revision",
+  "scientific_replay_archive_sha256": "900843d1e77462e4e1d4eddc2d52ddcfe1ba0f5663f9229222e125433156143f",
+  "document_only_delta": [
+    "GeoCert_ST_Atlas_Revision/SHA256SUMS.txt",
+    "GeoCert_ST_Atlas_Revision/docs/REPORT.md",
+    "GeoCert_ST_Atlas_Revision/manuscript/main.pdf",
+    "GeoCert_ST_Atlas_Revision/manuscript/main.tex",
+    "GeoCert_ST_Atlas_Revision/results/document_preflight.json"
+  ],
+  "outputs": {
+    "GeoCert_ST_Atlas_Manuscript.pdf": "ed32c5d4c1982565e7eeb4f6dad7e4db9c13020d97a3fa1d149c2b56950faae7",
+    "GeoCert_ST_Atlas_Supplement.pdf": "7668598681c109ae2d0d776a37af0a86de476a0478f3cdf717c3ee2073c41b5a",
+    "GeoCert_ST_Atlas_Report.md": "19db4a1c31cb6e3b388ca00727c14860d8110a9e1544ec890750b1fb8e10154f",
+    "GeoCert_ST_Atlas_Theory.md": "eeac6382c2342ebe51537410943b0c3c4220370ecf03fe43f60098772badca97",
+    "GeoCert_ST_Atlas_Replay.json": "137ce49006659fcf94fd151b43845adf9ab098499485ef36d600d991bde9619e"
+  }
+}

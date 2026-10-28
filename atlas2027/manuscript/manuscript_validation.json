@@ -1,0 +1,62 @@
+{
+  "title": "Certified Expression Intervals under Shared Segmentation Uncertainty",
+  "version": "0.3.0a2",
+  "main_pdf_pages": 13,
+  "title_pages": 1,
+  "body_pages": 10,
+  "reference_pages": 2,
+  "supplement_pdf_pages": 10,
+  "abstract_words_whitespace": 244,
+  "compiler_warnings": {},
+  "visual_qa": {
+    "all_main_pages": true,
+    "all_supplement_pages": true,
+    "inspected_render_scale_px": 1050,
+    "issues": []
+  },
+  "figure_updates": [
+    "Actual reference-mask transcript overlay, editable arcs, legend and 10 micrometre scale bar",
+    "Physical width versus exact shared-population count reach and boundary coverage",
+    "Supplementary reach versus area-budget curves"
+  ],
+  "scope_checks": {
+    "scalar_atlas_distinguished_from_general_theorem": true,
+    "breast_format_test_disclosed_in_abstract": true,
+    "endpoint_plateau_corrected": true,
+    "question_denominators_reported": true,
+    "non_nested_width_families_disclosed": true,
+    "old_and_refined_nuclear_denominators_distinguished": true,
+    "proseg_same_donor_adaptations_disclosed": true,
+    "no_biological_accuracy_or_acceptance_claim": true,
+    "accepted_band_caps_distinguished_from_attained_displacement": true,
+    "accepted_width_frequencies_reported": true,
+    "exact_scientific_source_commit_cited": true,
+    "stale_internal_notes_absent": true
+  },
+  "sha256": {
+    "main.tex": "fe0f5a6464a69f8b4fed849bfb6da72e5ab34b62ec7181bddb46a9aa299fdc53",
+    "supplement.tex": "006bf9fc99c4cc0510ea9acda70103e68b7868f8ee27c2a5eb16af36067e84e2",
+    "references.tex": "715eeb8dd5526bf353a094468028e610902463a575c9d6e265932b14d35c6693",
+    "reach_main.tex": "3d6205bf5b7a0938401c09a48dea59affc0707d2d26acbf6f2991a99845fffd0",
+    "reach_supplement.tex": "1dc96ebbf9fe4e9e727370cc71d628a99d43f7aa13a553e81bf14edc0881f60d",
+    "ABSTRACT.txt": "db5645f0efc6d800df7ddd67ff6a0526b4558a67d9a3c295ed3383050a3d8b99",
+    "main.pdf": "dcccb05595c3bf237fa81ec5ddb1a3224e7b5055a63ebda133486e97096e813c",
+    "supplement.pdf": "72ec60c608d417de1848eeb7b0d8fbbcf7fb9c92c3c146110beea02883ec56e6",
+    "make_reference_figure.py": "77a0db26d27429174b6fab680d1bc31cb078e1cbf1fc372e7ceaab9b3ddea257",
+    "figures/atlas_reference.pdf": "36832276f7e8d7d52332732b4e05490cdab425e8b4ed2b1946d2a6d67348bc39",
+    "figures/atlas_reference.png": "b5c13512a0511f378c11a724b0348aaec020b38471ba9dbf71baa3fe0eef202e",
+    "figures/cell_witness.pdf": "85d33b2c4e8de2f7f846d24d901d22760876f7c328770e9d45ff3df534ce0804",
+    "figures/cell_witness.png": "a0d747a811bdb0a6908ac2c20b0ea82b8a2fec109c05a047284d5df674985e67",
+    "figures/chain_scaling.pdf": "085eaa8b8e5813fbcdd6216d3350d614216ef592dcad8d59779ec942e1f91ca2",
+    "figures/chain_scaling.png": "7a5147a4ccc9fe2b3290f9d1ff5048467233bf0a1cb98dace3be36dbd17bc458",
+    "figures/count_curve.pdf": "92bba80452caa0f5d813269c369b9c85358b65779b700e6c46b3b1dab6f9f8eb",
+    "figures/count_curve.png": "b57d642b38e0703f8f6baf85dbdf4de24e3c2a6b291a47ea6454f3142086819a",
+    "figures/reach_budget.pdf": "45c168b3e2e0ba07339f9c5149cb2c1cbbe42bafe010519f7bc6c856ef78c77d",
+    "figures/reach_budget.png": "c5387f67f10fe70cdd313243e92c44c3fa951ec1cc2bbcca0a2559e103d226f5",
+    "figures/reach_width.pdf": "21d27acae13fb14577d62737a7558c77652c86b88a2a0ce6087b0b6b7692b831",
+    "figures/reach_width.png": "56090dbe95f2fa0dc876433cef68a634354d337e8737a053fcf62fe08b5f140b"
+  },
+  "scientific_source_commit": "1cdbb9e0b4ea386c210fd231372900b2844dddba",
+  "abstract_matches_text_file": true,
+  "registration_or_submission_performed": false
+}
