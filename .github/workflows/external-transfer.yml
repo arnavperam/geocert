@@ -20,6 +20,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Import checksum-verified analysis source
+        run: |
+          python - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import base64, hashlib, json, lzma
+          payload = Path('evaluation/source_bundle.txt')
+          if payload.exists():
+              raw = base64.b64decode(payload.read_text().strip(), validate=True)
+              assert len(raw) == 12372
+              assert hashlib.sha256(raw).hexdigest() == 'e5191d4db5b8e0564745ac0b29514b78382c6ac48b2c7bed2bbf8ccc23e4a826'
+              files = json.loads(lzma.decompress(raw))
+              assert len(files) == 9
+              for name, content in files.items():
+                  p = PurePosixPath(name)
+                  assert not p.is_absolute() and '..' not in p.parts and p.parts[0] == 'analysis'
+                  Path(name).parent.mkdir(parents=True, exist_ok=True)
+                  Path(name).write_text(content, encoding='utf-8', newline='')
+              payload.unlink()
+          PY
       - uses: actions/cache@v4
         with:
           path: /tmp/geocert-breast-2fov.zip
@@ -31,27 +50,45 @@ jobs:
           if [ ! -f /tmp/geocert-breast-2fov.zip ]; then
             curl --fail --location --max-time 180 --output /tmp/geocert-breast-2fov.zip https://cf.10xgenomics.com/samples/xenium/2.0.0/Xenium_V1_human_Breast_2fov/Xenium_V1_human_Breast_2fov_outs.zip || { rm -f /tmp/geocert-breast-2fov.zip; exit 1; }
           fi
-      - name: Inspect the fixed source
-        run: python evaluation/inspect_external.py
-      - name: Run extraction and analysis when present
+      - name: Verify and prepare the fixed source
         run: |
-          if [ -f evaluation/run_external.py ]; then
-            python evaluation/run_external.py
-          fi
-      - name: Retain completed records
+          python evaluation/inspect_external.py
+          python evaluation/run_external.py
+          mkdir -p analysis/external_inputs results/external
+          cp -r run/external/breast_01 run/external/breast_02 analysis/external_inputs/
+      - name: Screen without changing the protocol
+        run: |
+          python analysis/screen_external.py --height 24 --cells 3
+          python analysis/screen_external.py --height 12 --cells 3
+          python analysis/screen_external.py --height 24 --cells 2
+          python analysis/screen_external.py --height 12 --cells 2
+      - name: Compute and check every selected external question
+        run: |
+          python analysis/analyze_external.py
+          python analysis/check_external.py
+      - name: Reproduce the development readouts and shared-cost census
+        run: |
+          python analysis/audit_shared_cost.py --output results/shared_cost.json
+          python analysis/audit_cell_counts.py --output results/readout_results.json
+          python analysis/check_readouts.py --input results/readout_results.json
+      - name: Retain completed source and records
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add evaluation/results
+          git add analysis/*.py analysis/PROTOCOL.md analysis/source_counts.json analysis/external_source_counts.json results/external results/shared_cost.json results/readout_results.json evaluation/results
+          git add -u evaluation/source_bundle.txt || true
           if ! git diff --cached --quiet; then
-            git commit -m 'Record external transfer-check outputs'
+            git commit -m 'Record verified count readouts and locked breast transfer results'
             git push origin HEAD:evaluation/breast-transfer
           fi
       - uses: actions/upload-artifact@v4
         if: success()
         with:
-          name: external-transfer-inputs
+          name: external-transfer-results
           path: |
-            run/external
+            analysis
+            results/external
+            results/shared_cost.json
+            results/readout_results.json
             evaluation/results
-          retention-days: 7
+          retention-days: 14
