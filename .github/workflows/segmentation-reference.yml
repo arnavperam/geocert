@@ -1,0 +1,23 @@
+name: Segmentation reference
+on:
+  push:
+    branches: [research/expression-certificates]
+    paths: ['.github/workflows/segmentation-reference.yml']
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Retrieve published reference
+        shell: bash
+        run: |
+          mkdir reference
+          curl --fail --location --retry 2 https://github.com/kharchenkolab/Baysor/releases/download/cpp-0.9.0/baysor-0.9.0-linux-x86_64.tar.gz -o reference/baysor-0.9.0-linux-x86_64.tar.gz
+          echo '6848f2b924a20a32b19db568e286b156649f0a7ebc8c7ab54d1900f74f9b0e8a  reference/baysor-0.9.0-linux-x86_64.tar.gz' | sha256sum --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: baysor-reference
+          path: reference/
+          retention-days: 1
