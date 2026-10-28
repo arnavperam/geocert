@@ -15,10 +15,10 @@
 \newcommand{\ind}{\mathbf 1}
 \newcommand{\dist}{\operatorname{dist}}
 \title{Supplement: Certified Expression Intervals\\under Shared Segmentation Uncertainty}
-\author{Arnav Peram}\date{}
+\author{Arnav Peram\\[2pt]\normalsize Arizona College Preparatory High School\\\normalsize\texttt{arnavperam1@gmail.com}}\date{}
 \hypersetup{pdftitle={Supplement: Certified Expression Intervals under Shared Segmentation Uncertainty},pdfauthor={Arnav Peram}}
 \begin{document}\maketitle
-This supplement specifies the atlas construction, exact count algorithm, experimental contracts and verification paths. The main manuscript contains the complete cost-representation, gluing, hard-budget and composition arguments. All count guarantees concern the retained observed molecules and the declared fixed-seam family. The external breast input is explicitly a vendor format-test dataset, rather than biological validation.
+This supplement gives the continuous realization proofs, atlas construction, count algorithm and experimental details. The mathematical development has two complementary outputs: an exact cut representation for general assignment objectives and coupled boundaries, and a direct hard-budget algorithm for single-boundary point-transcript ribbons. Both use the same canonical minimum-area realization. The experiments evaluate their count certificates on a fixed-seam atlas of the retained observed molecules.
 
 \section{Continuous realization of assignments}\label{sec:continuous}
 Use coordinate $t$ along an interface and $x$ across it. Let $m$ ordered boundary graphs $f_a:I\to\R$, $a=0,\ldots,m-1$, divide a compact corridor into $m+1$ cells. Each boundary has a constant slope limit $s_a>0$, a constant band $[\underline b_a,\overline b_a]$, and fixed endpoint values. Adjacent boundaries satisfy
@@ -101,7 +101,7 @@ Let $N$ count all merged RNA and structural rectangles, $G$ groups, and $M_b=O(N
 |V|=O\!\left(Gm+\sum_b(M_b^2+M_b)\right),\quad
 |E|=O\!\left(Gm+N^2m^2+\sum_b(M_b^2+M_b)\right).\label{eq:size}
 \end{equation}
-The auxiliary contribution is $O(N^2m^5)$. Source knots still affect integration, coefficient lengths and reconstruction. Exact intersections, integrals and denominator scaling have polynomial bit complexity. An event integrator updates affected adjacent layers rather than rescanning every layer; on a $J$-knot reference its work is $O((M^2+MJ+J+1)\log(M+J+2))$ rational-arithmetic and bitset operations, given that reference. Queueing adjacent inversions handles multiple crossings; unchanged layer integrals accumulate until the next change. This is a construction bound with operand costs, not an end-to-end tissue runtime claim. Arrangement sweeps are established tools~\cite{bentley}.
+The auxiliary contribution is $O(N^2m^5)$. Source knots still affect integration, coefficient lengths and reconstruction. Exact intersections, integrals and denominator scaling have polynomial bit complexity. An event integrator updates affected adjacent layers rather than rescanning every layer; on a $J$-knot reference its work is $O((M^2+MJ+J+1)\log(M+J+2))$ rational-arithmetic and bitset operations, given that reference. Queueing adjacent inversions handles multiple crossings; unchanged layer integrals accumulate until the next change. These bounds describe graph construction, with rational operand costs accounted for separately. Arrangement sweeps are established tools~\cite{bentley}.
 
 
 \section{Physical atlas and exact reference agreement}
@@ -118,14 +118,14 @@ The run is exactly $u=r(t)$, with slopes $+1$ or $-1$ between its recorded raste
  \Phi(t,v)=\frac p2\bigl(s_x(t+r(t)+v),\ s_y(t-r(t)-v)\bigr),
  \qquad |\det D\Phi|=\frac{p^2}{2}.
 \]
-The pixel size $p$ is read from the source coordinate transformation and represented rationally. It is not replaced by a rounded display value. An accepted ribbon has $v\in[-B,B]$, allowed displacement $|h(t)|\le3B/4$, $|h(t)-h(t')|\le|t-t'|$, and zero endpoint displacement. The RNA clearance is $\rho=10^{-6}/p$ in chart coordinates; it is a numerical side-separation convention, rather than a calibrated physical normal clearance. These settings define a sensitivity family, not a fitted confidence region.
+The pixel size $p$ is read from the source coordinate transformation and retained as an exact rational value. An accepted ribbon has $v\in[-B,B]$, allowed displacement $|h(t)|\le3B/4$, $|h(t)-h(t')|\le|t-t'|$, and zero endpoint displacement. The RNA clearance is $\rho=10^{-6}/p$ in chart coordinates; it separates the two admissible ownership sides numerically. Together these settings define the geometric sensitivity family.
 
 \subsection{Acceptance and nuclear constraints}
-Every piece of the left/right half-ribbon is clipped against intersecting native pixels using rational polygon arithmetic. Positive-area intersections must have the declared left/right source labels. Pairwise ribbon interiors must be disjoint. A geometric spatial index reduces candidate comparisons; it does not replace the final rational intersection test. RNA coordinates are transformed through the exact chart and their nominal side must agree with the original source mask. A molecule may occur in at most one accepted patch.
+Every piece of the left/right half-ribbon is clipped against intersecting native pixels using rational polygon arithmetic. Positive-area intersections must have the declared left/right source labels. Pairwise ribbon interiors must be disjoint. A geometric spatial index selects candidate pairs for the final rational intersection test. RNA coordinates are transformed through the exact chart and their nominal side must agree with the original source mask. A molecule may occur in at most one accepted patch.
 
-A nuclear-mask pixel is labelled by the source \emph{cell} mask at that pixel, rather than by its unrelated nucleus identifier. Clip its square to the ribbon, transform its fragments into $(t,v)$ coordinates, and split at reference-curve knots. Over each projected interval, the maximum required left-side value or minimum right-side value supplies a conservative constant bound. Thus every original intersecting nuclear fragment retains its label. The bound may exclude additional shapes; it never permits a part of the nucleus to change owner. Structural constraints have zero additional clearance. Encoding them as shifted synthetic point/interval constraints cancels the engine's RNA clearance exactly; these encodings are not new RNA observations.
+A nuclear-mask pixel is labelled by the source \emph{cell} mask at that pixel, rather than by its unrelated nucleus identifier. Clip its square to the ribbon, transform its fragments into $(t,v)$ coordinates, and split at reference-curve knots. Over each projected interval, the maximum required left-side value or minimum right-side value supplies a conservative constant bound. The resulting conservative bound preserves the label of every intersecting nuclear fragment. Structural constraints have zero additional clearance. Encoding structural regions as shifted point/interval constraints cancels the engine's RNA clearance exactly, without adding molecular counts.
 
-An initial nucleus-free extraction was retained as an unsuccessful coverage pilot. The final procedure keeps nuclear constraints and includes cell--background interfaces. This amendment preceded the new count calculations. It was fixed before the external transfer results. It is documented experimental ordering, not external preregistration.
+An initial extraction pilot omitted nuclei. The final procedure added nuclear constraints and cell--background interfaces before recomputing counts and transferring the fixed rules to the breast crops. The provenance record preserves both stages.
 
 \subsection{Global homeomorphism}
 For fixed longitudinal coordinate and any admissible $h$, define
@@ -137,13 +137,13 @@ For fixed longitudinal coordinate and any admissible $h$, define
 \]
 Its transverse slopes are strictly positive because $|h|<B$. Both formulas agree at zero, map zero to $h$, and fix $-B,B$. Its inverse is continuous, and $h=0$ at longitudinal endpoints makes the whole boundary trace fixed. Conjugating $(t,v)\mapsto(t,H_h(t,v))$ through $\Phi$ gives a homeomorphism of the closed physical ribbon fixing its boundary. It maps the two source sides to the requested alternatives.
 
-Extend each map by the identity outside its ribbon. Disjoint interiors and fixed traces make the maps agree on intersections. A finite union is therefore a global continuous bijection with the corresponding piecewise inverse. The reference cell topology, connectivity, holes and junction incidences are preserved. This argument does not require deleting a complicated set of patches from a cell and hoping the remaining core is connected.
+Extend each map by the identity outside its ribbon. Disjoint interiors and fixed traces make the maps agree on intersections. A finite union is therefore a global continuous bijection with the corresponding piecewise inverse. The reference cell topology, connectivity, holes and junction incidences are preserved.
 
 Changed-label area inside one two-label ribbon is exactly
 \[
  A(h)=\frac{p^2}{2}\int_I |h(t)|\,dt.
 \]
-Interiors do not overlap, so changed-label area in the atlas is the sum of these costs, counted once. At source knots the chart is piecewise affine; the finite kink set has zero area. An arbitrary curved coordinate chart would require its own Jacobian and is not silently covered by this calculation.
+Interiors do not overlap, so changed-label area in the atlas is the sum of these costs, counted once. At source knots the chart is piecewise affine; the finite kink set has zero area. The constant Jacobian makes this conversion exact; other coordinate charts require their corresponding area factor.
 
 \section{Exact assignment-cost function and graph construction}
 In an ordered corridor, each boundary has a slope bound, band and endpoint values; adjacent boundaries have constant minimum and optional maximum separations. All finite rational data are binary encoded. The source satisfies the geometric constraints. RNA-location rectangles and pinned structural regions induce lower or upper interval requirements depending on their discrete owner thresholds.
@@ -158,7 +158,7 @@ The selected lower family $L$, upper family $U$, and reference $f^0$ obey the sa
 \[
  f_b^*(t)=\min\{U_b(t),\max\{L_b(t),f_b^0(t)\}\}
 \]
-is a jointly feasible family and is pointwise nearest to the reference. This simultaneous attainment establishes the ownerwise minimum $D^*(c)$, not just a lower bound on independently chosen coordinates.
+is a jointly feasible family and is pointwise nearest to the reference. This simultaneous attainment establishes the minimum $D^*(c)$ for each complete assignment.
 
 \subsection{Integrated layers and the helper bound}
 In one direction, source-relative excursions are maxima of active flat-top cones. On an analytic interval with ordered positive heights $h_1\ge\cdots\ge h_q>0$, set $h_{q+1}=0$. Their activated maximum equals
@@ -175,11 +175,11 @@ If $M_b=O(Nm^2)$ includes all propagated molecular and structural constraints, t
  |V|=O\!\left(Gm+\sum_b(M_b^2+M_b)\right),\quad
  |E|=O\!\left(Gm+N^2m^2+\sum_b(M_b^2+M_b)\right).
 \]
-The auxiliary contribution is $O(N^2m^5)$. Source knots, intersections and coefficient denominator lengths still affect construction and encoding. Event-driven accumulation can integrate a direction's coefficients in $O((M^2+MJ+J+1)\log(M+J+2))$ rational-arithmetic and bitset operations for a $J$-knot reference. This integration-stage statement is distinct from the final graph-size bound and from total bit complexity. These inherited optional-optimization results are not retimed in the present atlas study.
+The auxiliary contribution is $O(N^2m^5)$. Source knots, intersections and coefficient denominator lengths still affect construction and encoding. Event-driven accumulation can integrate a direction's coefficients in $O((M^2+MJ+J+1)\log(M+J+2))$ rational-arithmetic and bitset operations for a $J$-knot reference. This integration-stage statement is distinct from the final graph-size bound and from total bit complexity. The critical-height algorithm below uses this canonical realization directly to recover every count-specific minimum, including states unavailable to a penalty sweep.
 
 \section{Critical-height count algorithm}
 \subsection{Input contract and common mesh}
-The implemented count chain accepts one boundary, fixed structural regions, rational piecewise-affine source, slope/band/endpoints, and one point per free RNA group. It rejects a free group spanning several locations or an interval: its owner would need to be remembered across nodes. Fixed groups may contain many structural rectangles because their labels are known. Group scores are nonnegative integers for each owner, with an integer fixed offset. Atlas, source-observation and saved exact-geometry identities are checked before certification; the count chain checks the raw point-input contract before compilation.
+The count chain specializes the canonical realization to one boundary and one point per free RNA group, with fixed structural regions, a rational piecewise-affine source, slope bounds, bands and endpoints. A free group spanning several locations or an interval would require ownership memory across nodes and lies outside this input contract. Fixed groups may contain many structural rectangles because their labels are known. Group scores are nonnegative integers for each owner, with an integer fixed offset. Atlas, source-observation and saved exact-geometry identities are checked before certification; the count chain checks the raw point-input contract before compilation.
 
 Collect all affine pieces that any canonical realization can select: lower and upper cones for every possible point owner, fixed constraints, bands, endpoints and source. Include all piece endpoints, observation locations and same-boundary intersections in a common mesh. Omit crossings outside the forced envelope only when they cannot be a canonical switch. At every node, candidate heights are function values inside the forced range and outside every observation's clearance gap.
 
@@ -219,14 +219,14 @@ For a cell--gene pair with source count $n_0$, each incident patch supplies mini
 \]
 Using changes prevents counting fixed exterior molecules more than once. Zero-relevant patches can stay at their zero-cost source. A minimizing trace yields compatible local witnesses, and the global homeomorphism proves attainability. Restricting any allowed global state to its patches proves the reverse inequality. There is one budget for the complete atlas, not one independent allowance per patch.
 
-The outer baseline lets every individually affordable RNA choose a feasible owner independently. It can combine incompatible changes or overspend the budget; its interval is an outer bound. The additive inner baseline retains exact local feasibility, charges every changed RNA its singleton minimum (including collateral genes), and composes these costs. Under zero-cost source admissibility, this sum upper-bounds shared area, so budget feasibility is an inner approximation. An omitted endpoint is not a false exclusion made by the exact method. A zero discrepancy does not prove the two models identical for other objectives.
+The outer baseline lets every individually affordable RNA choose a feasible owner independently. It can combine incompatible changes or overspend the budget; its interval is an outer bound. The additive inner baseline retains exact local feasibility, charges every changed RNA its singleton minimum (including collateral genes), and composes these costs. Under zero-cost source admissibility, this sum upper-bounds shared area, so budget feasibility is an inner approximation. The comparison therefore distinguishes over-permissive independent transfers from over-conservative additive costs.
 
-For co-detection, retain a two-dimensional score and compose vector spectra. Marginal endpoints need not coexist. The tested predicate is $N_{g_1}>0$ and $N_{g_2}>0$, classified as always, never or variable over the budgeted spectrum. This is an expression-detection statement, not a cell-type, signaling, statistical differential-expression or false-discovery claim.
+For co-detection, retain a two-dimensional score and compose vector spectra. Marginal endpoints need not coexist. The tested predicate is $N_{g_1}>0$ and $N_{g_2}>0$, classified as always, never or variable over the budgeted spectrum. The resulting classification describes the stability of observed co-detection under the chosen family.
 
 \section{Data, extraction and complete experimental denominators}
-The lung inputs are two 200-micrometre lung crops of a public Xenium lung-cancer specimen, containing 7,370 retained Q20 measured-gene RNA records. Their 42 historical overlapping corridors are not used as independent atlas patches. The current atlas is re-extracted from the source masks, with whole reference-cell containment checked directly.
+The lung inputs are two 200-micrometre crops of a public Xenium lung-cancer specimen, containing 7,370 retained Q20 measured-gene RNA records. The atlas is extracted directly from the source masks with complete reference-cell containment; it replaces the overlapping corridors of the earlier implementation.
 
-The breast inputs are the two previously acquired source crops in the public workflow artifact identified in the provenance record. The artifact's SHA-256 is \nolinkurl{f53bee7d82a385a320c14a180049e66bf6f60963dda8d7a75574fda90c28febf}. It contains 81,182 retained RNA records and corresponding masks. The source is the vendor's two-field-of-view breast format-test dataset. The vendor explicitly cautions against biological conclusions from those trimmed test data. This is a fixed-rule external-data transfer test, not newly measured ground truth or a held-out biological cohort. The data had been analyzed in prior workflows and were not independently preregistered.
+The breast inputs are the two previously acquired source crops in the public workflow artifact identified in the provenance record. The artifact's SHA-256 is \nolinkurl{f53bee7d82a385a320c14a180049e66bf6f60963dda8d7a75574fda90c28febf}. It contains 81,182 retained RNA records and corresponding masks. The source is 10x Genomics' two-field-of-view breast format-test dataset, for which the vendor cautions against biological conclusions. We use these previously available crops to evaluate transfer of the fixed extraction and count-analysis rules.
 
 \begin{table}[ht]\centering
 \begin{tabular}{lrrrr}\toprule
@@ -243,9 +243,9 @@ All incident reference edges&10,756&12,408&43,331&37,132\\\bottomrule
 \caption{Complete extraction census. Coverage denominators include incident edges with ineligible neighboring cells. Refer to the machine-readable coverage record for per-cell lengths and fractions.}
 \end{table}
 
-The two lung crops have disjoint complete-cell identifiers, as do the two breast crops. Five eligible lung cells have no retained positive gene count and no editable relevant molecule; their rows are implicit zeros in the supplied matrix index. The interval CSV is sparse over every positive-source or editable cell--gene key. Absent entries are zero only within the explicitly recorded panel/observed-gene universe, retained observations and atlas identity. They are not biological-absence calls.
+The two lung crops have disjoint complete-cell identifiers, as do the two breast crops. Five eligible lung cells have no retained positive gene count and no editable relevant molecule; their rows are implicit zeros in the supplied matrix index. The interval CSV is sparse over every positive-source or editable cell--gene key. Absent entries are zero only within the explicitly recorded panel/observed-gene universe, retained observations and atlas identity. Thus a sparse zero refers to retained observed counts.
 
-All eight budgets $0,0.05,0.1,0.25,0.5,1,2,4\,\mu\mathrm m^2$ are reported. There are 3,304 lung and 22,976 breast cell--gene spectra, yielding 26,432 and 183,808 unique interval rows. The exact outputs are fixed by one atlas per crop; no interval is averaged or minimized across overlapping models. Source counts outside editable ribbons remain part of every cell's count.
+All eight budgets $0,0.05,0.1,0.25,0.5,1,2,4\,\mu\mathrm m^2$ are reported. There are 3,304 lung and 22,976 breast cell--gene spectra, yielding 26,432 and 183,808 unique interval rows. One atlas per crop determines every interval and its compatible attaining boundary. Source counts outside editable ribbons remain part of every cell's count.
 
 \subsection{Budget-specific simple-baseline comparisons}
 \begin{table}[ht]\centering
@@ -260,7 +260,7 @@ Area budget&Lung variable&Breast variable&\shortstack{Breast outer\\tightened}&\
 2&524&5,259&0&0\\
 4&524&5,259&0&0\\\bottomrule
 \end{tabular}
-\caption{Counts out of 3,304 or 22,976 entries per budget. Lung outer improvements comprise four rows at 0.1; the two lung inner misses occur at 0.1 and 0.25. Simple baselines agree with the majority of exact endpoints.}
+\caption{Counts out of 3,304 or 22,976 entries per budget. Lung outer improvements comprise four rows at 0.1; the two lung inner misses occur at 0.1 and 0.25. The differences concentrate at intermediate budgets, where shared area limits the combinations of affordable transfers.}
 \end{table}
 
 In breast crop 1, cell 81's LDHB source count is 22. Its minimum attaining count 17 is exactly
@@ -268,7 +268,7 @@ In breast crop 1, cell 81's LDHB source count is 22. Its minimum attaining count
  \frac{1977348833190267596699567429}{4085091626228121600000000000}
  \simeq0.48404026497\,\mu\mathrm m^2.
 \]
-The global trace changes three LDHB molecules through one patch and two through another, plus one collateral KRT8 molecule. A third incident LDHB patch remains unchanged. At budget 0.25 the exact interval is $[19,23]$ versus marginal $[17,23]$; at 0.5 it is $[17,23]$ versus additive-inner $[18,23]$. The case is an illustrative selection from the complete output, not a predefined biological hypothesis.
+The global trace changes three LDHB molecules through one patch and two through another, plus one collateral KRT8 molecule. A third incident LDHB patch remains unchanged. At budget 0.25 the exact interval is $[19,23]$ versus marginal $[17,23]$; at 0.5 it is $[17,23]$ versus additive-inner $[18,23]$. This example from the complete output shows how the two approximations fail in opposite directions.
 
 \begin{figure}[ht]\centering\includegraphics[width=.90\textwidth]{figures/count_curve.pdf}
 \caption{The complete LDHB count-spectrum example under unchanged atlas geometry. Step changes follow exact rational minimum areas, rather than interpolation between sampled optimization outputs. The inner comparison can miss an attainable endpoint; the outer comparison can combine individually affordable but jointly over-budget changes.}
@@ -276,39 +276,39 @@ The global trace changes three LDHB molecules through one patch and two through 
 
 
 \subsection{Question denominators and endpoint saturation}
-On the original eight budgets, 46 lung and 1,026 breast cell--gene questions have marginal width at least two for some budget. Exact geometry tightens four and 203 of these questions, affecting four of 153 lung cells and 139 of 467 breast cells. These question and cell denominators complement the repeated-row counts; no original row or null result is removed. A question is counted once if at least one budget tightens an endpoint.
+On the original eight budgets, 46 lung and 1,026 breast cell--gene questions have marginal width at least two for some budget. Exact geometry tightens four and 203 of these questions, affecting four of 153 lung cells and 139 of 467 breast cells. These question and cell denominators distinguish affected count entries from repeated budget rows. A question is counted once if at least one budget tightens an endpoint.
 
 \input{original_saturation_table.tex}
 
-In the original atlas the largest support halfwidth is four chart units. The chart displacement has Euclidean norm $p|h|/\sqrt2$, hence its maximum allowed value is $3pB/(4\sqrt2)\simeq0.4508\,\mu\mathrm m$. This is a cap in the coordinate model, rather than a calibrated error scale. The lung and breast spectra attain their extreme endpoints by areas approximately 0.240525 and 0.573939. Constant non-singleton totals from area 0.25 therefore indicate occupancy saturation earlier than complete endpoint saturation.
+In the original atlas the largest support halfwidth is four chart units. The chart displacement has Euclidean norm $p|h|/\sqrt2$, hence its maximum allowed value is $3pB/(4\sqrt2)\simeq0.4508\,\mu\mathrm m$. This is the geometric displacement cap of the primary atlas. The lung and breast spectra attain their extreme endpoints by areas approximately 0.240525 and 0.573939. Constant non-singleton totals from area 0.25 therefore indicate occupancy saturation earlier than complete endpoint saturation.
 
 \section{Physical-width sensitivity with fixed selection rules}
 The prospective analysis record fixes required support halfwidths $r=0.5,1,2,3\,\mu\mathrm m$, the original arc construction, run ordering, endpoint seams, slope one, nuclear constraints and clearance, and the area grid
 \[
 0,.005,.01,.025,.05,.1,.15,.2,.25,.375,.5,.75,1,2,4,8,16.
 \]
-The study is a declared sensitivity analysis on already available inputs. Its protocol predates the width-dependent extraction and count outcomes; it is not a new held-out biological study. Each run uses $B=\lfloor4\sqrt2r/p\rfloor/4$ and accepts only that width. Rejected patches do not fall back to narrower widths. Longer arcs keep priority and all original coordinate tie rules. Consequently each width defines a separate fixed-seam atlas; the atlases need not be nested.
+The protocol fixes these choices before width-dependent extraction and count calculations on the available inputs. Each run uses $B=\lfloor4\sqrt2r/p\rfloor/4$ and accepts only that width. Rejected patches do not fall back to narrower widths. Longer arcs keep priority and all original coordinate tie rules. Consequently each width defines a separate fixed-seam atlas; the atlases need not be nested.
 
 Every rejected candidate and accepted patch is retained in extraction summaries. Rejection can follow third labels, nuclei inconsistent with required clearance, chart geometry, intersections with earlier selected ribbons, or other declared acceptance conditions. All eligible source cells remain in count denominators, including those without editable patches. Each accepted patch is checked against exact raster-side intersections, all molecular source owners, structural constraints and disjoint interiors.
 
 \input{reach_table.tex}
 
-The last endpoint-saturation areas across Adaptive, 0.5, 1, 2 and 3 are, respectively, 0.240525, 0.154063, 1.497699, 3.090472 and 4.878380 for lung; and 0.573939, 0.376462, 1.281168, 5.095884 and 13.782726 for breast. Larger support permits larger movement, but fewer patches fit the same segmentation. The largest local gene multiplicity is 17; the largest patch contains 136 retained molecules. None of the eight new count runs terminates unresolved.
+The last endpoint-saturation areas across Adaptive, 0.5, 1, 2 and 3 are, respectively, 0.240525, 0.154063, 1.497699, 3.090472 and 4.878380 for lung; and 0.573939, 0.376462, 1.281168, 5.095884 and 13.782726 for breast. Larger support permits larger movement, but fewer patches fit the same segmentation. The largest local gene multiplicity is 17; the largest patch contains 136 retained molecules. All eight count runs return complete exact spectra.
 
-For like-for-like budget comparisons, the original adaptive-width spectra are also projected onto the 17-budget grid. This uses unchanged rational minima and individually affordable-transfer minima, and every original CSV row matches its earlier value exactly. On this finer grid, 12 of 46 lung and 361 of 1,026 breast questions tighten, versus the primary eight-grid results of 4 of 46 and 203 of 1,026. These are grid-dependent counts of transient differences, not additional biological observations. New width columns use the same fine grid.
+For like-for-like budget comparisons, the original adaptive-width spectra are also projected onto the 17-budget grid. This uses unchanged rational minima and individually affordable-transfer minima, and every original CSV row matches its earlier value exactly. On this finer grid, 12 of 46 lung and 361 of 1,026 breast questions tighten, versus the primary eight-grid results of 4 of 46 and 203 of 1,026. The finer grid resolves differences over shorter budget ranges in the same underlying spectra. New width columns use the same fine grid.
 
 \input{reach_budget_tables.tex}
 
 \begin{figure}[ht]\centering\includegraphics[width=.88\textwidth]{figures/width_budget.pdf}
-\caption{Breast format-test interval occupancy under all five separately extracted families. Each denominator is the complete positive-or-editable question set for that family. Width and budget change different aspects of the uncertainty model.}\end{figure}
+\caption{Breast interval occupancy under all five separately extracted families. Each denominator is the complete positive-or-editable question set for that family. Width and budget change different aspects of the uncertainty model.}\end{figure}
 
 \FloatBarrier
 \section{Reference segmentations and consistent reach denominators}
 \subsection{Image-only nuclear reference}
-The image-only reference assigns each retained RNA to the nearest labelled nuclear pixel within five physical micrometres, or to background. Nuclear pixels carry their source cell-mask label. RNA coordinates stay fixed. A five-micrometre crop-edge guard excludes points whose nearest nucleus could lie outside the observed crop. This is a deterministic comparison rule, separate from Proseg and from an anatomical truth standard.
+The image-only reference assigns each retained RNA to the nearest labelled nuclear pixel within five physical micrometres, or to background. Nuclear pixels carry their source cell-mask label. RNA coordinates stay fixed. A five-micrometre crop-edge guard excludes points whose nearest nucleus could lie outside the observed crop. This image-only reference provides a deterministic comparison with the expression-informed Proseg output.
 
 \subsection{Proseg executions}
-Proseg 3.2.0 was run on the two lung crops. The initial default-factorization run on crop 1 failed during feature selection with an empty-input error. One completed stochastic run per crop used factorization disabled; remaining sampler settings were 200 burn-in iterations, 200 sampling iterations and 50 hill-climb steps, with two requested threads. Diffusion and source reassignment remained enabled. This version exposes no seed argument. Commands, input/output hashes, exclusions and the initial failed log are preserved alongside the raw results. We reanalyzed those outputs; the width study does not represent new Proseg runs.
+Proseg 3.2.0 was run on the two lung crops. The initial default-factorization run on crop 1 failed during feature selection with an empty-input error. One completed stochastic run per crop used factorization disabled; remaining sampler settings were 200 burn-in iterations, 200 sampling iterations and 50 hill-climb steps, with two requested threads. Diffusion and source reassignment remained enabled. This version exposes no seed argument. Commands, input/output hashes, exclusions and the initial failed log are preserved alongside the raw results. The same two Proseg outputs are compared with every width family.
 
 \begin{table}[ht]\centering\begin{tabular}{lrr}\toprule
 Proseg execution quantity&Lung crop 1&Lung crop 2\\\midrule
@@ -318,7 +318,7 @@ Excluded RNA&73&41\\
 Changed source owner&3,242&765\\
 Output background/unassigned&2,484&1,335\\
 Verified nonzero output-count entries&1,443&67\\\bottomrule\end{tabular}
-\caption{Independent ingestion and count-matrix reconstruction of the Proseg executions. Small clipped crops omit surrounding tissue and can omit nuclear transcripts needed for cell initialization; high background assignment, particularly in crop 2, limits any accuracy interpretation.}
+\caption{Independent ingestion and count-matrix reconstruction of the Proseg executions. Background assignments account for 43.0\% and 90.1\% of output transcripts. The comparison therefore measures the reach of local boundary deformations against substantial assignment changes on clipped crops.}
 \end{table}
 
 The check joins exact transcript identifiers, verifies gene names and source assignments, maps Proseg cell labels using the original-cell mapping, and treats the output background flag explicitly. Observed-coordinate serialization residuals are at most 0.000243 and 0.000485 micrometres, respectively. Every saved sparse count entry is reconstructed exactly from the returned assignments. This arithmetic check is independent of the original comparison script; source data and Proseg executions are shared.
@@ -328,12 +328,28 @@ All five width families use a common set of comparison keys per reference. Retai
 
 The common comparison has 2,798 changed lung Proseg count keys, 1,114 changed lung nuclear keys and 10,965 changed breast nuclear keys. These differ from the original adaptive-only nuclear comparison (1,128 and 11,151 changed keys) because the new exclusion guard covers the union of editable observations over every width. Included/excluded keys and reasons are supplied explicitly.
 
-At each budget a reference count is attainable exactly when its count-specific minimum area is within budget. Unbounded-budget reach tests membership in the entire finite count spectrum. Main Table~3 gives the latter results; all 17 finite budgets are exported. The complete reference assignment vector is ruled out in each crop at every width by at least one changed fixed RNA or unavailable destination. This exclusion is stronger than merely observing that some count misses its interval. Conversely, countwise inclusion cannot establish a jointly realizable reference matrix.
+At each budget a reference count is attainable exactly when its count-specific minimum area is within budget. Unbounded-budget reach tests membership in the entire finite count spectrum. The main paper's reach table gives the latter results; all 17 finite budgets are exported. The complete reference assignment vector is ruled out in each crop at every width by at least one changed fixed RNA or unavailable destination. This exclusion is stronger than merely observing that some count misses its interval. Conversely, countwise inclusion cannot establish a jointly realizable reference matrix.
 
-A widening ribbon need not improve aggregate reach because its required support removes other patches. The observed reductions are results of the stated extractor and fixed-seam family, rather than evidence that Proseg or nuclear expansion is inaccurate. Anatomical coverage would require independently justified true owners or boundaries and an appropriate calibration design.
+A widening ribbon need not improve aggregate reach because its required support removes other patches. The width study separates the displacement available inside accepted ribbons from the extent of tissue covered by those ribbons.
 
 \subsection{Co-detection in the primary atlas}
-The three tested pairs are EPCAM/PTPRC, EPCAM/CD3D and EPCAM/PECAM1. The original lung census contains 150 cell/pair questions at eight budgets; the breast census contains 1,148. Of seven lung source EPCAM/PTPRC positives, two become removable by budget 0.25. Of 48 breast source positives, two become removable. Other tested positives persist under the primary family. The vector spectra add no exclusion beyond marginal intervals on these inputs. Neither outcome alone establishes whether co-detection reflects a cell state, doublet or leakage. These primary-family records are unchanged and are separate from the width study.
+The three tested pairs are EPCAM/PTPRC, EPCAM/CD3D and EPCAM/PECAM1. The primary atlas contains 150 lung and 1,148 breast cell/pair questions, each evaluated at eight budgets. Table~\ref{tab:codetection} separates persistent co-detection from source positives that can be removed and source negatives that can become positive. The classifications reached by area $0.25\,\mu\mathrm m^2$ persist through the largest tested area of $4\,\mu\mathrm m^2$. The vector spectra and marginal intervals give the same classifications on these inputs.
+
+\begin{table}[ht]\centering
+\begin{tabular}{llrrrr}\toprule
+ &Pair&\shortstack{Source\\positive}&Removable&Persistent&\shortstack{Newly\\possible}\\\midrule
+Lung&EPCAM/PTPRC&7&2&5&0\\
+ &EPCAM/CD3D&3&0&3&0\\
+ &EPCAM/PECAM1&3&0&3&0\\
+Breast&EPCAM/PTPRC&48&2&46&4\\
+ &EPCAM/CD3D&0&0&0&0\\
+ &EPCAM/PECAM1&47&5&42&3\\\bottomrule
+\end{tabular}
+\caption{Co-detection at area $0.25\,\mu\mathrm m^2$ in the primary atlas. Removable and persistent counts partition the source positives; newly possible counts describe source-negative cells. Each classification concerns joint positivity of the indicated pair.}\label{tab:codetection}
+\end{table}
+
+\paragraph{Interpretation.}
+These experiments quantify sensitivity within the stated geometric family. Fixed seams and junctions restrict its reach, and its width and budget parameters have yet to be anatomically calibrated. The two crops per tissue and repeated budget queries provide computational replication, rather than an independent donor cohort. The breast crop provenance limits biological interpretation. The nuclear and Proseg comparisons measure alternative assignments; they provide neither transcript-level truth nor a segmentation-accuracy benchmark. Likewise, stable or removable co-detection alone does not identify a cell state, doublet or leakage.
 
 \FloatBarrier
 \section{Validation and resource measurements}
@@ -341,7 +357,7 @@ The independent scalar reference uses Fraction arithmetic but imports none of th
 
 \begin{table}[ht]\centering
 \begin{tabular}{lrr}\toprule
-Check&Lung&Breast format test\\\midrule
+Check&Lung&Breast crops (Xenium)\\\midrule
 Independent local gene spectra&706&7,068\\
 Target binary assignments&1,498&17,542\\
 Local witness records&1,101&11,594\\
@@ -353,7 +369,7 @@ Exact half-ribbon/pixel checks&31,642&105,824\\
 Relevant ribbon-pair checks&491&1,602\\
 Nuclear pixel fragments&6,609&42,732\\\bottomrule
 \end{tabular}
-\caption{All checks completed without discrepancies. Counts are computational checks on repeated model inputs, not biological replicate counts.}
+\caption{Exact validation of the primary atlas: all comparisons agree and every attaining witness satisfies the continuous constraints.}
 \end{table}
 
 The count-chain test suite additionally compares 201 scalar spectra on 100 generated systems, tests 80 nonflat models against 1,644 exhaustive assignments, verifies positive mandatory deformation and rejection of free interval-valued RNA, and checks the explicit eight-unit gap. All 944 multicopy local gene questions from both data collections agree with independently enumerated spectra. A full hybrid reanalysis uses the chain for all multicopy genes and closure for single-copy genes; every global minimum area and every interval CSV row matches the separately checked enumerated calculation. The transversely monotone gluing map passes inverse, trace, chart roundtrip and independent polygon-area checks.
@@ -361,16 +377,16 @@ The count-chain test suite additionally compares 201 scalar spectra on 100 gener
 \subsection{Width-study checks}
 All eight width analyses completed, giving 106,351 global spectra and 1,807,967 interval rows. Local attaining boundaries were checked in continuous coordinates during computation. A separate composition routine reconstructed every global spectrum and checked 131,376 attaining traces, including source counts, local contribution signs, total area and unique transcript support. Every interval row was then recomputed from its exact spectrum and compared with its marginal outer bound.
 
-Independent scalar enumeration checks a deterministic hash-selected sample of up to 32 multicopy questions per setting, restricted to two--six target copies: 246 spectra and 1,628 target assignments in total. No sample reaches its 15-second resource limit; every minimum agrees. These sampled local checks are not presented as independent enumeration of all new local optima. The new forced-owner preprocessing is additionally tested on 80 generated models: 160 spectra, 773 target assignments and 287 witnesses agree among unpruned chain, pruned chain and separate scalar enumeration. Preprocessing substitutes only hard-implication consequences; it changes no feasible owner vector.
+Independent scalar enumeration checks a deterministic hash-selected sample of up to 32 multicopy questions per setting, restricted to two--six target copies: 246 spectra and 1,628 target assignments in total. All sampled minima agree within the 15-second per-query limit. The new forced-owner preprocessing is additionally tested on 80 generated models: 160 spectra, 773 target assignments and 287 witnesses agree among unpruned chain, pruned chain and separate scalar enumeration. Preprocessing substitutes only hard-implication consequences; it changes no feasible owner vector.
 
-A single process per width computes its complete spectra with a 60-second local chain allowance. Execution times in these simultaneous experiments are resource records rather than repeated comparative timing estimates. Source ingestion, masks and prepared atlas geometry remain shared dependencies. The repeated scaling study below is retained separately.
+A single process per width computes its complete spectra with a 60-second local chain allowance. Timings for these simultaneous runs record their computational cost; the sequential repeated scaling experiment below measures runtime under a controlled schedule. All computations use the same ingested observations, masks and prepared atlas geometry.
 
 \subsection{Count-chain scaling}
 The fixed constructed family has flat source, slope one, equal flipped height $h=1/4$, site spacing $d=1/10$, clearance $1/1000$, a containing band and endpoints outside all tents. The minimum for $k\ge1$ changes is
 \[
  A_k=h^2+(k-1)(hd-d^2/4),\qquad A_0=0,
 \]
-attained by $k$ consecutive sites. For arbitrary selected sites, each additional separation contributes at least the adjacent-site area increment, which proves the lower bound. This analytical family is a correctness/scaling test, not a difficult problem for every possible specialized algorithm.
+attained by $k$ consecutive sites. For arbitrary selected sites, each additional separation contributes at least the adjacent-site area increment, which proves the lower bound. The closed-form spectrum provides an exact reference for measuring the general count chain as input size grows.
 
 \begin{table}[ht]\centering
 \begin{tabular}{rrrrrr}\toprule
@@ -386,7 +402,6 @@ RNA&Count levels&Mesh nodes&Height candidates&Visited states&Median total(s)\\\m
 The 128-RNA totals range from 40.189 to 42.704 seconds. Median mesh compilation is approximately 2.033 seconds and dynamic programming plus all witness output/checking approximately 40.152 seconds; separate medians need not sum exactly. The tested limits are 300,000 retained candidate heights, one million visited states, 60 seconds for preparation, 90 seconds for dynamic programming, and 160 seconds for a complete process. Requested single-thread environment variables are recorded, but the arithmetic is Python integer/Fraction work. Peak whole-process RSS at the largest size is approximately 205 MiB and includes imports. Raw process records contain the exact environment and wall/memory measurements.
 
 \FloatBarrier
-\clearpage
 \section{Reproduction, data rights and assistance}
 The prepared-input exact workflow uses Python's standard library. Geometry extraction, raster reference analysis and plotting additionally use the declared analysis dependencies. The main commands are:
 \begin{verbatim}
@@ -398,10 +413,10 @@ python analysis/reach/audit_proseg.py
 python analysis/reach/check_outputs.py
 python analysis/reach/report.py
 \end{verbatim}
-The README lists separate commands for each main table and figure, the original full count computations and each width-specific recomputation. Compressed result files are restored only after their stored and expanded checksums agree. Source packages retain all original and new spectra, witnesses, comparison keys, Proseg records, selection rules and reference masks. Scientific validation is separate from historical timing measurements.
+The README lists separate commands for each main table and figure, the original full count computations and each width-specific recomputation. Compressed result files are restored only after their stored and expanded checksums agree. Source packages retain all original and new spectra, witnesses, comparison keys, Proseg records, selection rules and reference masks. The archive records both exact numerical checks and the environments used for runtime measurements.
 
 The GeoCert software is released under the MIT License. Original 10x data retain CC BY 4.0 attribution and the breast format-test limitation. Proseg retains its upstream rights; its executable is not redistributed. Source code, inputs and exact results for the 1.1.0 companion are publicly archived at \url{https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas}. This immutable source revision is distinguished from the separately rebuilt PDF artifacts in the release record.
 
-Generative AI assisted mathematical development, code, experiments, checking and drafting. The named author is responsible for the submitted claims and their explanation. Separate computational checks are described by the primitives they share; they do not constitute independent biological validation or external mathematical certification.
+Generative AI assisted mathematical development, code, experiments, checking and drafting. The author is responsible for the submitted claims and their explanation. The validation sections specify the independent calculations and their shared inputs.
 \input{supp_references.tex}
 \end{document}

@@ -1,58 +1,48 @@
 {
   "title": "Certified Expression Intervals under Shared Segmentation Uncertainty",
   "version": "1.1.0",
+  "revision_date": "2026-10-28",
   "scientific_source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
-  "scientific_source_url": "https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas",
-  "source_scope": "Algorithms, inputs and results. These PDFs are rebuilt separately after the source commit.",
+  "scientific_code_files_matched": 71,
   "main_title_pages": 1,
   "main_body_pages": 10,
   "main_reference_pages": 2,
   "supplement_pages": 16,
-  "abstract_matches_tex_and_rendered_pdf": true,
-  "abstract_words_whitespace": 224,
-  "abstract_sha256": "7068872ef36ded0ece1767a32201a4f8260f65f8d49d83d3e13402b0a62993b8",
-  "registration_or_submission_performed": false,
-  "pdfs": {
-    "main.pdf": {
-      "pages": 13,
-      "letter_pages": true,
-      "actual_source_commit_link_present": true,
-      "sha256": "abb9eb255cc375f34a479e1011c1ea693d8e233257ec962c8a0d5a2a2a31b20c",
-      "source_url_visibly_printed": true
-    },
-    "supplement.pdf": {
-      "pages": 16,
-      "letter_pages": true,
-      "actual_source_commit_link_present": true,
-      "sha256": "bc60a99496c0417479f4764f939a048f304eafdbff165f716c3ca77e559ef38b"
-    }
+  "abstract_words": 201,
+  "abstract_matches_tex_public_txt_and_rendered_pdf": true,
+  "abstract_only_sha256": "17c66548568ee4d430318b71ab7c03205d732fdcca9dda41acc88e76f28a8378",
+  "formal_mathematical_environments_unchanged": {
+    "main": true,
+    "supplement": true
   },
   "visual_qa": {
-    "all_13_main_pages_reviewed": true,
-    "all_16_supplement_pages_reviewed": true,
-    "render_long_edge_pixels": 1400,
+    "main_pages_reviewed": 13,
+    "supplement_pages_reviewed": 16,
     "clipping_or_overlap": false,
-    "figure_legends_and_labels_readable": true,
-    "numbering_correct": true
+    "figure_labels_readable": true
   },
   "latex_checks": {
-    "undefined_citations_or_references": false,
+    "undefined_references_or_citations": false,
     "overfull_boxes": false,
-    "underfull_main_table_cells": 2,
-    "underfull_note": "Inherited Table1 phrase wrapping; visually inspected and benign.",
-    "supplement_warnings": 0
+    "warnings": false
   },
-  "stale_availability_and_placeholder_scan": "passed",
-  "minimal_edits": [
-    "Two requested abstract text fixes",
-    "Actual immutable source link in both PDFs",
-    "Exact chart clearance description",
-    "Breast-specific baseline column labels",
-    "Main Table3 cross-reference",
-    "All-question denominators alongside eligible-question denominators",
-    "Runtime input and source-binding statement",
-    "Restored missing generated original_saturation_table.tex from original CSVs"
+  "scientific_checks": [
+    "Invariance fractions recomputed from both primary interval CSVs",
+    "Eight- and 17-budget tightening counts recomputed",
+    "Co-detection values checked against both joint-marker summaries",
+    "Proseg output-background percentages checked",
+    "Adaptive-fallback dominance not asserted"
   ],
+  "corrections": [
+    "Rewrite abstract and narrative around exact count certification",
+    "Add three-panel geometry schematic",
+    "Clarify cut representation and direct count DP roles",
+    "Report invariance and joint-marker results in the main paper",
+    "Correct breast EPCAM/PECAM1 co-detection summary",
+    "Add affiliation and contact; consolidate interpretation limits"
+  ],
+  "source_url_visibly_printed": true,
+  "registration_or_submission_performed": false,
   "sha256": {
     "figures/atlas_reference.pdf": "a3cb38999948ec3a251520bfcdba423697a43e351e6ea322ecf7e3d80bbd637e",
     "figures/atlas_reference.png": "f9bd29e856261f2cfb52ab0a216e73a04603d3364f97a4e2bd14024b06f44239",
@@ -62,66 +52,22 @@
     "figures/chain_scaling.png": "7a5147a4ccc9fe2b3290f9d1ff5048467233bf0a1cb98dace3be36dbd17bc458",
     "figures/count_curve.pdf": "f82920c9cdada88c21a8f2c8e52c51a1ccee660b0bc169cbc17ef6c484f95fd6",
     "figures/count_curve.png": "b57d642b38e0703f8f6baf85dbdf4de24e3c2a6b291a47ea6454f3142086819a",
-    "figures/reach_coverage.pdf": "8989009c1085fcbf3bcd70ce6fc0aea07233028b7df83e24eb867d9805be62c9",
-    "figures/reach_coverage.png": "ef4ec1b571d351bb1f9e1703e19c78ff240e388baf7f3291e48c54439fa1a2e5",
+    "figures/geometry_pipeline.pdf": "7cc2b4e37e72e2e5df6169b2b6884455961b423ec3256b105c43f5df00709998",
+    "figures/geometry_pipeline.png": "94a2a9062692a7c00b64d0294c8b9ca8303d42b52017414707cf0f3815466ca0",
+    "figures/reach_coverage.pdf": "652dc37b367308cdfe25a33a296cc03e7f171d78ba77c221c40589fd661987f1",
+    "figures/reach_coverage.png": "b74a8460d36265b54ffb951b19964b4ae17dcf82455bd815ef27ca217f98a016",
     "figures/width_budget.pdf": "052b3353149eb0ece044121c0b8fe87c3ec08350021ff0848fc062ef9da9b17c",
     "figures/width_budget.png": "e01547e54bb26cf92c1f88e261b5d182a95a58bf12da15f850f9708f35e5af1c",
-    "main.pdf": "abb9eb255cc375f34a479e1011c1ea693d8e233257ec962c8a0d5a2a2a31b20c",
-    "main.tex": "df693cbfeee3cc7d28a037ab2b2bd6a361569707648a0260c5f32f20f18fbb99",
-    "original_saturation_table.tex": "f13988f5cdf10dcac79a5d33b9ef291133c5f2a3aaf827c7a9ce8186e63da2a6",
-    "reach_budget_tables.tex": "2bc5f592e653ef823c58ef1a7436a8ff989eb7f87e2bb9a3c1174369d2516ad5",
+    "main.pdf": "8b9d1f3a98090036090b787316bd179f191be0419ac28c0e500434e62604dcc9",
+    "main.tex": "46d1e6de77c27542b88f6c9ca068f9d06df34bf899c995c5d0a1fbfb1d785338",
+    "original_saturation_table.tex": "f252740a7c2fa583317ea804c1ef709f637402b248e538221d0645405ef2b374",
+    "reach_budget_tables.tex": "46803f4508c137576ba86c1dd04efc1acd0fb3d6b27675a1b86b7d2c57226228",
     "reach_table.tex": "6d2465a080f7b7b2753e45a8dd6b6df1aeb528ddf682326074f6756fae1b0868",
     "references.tex": "715eeb8dd5526bf353a094468028e610902463a575c9d6e265932b14d35c6693",
+    "scripts/geometry_pipeline.py": "16fa4db263e4b7235edb080429339a9ce518733d0eb2e0e49f0127511eff34da",
+    "scripts/reach_figures.py": "b133dbf1cd14b940eab968d1dcf01d1ee961577685bdc07c26f4dc64d493c021",
     "supp_references.tex": "9f00bb8ebeadc73be680af3ecc6801095bc04bf3e205f18b41f72eab4c8f9c85",
-    "supplement.pdf": "bc60a99496c0417479f4764f939a048f304eafdbff165f716c3ca77e559ef38b",
-    "supplement.tex": "a8aac1b93dbf1b96e7eeb6822b99b5dd2bd7c71619171947b3840530de8a4528"
-  },
-  "package_include": [
-    "*.tex",
-    "main.pdf",
-    "supplement.pdf",
-    "figures/*.pdf",
-    "figures/*.png",
-    "manuscript_validation.json"
-  ],
-  "package_exclude": [
-    "*.aux",
-    "*.out",
-    "*.log",
-    "QA contact sheets and rendered pages"
-  ],
-  "final_github_edit": {
-    "date": "2026-10-28",
-    "changes": [
-      "Print full immutable source URL in main paper Software and disclosure paragraph",
-      "Remove supplied before Proseg 3.2.0 executions in section 5.5"
-    ],
-    "only_changed_pdf_pages": [
-      10,
-      11
-    ],
-    "body_pages": 10,
-    "abstract_tex_and_rendered_page_unchanged": true,
-    "supplement_and_figures_byte_identical": true,
-    "source_diff_exactly_requested_edits": true,
-    "affected_pages_visually_checked": true,
-    "clipping_or_overlap": false,
-    "source_url_visibly_printed_and_clickable": true,
-    "overfull_boxes": false,
-    "undefined_references_or_citations": false,
-    "underfull_boxes": 2,
-    "underfull_note": "Same inherited benign Table 1 cells as prior build."
-  },
-  "editorial_review": {
-    "scientific_source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
-    "prose_replacements": 14,
-    "abstract_unchanged": true,
-    "mathematical_environments_unchanged": true,
-    "numeric_tokens_unchanged": true,
-    "citations_and_labels_unchanged": true,
-    "full_ai_assistance_disclosure_retained": true,
-    "reproduction_commands_on_one_page": true,
-    "main_body_pages": 10,
-    "supplement_pages": 16
+    "supplement.pdf": "ecddc0db23c795a0ae7f0f62fc53b68ad91949343ab16437c910252a1d5f0e83",
+    "supplement.tex": "34994ab787d4aa1c73a14122bece89b373e098ffe21a914c52f7ba7c7b17fe99"
   }
 }
