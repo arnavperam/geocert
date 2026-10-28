@@ -1,0 +1,429 @@
+{
+  "archived_reanalysis": {
+    "uncontracted": {
+      "direct": {
+        "all": {
+          "models": 84,
+          "queries": 252,
+          "median_seconds": 4.127427646999763,
+          "time_range": [
+            3.988472953999917,
+            4.568922324000027
+          ],
+          "median_compile": 1.2053897879998203,
+          "median_scc_prepare": 0,
+          "median_queries": 2.9151206569996475,
+          "nodes_sum": 1806,
+          "arcs_sum": 13212,
+          "max_nodes": 76,
+          "min_nodes": 6,
+          "peak_rss_mib_range": [
+            175.73828125,
+            176.45703125
+          ]
+        },
+        "optional": {
+          "models": 48,
+          "queries": 144,
+          "median_seconds": 3.146969884999976,
+          "time_range": [
+            3.041374191999921,
+            3.51385316999972
+          ],
+          "median_compile": 0.9262824239999645,
+          "median_scc_prepare": 0,
+          "median_queries": 2.2161240479996422,
+          "nodes_sum": 1365,
+          "arcs_sum": 10306,
+          "max_nodes": 76,
+          "min_nodes": 8,
+          "peak_rss_mib_range": [
+            175.73828125,
+            176.45703125
+          ]
+        },
+        "fixed": {
+          "models": 36,
+          "queries": 108,
+          "median_seconds": 0.9804577619997872,
+          "time_range": [
+            0.947098761999996,
+            1.0550691540003072
+          ],
+          "median_compile": 0.2791073639998558,
+          "median_scc_prepare": 0,
+          "median_queries": 0.6989966090000053,
+          "nodes_sum": 441,
+          "arcs_sum": 2906,
+          "max_nodes": 40,
+          "min_nodes": 6,
+          "peak_rss_mib_range": [
+            175.73828125,
+            176.45703125
+          ]
+        }
+      },
+      "height": {
+        "all": {
+          "models": 84,
+          "queries": 252,
+          "median_seconds": 23.559976008000376,
+          "time_range": [
+            23.375248957000736,
+            25.637852070999656
+          ],
+          "median_compile": 13.178887823999958,
+          "median_scc_prepare": 0,
+          "median_queries": 10.38434170099913,
+          "nodes_sum": 37052,
+          "arcs_sum": 149120,
+          "max_nodes": 7553,
+          "min_nodes": 6,
+          "peak_rss_mib_range": [
+            205.23828125,
+            205.2578125
+          ]
+        },
+        "optional": {
+          "models": 48,
+          "queries": 144,
+          "median_seconds": 23.101156330000208,
+          "time_range": [
+            22.915973747000407,
+            25.125043426999923
+          ],
+          "median_compile": 12.856569241000102,
+          "median_scc_prepare": 0,
+          "median_queries": 10.253365471999814,
+          "nodes_sum": 36611,
+          "arcs_sum": 146214,
+          "max_nodes": 7553,
+          "min_nodes": 75,
+          "peak_rss_mib_range": [
+            205.23828125,
+            205.2578125
+          ]
+        },
+        "fixed": {
+          "models": 36,
+          "queries": 108,
+          "median_seconds": 0.4592752100003281,
+          "time_range": [
+            0.4588196780001681,
+            0.5128086439997332
+          ],
+          "median_compile": 0.3265409790005833,
+          "median_scc_prepare": 0,
+          "median_queries": 0.13475339300021005,
+          "nodes_sum": 441,
+          "arcs_sum": 2906,
+          "max_nodes": 40,
+          "min_nodes": 6,
+          "peak_rss_mib_range": [
+            205.23828125,
+            205.2578125
+          ]
+        }
+      },
+      "paired": {
+        "optional": {
+          "models": 48,
+          "median_model_median_ratio": 4.701666866261734,
+          "direct_faster": 48,
+          "height_faster": 0
+        },
+        "fixed": {
+          "models": 36,
+          "median_model_median_ratio": 0.4867222095164314,
+          "direct_faster": 0,
+          "height_faster": 36
+        }
+      }
+    }
+  },
+  "fresh_scc_experiment": {
+    "uncontracted": {
+      "direct": {
+        "all": {
+          "models": 84,
+          "queries": 252,
+          "median_seconds": 4.265857301999688,
+          "time_range": [
+            4.158397491000187,
+            4.321719292999944
+          ],
+          "median_compile": 1.2162023259998591,
+          "median_scc_prepare": 4.1562000035355595e-05,
+          "median_queries": 3.0277936370001726,
+          "nodes_sum": 1806,
+          "arcs_sum": 13212,
+          "max_nodes": 76,
+          "min_nodes": 6,
+          "peak_rss_mib_range": [
+            175.734375,
+            175.98828125
+          ]
+        },
+        "optional": {
+          "models": 48,
+          "queries": 144,
+          "median_seconds": 3.278120604000094,
+          "time_range": [
+            3.1894931350000206,
+            3.319487773999981
+          ],
+          "median_compile": 0.9421365039999614,
+          "median_scc_prepare": 2.5505999985853123e-05,
+          "median_queries": 2.320303393000245,
+          "nodes_sum": 1365,
+          "arcs_sum": 10306,
+          "max_nodes": 76,
+          "min_nodes": 8,
+          "peak_rss_mib_range": [
+            175.734375,
+            175.98828125
+          ]
+        },
+        "fixed": {
+          "models": 36,
+          "queries": 108,
+          "median_seconds": 0.9877366979995941,
+          "time_range": [
+            0.9689043560001664,
+            1.002231518999963
+          ],
+          "median_compile": 0.2740658219998977,
+          "median_scc_prepare": 1.3375999913023406e-05,
+          "median_queries": 0.7074902439999278,
+          "nodes_sum": 441,
+          "arcs_sum": 2906,
+          "max_nodes": 40,
+          "min_nodes": 6,
+          "peak_rss_mib_range": [
+            175.734375,
+            175.98828125
+          ]
+        }
+      },
+      "height": {
+        "all": {
+          "models": 84,
+          "queries": 252,
+          "median_seconds": 25.92765145900006,
+          "time_range": [
+            25.532431481999197,
+            27.739518676999978
+          ],
+          "median_compile": 13.866862998999522,
+          "median_scc_prepare": 4.728700002942787e-05,
+          "median_queries": 11.97771697200011,
+          "nodes_sum": 37052,
+          "arcs_sum": 149120,
+          "max_nodes": 7553,
+          "min_nodes": 6,
+          "peak_rss_mib_range": [
+            205.171875,
+            205.2734375
+          ]
+        },
+        "optional": {
+          "models": 48,
+          "queries": 144,
+          "median_seconds": 25.441851102000044,
+          "time_range": [
+            24.986693963999528,
+            27.20158110899979
+          ],
+          "median_compile": 13.52953712499965,
+          "median_scc_prepare": 3.0675000118662865e-05,
+          "median_queries": 11.841853725000362,
+          "nodes_sum": 36611,
+          "arcs_sum": 146214,
+          "max_nodes": 7553,
+          "min_nodes": 75,
+          "peak_rss_mib_range": [
+            205.171875,
+            205.2734375
+          ]
+        },
+        "fixed": {
+          "models": 36,
+          "queries": 108,
+          "median_seconds": 0.5379375680001885,
+          "time_range": [
+            0.48580035700001645,
+            0.5457375179996689
+          ],
+          "median_compile": 0.3599028140001792,
+          "median_scc_prepare": 1.6611999910765007e-05,
+          "median_queries": 0.15488196999996262,
+          "nodes_sum": 441,
+          "arcs_sum": 2906,
+          "max_nodes": 40,
+          "min_nodes": 6,
+          "peak_rss_mib_range": [
+            205.171875,
+            205.2734375
+          ]
+        }
+      },
+      "paired": {
+        "optional": {
+          "models": 48,
+          "median_model_median_ratio": 5.240723244328292,
+          "direct_faster": 48,
+          "height_faster": 0
+        },
+        "fixed": {
+          "models": 36,
+          "median_model_median_ratio": 0.5229660734286432,
+          "direct_faster": 0,
+          "height_faster": 36
+        }
+      }
+    },
+    "scc": {
+      "direct": {
+        "all": {
+          "models": 84,
+          "queries": 252,
+          "median_seconds": 4.530190418000075,
+          "time_range": [
+            4.300802464000128,
+            4.586317615000041
+          ],
+          "median_compile": 1.3211350450002897,
+          "median_scc_prepare": 0.01684713300051044,
+          "median_queries": 3.12176095299958,
+          "nodes_sum": 1431,
+          "arcs_sum": 7855,
+          "max_nodes": 74,
+          "min_nodes": 4,
+          "peak_rss_mib_range": [
+            175.98046875,
+            175.99609375
+          ]
+        },
+        "optional": {
+          "models": 48,
+          "queries": 144,
+          "median_seconds": 3.4172872450000114,
+          "time_range": [
+            3.2436277640001094,
+            3.509544989999938
+          ],
+          "median_compile": 1.0256177550000984,
+          "median_scc_prepare": 0.012990528000045742,
+          "median_queries": 2.334922352000035,
+          "nodes_sum": 1094,
+          "arcs_sum": 6151,
+          "max_nodes": 74,
+          "min_nodes": 6,
+          "peak_rss_mib_range": [
+            175.98046875,
+            175.99609375
+          ]
+        },
+        "fixed": {
+          "models": 36,
+          "queries": 108,
+          "median_seconds": 1.0767726250001033,
+          "time_range": [
+            1.0571747000000187,
+            1.1129031730000634
+          ],
+          "median_compile": 0.2955172900001912,
+          "median_scc_prepare": 0.0038389710001638377,
+          "median_queries": 0.7710350429999835,
+          "nodes_sum": 337,
+          "arcs_sum": 1704,
+          "max_nodes": 32,
+          "min_nodes": 4,
+          "peak_rss_mib_range": [
+            175.98046875,
+            175.99609375
+          ]
+        }
+      },
+      "height": {
+        "all": {
+          "models": 84,
+          "queries": 252,
+          "median_seconds": 19.53951960299969,
+          "time_range": [
+            17.81671595600028,
+            19.62501058300029
+          ],
+          "median_compile": 13.978758705999951,
+          "median_scc_prepare": 0.3380176120003284,
+          "median_queries": 4.931484864000311,
+          "nodes_sum": 6473,
+          "arcs_sum": 27010,
+          "max_nodes": 936,
+          "min_nodes": 4,
+          "peak_rss_mib_range": [
+            188.48046875,
+            188.625
+          ]
+        },
+        "optional": {
+          "models": 48,
+          "queries": 144,
+          "median_seconds": 19.041921330999855,
+          "time_range": [
+            17.361857750000127,
+            19.13068192800023
+          ],
+          "median_compile": 13.649260972000036,
+          "median_scc_prepare": 0.3342083320000597,
+          "median_queries": 4.790325176000238,
+          "nodes_sum": 6136,
+          "arcs_sum": 25306,
+          "max_nodes": 936,
+          "min_nodes": 19,
+          "peak_rss_mib_range": [
+            188.48046875,
+            188.625
+          ]
+        },
+        "fixed": {
+          "models": 36,
+          "queries": 108,
+          "median_seconds": 0.49432865500006073,
+          "time_range": [
+            0.4548582060001536,
+            0.4975982719998342
+          ],
+          "median_compile": 0.329497733999915,
+          "median_scc_prepare": 0.0038092800002687,
+          "median_queries": 0.14115968800007295,
+          "nodes_sum": 337,
+          "arcs_sum": 1704,
+          "max_nodes": 32,
+          "min_nodes": 4,
+          "peak_rss_mib_range": [
+            188.48046875,
+            188.625
+          ]
+        }
+      },
+      "paired": {
+        "optional": {
+          "models": 48,
+          "median_model_median_ratio": 3.884287419650536,
+          "direct_faster": 48,
+          "height_faster": 0
+        },
+        "fixed": {
+          "models": 36,
+          "median_model_median_ratio": 0.4448291112615985,
+          "direct_faster": 0,
+          "height_faster": 36
+        }
+      }
+    }
+  },
+  "fresh_processes": 12,
+  "exact_queries_per_run": 252,
+  "all_exact_objectives_agree": true
+}

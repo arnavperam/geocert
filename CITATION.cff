@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript when using this implementation."
+type: software
+title: "GeoCert-ST: Exact Joint Deformation Costs for Continuous RNA-Ownership Sensitivity"
+authors:
+  - family-names: Peram
+    given-names: Arnav
+version: 1.0.0
+repository-code: "https://github.com/arnavperam/geocert"
+abstract: "Exact ownerwise integrated-deformation representations and reproducible local-corridor sensitivity experiments."

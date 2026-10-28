@@ -8,6 +8,7 @@ on:
       - 'data/**'
       - 'tests/**'
       - 'geocert.py'
+      - 'SHA256SUMS.txt'
       - '.github/workflows/check.yml'
   pull_request:
   workflow_dispatch:
@@ -27,12 +28,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Check scientific artifact
-        shell: bash
         run: |
-          if [ ! -f geocert.py ]; then
-            echo 'Source import is not present in this commit.'
-            exit 0
-          fi
           python geocert.py verify-manifest
           python tests/test_scc.py
           python tests/test_prefix_bound.py
