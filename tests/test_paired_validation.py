@@ -46,6 +46,9 @@ def main():
     bad=copy.deepcopy(d['nominal']);bad['records'][0]['truth_boundaries']=[[]]
     try: validate_dataset(bad);raise AssertionError('Missing truth accepted')
     except ValueError as e: assert 'boundary' in str(e)
+    bad=copy.deepcopy(d['nominal']);bad.pop('coordinate_unit')
+    try: validate_dataset(bad);raise AssertionError('Unknown units accepted')
+    except ValueError as e: assert 'unit' in str(e)
     # Independent rank formula check against explicit positive-negative pairs.
     y=[0,1,1,0,1];s=[1,2,2,3,1]
     expected=sum(F(int(s[i]>s[j]))+F(int(s[i]==s[j]),2) for i in range(5) if y[i]

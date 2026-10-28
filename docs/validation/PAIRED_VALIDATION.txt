@@ -85,6 +85,8 @@ Input contract
 Use schema geocert.paired_boundaries.v1. The complete examples are the compressed
 JSON inputs; read them with gzip.open(path, 'rt') and json.load.
 Top-level fields:
+- coordinate_unit: synthetic_length_unit for these fixtures; external paired
+  measurements must use micrometre consistently, with budgets in squared units.
 - protocol_id, provenance, evidence_kind and optional training_units.
 - outside_assignments_fixed must be true for this current local model.
 - records contains one entry per paired observation.

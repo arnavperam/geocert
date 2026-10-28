@@ -30,7 +30,7 @@ def generate():
                                for g in ['SYN_A','SYN_B'] for o in [0,1]]})
     base={'schema':'geocert.paired_boundaries.v1','protocol_id':plan['protocol_id'],
           'protocol_sha256':hashlib.sha256(raw).hexdigest(),'evidence_kind':'synthetic_fixture',
-          'outside_assignments_fixed':True,'training_units':[],
+          'coordinate_unit':'synthetic_length_unit','outside_assignments_fixed':True,'training_units':[],
           'provenance':'Generated two-cell triangular-boundary software fixture. No donors, microscopy, real segmenter or tissue shape model.',
           'records':records}
     output={}

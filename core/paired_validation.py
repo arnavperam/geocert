@@ -63,6 +63,10 @@ def wilson(successes, total):
 def validate_dataset(data):
     if data.get('schema') != 'geocert.paired_boundaries.v1':
         raise ValueError('Unsupported paired data schema')
+    if data.get('coordinate_unit') not in ('micrometre', 'synthetic_length_unit'):
+        raise ValueError('A common explicit coordinate unit is required')
+    if data.get('evidence_kind') == 'externally_supplied_paired_boundaries' and data['coordinate_unit'] != 'micrometre':
+        raise ValueError('External paired coordinates must be converted to micrometres')
     if data.get('outside_assignments_fixed') is not True:
         raise ValueError('Current intervals require fixed outside assignments')
     if data.get('evidence_kind') not in ('synthetic_fixture', 'externally_supplied_paired_boundaries'):
@@ -194,6 +198,7 @@ def run_validation(data, alpha=F(1, 10), budgets=(F(0), F(1, 100), F(1, 20), F(1
             'macro_count_coverage':macro_coverage,'macro_interval_width':macro_width,
             'joint_strictly_tighter_rows':sum(r['lower']>r['singleton_lower'] or r['upper']<r['singleton_upper'] for r in rr)})
     return {'schema':'geocert.paired_validation.v1','protocol_id':data['protocol_id'],
+            'coordinate_unit':data['coordinate_unit'],'budget_unit':data['coordinate_unit']+' squared',
             'evidence_kind':data['evidence_kind'],'calibration':fit,'calibration_units':cal,'evaluation_units':test,
             'unit_scores':unit_scores,'summaries':summaries,'intervals':rows,'boundary_audit':boundary_audit,
             'pooled_error_ranking':{name:ranking_metrics(labels,ss) for name,ss in rank_scores.items()},
