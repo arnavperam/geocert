@@ -1,0 +1,33 @@
+name: Package published-method evidence
+on:
+  push:
+    branches: [research/global-patch-certificates]
+    paths: ['.github/workflows/package-proseg-evidence.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CARGO_PROFILE_RELEASE_DEBUG: '0'
+      CARGO_BUILD_JOBS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build pinned upstream executable
+        run: |
+          cargo install --locked --version 3.2.0 --bin proseg --jobs 2 proseg
+          mkdir -p run/evidence/bin
+          cp "$HOME/.cargo/bin/proseg" run/evidence/bin/proseg
+          cp -r results/proseg_locked run/evidence/
+          if [ -d results/proseg_unfactorized ]; then cp -r results/proseg_unfactorized run/evidence/; fi
+          cp evaluation/global_patch_protocol.md evaluation/proseg_amendment.md run/evidence/
+          sha256sum run/evidence/bin/proseg > run/evidence/binary.sha256
+          rustc --version > run/evidence/rust_version.txt
+          git rev-parse HEAD > run/evidence/source_revision.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: proseg-original-output-evidence
+          path: run/evidence
+          retention-days: 30
