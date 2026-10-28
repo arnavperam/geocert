@@ -1,0 +1,245 @@
+{
+  "version": "proseg 3.2.0",
+  "binary_sha256": "3de3ce70bebfad533b1cb4ace72ab2c923860e57e45821fe304431609b2f645e",
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "protocol": "evaluation/global_patch_protocol.md",
+  "scope": "published-method comparison on existing development crops; not truth or calibration",
+  "runs": [
+    {
+      "roi": "roi_01",
+      "mode": "fixed_xy",
+      "command": [
+        "/home/runner/.cargo/bin/proseg",
+        "--xenium",
+        "--nthreads",
+        "2",
+        "--output-spatialdata",
+        "spatial.zarr",
+        "--output-transcript-metadata",
+        "transcripts.csv.gz",
+        "--output-cell-metadata",
+        "cells.csv.gz",
+        "--output-gene-metadata",
+        "genes.csv.gz",
+        "--output-counts",
+        "counts.mtx.gz",
+        "--output-cell-polygons",
+        "polygons.geojson.gz",
+        "--ignore-z-coord",
+        "--voxel-layers",
+        "1",
+        "--no-diffusion",
+        "/home/runner/work/geocert/geocert/results/proseg_locked/roi_01_input.csv.gz"
+      ],
+      "input_rows": 5847,
+      "input_parquet_sha256": "e46ad6139dcc5035c3606f84c721f9114f5e2576c67fdcc706b116092e47afc0",
+      "sampling_defaults": {
+        "burnin": 200,
+        "samples": 200,
+        "hillclimb": 50
+      },
+      "stochastic": "one realization; upstream does not expose a seed option",
+      "returncode": 101,
+      "elapsed_seconds": 0.06405976100000998,
+      "outputs": {
+        "stderr.log": {
+          "bytes": 287,
+          "sha256": "caa843e56caa528cf6643efec1380406a8744a863db5ca9a1d2593d016d72194"
+        },
+        "stdout.log": {
+          "bytes": 39,
+          "sha256": "89938a80fb2324904b22b6cd35af501245a50a6d76803060f81259f9c7444c74"
+        }
+      }
+    },
+    {
+      "roi": "roi_01",
+      "mode": "default",
+      "command": [
+        "/home/runner/.cargo/bin/proseg",
+        "--xenium",
+        "--nthreads",
+        "2",
+        "--output-spatialdata",
+        "spatial.zarr",
+        "--output-transcript-metadata",
+        "transcripts.csv.gz",
+        "--output-cell-metadata",
+        "cells.csv.gz",
+        "--output-gene-metadata",
+        "genes.csv.gz",
+        "--output-counts",
+        "counts.mtx.gz",
+        "--output-cell-polygons",
+        "polygons.geojson.gz",
+        "/home/runner/work/geocert/geocert/results/proseg_locked/roi_01_input.csv.gz"
+      ],
+      "input_rows": 5847,
+      "input_parquet_sha256": "e46ad6139dcc5035c3606f84c721f9114f5e2576c67fdcc706b116092e47afc0",
+      "sampling_defaults": {
+        "burnin": 200,
+        "samples": 200,
+        "hillclimb": 50
+      },
+      "stochastic": "one realization; upstream does not expose a seed option",
+      "returncode": 101,
+      "elapsed_seconds": 0.06398132200001783,
+      "outputs": {
+        "stderr.log": {
+          "bytes": 287,
+          "sha256": "0d24d77230aa337aafd81b7128e966a3879607c3ca4882bb9f1e407532754c66"
+        },
+        "stdout.log": {
+          "bytes": 39,
+          "sha256": "89938a80fb2324904b22b6cd35af501245a50a6d76803060f81259f9c7444c74"
+        }
+      }
+    },
+    {
+      "roi": "roi_02",
+      "mode": "fixed_xy",
+      "command": [
+        "/home/runner/.cargo/bin/proseg",
+        "--xenium",
+        "--nthreads",
+        "2",
+        "--output-spatialdata",
+        "spatial.zarr",
+        "--output-transcript-metadata",
+        "transcripts.csv.gz",
+        "--output-cell-metadata",
+        "cells.csv.gz",
+        "--output-gene-metadata",
+        "genes.csv.gz",
+        "--output-counts",
+        "counts.mtx.gz",
+        "--output-cell-polygons",
+        "polygons.geojson.gz",
+        "--ignore-z-coord",
+        "--voxel-layers",
+        "1",
+        "--no-diffusion",
+        "/home/runner/work/geocert/geocert/results/proseg_locked/roi_02_input.csv.gz"
+      ],
+      "input_rows": 1523,
+      "input_parquet_sha256": "d77f0d97f0768bffb296b138b609ddefed54d5f7f74d5fd9091dc3875d1eec47",
+      "sampling_defaults": {
+        "burnin": 200,
+        "samples": 200,
+        "hillclimb": 50
+      },
+      "stochastic": "one realization; upstream does not expose a seed option",
+      "returncode": 0,
+      "elapsed_seconds": 3.071196686999997,
+      "outputs": {
+        "rebalanced_membership_debug.txt": {
+          "bytes": 350,
+          "sha256": "54783bbc2698be71e153355bdd820d65d6c8279d195a3f42faee6a2d7e048994"
+        },
+        "membership_debug.txt": {
+          "bytes": 350,
+          "sha256": "36f5adcd878330eec1b4a8ad46303cecab9e02b623d0501a4c182078200a14b7"
+        },
+        "transcripts.csv.gz": {
+          "bytes": 27565,
+          "sha256": "223ed26eb223dbcf3faa639c80d88b8e360283d2c6d5bf31ac9ece95037dc696"
+        },
+        "stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "counts.mtx.gz": {
+          "bytes": 713,
+          "sha256": "4108d0e522717396077bb31958decc88f1b784b8054f274d636e1ae1f35b1c6b"
+        },
+        "stdout.log": {
+          "bytes": 122,
+          "sha256": "bce201a486a105d5a97889b899dae211be3eed31a1c88f0d4a8ba209154195db"
+        },
+        "polygons.geojson.gz": {
+          "bytes": 5278,
+          "sha256": "b0103102310e67c566660e57ab5a48f321debb8ed9c7eb707cbd969d6c3e82d9"
+        },
+        "cells.csv.gz": {
+          "bytes": 1629,
+          "sha256": "35c953e6a6d363530cb7f03ca9a1b1408fdc1497ec686d57ac64f59a34b32a6f"
+        },
+        "genes.csv.gz": {
+          "bytes": 6482,
+          "sha256": "dcace94b28b678df1ddce9db38edab343a4ea8f2b873b9037069358c48208314"
+        }
+      }
+    },
+    {
+      "roi": "roi_02",
+      "mode": "default",
+      "command": [
+        "/home/runner/.cargo/bin/proseg",
+        "--xenium",
+        "--nthreads",
+        "2",
+        "--output-spatialdata",
+        "spatial.zarr",
+        "--output-transcript-metadata",
+        "transcripts.csv.gz",
+        "--output-cell-metadata",
+        "cells.csv.gz",
+        "--output-gene-metadata",
+        "genes.csv.gz",
+        "--output-counts",
+        "counts.mtx.gz",
+        "--output-cell-polygons",
+        "polygons.geojson.gz",
+        "/home/runner/work/geocert/geocert/results/proseg_locked/roi_02_input.csv.gz"
+      ],
+      "input_rows": 1523,
+      "input_parquet_sha256": "d77f0d97f0768bffb296b138b609ddefed54d5f7f74d5fd9091dc3875d1eec47",
+      "sampling_defaults": {
+        "burnin": 200,
+        "samples": 200,
+        "hillclimb": 50
+      },
+      "stochastic": "one realization; upstream does not expose a seed option",
+      "returncode": 0,
+      "elapsed_seconds": 3.4220576940000456,
+      "outputs": {
+        "rebalanced_membership_debug.txt": {
+          "bytes": 350,
+          "sha256": "078ff0d53ae95c074879b336de11e43e6c0c777f99ea8d6bfa2d22589fc5f44b"
+        },
+        "membership_debug.txt": {
+          "bytes": 350,
+          "sha256": "c1b7f26577886226d091abb24b4142d30b80eb492efc46a4958bc33ef60c6036"
+        },
+        "transcripts.csv.gz": {
+          "bytes": 39661,
+          "sha256": "1179fafe163b376a5bc66140989735a89208b215091c876819310b8159a0b94f"
+        },
+        "stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "counts.mtx.gz": {
+          "bytes": 298,
+          "sha256": "42f50c93c08305466a7af51d7fccb0da47aaaeb20f2087188d378fc2485329d6"
+        },
+        "stdout.log": {
+          "bytes": 122,
+          "sha256": "bce201a486a105d5a97889b899dae211be3eed31a1c88f0d4a8ba209154195db"
+        },
+        "polygons.geojson.gz": {
+          "bytes": 12076,
+          "sha256": "00cd34e4ab3e2e0f005b29f2b45b8e656cd58dbe006f65aadf887af8c5ea1168"
+        },
+        "cells.csv.gz": {
+          "bytes": 2070,
+          "sha256": "6b1c544e5b989481cac6b1cfdc3ec0b8e497fa9e2f3787d6a2f626424b2b4021"
+        },
+        "genes.csv.gz": {
+          "bytes": 20203,
+          "sha256": "510039a229ece95bb1d7cacb97393b9fe34d1ec3ca6766e850852355351f3de2"
+        }
+      }
+    }
+  ]
+}

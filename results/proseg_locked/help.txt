@@ -1,0 +1,229 @@
+High-speed cell segmentation of transcript-resolution spatial transcriptomics data.
+
+Usage: proseg [OPTIONS] <TRANSCRIPT_CSV> [PARQUET_FMT]
+
+Arguments:
+  <TRANSCRIPT_CSV>  CSV with transcript information. How this is interpreted is determined either by using a preset (`--xenium`, `--cosmx`, `--cosmx-micron`, `--merfish`) or by manually setting column names using (`--x-column`, `--transcript-column`, etc)
+  [PARQUET_FMT]     Platform-specific format to use when reading parquet files [default: none] [possible values: none, xenium, merfish2]
+
+Options:
+      --xenium
+          Preset for 10X Xenium data
+      --cosmx
+          Preset for NanoString CosMx data that using pixel coordinates. Output will still be in microns
+      --cosmx-micron
+          Preset for NanoString CosMx data that has been pre-scaled to microns
+      --merscope
+          Preset for Vizgen MERFISH/MERSCOPE
+      --merfish
+          Alias for preset for Vizgen MERFISH/MERSCOPE
+      --anndata
+          Input is a zarr encoded AnnData object
+      --zarr
+          Input file is a zarr encoded spatialdata object
+      --spatialdata-table <SPATIALDATA_TABLE>
+          If specified, transcripts are read from the table, rather than from points
+      --anndata-coordinate-key <ANNDATA_COORDINATE_KEY>
+          Key in the AnnData obsm dict holding spot coordinates [default: spatial]
+      --excluded-genes <EXCLUDED_GENES>
+          Regex pattern matching names of genes/features to be excluded
+      --use-cell-initialization
+          Initialize with cell assignments rather than nucleus assignments
+      --visiumhd
+          Preset for Visium HD
+      --non-unique-cell-ids
+          Specify if ids may be re-used in different fovs in the input data
+      --gene-column <GENE_COLUMN>
+          Name of column containing the feature/gene name
+      --transcript-id-column <TRANSCRIPT_ID_COLUMN>
+          Name of column containing the transcript ID
+      --cellpose-masks <CELLPOSE_MASKS>
+          Cellpose cell masks matrix in .npy format
+      --cellpose-masks-fixed <CELLPOSE_MASKS_FIXED>
+          Cellpose cell masks matrix in .npy format which proseg will leave fixed
+      --unmodeled-fixed-cells
+          Exclude fixed cells from the background noise model
+      --spaceranger-barcode-mappings <SPACERANGER_BARCODE_MAPPINGS>
+          Spaceranger Visium HD segmentation parquet file
+      --cellpose-cellprobs <CELLPOSE_CELLPROBS>
+          Cellpose cell probability matrix in .npy format
+      --cellpose-x-transform <CELLPOSE_X_TRANSFORM> <CELLPOSE_X_TRANSFORM> <CELLPOSE_X_TRANSFORM>
+          
+      --cellpose-y-transform <CELLPOSE_Y_TRANSFORM> <CELLPOSE_Y_TRANSFORM> <CELLPOSE_Y_TRANSFORM>
+          
+      --cellpose-scale <CELLPOSE_SCALE>
+          
+      --cellpose-cellprob-discount <CELLPOSE_CELLPROB_DISCOUNT>
+          [default: 0.85]
+      --expand-initialized-cells <EXPAND_INITIALIZED_CELLS>
+          Expand initialized cells outward by this many voxels [default: 0]
+  -x, --x-column <X_COLUMN>
+          Name of column containing the x coordinate
+  -y, --y-column <Y_COLUMN>
+          Name of column containing the y coordinate
+  -z, --z-column <Z_COLUMN>
+          Name of column containing the z coordinate
+      --compartment-column <COMPARTMENT_COLUMN>
+          Name of column containing the cellular compartment
+      --compartment-nuclear <COMPARTMENT_NUCLEAR>
+          Value in the cellular compartment column indicated the nucleus
+      --fov-column <FOV_COLUMN>
+          Name of column containing the field of view
+      --cell-assignment-column <CELL_ASSIGNMENT_COLUMN>
+          Column indicating whether a transcript is assigned to a cell
+      --cell-assignment-unassigned <CELL_ASSIGNMENT_UNASSIGNED>
+          Value in the cell assignment column indicating an unassigned transcript
+      --cell-id-column <CELL_ID_COLUMN>
+          Name of column containing the cell ID
+      --cell-id-unassigned <CELL_ID_UNASSIGNED>
+          Value in the cell ID column indicating an unassigned transcript
+      --qv-column <QV_COLUMN>
+          Name of column containing the quality value
+      --zarr-shape <ZARR_SHAPE>
+          Spatialdata cell boundary geometry to use as prior segmentation
+      --zarr-shape-geometry-column <ZARR_SHAPE_GEOMETRY_COLUMN>
+          Geometry column name for spatialdata cell boundaries
+      --zarr-shape-cell-id-column <ZARR_SHAPE_CELL_ID_COLUMN>
+          Cell ID column name for spatialdata cell boundaries
+      --ignore-z-coord
+          Ignore the z coordinate if any, treating the data as 2D
+      --min-qv <MIN_QV>
+          Filter out transcripts with quality values below this threshold
+      --cells-per-chunk <CELLS_PER_CHUNK>
+          Target number of cells per chunk in the parallelization scheme Smaller number enabled more parallelization, but too small a number risks inconsistent updates [default: 100]
+      --ncomponents <NCOMPONENTS>
+          Number of components in the mixture model of cellular gene expression [default: 10]
+      --nhidden <NHIDDEN>
+          Dimenionality of the latent space [default: 200]
+      --voxel-layers <VOXEL_LAYERS>
+          Number of layers of voxels in the z-axis used for segmentation [default: 4]
+      --burnin-samples <BURNIN_SAMPLES>
+          [default: 200]
+      --samples <SAMPLES>
+          [default: 200]
+      --hillclimb <HILLCLIMB>
+          [default: 50]
+      --recorded-samples <RECORDED_SAMPLES>
+          Number of samples at the end of the schedule used to compute expectations and uncertainty [default: 100]
+  -t, --nthreads <NTHREADS>
+          Number of CPU threads (by default, all cores are used)
+      --cell-compactness <CELL_COMPACTNESS>
+          [default: 0.04]
+  -m, --morphology-steps-per-iter <MORPHOLOGY_STEPS_PER_ITER>
+          Number of sub-iterations sampling cell morphology per overall iteration [default: 4000]
+      --nuclear-reassignment-prob <NUCLEAR_REASSIGNMENT_PROB>
+          [default: 0.2]
+      --prior-seg-reassignment-prob <PRIOR_SEG_REASSIGNMENT_PROB>
+          [default: 0.5]
+      --prior-weight <PRIOR_WEIGHT>
+          A multiplier for the image-based prior. Setting this higher makes the prior stronger relative to the transcript likelihoods, which can be useful for very high plexity data [default: 1]
+      --coordinate-scale <COORDINATE_SCALE>
+          Scale transcript coordinates by this factor to arrive at microns
+      --burnin-voxel-size <BURNIN_VOXEL_SIZE>
+          Size x/y size in microns of voxels during initial burn-in phase. [default: 2, on most platforms]
+      --voxel-size <VOXEL_SIZE>
+          Size x/y size in microns of voxels. [default: 1, on most platforms]
+      --quad-size <QUAD_SIZE>
+          Size of quads in voxel checkerboard [default: 150]
+      --max-transcript-nucleus-distance <MAX_TRANSCRIPT_NUCLEUS_DISTANCE>
+          Exclude transcripts that are more than this distance from any nucleus [default: 60]
+      --no-diffusion
+          Disable transcript diffusion model
+      --diffusion-probability <DIFFUSION_PROBABILITY>
+          Probability of transcript diffusion [default: 0.2]
+      --diffusion-sigma-near <DIFFUSION_SIGMA_NEAR>
+          Stddev parameter for repositioning of un-diffused transcripts. [default: {DEFAULT_DIFFUSION_SIGMA_NEAR}]]
+      --diffusion-sigma-far <DIFFUSION_SIGMA_FAR>
+          Stddev parameter for repositioning of diffused transcripts. [default: {DEFAULT_DIFFUSION_SIGMA_FAR}]]
+      --diffusion-sigma-z <DIFFUSION_SIGMA_Z>
+          Stddev parameter for repositioning transcripts on the z-axis [default: 0.1]
+      --diffusion-proposal-sigma <DIFFUSION_PROPOSAL_SIGMA>
+          Stddev parameter for sampler proposals during transcript repo [default: 4]
+      --diffusion-proposal-sigma-z <DIFFUSION_PROPOSAL_SIGMA_Z>
+          [default: 0.2]
+      --variable-burnin-dispersion
+          Allow dispersion parameter to vary during burn-in
+      --burnin-dispersion <BURNIN_DISPERSION>
+          Fixed dispersion parameter value during burn-in [default: 1]
+      --dispersion <DISPERSION>
+          Fixed dispersion parameter throughout sampling
+      --ab-nihlo-bubble-prob <AB_NIHLO_BUBBLE_PROB>
+          Probability of proposing ab nihlo bubble formation [default: 0.05]
+      --check-consistency
+          Run time consuming checks to make sure data structures are in a consistent state
+      --output-path <OUTPUT_PATH>
+          Prepend a path name to every  output file name
+      --output-spatialdata <OUTPUT_SPATIALDATA>
+          Write a SpatialData object to zarr format [default: proseg-output.zarr]
+      --exclude-spatialdata-transcripts
+          Exclude transcript data from spatialdata output
+      --overwrite
+          Overwrite existing spatialdata file (other output is always overwritten)
+      --output-counts <OUTPUT_COUNTS>
+          Output a point estimate of transcript counts per cell
+      --output-counts-fmt <OUTPUT_COUNTS_FMT>
+          [default: infer] [possible values: infer, csv, csv-gz, parquet]
+      --output-expected-counts <OUTPUT_EXPECTED_COUNTS>
+          Output a matrix of expected transcript counts per cell
+      --output-rates <OUTPUT_RATES>
+          Output a matrix of estimated Poisson expression rates per cell
+      --output-rates-fmt <OUTPUT_RATES_FMT>
+          [default: infer] [possible values: infer, csv, csv-gz, parquet]
+      --output-cell-metadata <OUTPUT_CELL_METADATA>
+          Output cell metadata
+      --output-cell-metadata-fmt <OUTPUT_CELL_METADATA_FMT>
+          [default: infer] [possible values: infer, csv, csv-gz, parquet]
+      --output-transcript-metadata <OUTPUT_TRANSCRIPT_METADATA>
+          Output transcript metadata
+      --output-transcript-metadata-fmt <OUTPUT_TRANSCRIPT_METADATA_FMT>
+          [default: infer] [possible values: infer, csv, csv-gz, parquet]
+      --output-gene-metadata <OUTPUT_GENE_METADATA>
+          Output gene metadata
+      --output-gene-metadata-fmt <OUTPUT_GENE_METADATA_FMT>
+          [default: infer] [possible values: infer, csv, csv-gz, parquet]
+      --output-metagene-rates <OUTPUT_METAGENE_RATES>
+          Output cell metagene rates
+      --output-metagene-rates-fmt <OUTPUT_METAGENE_RATES_FMT>
+          [default: infer] [possible values: infer, csv, csv-gz, parquet]
+      --output-metagene-loadings <OUTPUT_METAGENE_LOADINGS>
+          Output metagene loadings
+      --output-metagene-loadings-fmt <OUTPUT_METAGENE_LOADINGS_FMT>
+          [default: infer] [possible values: infer, csv, csv-gz, parquet]
+      --output-cell-polygons <OUTPUT_CELL_POLYGONS>
+          Output consensus non-overlapping 2D polygons, formed by taking the dominant cell at each x/y location
+      --output-union-cell-polygons <OUTPUT_UNION_CELL_POLYGONS>
+          Output cell polygons flattened (unioned) to 2D
+      --output-cell-polygon-layers <OUTPUT_CELL_POLYGON_LAYERS>
+          Output separate cell polygons for each layer of voxels along the z-axis
+      --output-voxel-counts <OUTPUT_VOXEL_COUNTS>
+          Output a table of voxel-level counts (mainly for debugging)
+      --monitor-cell-polygons <MONITOR_CELL_POLYGONS>
+          Output cell polygons repeatedly during sampling
+      --monitor-cell-polygons-freq <MONITOR_CELL_POLYGONS_FREQ>
+          How frequently to output cell polygons during monitoring [default: 10]
+      --enforce-connectivity
+          Use connectivity checks to prevent cells from having any disconnected voxels
+      --nunfactored <NUNFACTORED>
+          [default: 200]
+      --no-factorization
+          Disable factorization model and use genes directly
+      --include-neg-ctrls
+          Include negative controls which are excluded by default
+      --use-scaled-cells
+          Disable cell scale factors
+      --hyperparam-e-phi <HYPERPARAM_E_PHI>
+          [default: 1]
+      --hyperparam-f-phi <HYPERPARAM_F_PHI>
+          [default: 1]
+      --hyperparam-neg-mu-phi <HYPERPARAM_NEG_MU_PHI>
+          [default: 1]
+      --hyperparam-tau-phi <HYPERPARAM_TAU_PHI>
+          [default: 0.1]
+      --density-bandwidth <DENSITY_BANDWIDTH>
+          [default: 0.5]
+      --density-bins <DENSITY_BINS>
+          [default: 5]
+  -h, --help
+          Print help
+  -V, --version
+          Print version
