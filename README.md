@@ -30,6 +30,23 @@ Exact joint deformation costs for continuous RNA-ownership sensitivity.
 
 Companion code for **Exact Joint Deformation Costs for Continuous RNA-Ownership Sensitivity**, by Arnav Peram. The method represents the minimum integrated deformation for every feasible ownership vector in a local ordered-cell corridor. It includes a direct owner-layer construction and an exact critical-mesh height reference.
 
+## Paired-boundary validation harness
+
+[Validation guide](docs/validation/PAIRED_VALIDATION.txt) documents the new paired
+reference/truth schema, unit-level split calibration, count/family coverage,
+interval widths, and descriptive error-ranking metrics.
+
+```sh
+python tests/test_paired_validation.py
+python experiments/validate_paired.py data/paired_validation/nominal.json.gz --output run/paired.json
+```
+
+The three included scenarios are **synthetic software fixtures**. They demonstrate
+that perfect count coverage can coexist with poor geometric containment, and that
+out-of-family calibration cases can require abstention. No new donor or anatomical
+validation is claimed. External method scores can be imported with provenance;
+those external segmenters have not been run in this extension.
+
 ## Run the native example
 
 Python 3.12 or 3.13 is sufficient. The current exact workflow uses only the Python standard library; there are no packages to install.

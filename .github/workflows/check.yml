@@ -36,6 +36,8 @@ jobs:
           python tests/test_scc.py
           python tests/test_prefix_bound.py
           python tests/test_budget_counts.py
+          python tests/test_paired_validation.py
+          python -c "import gzip,json; from pathlib import Path; assert all(json.loads(gzip.decompress(p.read_bytes())) == json.loads(gzip.decompress((Path('run/paired_validation')/p.name).read_bytes())) for p in Path('results/paired_validation').glob('*.json.gz'))"
           python geocert_counts.py interval --corridor 4037abe9fea38e --cell 153124 --gene PECAM1 --budget 1 --output run/count.json
           python geocert_counts.py verify run/count.json
           python geocert.py showcase --output run/showcase.json

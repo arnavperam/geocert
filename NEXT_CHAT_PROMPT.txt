@@ -14,6 +14,10 @@ count/linear-contrast hard-budget frontiers via targeted owner enumeration;
 sound rational cut bounds with witnesses and gaps; complete supported paths by
 repeated cuts; standard residual DAG representation of all penalized optima.
 The new gene-count analysis uses every original native corridor and setting.
+A paired-boundary validation harness now accepts explicit ordered models and
+supplied truth, calibrates budgets by independent unit, and reports family and
+count coverage separately. Three synthetic fixtures test it; none are donor data.
+Read docs/validation/PAIRED_VALIDATION.txt and run tests/test_paired_validation.py.
 
 NEXT HIGH-VALUE STEPS
 1. Audit the new hard-budget proofs and code. In particular distinguish a dual
@@ -27,7 +31,7 @@ NEXT HIGH-VALUE STEPS
    donor/slide rather than by overlapping corridor. Fit geometric settings on
    training data and calibrate on independent units. Count out-of-family cases.
 4. Assess geometric-family coverage, not just solver correctness. A perfect cut
-   cannot contain true counts if the assumed family excludes the true geometry.
+   does not guarantee true-count containment when the assumed family excludes the true geometry.
 5. Build ground-truth/proxy baselines according to docs/budgets/NEXT_STUDY_PROTOCOL.txt.
    Record ambiguous transcripts and donor-level replication. Marker leakage is
    evidence, not a definition of misassignment.

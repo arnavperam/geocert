@@ -1,0 +1,144 @@
+PAIRED-BOUNDARY VALIDATION: IMPLEMENTED HARNESS, SYNTHETIC CHECKS ONLY
+28 October 2026
+
+What this adds
+The certified-count solver now has an executable route from paired reference/truth
+records to held-out budget calibration and evaluation. The input explicitly names
+independent units, records within units, calibration/evaluation splits, reference
+geometry, supplied true boundaries, supplied true RNA owners and count targets.
+No independent tissue, donor, microscopy or external segmentation output was
+acquired for this extension. The included inputs are labeled synthetic fixtures.
+
+Commands (Python standard library)
+python tests/test_paired_validation.py
+python experiments/validate_paired.py data/paired_validation/nominal.json.gz --alpha 1/10 --output run/paired.json
+python experiments/validate_paired.py data/paired_validation/evaluation_shift.json.gz --alpha 1/10 --output run/shift.json
+python experiments/validate_paired.py data/paired_validation/calibration_failure.json.gz --alpha 1/10 --output run/abstention.json
+
+The test command writes fresh records to run/paired_validation/. Frozen expected
+records are in results/paired_validation/. CI compares every compressed full result
+against the fresh replay. experiments/make_paired_fixture.py regenerates the inputs
+from docs/validation/SYNTHETIC_PROTOCOL.json. The protocol was written before the
+fixture generator was executed; this is not registration of a biological study.
+
+The score and its guarantee
+For each paired record, the original-coordinate verifier checks the supplied true
+boundary against the declared endpoint, band, slope, separation and RNA ownership
+constraints. Its score is that boundary's actual summed deformation area when all
+checks pass, and infinity otherwise. This is deliberately not D*(true owners): a
+minimum-cost alternative with the same owners need not contain the measured true
+boundary, and would be the wrong score for a geometric-containment claim.
+
+A unit's score is the maximum over all its included paired records. The budget is
+the calibration order statistic at ceil((n+1)*(1-alpha)), with infinity beyond the
+finite scores. Units crossing splits, repeated sample identifiers, training-unit
+leakage, missing boundary arrays and unsupported model fields are rejected.
+Out-of-family geometries remain in the denominator and can force abstention.
+
+Under exchangeability of calibration and new units, a frozen family/extraction
+procedure and valid paired truth, this standard split-conformal construction
+bounds marginal new-unit noncoverage. If the unit's true boundaries are contained,
+all queried local counts are enclosed simultaneously, with the exterior fixed.
+A finite-budget-only output may abstain when the order statistic is infinite;
+there is no claimed coverage guarantee conditional on not abstaining. For a
+marginal coverage statement that includes abstentions, abstention must mean an
+unrestricted prediction set, not merely infinite area within the fixed family:
+infinite area does not repair a violated slope, band or topology constraint. An empirical
+fraction from one held-out batch is not forced to equal the nominal target.
+Identifiers and a protocol_id string do not prove independence or preregistration.
+
+Executed synthetic results
+Each scenario has 39 calibration units and 60 evaluation units, with two paired
+records per unit. These are synthetic units, not 99 donors or biological samples.
+Each record has four point RNAs, two synthetic genes and a triangular true boundary.
+The reference boundary is flat. This is a software fixture, not a realistic-cell
+simulation, an image-segmentation benchmark or a demonstration of biological value.
+
+Scenario                 Budget       Count-covered units     Family+budget-contained units
+Nominal generator        381/500       60/60                   51/60
+Evaluation shift         381/500       60/60                   41/60
+Calibration failure      abstain      no calibrated interval   no finite calibrated family
+
+In the evaluation-shift scenario, 12 units receive a boundary exceeding the model
+band. Calibration data and budget stay exactly unchanged. All count intervals
+still cover because they are broad: mean width is two, the full variable range of
+these gene counts. Thus 100% count coverage can conceal misspecified geometry.
+In the calibration-failure scenario, five calibration units violate the band, so
+the 36th order statistic out of 39 units is infinite and the pipeline abstains.
+
+The nominal family-coverage Wilson interval is approximately [0.739, 0.919]; the
+shifted interval is approximately [0.558, 0.787]. These are approximate intervals
+for independent unit indicators, not transcript-level biological confidence.
+The observed nominal 85% does not contradict a 90% split-conformal marginal
+statement, which averages over calibration/new draws rather than guaranteeing
+90% in each particular finite evaluation batch.
+
+The singleton-fragility and distance-to-boundary rankings have identical nominal
+AUROC (979/1350, approximately 0.7252) and average precision (1043/4000).
+No superiority is observed. Ranking is pooled and descriptive; the harness does
+not attach transcript-independent confidence intervals to correlated records.
+Every geometry-and-budget-contained truth has a covered exact count. The tests
+also check tied-score AUROC/AP, single-class outputs, leakage rejection, missing
+truth, unsupported structure and calibration isolation under changed test data.
+
+Input contract
+Use schema geocert.paired_boundaries.v1. The complete examples are the compressed
+JSON inputs; read them with gzip.open(path, 'rt') and json.load.
+Top-level fields:
+- protocol_id, provenance, evidence_kind and optional training_units.
+- outside_assignments_fixed must be true for this current local model.
+- records contains one entry per paired observation.
+Each record contains:
+- unit_id, sample_id and split ('calibration' or 'evaluation').
+- model: baselines, source owners, slopes, minimum_gaps, maximum_gaps,
+  clearance, bands and nominal mode. Values may be exact rational strings.
+- sites: x, t and gene for each point RNA, in the same order as source owners.
+- truth_owners: independently supplied owner label for every modeled point.
+- truth_boundaries: per-boundary lists of [t_start,t_end,x_start,x_end].
+- targets: gene, owner and nonnegative fixed outside count.
+Optional external_error_scores maps method name to one finite score per site,
+with larger values meaning higher predicted misassignment. Each method needs an
+external_method_provenance entry at dataset level and identical evaluation-site
+coverage. This imports scores; it does not execute Proseg, Baysor, ResolVI or
+other methods. No scores from those tools are included or fabricated.
+
+Current importer restrictions
+Only ordered nominal point-site models are accepted. The source must be feasible
+at zero deformation. Nuclear/fixed-region fields, 3D/general tessellations and
+partial owner labels are not silently approximated. The importer rejects
+unsupported model fields. A reporter or species label is not necessarily a full
+cell-owner label and cannot simply be inserted as one. Supplied truth is trusted
+for evaluation; geometry checking does not establish anatomical correctness.
+
+What to do with real data next
+1. Independently register same-cell reference and truth geometry and identities.
+2. Freeze extraction and retention criteria, including non-ordered regions.
+3. Split biological units, fit settings on training units, and leave calibration
+   and test units untouched by geometry selection or parameter tuning.
+4. Convert eligible paired records to this schema, audit conversion separately,
+   report excluded tissue and retain family violations.
+5. Run compatible external baselines on the same sites and record versions,
+   input differences, score definitions and every missing/failed output.
+6. Evaluate geometric containment, interval coverage AND width, and biological
+   endpoints with appropriate independent replicates. Do not treat this synthetic
+   replay as completion of any of those steps.
+
+External-data intake checked in this revision
+The published spatial-segmentation benchmark describes a substantially broader
+multi-platform evaluation. Its repository README supplies transcript/image links
+for Stereo-seq, STARmap PLUS, MERFISH, Xenium and CosMx examples, including lung
+and pancreas. Those links are candidate inputs; this revision did not download,
+register or verify them as paired cell-owner truth. The README coverage differs
+from the newer article description, so pin an actual release and inspect the
+corresponding annotation assets before claiming a matched benchmark.
+Repository inspected: https://github.com/TranslationalBioinformaticsUnit/Benchmarking-SegmentationMethods-ST/blob/main/README.md
+Inspected README blob: 9f792764185bf4204204f04132d537a523fb0632
+Article: https://doi.org/10.1038/s41592-026-03272-x
+Standard conformal background: https://arxiv.org/abs/2107.07511
+
+Scientific status
+This adds a tested validation interface and an informative failure diagnostic.
+It does not add realistic segmentation simulation, learned geometric settings,
+independent anatomical truth, new biological replication, robust DE/FDR, a
+published biological finding, a planar hardness proof or whole-slide engineering.
+The original submission PDFs and previous eight-page theory note remain unchanged.

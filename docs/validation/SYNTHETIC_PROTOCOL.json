@@ -1,0 +1,21 @@
+{
+  "protocol_id": "geocert-paired-plumbing-v1",
+  "purpose": "Synthetic software validation only; no tissue realism, anatomical validation or method superiority claim",
+  "seed": 20261028,
+  "calibration_units": 39,
+  "evaluation_units": 60,
+  "records_per_unit": 2,
+  "alpha": "1/10",
+  "area_probe_budgets": ["0", "1/100", "1/20", "1/4"],
+  "model": "One flat reference boundary on [0,4], bands [-1/2,1/2], slope 1 and clearance 1/100",
+  "sites": "Two synthetic genes, each with two point sites, one on each side of the source boundary",
+  "truth_generator": "Triangular PL boundary with peak h at t=2; h is uniform on integer grid [-900,900]/2000, rejecting ownership-clearance ambiguity",
+  "scenarios": {
+    "nominal": "Same independent generator in calibration and evaluation",
+    "evaluation_shift": "Replace first record in every fifth evaluation unit with peak 3/4, outside the model band; calibration unchanged",
+    "calibration_failure": "Replace first record in first five calibration units with peak 3/4; force a nonfinite conformal threshold"
+  },
+  "primary_checks": ["Every family-and-budget-contained boundary has covered count", "All rejected-family records remain in denominators", "Calibration/evaluation unit overlap rejected", "Count coverage and family coverage reported separately"],
+  "ranking": "Pooled descriptive AUROC and grouped average precision for singleton fragility versus distance; no biological interpretation",
+  "statistics": "Unit-level simultaneous coverage with approximate Wilson intervals; synthetic units are not donors"
+}

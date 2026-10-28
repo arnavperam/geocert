@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "scope": "synthetic software fixtures only",
+  "scenarios": {
+    "nominal": {
+      "calibration": {
+        "status": "finite",
+        "rank": 36,
+        "units": 39,
+        "alpha": "1/10",
+        "budget": "381/500",
+        "scope": "Marginal new-unit coverage requires exchangeability and a valid nested-family score; not cellwise conditional coverage."
+      },
+      "evaluation_units": 60,
+      "at_calibrated_budget": {
+        "budget": "381/500",
+        "evaluation_units": 60,
+        "query_rows": 480,
+        "simultaneous_count_covered_units": 60,
+        "simultaneous_count_coverage": "1",
+        "unit_coverage_wilson_95": [
+          0.93982814785791,
+          1.0
+        ],
+        "family_contained_units": 51,
+        "family_coverage": "17/20",
+        "family_coverage_wilson_95": [
+          0.7388541093022145,
+          0.9190255941983225
+        ],
+        "macro_count_coverage": "1",
+        "macro_interval_width": "2",
+        "joint_strictly_tighter_rows": 0
+      },
+      "family_violations": 0,
+      "ranking": {
+        "singleton_fragility": {
+          "status": "computed",
+          "positives": 75,
+          "negatives": 405,
+          "auroc": "979/1350",
+          "average_precision": "1043/4000"
+        },
+        "distance_to_boundary": {
+          "status": "computed",
+          "positives": 75,
+          "negatives": 405,
+          "auroc": "979/1350",
+          "average_precision": "1043/4000"
+        }
+      }
+    },
+    "evaluation_shift": {
+      "calibration": {
+        "status": "finite",
+        "rank": 36,
+        "units": 39,
+        "alpha": "1/10",
+        "budget": "381/500",
+        "scope": "Marginal new-unit coverage requires exchangeability and a valid nested-family score; not cellwise conditional coverage."
+      },
+      "evaluation_units": 60,
+      "at_calibrated_budget": {
+        "budget": "381/500",
+        "evaluation_units": 60,
+        "query_rows": 480,
+        "simultaneous_count_covered_units": 60,
+        "simultaneous_count_coverage": "1",
+        "unit_coverage_wilson_95": [
+          0.93982814785791,
+          1.0
+        ],
+        "family_contained_units": 41,
+        "family_coverage": "41/60",
+        "family_coverage_wilson_95": [
+          0.5576623297382323,
+          0.7869413244763347
+        ],
+        "macro_count_coverage": "1",
+        "macro_interval_width": "2",
+        "joint_strictly_tighter_rows": 0
+      },
+      "family_violations": 12,
+      "ranking": {
+        "singleton_fragility": {
+          "status": "computed",
+          "positives": 93,
+          "negatives": 387,
+          "auroc": "16237/23994",
+          "average_precision": "6259/22320"
+        },
+        "distance_to_boundary": {
+          "status": "computed",
+          "positives": 93,
+          "negatives": 387,
+          "auroc": "16237/23994",
+          "average_precision": "6259/22320"
+        }
+      }
+    },
+    "calibration_failure": {
+      "calibration": {
+        "status": "abstain",
+        "rank": 36,
+        "units": 39,
+        "alpha": "1/10",
+        "budget": null
+      },
+      "evaluation_units": 60,
+      "at_calibrated_budget": null,
+      "family_violations": 5,
+      "ranking": {
+        "singleton_fragility": {
+          "status": "computed",
+          "positives": 75,
+          "negatives": 405,
+          "auroc": "979/1350",
+          "average_precision": "1043/4000"
+        },
+        "distance_to_boundary": {
+          "status": "computed",
+          "positives": 75,
+          "negatives": 405,
+          "auroc": "979/1350",
+          "average_precision": "1043/4000"
+        }
+      }
+    }
+  }
+}

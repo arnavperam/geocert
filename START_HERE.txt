@@ -5,6 +5,8 @@ multi-donor, calibrated, whole-slide research program is complete. No conference
 registration or submission was performed. The original v1.0.0 tag stays fixed.
 
 READ THESE FIRST
+0. docs/validation/PAIRED_VALIDATION.txt - new executable paired-boundary study
+   harness, input schema and three synthetic failure/success diagnostics.
 1. docs/budgets/Count_Intervals_Theory.pdf - definitions, proofs, executed results,
    a source-mask-to-certificate figure, and corrections to the proposed agenda.
 2. NEXT_CHAT_PROMPT.txt - concrete continuation instructions and scientific gates.
@@ -110,3 +112,10 @@ rate. Deterministic intervals have no nominal probability without calibration.
 AI assisted software, analysis and writing; human proof review and full authorship
 responsibility remain necessary. No software license was chosen on the author's
 behalf. Do not claim historical firstness or guaranteed acceptance.
+
+PAIRED-VALIDATION UPDATE
+Run python tests/test_paired_validation.py. The harness calibrates actual-boundary
+area on disjoint units and measures family containment separately from count
+coverage. Nominal synthetic count coverage is 60/60 with family containment
+51/60; an out-of-family evaluation shift gives 60/60 versus 41/60. Five invalid
+calibration units cause abstention. These are software fixtures, not real donors.
