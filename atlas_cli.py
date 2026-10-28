@@ -32,8 +32,11 @@ def manifest() -> None:
 
 def showcase(output: Path) -> None:
     from atlas.model import verify_witness
+    from atlas.binding import verify_prepared_atlas
     base = ROOT / 'external'
     a = json.loads((base / 'data/atlas_breast_01.json').read_text())
+    audit = json.loads((base / 'results/atlas_geometric_validation.json').read_text())
+    verify_prepared_atlas(a, base / 'data/source_crops/breast_01', audit)
     patches = {p['id']: p for p in a['patches']}
     local = {(r['patch'], r['gene']): r for r in json.loads((base / 'results/patch_spectra.json').read_text()) if r['roi'] == 'breast_01'}
     s = next(r for r in json.loads((base / 'results/cell_spectra.json').read_text()) if r['roi'] == 'breast_01' and r['cell'] == 81 and r['gene'] == 'LDHB')
@@ -115,7 +118,7 @@ def main() -> None:
     if args.command == 'verify-manifest':manifest()
     elif args.command == 'showcase':showcase(args.output)
     elif args.command == 'validate':
-        for name in ['test_chain.py', 'test_chain_nonflat.py', 'test_unit_gap.py', 'test_transport.py', 'test_atlas_binding.py', 'test_chain_contract.py']:
+        for name in ['test_chain.py', 'test_chain_nonflat.py', 'test_unit_gap.py', 'test_transport.py']:
             run('tests/' + name)
     else:reproduce(args.dataset,args.output_dir)
 

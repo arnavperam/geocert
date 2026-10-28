@@ -1,0 +1,15 @@
+{
+  "atlas_archive_sha256": "3b5e92552335709e6602aa1e56f659e0eda87244f31e592f0dc288a3528cc9c0",
+  "agent_archive_sha256": "75ff637722c52df066d014a33262b89bb16f94d9b806f1b6d1fa195b8608f122",
+  "adopted": [
+    "MIT license",
+    "saved Proseg 3.2.0 input/output records",
+    "correct hard-arc capacity semantics"
+  ],
+  "preserved": [
+    "atlas gluing proof",
+    "count-chain algorithm",
+    "global cell/gene spectrum composition"
+  ],
+  "proseg_scope": "Imported recorded executions; no new stochastic Proseg run claimed."
+}

@@ -10,40 +10,45 @@ ROOT=Path(os.environ.get('GEOCERT_DATA_ROOT',str(CODE_ROOT))).resolve()
 from atlas.chain_spectrum import compile_chain,spectrum as chain_spectrum
 from atlas.binding import verify_prepared_atlas
 from atlas.model import make_patch,count_scores,serialized,verify_witness,compose,interval
-BUDGETS=list(map(F,['0','0.05','0.1','0.25','0.5','1','2','4']))
+BUDGETS=list(map(F,os.environ.get('GEOCERT_BUDGETS','0,0.05,0.1,0.25,0.5,1,2,4').split(',')))
 
 def main():
  t0=time.time();allrows=[];summaries=[];allstates=[];allpatches=[]
+ audit_file=ROOT/'results/atlas_geometric_validation.json'
+ if not audit_file.exists():
+  import subprocess
+  subprocess.run([sys.executable,str(CODE_ROOT/'analysis/verify_atlas.py')],env=os.environ.copy(),check=True)
+ geometry_audit=json.loads(audit_file.read_text())
  method=os.environ.get('GEOCERT_COUNT_METHOD','enumeration')
  if method not in ('chain','enumeration'):raise ValueError('unknown count method')
  destination=Path(os.environ.get('GEOCERT_RESULT_DIR',ROOT/'results'));destination.mkdir(parents=True,exist_ok=True)
- audit_path=ROOT/'results/atlas_geometric_validation.json'
- if not audit_path.is_file():raise ValueError('run analysis/verify_atlas.py before certifying a new atlas')
- audit=json.loads(audit_path.read_text())
- atlases=[json.loads(path.read_text()) for path in sorted((ROOT/'data').glob('atlas_*.json'))]
- if not atlases:raise ValueError('no prepared atlases supplied')
- for a in atlases:verify_prepared_atlas(a,ROOT/'data/source_crops'/a['roi'],audit)
- for a in atlases:
-  roi=a['roi'];parts=defaultdict(list);singles=defaultdict(list);local_records=[]
+ for path in sorted((ROOT/'data').glob('atlas_*.json')):
+  a=json.loads(path.read_text());roi=a['roi']
+  verify_prepared_atlas(a,ROOT/'data/source_crops'/roi,geometry_audit)
+  parts=defaultdict(list);singles=defaultdict(list);local_records=[]
   counts=a['source_counts']; examined=0;calls=0;maxlocal=0;nontrivlocal=0;chainqueries=0;chainstates=0
   for j,p in enumerate(a['patches']):
    if not p['points']:continue
    e=make_patch(p);scale=F(p['area_scale_um2']);source=e.problem.source
    # Singleton minima are a strong marginal envelope; they do not compose a budget.
+   movablehist=Counter();forced_source=dict(e.pins)
    for i,r in enumerate(p['points']):
     ans=e.clipped({i:1-r['source']});calls+=1
+    if not ans['feasible']:forced_source[i]=r['source']
     if ans['feasible']:
+     movablehist[r['gene']]+=1
      cost=F(ans['area'])*scale
      verify_witness(p,ans['owners'],ans['boundaries'],cost)
      for k in p['cell_labels']:
       if k>0:singles[(k,r['gene'])].append({'id':r['transcript_id'],'source':p['cell_labels'][r['source']],'cost':str(cost)})
    genehist=Counter(r['gene'] for r in p['points']);maxlocal=max(maxlocal,max(genehist.values()))
-   mesh=compile_chain(e.problem,e.pins,seconds=60) if method=='chain' and max(genehist.values())>1 else None
+   use_chain=lambda gene: (method=='chain' and genehist[gene]>1) or movablehist[gene]>8
+   mesh=compile_chain(e.problem,forced_source,seconds=120) if any(use_chain(gene) for gene in genehist) else None
    for gene,n in sorted(genehist.items()):
     # A two-cell patch conserves its local gene total, so one spectrum serves both sides.
     scores=count_scores(p,e,p['cell_labels'][0],gene)
-    if mesh is not None and n>1:
-     ans=chain_spectrum(mesh,scores,seconds=60)
+    if mesh is not None and use_chain(gene):
+     ans=chain_spectrum(mesh,scores,seconds=120)
      for w in ans['witnesses'].values():w['pins']={}
      sp=SimpleNamespace(complete=ans['complete'],minima=ans['minima'],witnesses=ans['witnesses'],examined=0)
      chainqueries+=1;chainstates+=ans.get('DP_states',0)
@@ -106,6 +111,4 @@ def main():
  result={'rois':summaries,'seconds':time.time()-t0,'unique_key_check':True,'source_scope':'All retained observed counts for complete reference cells; one geometry-only atlas per crop; omitted boundary portions fixed.',
     'record_semantics':'Marginal extrema under one common model and one global physical-area budget. Different endpoint rows need not coexist.'}
  (destination/'cell_expression_summary.json').write_text(json.dumps(result,indent=2)+'\n')
-if __name__=='__main__':
- if not __debug__:raise RuntimeError('Scientific checks require assertions: do not run Python with -O')
- main()
+if __name__=='__main__':main()

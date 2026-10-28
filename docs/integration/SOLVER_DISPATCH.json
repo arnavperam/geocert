@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-28T19:28:08.791138+00:00",
+  "dispatch": "Enumeration for <=8 independently movable scored groups; otherwise exact count chain. Full-chain mode remains available. Logically forced source owners enter mesh pins.",
+  "proof": "A source-feasible binary group whose alternative is infeasible has that source owner in every feasible completion. Pinning it preserves the entire feasible family. Target enumeration already removes these singleton-infeasible domains.",
+  "changes": "Frontend dispatch and redundant pin insertion only; no geometry, budgets, observations, eligibility, objectives, or solver core changed.",
+  "previous_dispatch": {
+    "utc": "2026-10-28T19:17:21.478930+00:00",
+    "dispatch": "Target multiplicity greater than 8 uses the existing exact critical-height count chain. Other targets retain enumeration unless full chain mode is requested.",
+    "reason": "Bound computational work in wider families, as allowed by the frozen protocol. No change to geometry, budgets, scoring, sample selection or endpoint definition.",
+    "source_file": "analysis/certify_cells.py",
+    "inference": "Backend equivalence is checked independently; a resource failure never becomes an exact endpoint."
+  },
+  "reason": "Avoid constructing optional height states for gene copies whose owners were already proved fixed."
+}

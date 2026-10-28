@@ -1,7 +1,7 @@
-# Rights and scope
+# Rights and attribution
 
-Project software and project documentation are licensed under the MIT License in LICENSE, copyright 2026 Arnav Peram. Third-party software dependencies retain their own licenses. Dataset terms are separate.
+The GeoCert software is distributed under the MIT license in LICENSE, inherited from the supplied author-owned revision 0.2.0a2. Source data retain their separate original terms and attribution in docs/DATA_PROVENANCE.md. The breast collection is trimmed vendor format-test data and is not used for biological conclusions.
 
-The included source crops derive from 10x Genomics datasets distributed under CC BY 4.0. Attribution, transformations and the breast format-test limitation appear in docs/DATA_PROVENANCE.md. Those data are excluded from the project software license.
+Proseg output files and execution records are imported from the supplied revision for reanalysis. Proseg itself is third-party software; its source is not included or relicensed here. The upstream version, options and hashes are retained with those records.
 
-This research candidate provides conditional exact calculations. Anatomical accuracy, clinical validity and conference acceptance remain unestablished.
+A version identifier describes a software release, not conference acceptance. Authorship and the manuscript's AI-assistance disclosure remain explicit.

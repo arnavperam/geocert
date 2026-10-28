@@ -1,10 +1,12 @@
 cff-version: 1.2.0
-message: "Please cite the manuscript and identify the exact code revision used."
+message: "Please cite the manuscript and the exact code revision used."
 title: "Certified Expression Intervals under Shared Segmentation Uncertainty"
 authors:
   - family-names: Peram
     given-names: Arnav
-version: 0.3.0a2
+version: 1.1.0
 date-released: 2026-10-28
 type: software
-abstract: "Research implementation of exact count spectra and a compatible fixed-seam boundary atlas. This version is not a published conference paper."
+license: MIT
+repository-code: "https://github.com/arnavperam/geocert"
+abstract: "Exact count spectra and topology-preserving boundary-atlas composition under a declared shared deformation budget."

@@ -108,7 +108,7 @@ def main():
                 lower=int(mask[math.floor(mid[1]+sy*.1),math.floor(mid[0]-sx*.1)])
                 upper=int(mask[math.floor(mid[1]-sy*.1),math.floor(mid[0]+sx*.1)])
                 if {lower,upper}!=set(pair):raise AssertionError('edge-side labels')
-                for width in (F(4),F(2),F(1),F(1,2)):
+                for width in tuple(F(x) for x in os.environ.get('GEOCERT_WIDTHS','4,2,1,1/2').split(',')):
                     trials['widths']+=1
                     poly=polygon_for(points,sx,sy,width)
                     low=polygon_for(points,sx,sy,width,-1);high=polygon_for(points,sx,sy,width,1)
