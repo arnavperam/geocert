@@ -8,7 +8,7 @@ from pathlib import Path
 import hashlib,sys,urllib.request
 
 EXPECTED='c786d48ce8925c5e5fe45dd4a96a7782edc5ba61377d2f833e9ddd0c9c53ba60'
-REF='reader-revision'
+REF='fdffadfedc0e21202d554c8425add3349199a766'
 BASE=f'https://raw.githubusercontent.com/arnavperam/geocert/{REF}/artifacts/'
 PARTS=['publication_companion.zip.part01','publication_companion.zip.part02']
 
