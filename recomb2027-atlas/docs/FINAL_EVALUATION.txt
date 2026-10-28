@@ -1,0 +1,25 @@
+FINAL EVALUATION CANDIDATE — 1.1.0
+
+Selected paper: Certified Expression Intervals under Shared Segmentation Uncertainty, by Arnav Peram.
+
+Agent 1 supplies the scientific manuscript and strict physical-width study: both input collections, four required support widths without narrower fallback, and seventeen budgets. Agent 2 supplies the previously verified input guards and the public publication/replay route. No new scientific study, parameter selection, anatomical calibration or biological validation is introduced in this finalization.
+
+Changes from Agent 1's supplied archive:
+- Match abstract typography: cell–gene; remove “supplied” from “Proseg executions.”
+- Restore raw-point, multisite and owner-threshold input checks; bind primary and strict-width atlases to their source observations and completed geometry audits.
+- Correct the supplement's main-table cross-reference, clarify chart clearance, and label breast-only comparison columns.
+- Include the missing generated original_saturation_table.tex build input; its values are regenerated from unchanged original interval tables.
+- Correct report coverage rounding for lung support 2: 5455/23164 = 23.54947%, shown as 23.5% to one decimal.
+- Replace the manuscript's publication to-do with an actual immutable public scientific source URL and rebuild both PDFs.
+
+Validation scope:
+The finalization independently checks the strict-width configuration, 106351 global spectra, 131376 witness traces, 1807967 interval rows and the supplied independent scalar sample (246 local spectra, 1628 assignments). It preserves all original scientific result files. Guard regression tests accept all twenty prepared atlases and reject twenty deliberately invalid bindings and seven unsupported free-input cases. Primary and selected-width replay checks are repeated on the guarded implementation. Final publication records report completed local and clean public-CI runs separately from historical timing measurements.
+
+Nuclear reference denominators are intentionally different from Agent 2's earlier fallback-width study: this study excludes keys affected by missing-reference molecules consistently across all widths. The twenty removed changed keys explain 186/1134 becoming 184/1114, and every common key agrees. Neither denominator is an ownership-accuracy estimate.
+
+Retained limitations: fixed seams and junctions, uncalibrated uncertainty families, vendor breast format-test data, adapted same-donor Proseg execution diagnostics, and limited reference-count reach. Entrywise attainable counts do not imply simultaneous attainment of the reference matrix. No additional donor or real breast publication cohort was acquired.
+
+Original Agent 1 archive SHA-256:
+0d682f6585a082530fde3de888772cc4306aa86c2e0aa1e11fe9791a482502c7
+
+No conference registration or submission has been performed by this finalization. A stable v1.1.0 tag is not claimed.

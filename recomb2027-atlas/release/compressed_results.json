@@ -1,0 +1,359 @@
+{
+  "compression": "gzip, deterministic header, no online retrieval",
+  "compressed": [
+    {
+      "path": "external/data/atlas_breast_01.json",
+      "compressed_path": "external/data/atlas_breast_01.json.gz",
+      "bytes": 12548932,
+      "sha256": "714beaabf063e94ddca850744a02f73cd54b08474accce6a40bd977f036f9f7a",
+      "compressed_bytes": 1700430,
+      "compressed_sha256": "aa9882e093161138a9a497efa33377e8819740ad516a88c811dfdcc937f78f9f"
+    },
+    {
+      "path": "external/data/atlas_breast_02.json",
+      "compressed_path": "external/data/atlas_breast_02.json.gz",
+      "bytes": 10621835,
+      "sha256": "e36109e755c17bb14ce6e19e5bfdc954289442cc18fb6dbb49d0d9d2514e9fa5",
+      "compressed_bytes": 1355915,
+      "compressed_sha256": "0dcd81a66bb94bcca46df4b99fa1e613a7870f5f1aab2de3f24b8d97b0737b62"
+    },
+    {
+      "path": "external/data/observed_crop_counts.json",
+      "compressed_path": "external/data/observed_crop_counts.json.gz",
+      "bytes": 20011794,
+      "sha256": "642fe3a03a2a701f4e6b949262779e47617c9183e0d89a05d6f355578886d61c",
+      "compressed_bytes": 2431471,
+      "compressed_sha256": "e540610aee04ec434fa220e6ccdad847a221560583e00094db5cc0d34409e55a"
+    },
+    {
+      "path": "external/results/cell_expression_intervals.csv",
+      "compressed_path": "external/results/cell_expression_intervals.csv.gz",
+      "bytes": 22559411,
+      "sha256": "5f6df37480d377877dfd75ea6f0c325553c9bf5141c8a0b82fd2a945c2cce1d9",
+      "compressed_bytes": 862826,
+      "compressed_sha256": "627dc22cc2b187b51d7ed2f859d8b7e755b8475289f1d8254d8ee3d1d0f6d303"
+    },
+    {
+      "path": "external/results/cell_spectra.json",
+      "compressed_path": "external/results/cell_spectra.json.gz",
+      "bytes": 8122528,
+      "sha256": "5c35da438a90f5cd5ac6b948de68e4d4e68ceab0af35e3f5ec1e24c84668964a",
+      "compressed_bytes": 452569,
+      "compressed_sha256": "80263afbf46c4eee475ef0312cefda620b79319a1414123b212dd6b5d1f16a9e"
+    },
+    {
+      "path": "external/results/chain_recomputed/cell_expression_intervals.csv",
+      "compressed_path": "external/results/chain_recomputed/cell_expression_intervals.csv.gz",
+      "bytes": 22559411,
+      "sha256": "5f6df37480d377877dfd75ea6f0c325553c9bf5141c8a0b82fd2a945c2cce1d9",
+      "compressed_bytes": 862826,
+      "compressed_sha256": "627dc22cc2b187b51d7ed2f859d8b7e755b8475289f1d8254d8ee3d1d0f6d303"
+    },
+    {
+      "path": "external/results/chain_recomputed/cell_spectra.json",
+      "compressed_path": "external/results/chain_recomputed/cell_spectra.json.gz",
+      "bytes": 8122528,
+      "sha256": "5c35da438a90f5cd5ac6b948de68e4d4e68ceab0af35e3f5ec1e24c84668964a",
+      "compressed_bytes": 452569,
+      "compressed_sha256": "80263afbf46c4eee475ef0312cefda620b79319a1414123b212dd6b5d1f16a9e"
+    },
+    {
+      "path": "external/results/chain_recomputed/patch_spectra.json",
+      "compressed_path": "external/results/chain_recomputed/patch_spectra.json.gz",
+      "bytes": 57811647,
+      "sha256": "0eaa7952eb9abbe2ad9fcd0c2864ee6ca9d31b368bf6df6ae446b048e2937520",
+      "compressed_bytes": 3447687,
+      "compressed_sha256": "a518d9974d33810930a68aa0d3cd62bad52c1951bcc9045119702fd90151f741"
+    },
+    {
+      "path": "external/results/count_baseline_comparison.csv",
+      "compressed_path": "external/results/count_baseline_comparison.csv.gz",
+      "bytes": 24411242,
+      "sha256": "58e850cc86dbed2b59330103c1956ee451a8351bc0dc44279ff47724475f7717",
+      "compressed_bytes": 891305,
+      "compressed_sha256": "6113bc27c96b1a3d5bac589a1730a95da5079a0368ddd6664cc3c4a283ba4b5f"
+    },
+    {
+      "path": "external/results/patch_spectra.json",
+      "compressed_path": "external/results/patch_spectra.json.gz",
+      "bytes": 9707803,
+      "sha256": "1cf678cc7d6d4b8659a0ed74f694d58d4d268c6526eb7e1a9169ad9edd5df9ab",
+      "compressed_bytes": 568663,
+      "compressed_sha256": "ad7a425404ddbff5aa6a129c1bf0dfe7fd09e59f7273ae46c3821ff2cecde1fc"
+    },
+    {
+      "path": "reach/breast/r0p5/data/atlas_breast_01.json",
+      "compressed_path": "reach/breast/r0p5/data/atlas_breast_01.json.gz",
+      "bytes": 11459711,
+      "sha256": "a7d5a51d414b1d43438dd319684b44f1d5063f88c2234e13679df0595e2e623b",
+      "compressed_bytes": 1581747,
+      "compressed_sha256": "3d8f48381deef9821f36999495b2032c1ecfa0f5b0b308ba45642c8b10edf96c"
+    },
+    {
+      "path": "reach/breast/r0p5/data/atlas_breast_02.json",
+      "compressed_path": "reach/breast/r0p5/data/atlas_breast_02.json.gz",
+      "bytes": 9670939,
+      "sha256": "e4e4703240231c189061fbac10276cb4162af9a90a35972a64bb30013d310e5e",
+      "compressed_bytes": 1256534,
+      "compressed_sha256": "6b86c6a9148832a7175e3dec55166464e2bdbe0f05ff2b6d1f2f6439c9687098"
+    },
+    {
+      "path": "reach/breast/r0p5/results/cell_expression_intervals.csv",
+      "compressed_path": "reach/breast/r0p5/results/cell_expression_intervals.csv.gz",
+      "bytes": 46102404,
+      "sha256": "a87ffba1d44b912dc20bc8db53884df0a0e0737b50970d6d449a4635c2b4559b",
+      "compressed_bytes": 1492492,
+      "compressed_sha256": "8bc1d4bc1486cad4b5e655c2b80a1863589c78731c25dc60defe2db666b7978b"
+    },
+    {
+      "path": "reach/breast/r0p5/results/cell_spectra.json",
+      "compressed_path": "reach/breast/r0p5/results/cell_spectra.json.gz",
+      "bytes": 7444225,
+      "sha256": "50e56cbb04dab081304fb05bb9715d49d59aa8ff0d5d2a81e7924f20091f5d79",
+      "compressed_bytes": 356854,
+      "compressed_sha256": "07605242f896c83136b29bf0f3a84c86456a3925c2c9e4da460a2ce3c61ce407"
+    },
+    {
+      "path": "reach/breast/r0p5/results/patch_spectra.json",
+      "compressed_path": "reach/breast/r0p5/results/patch_spectra.json.gz",
+      "bytes": 17077993,
+      "sha256": "e4a5945a79cb9c919644e702f1e80e572b8c5832d8b3334315508d4b72f0cbbe",
+      "compressed_bytes": 784734,
+      "compressed_sha256": "49648a3d89b67546be377829eab6825752d6a5f7805228d3d8b1c46542748cd8"
+    },
+    {
+      "path": "reach/breast/r1/data/atlas_breast_01.json",
+      "compressed_path": "reach/breast/r1/data/atlas_breast_01.json.gz",
+      "bytes": 11741894,
+      "sha256": "cdff0fb1a81997f31fc5e3cfbe91f3172f333de56aed36544ade30f0c4663725",
+      "compressed_bytes": 1649577,
+      "compressed_sha256": "12b6d420743f20e5cc4fbc7f4f4a63973961a859cff2e3038ff88cc00211d161"
+    },
+    {
+      "path": "reach/breast/r1/data/atlas_breast_02.json",
+      "compressed_path": "reach/breast/r1/data/atlas_breast_02.json.gz",
+      "bytes": 9922803,
+      "sha256": "419c219ef316e13c9a579c74fe80a6ca98a4486754b9dbe1a15515879d151a5f",
+      "compressed_bytes": 1310675,
+      "compressed_sha256": "1d3df0123f05667de791152b3d36c1bf4661b7f5b219ccddc3b9afe00bf50fad"
+    },
+    {
+      "path": "reach/breast/r1/results/cell_expression_intervals.csv",
+      "compressed_path": "reach/breast/r1/results/cell_expression_intervals.csv.gz",
+      "bytes": 47351830,
+      "sha256": "e0f2d7bb57d3f8cb2f5c9cd3d127528a33b75e10a123c4dd5f273daf49d51b0f",
+      "compressed_bytes": 1581680,
+      "compressed_sha256": "ecb02aa0a3f258d1e625d52dd20402f26def4a3d70ae50a5d8982e7b8ce8b59c"
+    },
+    {
+      "path": "reach/breast/r1/results/cell_spectra.json",
+      "compressed_path": "reach/breast/r1/results/cell_spectra.json.gz",
+      "bytes": 8038812,
+      "sha256": "38cf4cba0950a4dc066b143a7002ce31c484bf886467160a15e9c489d9a06f83",
+      "compressed_bytes": 418931,
+      "compressed_sha256": "53967246a05fba9d29edfe7daa22b129b527d4028aa8e72b738bcca67da87fc4"
+    },
+    {
+      "path": "reach/breast/r1/results/patch_spectra.json",
+      "compressed_path": "reach/breast/r1/results/patch_spectra.json.gz",
+      "bytes": 54700514,
+      "sha256": "c02d9d7d320a97353e3263e953386e1a0f3d25ca32ee8c6c0ccdebf77bc66e86",
+      "compressed_bytes": 3559224,
+      "compressed_sha256": "d24afc09b7ea7a733e1b6e89901cea9c8e76af1133598290b912b73bc54ddf42"
+    },
+    {
+      "path": "reach/breast/r2/data/atlas_breast_01.json",
+      "compressed_path": "reach/breast/r2/data/atlas_breast_01.json.gz",
+      "bytes": 12205662,
+      "sha256": "8be33631afe1e05bfe1bca1752054ae6bc6b40667a6dd7be47a3a1ddb8940833",
+      "compressed_bytes": 1738937,
+      "compressed_sha256": "ed2a301cf29cf14c451585acff94720f73f7e14272f458b9a2f1fd23cb662d2e"
+    },
+    {
+      "path": "reach/breast/r2/data/atlas_breast_02.json",
+      "compressed_path": "reach/breast/r2/data/atlas_breast_02.json.gz",
+      "bytes": 10277215,
+      "sha256": "f62e5032f7cd8c60d37a66f2c040e5d6c16b2aab4258cde9e696f2210ff735b3",
+      "compressed_bytes": 1376665,
+      "compressed_sha256": "cf753a2a033863dd43cae20039d9c442a724d911c78fe3b2a493907eb848703c"
+    },
+    {
+      "path": "reach/breast/r2/results/cell_expression_intervals.csv",
+      "compressed_path": "reach/breast/r2/results/cell_expression_intervals.csv.gz",
+      "bytes": 48137491,
+      "sha256": "10d66b1ac22e174720501d0e0d0489750cd3801ed57d487fb9deb011a8063a3b",
+      "compressed_bytes": 1628181,
+      "compressed_sha256": "b61e438836889456bf95cb2839b5aa074db4e3e1deee33f73c42b81e189802b1"
+    },
+    {
+      "path": "reach/breast/r2/results/cell_spectra.json",
+      "compressed_path": "reach/breast/r2/results/cell_spectra.json.gz",
+      "bytes": 8491987,
+      "sha256": "5ac62fb0a13ce38817dbc074b6b5aecd0670accdab5265ff689f8b5a97e5bc46",
+      "compressed_bytes": 438528,
+      "compressed_sha256": "2ed283f7e7e5e13b3a02ab8147bbc6208ebf89e5539aeb06b3e0b142c99e075c"
+    },
+    {
+      "path": "reach/breast/r2/results/patch_spectra.json",
+      "compressed_path": "reach/breast/r2/results/patch_spectra.json.gz",
+      "bytes": 150149441,
+      "sha256": "d6633ab05fe141e61a5126465f8d2d056b2335f66f7acbfc5e759a456dc11612",
+      "compressed_bytes": 12110121,
+      "compressed_sha256": "f5fa4d0fc33adc7a2a1cbe26c596600ac7ae649ed3b1e0c87561c89f2c8abe7f"
+    },
+    {
+      "path": "reach/breast/r3/data/atlas_breast_01.json",
+      "compressed_path": "reach/breast/r3/data/atlas_breast_01.json.gz",
+      "bytes": 11938545,
+      "sha256": "d231c6f0ef9d86c0975899783f75dae3ed4534960d160eab1bf0d03952caf51d",
+      "compressed_bytes": 1715743,
+      "compressed_sha256": "6f0bd97f5cd1dff706d0bd6c96029afc25ac8ea69afd1ae99be655a97565f517"
+    },
+    {
+      "path": "reach/breast/r3/data/atlas_breast_02.json",
+      "compressed_path": "reach/breast/r3/data/atlas_breast_02.json.gz",
+      "bytes": 10476083,
+      "sha256": "d438693c61467c0b0975bd87c87448bc285f78c4f04c46381f9780c1ef016b1b",
+      "compressed_bytes": 1414012,
+      "compressed_sha256": "6fd0c1d9396b3c1db63862b02b055790b1ac6064db9ed434e4735b2879666bc9"
+    },
+    {
+      "path": "reach/breast/r3/results/cell_expression_intervals.csv",
+      "compressed_path": "reach/breast/r3/results/cell_expression_intervals.csv.gz",
+      "bytes": 47668506,
+      "sha256": "43c6eda74da84d81a6a044f509447da77330aa9ffaaaf1f0652becbafce6840d",
+      "compressed_bytes": 1579368,
+      "compressed_sha256": "b31b8d2b9662408e46484507723a66e90e89dcc318ea6edaca18ef435f8f68c5"
+    },
+    {
+      "path": "reach/breast/r3/results/cell_spectra.json",
+      "compressed_path": "reach/breast/r3/results/cell_spectra.json.gz",
+      "bytes": 8310798,
+      "sha256": "815b5dbbf17e6206ebb9a194e5b079054674d55be5425e515bfb8b6707c09e58",
+      "compressed_bytes": 392249,
+      "compressed_sha256": "e46749582432cd993ce70fa13778b47eac33c1ee03b942e3a6592d84f422e8d5"
+    },
+    {
+      "path": "reach/breast/r3/results/patch_spectra.json",
+      "compressed_path": "reach/breast/r3/results/patch_spectra.json.gz",
+      "bytes": 198205738,
+      "sha256": "ee828a242af3d43dd7433cabe5e3f9512d831f6c4cbc8ab71a75828d3e44e3ae",
+      "compressed_bytes": 16554453,
+      "compressed_sha256": "ff4472400e9b10f6ff395e4a056060c2eeaccc73aca5df22f79b46caf9353b61"
+    },
+    {
+      "path": "reach/lung/r0p5/results/cell_expression_intervals.csv",
+      "compressed_path": "reach/lung/r0p5/results/cell_expression_intervals.csv.gz",
+      "bytes": 6311513,
+      "sha256": "7f5ee8075dbda3b5197c9821b88ec3f2371dfe289fcb47bc69e1e196242a5d22",
+      "compressed_bytes": 194411,
+      "compressed_sha256": "ac50051c81116c8e32fea26135fce68ce30aac9a8b3c10de7bfed7ef19c7ef9b"
+    },
+    {
+      "path": "reach/lung/r1/results/cell_expression_intervals.csv",
+      "compressed_path": "reach/lung/r1/results/cell_expression_intervals.csv.gz",
+      "bytes": 6488169,
+      "sha256": "b34d58bc53a0e2745cfd8bf394c0df81c99e35260e6d342116c07fc348ae59c6",
+      "compressed_bytes": 203966,
+      "compressed_sha256": "e181315cd69c6a5859f6468e9b2c05dcb6e1f88994b9cb4d734f36be038cfb93"
+    },
+    {
+      "path": "reach/lung/r2/results/cell_expression_intervals.csv",
+      "compressed_path": "reach/lung/r2/results/cell_expression_intervals.csv.gz",
+      "bytes": 6619192,
+      "sha256": "f59407f6663fe51461445eef6fc27fff14c303f339da361625338b160d01700b",
+      "compressed_bytes": 207733,
+      "compressed_sha256": "bd5f006a93b79e76ec5063e2f361281c8c5f4385a910e998adb88efdec0a2bcd"
+    },
+    {
+      "path": "reach/lung/r3/results/cell_expression_intervals.csv",
+      "compressed_path": "reach/lung/r3/results/cell_expression_intervals.csv.gz",
+      "bytes": 6633942,
+      "sha256": "3e4af37a94b7569ffa3f6b4b53a166f1e1240f4b73d9e67a34da4a8dd19f78ee",
+      "compressed_bytes": 205950,
+      "compressed_sha256": "61daec6e6bd7f65b24d17deb8493d2cdf5d1019ed2dd30af7bca6a2519d114f5"
+    },
+    {
+      "path": "results/reach/baseline_breast_fine_intervals.csv",
+      "compressed_path": "results/reach/baseline_breast_fine_intervals.csv.gz",
+      "bytes": 48070336,
+      "sha256": "50526b434859955a9e06cb1e794b8a5940b8248cc1340708849852b338b9ccc6",
+      "compressed_bytes": 1604108,
+      "compressed_sha256": "9dd8d3558b96e22ff054a9aafc1dbf723d16acdecef1e9bad5b8dc6de995d4e6"
+    },
+    {
+      "path": "results/reach/baseline_lung_fine_intervals.csv",
+      "compressed_path": "results/reach/baseline_lung_fine_intervals.csv.gz",
+      "bytes": 6606954,
+      "sha256": "00c6e048478d320fb174433fa2c6b2939e0dd335b3e79fa87be7f8c9c07167d9",
+      "compressed_bytes": 210736,
+      "compressed_sha256": "3bdf725f6dd73013f9d71d5ec576bba1147995457e787f3f0bbdbce420e9f6a6"
+    }
+  ],
+  "aliases": [
+    {
+      "path": "reach/breast/r0p5/data/observed_crop_counts.json",
+      "target": "external/data/observed_crop_counts.json"
+    },
+    {
+      "path": "reach/breast/r0p5/data/source_crops",
+      "target": "external/data/source_crops"
+    },
+    {
+      "path": "reach/breast/r1/data/observed_crop_counts.json",
+      "target": "external/data/observed_crop_counts.json"
+    },
+    {
+      "path": "reach/breast/r1/data/source_crops",
+      "target": "external/data/source_crops"
+    },
+    {
+      "path": "reach/breast/r2/data/observed_crop_counts.json",
+      "target": "external/data/observed_crop_counts.json"
+    },
+    {
+      "path": "reach/breast/r2/data/source_crops",
+      "target": "external/data/source_crops"
+    },
+    {
+      "path": "reach/breast/r3/data/observed_crop_counts.json",
+      "target": "external/data/observed_crop_counts.json"
+    },
+    {
+      "path": "reach/breast/r3/data/source_crops",
+      "target": "external/data/source_crops"
+    },
+    {
+      "path": "reach/lung/r0p5/data/observed_crop_counts.json",
+      "target": "data/observed_crop_counts.json"
+    },
+    {
+      "path": "reach/lung/r0p5/data/source_crops",
+      "target": "data/source_crops"
+    },
+    {
+      "path": "reach/lung/r1/data/observed_crop_counts.json",
+      "target": "data/observed_crop_counts.json"
+    },
+    {
+      "path": "reach/lung/r1/data/source_crops",
+      "target": "data/source_crops"
+    },
+    {
+      "path": "reach/lung/r2/data/observed_crop_counts.json",
+      "target": "data/observed_crop_counts.json"
+    },
+    {
+      "path": "reach/lung/r2/data/source_crops",
+      "target": "data/source_crops"
+    },
+    {
+      "path": "reach/lung/r3/data/observed_crop_counts.json",
+      "target": "data/observed_crop_counts.json"
+    },
+    {
+      "path": "reach/lung/r3/data/source_crops",
+      "target": "data/source_crops"
+    }
+  ]
+}

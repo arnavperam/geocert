@@ -1,0 +1,41 @@
+name: Atlas exact checks
+on:
+  pull_request:
+    paths: ['recomb2027-atlas/**', '.github/workflows/atlas-check.yml']
+  push:
+    paths: ['recomb2027-atlas/**', '.github/workflows/atlas-check.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.12', '3.13']
+    defaults:
+      run:
+        working-directory: recomb2027-atlas
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Verify and restore
+        run: |
+          python atlas_cli.py verify-manifest
+          python release/restore_results.py
+          python release/check_interval_hashes.py
+      - name: Check exact algorithms and witness
+        run: |
+          python atlas_cli.py validate
+          python analysis/reach/test_forced_reduction.py
+          python atlas_cli.py showcase --output run/showcase.json
+      - name: Recompute original lung table and one widened family
+        run: |
+          python atlas_cli.py reproduce --dataset lung --output-dir run/lung
+          python analysis/reach/reproduce.py --dataset lung --width 1 --output-dir run/lung-width1
+      - name: Check all recorded new compositions and interval rows
+        run: python analysis/reach/check_outputs.py
