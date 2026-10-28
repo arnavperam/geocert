@@ -1,56 +1,97 @@
-# GeoCert-ST
+# GeoCert: expression intervals on a compatible boundary atlas
 
-Exact joint deformation costs for continuous RNA-ownership sensitivity.
+Research implementation accompanying **Certified Expression Intervals under Shared Segmentation Uncertainty**, by Arnav Peram.
 
-Companion code for **Exact Joint Deformation Costs for Continuous RNA-Ownership Sensitivity**, by Arnav Peram. The method represents the minimum integrated deformation for every feasible ownership vector in a local ordered-cell corridor. It includes a direct owner-layer construction and an exact critical-mesh height reference.
+The input is a reference cell segmentation, measured RNA coordinates, fixed nuclear regions, and a declared geometric uncertainty family. The output is one count interval per reference cell, gene and physical-area budget. All editable patches belong to one disjoint atlas, share one budget and glue into a topology-preserving partition. Unselected boundaries and patch seams stay fixed.
 
-## Run the native example
+This release adds a critical-height/count dynamic program for exact hard-budget spectra with explicitly listed point RNAs. It retains the earlier exact continuous assignment-cost reduction. It does not infer which segmentation is anatomically correct.
 
-Python 3.12 or 3.13 is sufficient. The current exact workflow uses only the Python standard library; there are no packages to install.
+## Run
+
+Python 3.12 or later is required by the included code. The inherited clean replay used Python 3.13.5; this merged candidate is checked again with Python 3.12 and CI. The prepared-input exact workflow uses only the Python standard library.
 
 ```sh
-git clone https://github.com/arnavperam/geocert.git
-cd geocert
 python3 -m venv .venv
 . .venv/bin/activate
-python geocert.py verify-manifest
-python geocert.py showcase --output run/showcase.json
+python atlas_cli.py verify-manifest
+python atlas_cli.py showcase --output run/showcase.json
+python atlas_cli.py validate
 ```
 
-On Windows, use `.venv\Scripts\python.exe` in place of `python`. Run without `-O`; scientific assertions must remain enabled.
+On Windows, substitute `.venv\Scripts\python.exe` for `python`. Keep assertions enabled; do not pass `-O`.
 
-The example is corridor `4037abe9fea38e` at deformation penalty 1. Both exact representations return five RNA reassignments, deformation approximately 3.506102 square micrometres, and joint-model objective approximately -1.493898. The JSON output contains exact rational values, a continuous boundary, and a flow/cut certificate.
+The showcase checks a recorded exact spectrum and its continuous witness. In breast format-test crop 1, cell 81 has an LDHB source count of 22. Its exact interval is `[19,23]` at area 0.25 µm² and `[17,23]` at area 0.5 µm². Count 17 has minimum area approximately 0.484040265 µm². The witness transfers five LDHB RNAs through two compatible patches and one collateral KRT8 RNA. The test dataset does not support a biological interpretation of that example.
 
-## Reproduce the representation comparison
+## Recompute the full count tables
 
 ```sh
-python geocert.py benchmark --repetitions 1 --scc --output-dir run/comparison
-python tests/test_scc.py
-python tests/test_prefix_bound.py
+python atlas_cli.py reproduce --dataset lung --output-dir run/lung
+python atlas_cli.py reproduce --dataset breast --output-dir run/breast
 ```
 
-Each representation evaluates 84 corridor/setting models and 252 optional objectives. Expected objective hash:
+The commands compute all multicopy spectra with the exact count chain and use implication closure for single-copy targets. They compare every rational minimum area and every interval row with the stored independent-reference-checked results. A fresh output directory preserves the stored records.
 
-```text
-66f6a364012ce85e587c9d71a3005c57d9b7a845d83b2513f9cdce5018e8017f
+Expected outputs:
+
+| Input collection | Complete reference cells | Local patches | Cell–gene spectra | Eight-budget interval rows |
+|---|---:|---:|---:|---:|
+| Lung crops | 153 | 544 | 3,304 | 26,432 |
+| Breast format-test crops | 467 | 1,708 | 22,976 | 183,808 |
+
+Five eligible lung cells have no retained positive or editable gene entry. Their entries are implicit zero within the gene universe recorded in `matrix_index.json`. All counts refer to detected retained molecules, not biological abundance or unmeasured genes.
+
+For the independent scalar/Cartesian check:
+
+```sh
+python analysis/check_global_counts.py
+GEOCERT_DATA_ROOT=external python analysis/check_global_counts.py
 ```
 
-Use `--repetitions 3` for repeated fresh-process measurements. Omit `--scc` to run the uncontracted ablation. Timings and tied choices may vary; exact objective values must agree. See [reproduction notes](docs/REPRODUCIBILITY.md) for scope and recorded environments.
+These scripts regenerate their small validation summaries; they do not alter spectra or inputs. A copied working directory is appropriate for replay. The scalar reference does not import the production compiler, geometry envelopes, count chain or optimizer. It shares prepared input extraction.
 
-## Repository contents
+## Geometry and source-data checks
 
-- `core/`: exact geometry, direct and height constructions, flow, contraction, and witness checks.
-- `data/`: the 42 source-derived rational corridors, expected objectives, and separately enumerated showcase costs.
-- `tests/`: bounded correctness tests.
-- `results/`: reported summaries, per-model timing records, and validation outputs.
-- `docs/`: mathematical notes, data attribution, and release provenance.
+The exact count solver does not require scientific libraries. Source extraction, image geometry indexing, nuclear-distance analysis and plotting do:
 
-## Scope
+```sh
+python -m pip install -r requirements-analysis.txt
+python analysis/check_source_inputs.py
+python analysis/verify_atlas.py
+GEOCERT_DATA_ROOT=external python analysis/verify_atlas.py
+```
 
-This is a research implementation for model-conditioned assignment sensitivity, not an estimator of corrected anatomical ownership. The inputs are selected local corridors from one development donor. Boundaries are ordered graphs, and the geometric uncertainty settings are not anatomically calibrated. The theorem covers nonadditive geometric deformation and unary molecular costs; it does not automatically solve arbitrary higher-order molecular objectives or hard-budget problems.
+`analysis/build_atlas.py` regenerates the lung atlas from the supplied mask and transcript inputs. For the external collection, set `GEOCERT_DATA_ROOT=external`. The extraction rule is geometry-driven, with the protocol and coverage denominators in `docs/` and `results/`.
 
-Version 1.0.0 packages the reviewed RC2 exact implementation without changing its algorithms or scientific inputs. The [provenance record](docs/RELEASE_PROVENANCE.json) identifies the frozen predecessor and the documentation-only correction. Historical numerical workflows and the large development archive are not included in this compact source release.
+## Files
 
-## Citation and rights
+- `atlas/`: physical charts and gluing maps, exact count-chain algorithm, independent scalar reference.
+- `geocert_expression/`: preserved exact continuum primitives and earlier count APIs.
+- `data/`, `external/data/`: original crops, prepared observations and rational atlas definitions.
+- `results/`, `external/results/`: complete spectra, witnesses, interval tables and baseline comparisons.
+- `tests/`: exhaustive, nonflat, unit-molecule gap and topology-map checks.
+- `analysis/`: full evaluation and figure commands.
+- `manuscript/`: LaTeX, figures, paper and supplement.
 
-Citation metadata is in `CITATION.cff`. The manuscript is not represented as accepted or published. Data attribution and modification details are in [DATA_PROVENANCE.md](docs/DATA_PROVENANCE.md). No software license has been selected; see [NOTICE.md](NOTICE.md).
+The repeated 12-process scaling experiment is in `results/chain_benchmarks/`. Run `python analysis/run_chain_benchmarks.py` in a working copy to repeat it. The special equal-tent family has an analytical spectrum; these measurements are not a comparison against every specialized method.
+
+## Interpretation
+
+The complete-cell count table uses a restricted *fixed-seam* uncertainty family, not unrestricted deformation of every cell perimeter. Roughly two-thirds of incident boundary length is editable in these data. The remaining portions, junctions, crop-border cells and nuclear owners are fixed. Exported atlas identifiers specify this conditioning. Marginal endpoints of different matrix entries need not be jointly attainable.
+
+The breast data are the vendor's trimmed format-test data and are used only for computational transfer testing. Neither collection supplies true transcript ownership. A deterministic five-micrometre nuclear-expansion reference is implemented and often lies outside the atlas; it is not Proseg or a biological accuracy standard. Proseg 3.2.0 was executed on the two lung crops using the documented no-factorization adaptation. Raw outputs and exclusions are retained in results/proseg; reference reach uses shared retained molecules and original observed coordinates, not Proseg-diffused positions. Baysor and ResolVI were not executed.
+
+The merged candidate is `0.3.0a2`, on the public `atlas-merged-revision` review branch under `atlas2027/`; it is not a stable release tag. Public v1.0.0 is an earlier exact-workflow release, not this extension. See `docs/PROVENANCE.json` for input identities, `docs/REPORT.md` for results and `docs/RESPONSE.md` for the critique response.
+
+## Rights and disclosure
+
+Source-data attribution and permitted use are documented in `docs/DATA_PROVENANCE.md`. Project software is MIT licensed; `NOTICE.md` preserves separate dataset and dependency rights.
+
+AI assistance contributed to mathematics, algorithms, code, experiments, verification and writing. The listed author is responsible for the submission and for reviewing and defending its claims. This package is not a conference acceptance or biological-validation claim.
+
+## Comparison and merge
+
+The Atlas is the scientific base because its disjoint supports give one compatible fixed-seam count family and its scalar count-chain algorithm handles explicit unit molecules in polynomial time. The preceding corridor revision contributes actual Proseg outputs, MIT licensing and release checks. Its old pair-census totals are not a new discovery; the original supplement already contained them. See docs/COMPARISON_AUDIT.md.
+
+Both denominators matter: joint geometry changes 203/1,026 breast questions with marginal width at least two, but 203/22,976 questions overall. Constant numbers of non-singleton intervals do not imply fixed endpoints: on the supplied grid, lung endpoints plateau from0.25 square micrometres, breast endpoints from1. The breast data remain explicitly vendor format-test data.
+
+`python analysis/audit_revision_csv.py` recomputes these denominator and saturation checks. New width/reach results are in results/revision_reach; their protocol was fixed before execution. The study uses lung crops only, and external-method reach is not accuracy or anatomical calibration.

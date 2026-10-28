@@ -1,0 +1,72 @@
+name: Verify atlas source import
+on:
+  push:
+    branches: [release/atlas-import-v110]
+    paths: ['.import/**', '.github/workflows/import-atlas.yml']
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Reconstruct reviewed source overlay
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib,json,lzma,subprocess
+          from pathlib import Path,PurePosixPath
+          raw=b''.join(Path(f'.import/part{i:02d}').read_bytes() for i in range(4))
+          assert len(raw)==27100
+          assert hashlib.sha256(raw).hexdigest()=='0a044f279ef6f1aae8df97637bbc0d9ea1fdd4898dbaab19399ebdd9e5348f05'
+          files=json.loads(lzma.decompress(raw));assert len(files)==24
+          for name,text in files.items():
+              p=PurePosixPath(name)
+              assert not p.is_absolute() and '..' not in p.parts and p.parts[0] not in ('.git','.github','.import')
+              q=Path(name);q.parent.mkdir(parents=True,exist_ok=True);q.write_text(text,encoding='utf-8',newline='')
+          subprocess.run(['git','add','--',*files],check=True)
+          unused=['analysis/audit_revision_csv.py','analysis/proseg_comparison.py','analysis/reach_independent_check.py','analysis/revision_reach.py','analysis/revision_reach_verify.py']
+          for name in unused:
+              if Path(name).exists():subprocess.run(['git','rm','--',name],check=True)
+          tracked=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          entries=[]
+          for name in sorted(filter(None,tracked)):
+              if name.startswith(('.import/','.github/')) or name=='SHA256SUMS.txt':continue
+              p=Path(name)
+              if p.is_file():entries.append(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+name)
+          Path('SHA256SUMS.txt').write_text('\n'.join(entries)+'\n')
+          subprocess.run(['git','add','SHA256SUMS.txt'],check=True)
+          print('Verified and staged',len(files),'source/documentation files.')
+          PY
+      - name: Fetch and verify immutable public inputs
+        run: python fetch_inputs.py
+      - name: Reproduce exact scientific checks
+        env:
+          PYTHONHASHSEED: '0'
+        run: |
+          python atlas_cli.py verify-manifest
+          python atlas_cli.py validate
+          python tests/test_adopted_guards.py
+          python atlas_cli.py showcase --output run/showcase.json
+          python atlas_cli.py reproduce --dataset lung --output-dir run/lung
+          python atlas_cli.py reproduce --dataset breast --output-dir run/breast
+      - name: Save verification outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-source-import-check
+          path: |
+            run/showcase.json
+            results/adopted_guards_validation.json
+            run/lung/cell_expression_summary.json
+            run/breast/cell_expression_summary.json
+          retention-days: 30
+      - name: Commit the checked source on the staging branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Integrate atlas reach analysis and verified source guards'
+          git push origin HEAD:release/atlas-import-v110

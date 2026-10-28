@@ -1,7 +1,7 @@
-# Rights and attribution
+# Rights and scope
 
-No software license has been selected for this release. Public availability is not a grant of an additional software license. Contact the repository owner concerning reuse terms.
+Project software and project documentation are licensed under the MIT License in LICENSE, copyright 2026 Arnav Peram. Third-party software dependencies retain their own licenses. Dataset terms are separate.
 
-The source-derived native data originate from the 10x Genomics dataset identified in `docs/DATA_PROVENANCE.md`, released under CC BY 4.0. That attribution and license apply to the source data; no ownership of third-party data is claimed here.
+The included source crops derive from 10x Genomics datasets distributed under CC BY 4.0. Attribution, transformations and the breast format-test limitation appear in docs/DATA_PROVENANCE.md. Those data are excluded from the project software license.
 
-The implementation uses Python's standard library and does not vendor NumPy, SciPy, NetworkX, font files, or a third-party surface-segmentation package. Algorithmic foundations and their citations are documented in the manuscript and mathematical notes.
+This research candidate provides conditional exact calculations. Anatomical accuracy, clinical validity and conference acceptance remain unestablished.

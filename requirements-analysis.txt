@@ -1,0 +1,11 @@
+# Analysis environment recorded for this release; exact prepared-input workflow has no third-party dependency.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+rasterio==1.5.0
+shapely==2.1.2
+matplotlib==3.10.8
+thrift==0.20.0
+
+# Optional standard Parquet reader: pyarrow (not installed or replayed here).
+# The included restricted Parquet fallback instead uses system libsnappy.
