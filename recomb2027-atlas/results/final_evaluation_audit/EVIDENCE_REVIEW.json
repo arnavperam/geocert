@@ -1,0 +1,12 @@
+{
+  "scope": "Read-only evidence audit of Agent1 strict-width study; no new optimization study or Proseg execution",
+  "original_zip_sha256": "0d682f6585a082530fde3de888772cc4306aa86c2e0aa1e11fe9791a482502c7",
+  "composition_validation": "composition_validation.json",
+  "report_replay": "report_replay_check.json",
+  "independent_summary": "independent_summary_audit.json",
+  "primary_identity": "primary_identity_check.json",
+  "attachment_identity": "attachment_identity_check.json",
+  "widest_geometry": "geometry_replay/widest_geometry_validation.json",
+  "correct_report_coverage": "Lung support2:5455/23164=23.5494733%,roundsto23.5%",
+  "all_checks_passed": true
+}

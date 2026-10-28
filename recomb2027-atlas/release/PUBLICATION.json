@@ -1,0 +1,26 @@
+{
+  "candidate": "Atlas 1.1.0 final evaluation",
+  "scientific_source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
+  "scientific_source_url": "https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas",
+  "scientific_archive": {
+    "sha256": "1b08829e7e80a1e966a1bc39920dc4509af99f79ffd11dadfaa71b8338ca59d5",
+    "bytes": 74715174,
+    "manifest_entries": 366,
+    "files": 367,
+    "source_guards_match": true
+  },
+  "source_public_anonymously_verified": true,
+  "scientific_implementation_and_results_unchanged_since_source_commit": true,
+  "document_sha256": {
+    "main.pdf": "86d17c2e8b267efd300c4bc7ff442fcbbd2b175009e0dc9e57cd5facabe9da79",
+    "supplement.pdf": "d21293858f793519beddb81ce323e5616d7238fdd4b34ce0f9de1645dd0ebf98"
+  },
+  "body_pages": 10,
+  "supplement_pages": 16,
+  "abstract_words": 224,
+  "abstract_matches_rendered_pdf": true,
+  "registration_performed": false,
+  "stable_tag_claimed": false,
+  "prior_agent1_archive_sha256": "0d682f6585a082530fde3de888772cc4306aa86c2e0aa1e11fe9791a482502c7",
+  "ci_scope": "Dedicated read-only workflow validates the public scientific archive and code; use actual GitHub Actions results for completion status."
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "dataset": "lung",
+    "radius": "3",
+    "returncode": 0,
+    "seconds": 36.258800323001196,
+    "matches_original_geometric_counts": true
+  },
+  {
+    "dataset": "breast",
+    "radius": "3",
+    "returncode": 0,
+    "seconds": 204.34259941600249,
+    "matches_original_geometric_counts": true
+  }
+]

@@ -1,0 +1,32 @@
+breast_01 0 patches 10 spectra
+breast_01 50 patches 491 spectra
+breast_01 100 patches 1015 spectra
+breast_01 150 patches 1463 spectra
+breast_01 200 patches 1853 spectra
+breast_01 250 patches 2170 spectra
+breast_01 300 patches 2468 spectra
+breast_01 350 patches 2732 spectra
+breast_01 400 patches 2962 spectra
+breast_01 450 patches 3145 spectra
+breast_01 550 patches 3499 spectra
+breast_01 600 patches 3639 spectra
+breast_01 650 patches 3731 spectra
+breast_01 700 patches 3829 spectra
+breast_01 750 patches 3914 spectra
+breast_01 850 patches 4012 spectra
+breast_01 900 patches 4050 spectra
+{'roi': 'breast_01', 'complete_cells': 253, 'positive_or_editable_cell_gene_keys': 12858, 'editable_cell_gene_keys': 5004, 'local_gene_spectra': 4062, 'local_variable_gene_spectra': 2435, 'count_method': 'chain', 'chain_queries': 540, 'chain_DP_states': 812059, 'local_target_assignments': 5528, 'singleton_questions': 4789, 'maximum_gene_copies_per_patch': 6, 'maximum_patches_per_cell_gene': 7, 'maximum_cell_gene_observed_count': 52, 'interval_rows': 102864, 'by_budget': [{'budget_um2': '0', 'rows': 12858, 'non_singleton': 0, 'strictly_tighter_than_independent': 0, 'max_width': 0, 'source_detection_can_disappear': 0, 'source_zero_can_appear': 0}, {'budget_um2': '1/20', 'rows': 12858, 'non_singleton': 2172, 'strictly_tighter_than_independent': 57, 'max_width': 5, 'source_detection_can_disappear': 307, 'source_zero_can_appear': 317}, {'budget_um2': '1/10', 'rows': 12858, 'non_singleton': 2606, 'strictly_tighter_than_independent': 50, 'max_width': 7, 'source_detection_can_disappear': 375, 'source_zero_can_appear': 404}, {'budget_um2': '1/4', 'rows': 12858, 'non_singleton': 3105, 'strictly_tighter_than_independent': 42, 'max_width': 8, 'source_detection_can_disappear': 472, 'source_zero_can_appear': 508}, {'budget_um2': '1/2', 'rows': 12858, 'non_singleton': 3105, 'strictly_tighter_than_independent': 2, 'max_width': 8, 'source_detection_can_disappear': 473, 'source_zero_can_appear': 508}, {'budget_um2': '1', 'rows': 12858, 'non_singleton': 3105, 'strictly_tighter_than_independent': 0, 'max_width': 8, 'source_detection_can_disappear': 473, 'source_zero_can_appear': 508}, {'budget_um2': '2', 'rows': 12858, 'non_singleton': 3105, 'strictly_tighter_than_independent': 0, 'max_width': 8, 'source_detection_can_disappear': 473, 'source_zero_can_appear': 508}, {'budget_um2': '4', 'rows': 12858, 'non_singleton': 3105, 'strictly_tighter_than_independent': 0, 'max_width': 8, 'source_detection_can_disappear': 473, 'source_zero_can_appear': 508}]}
+breast_02 0 patches 11 spectra
+breast_02 50 patches 387 spectra
+breast_02 100 patches 788 spectra
+breast_02 150 patches 1143 spectra
+breast_02 200 patches 1481 spectra
+breast_02 250 patches 1742 spectra
+breast_02 300 patches 1962 spectra
+breast_02 400 patches 2324 spectra
+breast_02 450 patches 2510 spectra
+breast_02 550 patches 2718 spectra
+breast_02 650 patches 2874 spectra
+breast_02 750 patches 2995 spectra
+{'roi': 'breast_02', 'complete_cells': 214, 'positive_or_editable_cell_gene_keys': 10118, 'editable_cell_gene_keys': 3605, 'local_gene_spectra': 3006, 'local_variable_gene_spectra': 1720, 'count_method': 'chain', 'chain_queries': 369, 'chain_DP_states': 478053, 'local_target_assignments': 4062, 'singleton_questions': 3473, 'maximum_gene_copies_per_patch': 6, 'maximum_patches_per_cell_gene': 8, 'maximum_cell_gene_observed_count': 50, 'interval_rows': 80944, 'by_budget': [{'budget_um2': '0', 'rows': 10118, 'non_singleton': 0, 'strictly_tighter_than_independent': 0, 'max_width': 0, 'source_detection_can_disappear': 0, 'source_zero_can_appear': 0}, {'budget_um2': '1/20', 'rows': 10118, 'non_singleton': 1512, 'strictly_tighter_than_independent': 27, 'max_width': 4, 'source_detection_can_disappear': 208, 'source_zero_can_appear': 196}, {'budget_um2': '1/10', 'rows': 10118, 'non_singleton': 1808, 'strictly_tighter_than_independent': 30, 'max_width': 5, 'source_detection_can_disappear': 256, 'source_zero_can_appear': 241}, {'budget_um2': '1/4', 'rows': 10118, 'non_singleton': 2154, 'strictly_tighter_than_independent': 19, 'max_width': 7, 'source_detection_can_disappear': 316, 'source_zero_can_appear': 303}, {'budget_um2': '1/2', 'rows': 10118, 'non_singleton': 2154, 'strictly_tighter_than_independent': 1, 'max_width': 9, 'source_detection_can_disappear': 316, 'source_zero_can_appear': 303}, {'budget_um2': '1', 'rows': 10118, 'non_singleton': 2154, 'strictly_tighter_than_independent': 0, 'max_width': 10, 'source_detection_can_disappear': 316, 'source_zero_can_appear': 303}, {'budget_um2': '2', 'rows': 10118, 'non_singleton': 2154, 'strictly_tighter_than_independent': 0, 'max_width': 10, 'source_detection_can_disappear': 316, 'source_zero_can_appear': 303}, {'budget_um2': '4', 'rows': 10118, 'non_singleton': 2154, 'strictly_tighter_than_independent': 0, 'max_width': 10, 'source_detection_can_disappear': 316, 'source_zero_can_appear': 303}]}
+{"dataset": "breast", "spectra": 22976, "intervals": 183808, "status": "exact match"}

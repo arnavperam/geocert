@@ -1,0 +1,7 @@
+{
+  "summary": true,
+  "budget_summary": true,
+  "reference_budget_summary": true,
+  "reference_exclusions": true,
+  "reference_counts_expanded_bytes": true
+}

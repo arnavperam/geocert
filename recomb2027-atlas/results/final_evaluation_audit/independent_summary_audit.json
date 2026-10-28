@@ -1,0 +1,260 @@
+{
+  "summary": [
+    {
+      "dataset": "lung",
+      "setting": "baseline",
+      "patches": 544,
+      "selected_edges": 15821,
+      "width_histogram": {
+        "2": 209,
+        "4": 282,
+        "1": 53
+      },
+      "spectra": 3304,
+      "rows": 56168,
+      "budgets": 17,
+      "eligible": 46,
+      "tightened": 12,
+      "last_endpoint_area_exact": "266538130516006515813469/1108152025344000000000000",
+      "last_endpoint_area_float": 0.24052487783277385
+    },
+    {
+      "dataset": "lung",
+      "setting": "0.5",
+      "patches": 314,
+      "selected_edges": 10450,
+      "width_histogram": {
+        "13/4": 314
+      },
+      "spectra": 3216,
+      "rows": 54672,
+      "budgets": 17,
+      "eligible": 14,
+      "tightened": 6,
+      "last_endpoint_area_exact": "3073061218868041592919317/19946736456192000000000000",
+      "last_endpoint_area_float": 0.1540633589668791
+    },
+    {
+      "dataset": "lung",
+      "setting": "1",
+      "patches": 249,
+      "selected_edges": 7836,
+      "width_histogram": {
+        "13/2": 249
+      },
+      "spectra": 3298,
+      "rows": 56066,
+      "budgets": 17,
+      "eligible": 40,
+      "tightened": 16,
+      "last_endpoint_area_exact": "273135532910595687607628401/182370161885184000000000000",
+      "last_endpoint_area_float": 1.4976985823073155
+    },
+    {
+      "dataset": "lung",
+      "setting": "2",
+      "patches": 185,
+      "selected_edges": 5455,
+      "width_histogram": {
+        "53/4": 185
+      },
+      "spectra": 3403,
+      "rows": 57851,
+      "budgets": 17,
+      "eligible": 41,
+      "tightened": 16,
+      "last_endpoint_area_exact": "1712356476475963504805797/554076012672000000000000",
+      "last_endpoint_area_float": 3.0904721325477023
+    },
+    {
+      "dataset": "lung",
+      "setting": "3",
+      "patches": 135,
+      "selected_edges": 3916,
+      "width_histogram": {
+        "79/4": 135
+      },
+      "spectra": 3424,
+      "rows": 58208,
+      "budgets": 17,
+      "eligible": 36,
+      "tightened": 8,
+      "last_endpoint_area_exact": "97307759575657258853508721/19946736456192000000000000",
+      "last_endpoint_area_float": 4.878379969042522
+    },
+    {
+      "dataset": "breast",
+      "setting": "baseline",
+      "patches": 1708,
+      "selected_edges": 52912,
+      "width_histogram": {
+        "4": 892,
+        "2": 662,
+        "1": 154
+      },
+      "spectra": 22976,
+      "rows": 390592,
+      "budgets": 17,
+      "eligible": 1026,
+      "tightened": 361,
+      "last_endpoint_area_exact": "146537156440216822075751663/255318226639257600000000000",
+      "last_endpoint_area_float": 0.5739392693153124
+    },
+    {
+      "dataset": "breast",
+      "setting": "0.5",
+      "patches": 994,
+      "selected_edges": 35872,
+      "width_histogram": {
+        "13/4": 994
+      },
+      "spectra": 22538,
+      "rows": 383146,
+      "budgets": 17,
+      "eligible": 598,
+      "tightened": 194,
+      "last_endpoint_area_exact": "480588225293399867025664489/1276591133196288000000000000",
+      "last_endpoint_area_float": 0.3764621363851388
+    },
+    {
+      "dataset": "breast",
+      "setting": "1",
+      "patches": 803,
+      "selected_edges": 27848,
+      "width_histogram": {
+        "13/2": 803
+      },
+      "spectra": 23013,
+      "rows": 391221,
+      "budgets": 17,
+      "eligible": 990,
+      "tightened": 409,
+      "last_endpoint_area_exact": "8986418958905379100364293/7014236995584000000000000",
+      "last_endpoint_area_float": 1.2811684242438655
+    },
+    {
+      "dataset": "breast",
+      "setting": "2",
+      "patches": 609,
+      "selected_edges": 19869,
+      "width_histogram": {
+        "53/4": 609
+      },
+      "spectra": 23687,
+      "rows": 402679,
+      "budgets": 17,
+      "eligible": 1134,
+      "tightened": 444,
+      "last_endpoint_area_exact": "2478232401588748372705975699/486320431693824000000000000",
+      "last_endpoint_area_float": 5.0958837837785635
+    },
+    {
+      "dataset": "breast",
+      "setting": "3",
+      "patches": 481,
+      "selected_edges": 14304,
+      "width_histogram": {
+        "79/4": 481
+      },
+      "spectra": 23772,
+      "rows": 404124,
+      "budgets": 17,
+      "eligible": 900,
+      "tightened": 343,
+      "last_endpoint_area_exact": "93839499575333126661665622179/6808486043713536000000000000",
+      "last_endpoint_area_float": 13.782726287876839
+    }
+  ],
+  "new_width_total_spectra": 106351,
+  "new_width_total_rows": 1807967,
+  "no_narrower_width_fallback_verified": true,
+  "lung_support2_coverage": {
+    "selected": 5455,
+    "incident": 23164,
+    "percent": 23.549473320670007,
+    "one_decimal_percent": "23.5"
+  },
+  "nuclear_denominator_audit": {
+    "old_changed_keys": 1134,
+    "new_changed_keys": 1114,
+    "common_exact_count_and_minimum_agreement": 1114,
+    "removed_keys": 20,
+    "added_keys": 0,
+    "removed_attainable_keys": 2,
+    "removed_details": {
+      "roi_01:153179:INMT": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:51248:PMP22": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153179:MYLK": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153257:TFPI": [
+        "missing-reference molecule can affect this key in 1",
+        "missing-reference molecule can affect this key in 2",
+        "missing-reference molecule can affect this key in 3",
+        "missing-reference molecule can affect this key in baseline",
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153965:C7": [
+        "missing-reference molecule can affect this key in baseline",
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153127:FSTL3": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153253:EDN1": [
+        "missing-reference molecule can affect this key in baseline",
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153127:CCR2": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153179:CAVIN1": [
+        "missing-reference molecule can affect this key in baseline",
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153206:EHF": [
+        "missing-reference molecule can affect this key in 2",
+        "missing-reference molecule can affect this key in 3"
+      ],
+      "roi_01:153179:DES": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153257:CFB": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153179:FBN1": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153127:PTGDS": [
+        "missing-reference molecule can affect this key in 0.5",
+        "missing-reference molecule can affect this key in baseline",
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153109:LTBP2": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153128:FBN1": [
+        "missing-reference molecule can affect this key in 2",
+        "missing-reference molecule can affect this key in 3"
+      ],
+      "roi_01:153109:INMT": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153146:LTBP2": [
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153109:MYH11": [
+        "missing-reference molecule can affect this key in baseline",
+        "missing-reference molecule has this source cell/gene"
+      ],
+      "roi_01:153146:PTGDS": [
+        "missing-reference molecule has this source cell/gene"
+      ]
+    }
+  },
+  "failures": 0
+}

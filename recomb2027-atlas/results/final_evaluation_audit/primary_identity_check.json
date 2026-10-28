@@ -1,0 +1,42 @@
+[
+  {
+    "path": "data/atlas_roi_01.json",
+    "sha256": "bc2ca46a3712161146108e9d65735dcab7c58fe9e2c470c39a77d99156667bf0",
+    "unchanged_from_merged_0_3_0a2": true
+  },
+  {
+    "path": "data/atlas_roi_02.json",
+    "sha256": "14c0498c52701780e3edacc488fd2c7f7cbae37f11f9a57a590887ee174e85a8",
+    "unchanged_from_merged_0_3_0a2": true
+  },
+  {
+    "path": "external/data/atlas_breast_01.json",
+    "sha256": "714beaabf063e94ddca850744a02f73cd54b08474accce6a40bd977f036f9f7a",
+    "unchanged_from_merged_0_3_0a2": true
+  },
+  {
+    "path": "external/data/atlas_breast_02.json",
+    "sha256": "e36109e755c17bb14ce6e19e5bfdc954289442cc18fb6dbb49d0d9d2514e9fa5",
+    "unchanged_from_merged_0_3_0a2": true
+  },
+  {
+    "path": "results/cell_expression_intervals.csv",
+    "sha256": "1a91fbe6aee96dc0995501e88c95da6aa85862df752c0c487700a007176abfd7",
+    "unchanged_from_merged_0_3_0a2": true
+  },
+  {
+    "path": "external/results/cell_expression_intervals.csv",
+    "sha256": "5f6df37480d377877dfd75ea6f0c325553c9bf5141c8a0b82fd2a945c2cce1d9",
+    "unchanged_from_merged_0_3_0a2": true
+  },
+  {
+    "path": "results/cell_spectra.json",
+    "sha256": "135644d9ea26727e0ee921683ddb1d408c9a1e0ccaf50ab69c148e2225553db1",
+    "unchanged_from_merged_0_3_0a2": true
+  },
+  {
+    "path": "external/results/cell_spectra.json",
+    "sha256": "5c35da438a90f5cd5ac6b948de68e4d4e68ceab0af35e3f5ec1e24c84668964a",
+    "unchanged_from_merged_0_3_0a2": true
+  }
+]

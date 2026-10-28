@@ -1,0 +1,22 @@
+Agent 1 strict-width evidence review
+
+The strict-width experiment is internally consistent in the reviewed artifact. It is a useful replacement for the preceding cap-with-fallback study, while retaining the scientific limitation that larger required ribbons lose boundary coverage.
+
+Verified in this review:
+- All four original atlas JSONs, two primary interval tables and two primary global spectra are byte-identical to the previously verified merged 0.3.0a2 package.
+- The frozen plan hash matches docs/PREREGISTRATION.md: 77849141d51adcb2f57aa4da191d6369963e811b42168d68a625cfc43dd400c0.
+- Every patch in each of the eight required-width settings has exactly the one chart width obtained from the declared conversion. The extraction loop contains one width, with no narrow-width fallback. Physical values are rounded downward to the documented quarter-chart-unit grid; nominal 3 micrometres gives support 2.967638949 micrometres and band cap 2.225729212 micrometres.
+- An independently written tally reconstructs 106,351 new global spectra and 1,807,967 rows on 17 budgets, along with every setting's selected-edge count, width histogram, question count and endpoint-saturation threshold.
+- The provided independent composition/scalar validator was rerun with its output redirected to this audit directory. All 106,351 global spectra, 131,376 witness traces and 1,807,967 interval rows passed. The separate scalar implementation agreed on 246 deterministic local samples and 1,628 target assignments; no sample hit its resource limit. This does not independently enumerate every new local optimum.
+- The report pipeline was rerun into an isolated output directory. Summary, budget summary, reference-budget summary and exclusion JSON match exactly. Decompressed per-key reference-count CSV bytes also match exactly.
+- The two widest-support geometry checks were rerun from the masks and exact rational ribbons: all 135 lung and 481 breast patches passed, including all 88,552 raw RNA memberships and the stored nuclear restrictions. All non-timing geometric counters exactly match the inherited audit records. This is geometry verification, not a new width optimization experiment.
+- Baseline last endpoint thresholds are 0.24052487783277385 square micrometres (lung) and 0.5739392693153124 (breast). These are distinct from the coarse-grid last observed changes.
+
+One prose correction:
+Lung required support 2 has 5,455 selected edges out of 23,164 incident edges, i.e. 23.5494733 percent. One-decimal rounding is 23.5 percent. The manuscript table is correct; the supplied report's 23.6 percent should be corrected.
+
+Nuclear-reference denominator reconciliation:
+The old merged study scored retained-reference molecules and gave excluded molecules zero score. The strict-width study instead excludes a whole cell/gene question if a reference-missing molecule belongs to that key or could affect it in any tested family. Its fixed comparison universe therefore has 1,114 changed lung keys instead of 1,134. Exactly 20 old keys are excluded, including two formerly attainable keys; all 1,114 common keys have identical source counts, reference counts and exact minimum areas. Hence 184/1,114 versus the prior 186/1,134 is a population-policy change, not a contradiction. Both definitions are conditional diagnostics, and the paper should retain the explicit exclusion rule.
+
+Scope:
+This review checks saved data, geometry identities, code-level width enforcement, composition, scalar samples and reference reconstruction. It does not rerun all eight complete optimization studies or Proseg, acquire a new dataset, infer accuracy, or establish historical theoretical priority. The fixed-seam and format-test limitations remain substantive.

@@ -1,0 +1,20 @@
+{
+  "all_passed": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
+  "stages": [
+    {
+      "dataset": "lung",
+      "spectra": 3304,
+      "intervals": 26432,
+      "status": "exact match"
+    },
+    {
+      "dataset": "breast",
+      "spectra": 22976,
+      "intervals": 183808,
+      "status": "exact match"
+    }
+  ],
+  "scope": "Recomputed both complete primary collections after guard carry-forward. Recorded strict-width results were checked by separate full-composition/witness validation; this is not recomputation of all eight width experiments."
+}
