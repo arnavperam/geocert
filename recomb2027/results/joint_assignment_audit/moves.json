@@ -1,0 +1,1973 @@
+[
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "baseline",
+    "group": 3,
+    "source": 1,
+    "owner": 0,
+    "gene": "CD8A",
+    "area": "5057123723634717399617/5106364532785152000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "baseline",
+    "group": 5,
+    "source": 2,
+    "owner": 1,
+    "gene": "CPA3",
+    "area": "8271001821061681627/15760384360448000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "baseline",
+    "group": 7,
+    "source": 1,
+    "owner": 0,
+    "gene": "CD3D",
+    "area": "13564263285705433643/22694953479045120000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "baseline",
+    "group": 8,
+    "source": 1,
+    "owner": 0,
+    "gene": "RBP5",
+    "area": "219321837577461550303/1361697208742707200000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "baseline",
+    "group": 10,
+    "source": 0,
+    "owner": 1,
+    "gene": "INMT",
+    "area": "881280338366309308801/3829773399588864000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "baseline",
+    "group": 12,
+    "source": 1,
+    "owner": 2,
+    "gene": "IGSF6",
+    "area": "60373495913850492409/957443349897216000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 0,
+    "source": 0,
+    "owner": 1,
+    "gene": "CCL5",
+    "area": "3604702294523929/31520768720896000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 2,
+    "source": 2,
+    "owner": 1,
+    "gene": "CLECL1",
+    "area": "2370752333580985758889/38297733995888640000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 3,
+    "source": 1,
+    "owner": 0,
+    "gene": "CD8A",
+    "area": "38878323006032873947/83369216861798400000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 5,
+    "source": 2,
+    "owner": 1,
+    "gene": "CPA3",
+    "area": "6445438153867139708963/30638187196710912000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 6,
+    "source": 1,
+    "owner": 0,
+    "gene": "LTBP2",
+    "area": "12618881043073479614761/25531822663925760000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 7,
+    "source": 1,
+    "owner": 0,
+    "gene": "CD3D",
+    "area": "9225818517942650940409/38297733995888640000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 8,
+    "source": 1,
+    "owner": 0,
+    "gene": "RBP5",
+    "area": "501179570447021986997/7659546799177728000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 9,
+    "source": 1,
+    "owner": 0,
+    "gene": "SMYD2",
+    "area": "150531217839623107191169/102127290655703040000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 10,
+    "source": 0,
+    "owner": 1,
+    "gene": "INMT",
+    "area": "1076465179755395947709/17021215109283840000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 11,
+    "source": 1,
+    "owner": 0,
+    "gene": "CXCR4",
+    "area": "117057537937391726447/79786945824768000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 12,
+    "source": 1,
+    "owner": 2,
+    "gene": "IGSF6",
+    "area": "60373495913850492409/2393608374743040000000"
+  },
+  {
+    "corridor": "4c4f466415dd22",
+    "setting": "maximal",
+    "group": 14,
+    "source": 1,
+    "owner": 0,
+    "gene": "PTPRC",
+    "area": "8856106927214039252693/12765911331962880000000"
+  },
+  {
+    "corridor": "a0987140ecb03c",
+    "setting": "baseline",
+    "group": 4,
+    "source": 1,
+    "owner": 0,
+    "gene": "CCL5",
+    "area": "954014509159723149767/40850916262281216000000"
+  },
+  {
+    "corridor": "a0987140ecb03c",
+    "setting": "maximal",
+    "group": 0,
+    "source": 1,
+    "owner": 0,
+    "gene": "TNFRSF17",
+    "area": "407395952624664160931/1276591133196288000000"
+  },
+  {
+    "corridor": "a0987140ecb03c",
+    "setting": "maximal",
+    "group": 1,
+    "source": 1,
+    "owner": 0,
+    "gene": "CD79A",
+    "area": "426667962947838049/1888448421888000000"
+  },
+  {
+    "corridor": "a0987140ecb03c",
+    "setting": "maximal",
+    "group": 2,
+    "source": 2,
+    "owner": 1,
+    "gene": "PECAM1",
+    "area": "3305087219352810759521/5106364532785152000000"
+  },
+  {
+    "corridor": "a0987140ecb03c",
+    "setting": "maximal",
+    "group": 4,
+    "source": 1,
+    "owner": 0,
+    "gene": "CCL5",
+    "area": "39026172609132556031/3063818719671091200000"
+  },
+  {
+    "corridor": "a0987140ecb03c",
+    "setting": "maximal",
+    "group": 5,
+    "source": 2,
+    "owner": 1,
+    "gene": "TMEM100",
+    "area": "5244338974708251645763/6127637439342182400000"
+  },
+  {
+    "corridor": "a0987140ecb03c",
+    "setting": "maximal",
+    "group": 7,
+    "source": 1,
+    "owner": 2,
+    "gene": "MAMDC2",
+    "area": "142138551854132323249/6127637439342182400000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "baseline",
+    "group": 0,
+    "source": 1,
+    "owner": 2,
+    "gene": "SH2D3C",
+    "area": "2458152382938798409/66489121520640000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "baseline",
+    "group": 12,
+    "source": 2,
+    "owner": 1,
+    "gene": "TCF4",
+    "area": "121876259272147827/163489464320000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "baseline",
+    "group": 17,
+    "source": 1,
+    "owner": 2,
+    "gene": "C7",
+    "area": "17723156014479187163/1512996898603008000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "baseline",
+    "group": 20,
+    "source": 1,
+    "owner": 2,
+    "gene": "TFPI",
+    "area": "1883098642146718241321/4255303777320960000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 0,
+    "source": 1,
+    "owner": 2,
+    "gene": "SH2D3C",
+    "area": "126444782196744001/23640576540672000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 1,
+    "source": 2,
+    "owner": 1,
+    "gene": "CAVIN1",
+    "area": "29279120434006039100149/40850916262281216000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 2,
+    "source": 1,
+    "owner": 2,
+    "gene": "CAVIN2",
+    "area": "655756307067314821853/2297864039753318400000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 3,
+    "source": 2,
+    "owner": 1,
+    "gene": "VWF",
+    "area": "637021016916339637483/2553182266392576000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 4,
+    "source": 0,
+    "owner": 1,
+    "gene": "SRPX",
+    "area": "444440464677847431401/437688388524441600000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 5,
+    "source": 0,
+    "owner": 1,
+    "gene": "VWF",
+    "area": "3287131660754573273627/2042545813114060800000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 6,
+    "source": 1,
+    "owner": 2,
+    "gene": "VWF",
+    "area": "242841957340939980043/957443349897216000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 8,
+    "source": 1,
+    "owner": 2,
+    "gene": "CD93",
+    "area": "224764148057552207129/851060755464192000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 9,
+    "source": 2,
+    "owner": 1,
+    "gene": "PECAM1",
+    "area": "26489016336339845324461/10212729065570304000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 10,
+    "source": 2,
+    "owner": 1,
+    "gene": "C7",
+    "area": "103211409312788264810149/40850916262281216000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 11,
+    "source": 1,
+    "owner": 2,
+    "gene": "MMRN1",
+    "area": "54485019049719678851/638295566598144000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 12,
+    "source": 2,
+    "owner": 1,
+    "gene": "TCF4",
+    "area": "1338619130244341151313/5106364532785152000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 13,
+    "source": 2,
+    "owner": 1,
+    "gene": "NPDC1",
+    "area": "16201921681866206299253/5106364532785152000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 14,
+    "source": 1,
+    "owner": 2,
+    "gene": "MDM2",
+    "area": "385892764072328630947/425530377732096000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 16,
+    "source": 2,
+    "owner": 1,
+    "gene": "CD34",
+    "area": "158694723868461680397469/40850916262281216000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 17,
+    "source": 1,
+    "owner": 2,
+    "gene": "C7",
+    "area": "13923302534000660761/5106364532785152000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 18,
+    "source": 0,
+    "owner": 1,
+    "gene": "CAVIN1",
+    "area": "717477489905635415147/1702121510928384000000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 19,
+    "source": 1,
+    "owner": 0,
+    "gene": "TFPI",
+    "area": "3384554978734461292727/3063818719671091200000"
+  },
+  {
+    "corridor": "c8f8188430d092",
+    "setting": "maximal",
+    "group": 20,
+    "source": 1,
+    "owner": 2,
+    "gene": "TFPI",
+    "area": "682999488237423074147/4538990695809024000000"
+  },
+  {
+    "corridor": "d64a2a80fc9f78",
+    "setting": "maximal",
+    "group": 1,
+    "source": 2,
+    "owner": 1,
+    "gene": "FBN1",
+    "area": "87978023820763212523/189124612325376000000"
+  },
+  {
+    "corridor": "d64a2a80fc9f78",
+    "setting": "maximal",
+    "group": 3,
+    "source": 0,
+    "owner": 1,
+    "gene": "FCGR1A",
+    "area": "2878512268093545498889/6127637439342182400000"
+  },
+  {
+    "corridor": "d64a2a80fc9f78",
+    "setting": "maximal",
+    "group": 5,
+    "source": 1,
+    "owner": 2,
+    "gene": "LTBP2",
+    "area": "527278549909124901907/1702121510928384000000"
+  },
+  {
+    "corridor": "d64a2a80fc9f78",
+    "setting": "maximal",
+    "group": 6,
+    "source": 2,
+    "owner": 1,
+    "gene": "LTBP2",
+    "area": "245576052384405553849/680848604371353600000"
+  },
+  {
+    "corridor": "d64a2a80fc9f78",
+    "setting": "maximal",
+    "group": 7,
+    "source": 0,
+    "owner": 1,
+    "gene": "CD163",
+    "area": "193405390971204486289/567373836976128000000"
+  },
+  {
+    "corridor": "d64a2a80fc9f78",
+    "setting": "maximal",
+    "group": 10,
+    "source": 2,
+    "owner": 1,
+    "gene": "PTGDS",
+    "area": "1968529600559558089/4986684114048000000"
+  },
+  {
+    "corridor": "d64a2a80fc9f78",
+    "setting": "maximal",
+    "group": 13,
+    "source": 0,
+    "owner": 1,
+    "gene": "MS4A6A",
+    "area": "58510954973571790051/245105497573687296000"
+  },
+  {
+    "corridor": "d64a2a80fc9f78",
+    "setting": "maximal",
+    "group": 14,
+    "source": 2,
+    "owner": 1,
+    "gene": "C7",
+    "area": "635720962946229967/712383444864000000"
+  },
+  {
+    "corridor": "d64a2a80fc9f78",
+    "setting": "maximal",
+    "group": 15,
+    "source": 2,
+    "owner": 1,
+    "gene": "PMP22",
+    "area": "1710431883638901286561/2042545813114060800000"
+  },
+  {
+    "corridor": "10ff8893e7f431",
+    "setting": "maximal",
+    "group": 4,
+    "source": 2,
+    "owner": 1,
+    "gene": "CAVIN1",
+    "area": "244727096680870314649/382977339958886400000"
+  },
+  {
+    "corridor": "7f5bc4dec18cec",
+    "setting": "baseline",
+    "group": 5,
+    "source": 1,
+    "owner": 2,
+    "gene": "GNG11",
+    "area": "1158359688564182704321/6127637439342182400000"
+  },
+  {
+    "corridor": "7f5bc4dec18cec",
+    "setting": "maximal",
+    "group": 5,
+    "source": 1,
+    "owner": 2,
+    "gene": "GNG11",
+    "area": "10444428628188310103809/102127290655703040000000"
+  },
+  {
+    "corridor": "7f5bc4dec18cec",
+    "setting": "maximal",
+    "group": 7,
+    "source": 2,
+    "owner": 1,
+    "gene": "MYH11",
+    "area": "18387670510778818194521/10212729065570304000000"
+  },
+  {
+    "corridor": "9bee7d8841eb84",
+    "setting": "maximal",
+    "group": 1,
+    "source": 1,
+    "owner": 2,
+    "gene": "KCNMA1",
+    "area": "358084709760522995041/2269495347904512000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "baseline",
+    "group": 0,
+    "source": 0,
+    "owner": 1,
+    "gene": "SERPINB9",
+    "area": "135489105835890585529/10212729065570304000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "baseline",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "CXCR4",
+    "area": "2059800907636061861987/40850916262281216000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "baseline",
+    "group": 2,
+    "source": 1,
+    "owner": 0,
+    "gene": "FKBP11",
+    "area": "1026655416212823881/49099658969088000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "baseline",
+    "group": 8,
+    "source": 1,
+    "owner": 0,
+    "gene": "SRPX",
+    "area": "1999736191699309573169/13616972087427072000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "baseline",
+    "group": 9,
+    "source": 0,
+    "owner": 1,
+    "gene": "GZMK",
+    "area": "839208905547496649/638295566598144000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "baseline",
+    "group": 18,
+    "source": 0,
+    "owner": 1,
+    "gene": "GPR183",
+    "area": "1576905080336168685623/1702121510928384000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "maximal",
+    "group": 0,
+    "source": 0,
+    "owner": 1,
+    "gene": "SERPINB9",
+    "area": "135489105835890585529/20425458131140608000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "maximal",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "CXCR4",
+    "area": "587820877215580982041/24510549757368729600000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "maximal",
+    "group": 2,
+    "source": 1,
+    "owner": 0,
+    "gene": "FKBP11",
+    "area": "5560809730880569/1416336316416000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "maximal",
+    "group": 3,
+    "source": 1,
+    "owner": 0,
+    "gene": "THY1",
+    "area": "539564299296635981867/1702121510928384000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "maximal",
+    "group": 6,
+    "source": 1,
+    "owner": 0,
+    "gene": "CD79A",
+    "area": "665344434559892937613/471356726103244800000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "maximal",
+    "group": 8,
+    "source": 1,
+    "owner": 0,
+    "gene": "SRPX",
+    "area": "285952456547432996563/5106364532785152000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "maximal",
+    "group": 9,
+    "source": 0,
+    "owner": 1,
+    "gene": "GZMK",
+    "area": "42257215492228801/141843459244032000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "maximal",
+    "group": 11,
+    "source": 1,
+    "owner": 0,
+    "gene": "KIT",
+    "area": "510318538430799394657/980421990294749184000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "maximal",
+    "group": 14,
+    "source": 1,
+    "owner": 0,
+    "gene": "DERL3",
+    "area": "19641550526728829295689/20425458131140608000000"
+  },
+  {
+    "corridor": "142d24a9c1c8a6",
+    "setting": "maximal",
+    "group": 18,
+    "source": 0,
+    "owner": 1,
+    "gene": "GPR183",
+    "area": "1904083525388423119001/5106364532785152000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "baseline",
+    "group": 5,
+    "source": 1,
+    "owner": 0,
+    "gene": "PECAM1",
+    "area": "271800754487030237899/212765188866048000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "baseline",
+    "group": 7,
+    "source": 0,
+    "owner": 1,
+    "gene": "LTBP2",
+    "area": "8257302153140406437/10594117287936000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "baseline",
+    "group": 10,
+    "source": 1,
+    "owner": 0,
+    "gene": "TMEM100",
+    "area": "61019822279117408415367/40850916262281216000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "baseline",
+    "group": 13,
+    "source": 1,
+    "owner": 0,
+    "gene": "MYC",
+    "area": "38183656990573850045219/20425458131140608000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "baseline",
+    "group": 18,
+    "source": 1,
+    "owner": 0,
+    "gene": "C7",
+    "area": "42738801763706134671719/20425458131140608000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "baseline",
+    "group": 21,
+    "source": 1,
+    "owner": 0,
+    "gene": "PMP22",
+    "area": "40108983651796025604559/20425458131140608000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "maximal",
+    "group": 1,
+    "source": 1,
+    "owner": 0,
+    "gene": "FBN1",
+    "area": "87978023820763212523/189124612325376000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "maximal",
+    "group": 5,
+    "source": 1,
+    "owner": 0,
+    "gene": "PECAM1",
+    "area": "555666426567311291503/875376777048883200000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "maximal",
+    "group": 7,
+    "source": 0,
+    "owner": 1,
+    "gene": "LTBP2",
+    "area": "527278549909124901907/1702121510928384000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "maximal",
+    "group": 8,
+    "source": 1,
+    "owner": 0,
+    "gene": "LTBP2",
+    "area": "245576052384405553849/680848604371353600000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "maximal",
+    "group": 10,
+    "source": 1,
+    "owner": 0,
+    "gene": "TMEM100",
+    "area": "5244338974708251645763/6127637439342182400000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "maximal",
+    "group": 12,
+    "source": 0,
+    "owner": 1,
+    "gene": "MAMDC2",
+    "area": "142138551854132323249/6127637439342182400000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "maximal",
+    "group": 13,
+    "source": 1,
+    "owner": 0,
+    "gene": "MYC",
+    "area": "1095321293310590697517/1021272906557030400000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "maximal",
+    "group": 15,
+    "source": 1,
+    "owner": 0,
+    "gene": "PTGDS",
+    "area": "1968529600559558089/4986684114048000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "maximal",
+    "group": 18,
+    "source": 1,
+    "owner": 0,
+    "gene": "C7",
+    "area": "9775289774863307508313/10212729065570304000000"
+  },
+  {
+    "corridor": "4037abe9fea38e",
+    "setting": "maximal",
+    "group": 21,
+    "source": 1,
+    "owner": 0,
+    "gene": "PMP22",
+    "area": "23275696224189339971/27233944174854144000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "baseline",
+    "group": 2,
+    "source": 0,
+    "owner": 1,
+    "gene": "SLAMF7",
+    "area": "35150562282225660451/79786945824768000000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "baseline",
+    "group": 6,
+    "source": 0,
+    "owner": 1,
+    "gene": "MDM2",
+    "area": "144767145904238109043/10212729065570304000000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "baseline",
+    "group": 10,
+    "source": 1,
+    "owner": 0,
+    "gene": "DST",
+    "area": "1401065346820151938253/785594543505408000000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "baseline",
+    "group": 17,
+    "source": 0,
+    "owner": 1,
+    "gene": "PPARG",
+    "area": "26585326971275790227/69474347384832000000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "baseline",
+    "group": 20,
+    "source": 1,
+    "owner": 0,
+    "gene": "TRAC",
+    "area": "226440434076588807391/212765188866048000000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "maximal",
+    "group": 0,
+    "source": 1,
+    "owner": 0,
+    "gene": "CAVIN1",
+    "area": "877279873375588138969/20425458131140608000000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "maximal",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "CAVIN1",
+    "area": "263843242189704639653/191488669979443200000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "maximal",
+    "group": 2,
+    "source": 0,
+    "owner": 1,
+    "gene": "SLAMF7",
+    "area": "3060861669670976649/15760384360448000000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "maximal",
+    "group": 3,
+    "source": 1,
+    "owner": 0,
+    "gene": "ACTA2",
+    "area": "1716527187142087288849/6127637439342182400000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "maximal",
+    "group": 6,
+    "source": 0,
+    "owner": 1,
+    "gene": "MDM2",
+    "area": "47064462163313248201/6127637439342182400000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "maximal",
+    "group": 9,
+    "source": 0,
+    "owner": 1,
+    "gene": "GPR183",
+    "area": "2093281237306421351041/5106364532785152000000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "maximal",
+    "group": 10,
+    "source": 1,
+    "owner": 0,
+    "gene": "DST",
+    "area": "21613250396160829450441/24510549757368729600000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "maximal",
+    "group": 12,
+    "source": 1,
+    "owner": 0,
+    "gene": "CRISPLD2",
+    "area": "2277543079615834345769/1276591133196288000000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "maximal",
+    "group": 17,
+    "source": 0,
+    "owner": 1,
+    "gene": "PPARG",
+    "area": "347391495299277616919/1634036650491248640000"
+  },
+  {
+    "corridor": "4e7c5bf618b010",
+    "setting": "maximal",
+    "group": 20,
+    "source": 1,
+    "owner": 0,
+    "gene": "TRAC",
+    "area": "679691855713258927649/1276591133196288000000"
+  },
+  {
+    "corridor": "3d714546e20970",
+    "setting": "maximal",
+    "group": 2,
+    "source": 1,
+    "owner": 0,
+    "gene": "MFAP5",
+    "area": "18272997109793430627361/24510549757368729600000"
+  },
+  {
+    "corridor": "3d714546e20970",
+    "setting": "maximal",
+    "group": 3,
+    "source": 1,
+    "owner": 0,
+    "gene": "CNN1",
+    "area": "4603735015392578114449/20425458131140608000000"
+  },
+  {
+    "corridor": "451bff30357502",
+    "setting": "baseline",
+    "group": 4,
+    "source": 0,
+    "owner": 1,
+    "gene": "ACTA2",
+    "area": "712293215637605417929/10212729065570304000000"
+  },
+  {
+    "corridor": "451bff30357502",
+    "setting": "maximal",
+    "group": 2,
+    "source": 0,
+    "owner": 1,
+    "gene": "KCNMA1",
+    "area": "358084709760522995041/2269495347904512000000"
+  },
+  {
+    "corridor": "451bff30357502",
+    "setting": "maximal",
+    "group": 4,
+    "source": 0,
+    "owner": 1,
+    "gene": "ACTA2",
+    "area": "712293215637605417929/20425458131140608000000"
+  },
+  {
+    "corridor": "83bbb6c7f2dd22",
+    "setting": "maximal",
+    "group": 0,
+    "source": 0,
+    "owner": 1,
+    "gene": "VWA5A",
+    "area": "492731061904055918401/3829773399588864000000"
+  },
+  {
+    "corridor": "c22580b0103361",
+    "setting": "maximal",
+    "group": 0,
+    "source": 0,
+    "owner": 1,
+    "gene": "CXCL2",
+    "area": "22205812363207272704279/6382955665981440000000"
+  },
+  {
+    "corridor": "c22580b0103361",
+    "setting": "maximal",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "SERPINB9",
+    "area": "38260683374279373616529/6382955665981440000000"
+  },
+  {
+    "corridor": "c22580b0103361",
+    "setting": "maximal",
+    "group": 3,
+    "source": 0,
+    "owner": 1,
+    "gene": "SERPINB9",
+    "area": "77064754857129235666241/25531822663925760000000"
+  },
+  {
+    "corridor": "00d44a60e91246",
+    "setting": "baseline",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "TRAC",
+    "area": "217460835187004552929/10212729065570304000000"
+  },
+  {
+    "corridor": "00d44a60e91246",
+    "setting": "baseline",
+    "group": 3,
+    "source": 1,
+    "owner": 0,
+    "gene": "FBN1",
+    "area": "59130695709454646489/10212729065570304000000"
+  },
+  {
+    "corridor": "00d44a60e91246",
+    "setting": "baseline",
+    "group": 5,
+    "source": 0,
+    "owner": 1,
+    "gene": "PRDM1",
+    "area": "304043255506148610929/13616972087427072000000"
+  },
+  {
+    "corridor": "00d44a60e91246",
+    "setting": "baseline",
+    "group": 9,
+    "source": 0,
+    "owner": 1,
+    "gene": "NKG7",
+    "area": "4907091205119243529/10212729065570304000000"
+  },
+  {
+    "corridor": "00d44a60e91246",
+    "setting": "maximal",
+    "group": 0,
+    "source": 0,
+    "owner": 1,
+    "gene": "TRAC",
+    "area": "147408120908661354023/729480647540736000000"
+  },
+  {
+    "corridor": "00d44a60e91246",
+    "setting": "maximal",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "TRAC",
+    "area": "186912600417440170387/40850916262281216000000"
+  },
+  {
+    "corridor": "00d44a60e91246",
+    "setting": "maximal",
+    "group": 3,
+    "source": 1,
+    "owner": 0,
+    "gene": "FBN1",
+    "area": "50492807098925202649/20425458131140608000000"
+  },
+  {
+    "corridor": "00d44a60e91246",
+    "setting": "maximal",
+    "group": 5,
+    "source": 0,
+    "owner": 1,
+    "gene": "PRDM1",
+    "area": "300944386245226983673/24510549757368729600000"
+  },
+  {
+    "corridor": "00d44a60e91246",
+    "setting": "maximal",
+    "group": 9,
+    "source": 0,
+    "owner": 1,
+    "gene": "NKG7",
+    "area": "4907091205119243529/20425458131140608000000"
+  },
+  {
+    "corridor": "01daeeb3d8d695",
+    "setting": "baseline",
+    "group": 9,
+    "source": 0,
+    "owner": 1,
+    "gene": "CLEC10A",
+    "area": "936370122857486678801/2553182266392576000000"
+  },
+  {
+    "corridor": "01daeeb3d8d695",
+    "setting": "maximal",
+    "group": 2,
+    "source": 1,
+    "owner": 0,
+    "gene": "C1orf162",
+    "area": "1067844138317305123651/6127637439342182400000"
+  },
+  {
+    "corridor": "01daeeb3d8d695",
+    "setting": "maximal",
+    "group": 9,
+    "source": 0,
+    "owner": 1,
+    "gene": "CLEC10A",
+    "area": "893385105591553162001/5106364532785152000000"
+  },
+  {
+    "corridor": "01daeeb3d8d695",
+    "setting": "maximal",
+    "group": 10,
+    "source": 0,
+    "owner": 1,
+    "gene": "CD163",
+    "area": "1826883526035456319393/6127637439342182400000"
+  },
+  {
+    "corridor": "01daeeb3d8d695",
+    "setting": "maximal",
+    "group": 13,
+    "source": 1,
+    "owner": 0,
+    "gene": "VSIG4",
+    "area": "1866129066223005498001/3829773399588864000000"
+  },
+  {
+    "corridor": "02d9a53ef82968",
+    "setting": "maximal",
+    "group": 0,
+    "source": 0,
+    "owner": 1,
+    "gene": "CCL5",
+    "area": "1932218338752406099169/2042545813114060800000"
+  },
+  {
+    "corridor": "02d9a53ef82968",
+    "setting": "maximal",
+    "group": 2,
+    "source": 0,
+    "owner": 1,
+    "gene": "FCGR3A",
+    "area": "5793502302446294561641/6127637439342182400000"
+  },
+  {
+    "corridor": "02d9a53ef82968",
+    "setting": "maximal",
+    "group": 8,
+    "source": 0,
+    "owner": 1,
+    "gene": "LTBP2",
+    "area": "360243986738990629637/392797271752704000000"
+  },
+  {
+    "corridor": "02d9a53ef82968",
+    "setting": "maximal",
+    "group": 9,
+    "source": 0,
+    "owner": 1,
+    "gene": "GZMK",
+    "area": "403248541247320240127/765954679917772800000"
+  },
+  {
+    "corridor": "02d9a53ef82968",
+    "setting": "maximal",
+    "group": 10,
+    "source": 1,
+    "owner": 0,
+    "gene": "MAMDC2",
+    "area": "3688527436817534322769/15319093598355456000000"
+  },
+  {
+    "corridor": "02d9a53ef82968",
+    "setting": "maximal",
+    "group": 14,
+    "source": 1,
+    "owner": 0,
+    "gene": "PDGFRA",
+    "area": "3520336039087095568411/6127637439342182400000"
+  },
+  {
+    "corridor": "02d9a53ef82968",
+    "setting": "maximal",
+    "group": 15,
+    "source": 0,
+    "owner": 1,
+    "gene": "ACTA2",
+    "area": "139132007748007381801/239360837474304000000"
+  },
+  {
+    "corridor": "02d9a53ef82968",
+    "setting": "maximal",
+    "group": 17,
+    "source": 1,
+    "owner": 0,
+    "gene": "CD8A",
+    "area": "1862850452484899888251/1531909359835545600000"
+  },
+  {
+    "corridor": "02d9a53ef82968",
+    "setting": "maximal",
+    "group": 19,
+    "source": 0,
+    "owner": 1,
+    "gene": "CLEC4E",
+    "area": "3117150859210714248529/6127637439342182400000"
+  },
+  {
+    "corridor": "2bb62b675f6e6a",
+    "setting": "baseline",
+    "group": 3,
+    "source": 1,
+    "owner": 0,
+    "gene": "GZMA",
+    "area": "16512580955493637771/45592540471296000000"
+  },
+  {
+    "corridor": "2bb62b675f6e6a",
+    "setting": "maximal",
+    "group": 0,
+    "source": 1,
+    "owner": 0,
+    "gene": "CCL5",
+    "area": "3438833039525159495719/1750753554097766400000"
+  },
+  {
+    "corridor": "2bb62b675f6e6a",
+    "setting": "maximal",
+    "group": 3,
+    "source": 1,
+    "owner": 0,
+    "gene": "GZMA",
+    "area": "114105430338601606921/781586408079360000000"
+  },
+  {
+    "corridor": "2bb62b675f6e6a",
+    "setting": "maximal",
+    "group": 5,
+    "source": 0,
+    "owner": 1,
+    "gene": "BCL2L11",
+    "area": "29559226782383316706321/25531822663925760000000"
+  },
+  {
+    "corridor": "2bb62b675f6e6a",
+    "setting": "maximal",
+    "group": 6,
+    "source": 1,
+    "owner": 0,
+    "gene": "BCL2L11",
+    "area": "1486847986663171561309/2553182266392576000000"
+  },
+  {
+    "corridor": "2d321535d93169",
+    "setting": "baseline",
+    "group": 16,
+    "source": 0,
+    "owner": 1,
+    "gene": "TFPI",
+    "area": "202657000280414177/7274023550976000000"
+  },
+  {
+    "corridor": "2d321535d93169",
+    "setting": "maximal",
+    "group": 0,
+    "source": 1,
+    "owner": 0,
+    "gene": "MET",
+    "area": "12098886885735530408449/20425458131140608000000"
+  },
+  {
+    "corridor": "2d321535d93169",
+    "setting": "maximal",
+    "group": 6,
+    "source": 1,
+    "owner": 0,
+    "gene": "MALL",
+    "area": "156254472280589568961/127659113319628800000"
+  },
+  {
+    "corridor": "2d321535d93169",
+    "setting": "maximal",
+    "group": 7,
+    "source": 0,
+    "owner": 1,
+    "gene": "TFPI",
+    "area": "839269223738978482921/2269495347904512000000"
+  },
+  {
+    "corridor": "2d321535d93169",
+    "setting": "maximal",
+    "group": 8,
+    "source": 1,
+    "owner": 0,
+    "gene": "EPCAM",
+    "area": "7286469024343538401/19946736456192000000"
+  },
+  {
+    "corridor": "2d321535d93169",
+    "setting": "maximal",
+    "group": 9,
+    "source": 0,
+    "owner": 1,
+    "gene": "MYH11",
+    "area": "77406376967219108449/567373836976128000000"
+  },
+  {
+    "corridor": "2d321535d93169",
+    "setting": "maximal",
+    "group": 10,
+    "source": 1,
+    "owner": 0,
+    "gene": "ADGRL4",
+    "area": "1900029724202403508081/5106364532785152000000"
+  },
+  {
+    "corridor": "2d321535d93169",
+    "setting": "maximal",
+    "group": 12,
+    "source": 0,
+    "owner": 1,
+    "gene": "CD247",
+    "area": "6721932845224432080281/5106364532785152000000"
+  },
+  {
+    "corridor": "2d321535d93169",
+    "setting": "maximal",
+    "group": 16,
+    "source": 0,
+    "owner": 1,
+    "gene": "TFPI",
+    "area": "4214429295362658859/382977339958886400000"
+  },
+  {
+    "corridor": "2dc8286e944ea6",
+    "setting": "maximal",
+    "group": 0,
+    "source": 0,
+    "owner": 1,
+    "gene": "SFTA2",
+    "area": "13284069941079798150889/20425458131140608000000"
+  },
+  {
+    "corridor": "2dc8286e944ea6",
+    "setting": "maximal",
+    "group": 1,
+    "source": 1,
+    "owner": 0,
+    "gene": "CFB",
+    "area": "20954334563180804729/79786945824768000000"
+  },
+  {
+    "corridor": "2dc8286e944ea6",
+    "setting": "maximal",
+    "group": 9,
+    "source": 0,
+    "owner": 1,
+    "gene": "TNC",
+    "area": "581111446841481239329/1276591133196288000000"
+  },
+  {
+    "corridor": "2dc8286e944ea6",
+    "setting": "maximal",
+    "group": 10,
+    "source": 1,
+    "owner": 0,
+    "gene": "TCIM",
+    "area": "691349057412418965187/1702121510928384000000"
+  },
+  {
+    "corridor": "2dc8286e944ea6",
+    "setting": "maximal",
+    "group": 13,
+    "source": 1,
+    "owner": 0,
+    "gene": "ADAM28",
+    "area": "6228389808909564761477/4902109951473745920000"
+  },
+  {
+    "corridor": "2dc8286e944ea6",
+    "setting": "maximal",
+    "group": 14,
+    "source": 0,
+    "owner": 1,
+    "gene": "TNC",
+    "area": "281350876338979906283/10212729065570304000000"
+  },
+  {
+    "corridor": "2dc8286e944ea6",
+    "setting": "maximal",
+    "group": 19,
+    "source": 1,
+    "owner": 0,
+    "gene": "TFPI",
+    "area": "27387664833662853342409/24510549757368729600000"
+  },
+  {
+    "corridor": "2f8357efef18c4",
+    "setting": "baseline",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "SERPINB9",
+    "area": "135489105835890585529/10212729065570304000000"
+  },
+  {
+    "corridor": "2f8357efef18c4",
+    "setting": "baseline",
+    "group": 2,
+    "source": 0,
+    "owner": 1,
+    "gene": "CXCR4",
+    "area": "2059800907636061861987/40850916262281216000000"
+  },
+  {
+    "corridor": "2f8357efef18c4",
+    "setting": "baseline",
+    "group": 5,
+    "source": 0,
+    "owner": 1,
+    "gene": "GZMK",
+    "area": "839208905547496649/638295566598144000000"
+  },
+  {
+    "corridor": "2f8357efef18c4",
+    "setting": "maximal",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "SERPINB9",
+    "area": "135489105835890585529/20425458131140608000000"
+  },
+  {
+    "corridor": "2f8357efef18c4",
+    "setting": "maximal",
+    "group": 2,
+    "source": 0,
+    "owner": 1,
+    "gene": "CXCR4",
+    "area": "587820877215580982041/24510549757368729600000"
+  },
+  {
+    "corridor": "2f8357efef18c4",
+    "setting": "maximal",
+    "group": 5,
+    "source": 0,
+    "owner": 1,
+    "gene": "GZMK",
+    "area": "42257215492228801/141843459244032000000"
+  },
+  {
+    "corridor": "2f8357efef18c4",
+    "setting": "maximal",
+    "group": 7,
+    "source": 1,
+    "owner": 0,
+    "gene": "KIT",
+    "area": "11536295992458312738937/24510549757368729600000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "baseline",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "PRDM1",
+    "area": "386840833650689761687/2188441942622208000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "baseline",
+    "group": 2,
+    "source": 1,
+    "owner": 0,
+    "gene": "CD79A",
+    "area": "2560790948997879258217/6127637439342182400000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "baseline",
+    "group": 4,
+    "source": 0,
+    "owner": 1,
+    "gene": "TNFRSF17",
+    "area": "2001977578146711030889/15319093598355456000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "baseline",
+    "group": 5,
+    "source": 1,
+    "owner": 0,
+    "gene": "TNFRSF17",
+    "area": "791395378531167711137/4085091626228121600000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "baseline",
+    "group": 13,
+    "source": 0,
+    "owner": 1,
+    "gene": "CCL19",
+    "area": "1986513860628380329/957443349897216000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "PRDM1",
+    "area": "12351312331534093692707/136169720874270720000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 2,
+    "source": 1,
+    "owner": 0,
+    "gene": "CD79A",
+    "area": "418262670031426383409/2393608374743040000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 3,
+    "source": 0,
+    "owner": 1,
+    "gene": "TNFRSF17",
+    "area": "9227908628442308670889/38297733995888640000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 4,
+    "source": 0,
+    "owner": 1,
+    "gene": "TNFRSF17",
+    "area": "2001977578146711030889/38297733995888640000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 5,
+    "source": 1,
+    "owner": 0,
+    "gene": "TNFRSF17",
+    "area": "745752182499400217761/9574433498972160000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 7,
+    "source": 0,
+    "owner": 1,
+    "gene": "BASP1",
+    "area": "131525083621004596671401/408509162622812160000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 10,
+    "source": 1,
+    "owner": 0,
+    "gene": "CXCR4",
+    "area": "1985510363614537745413/2945979538145280000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 12,
+    "source": 0,
+    "owner": 1,
+    "gene": "PDGFRA",
+    "area": "48256772260561356549401/408509162622812160000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 13,
+    "source": 0,
+    "owner": 1,
+    "gene": "CCL19",
+    "area": "1986513860628380329/2393608374743040000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 14,
+    "source": 1,
+    "owner": 0,
+    "gene": "FKBP11",
+    "area": "1206157860215635340413/2945979538145280000000"
+  },
+  {
+    "corridor": "2fa06b2ccb3a51",
+    "setting": "maximal",
+    "group": 15,
+    "source": 1,
+    "owner": 0,
+    "gene": "GPR183",
+    "area": "106407901086116292681649/102127290655703040000000"
+  },
+  {
+    "corridor": "31cf5a487b7a71",
+    "setting": "baseline",
+    "group": 7,
+    "source": 0,
+    "owner": 1,
+    "gene": "C1orf162",
+    "area": "324649554327727134241/2553182266392576000000"
+  },
+  {
+    "corridor": "31cf5a487b7a71",
+    "setting": "maximal",
+    "group": 6,
+    "source": 0,
+    "owner": 1,
+    "gene": "CXCR4",
+    "area": "12925112388745128079/91185080942592000000"
+  },
+  {
+    "corridor": "31cf5a487b7a71",
+    "setting": "maximal",
+    "group": 7,
+    "source": 0,
+    "owner": 1,
+    "gene": "C1orf162",
+    "area": "334523828745190524793/6127637439342182400000"
+  },
+  {
+    "corridor": "31cf5a487b7a71",
+    "setting": "maximal",
+    "group": 11,
+    "source": 0,
+    "owner": 1,
+    "gene": "DST",
+    "area": "492598600466566809587/1276591133196288000000"
+  },
+  {
+    "corridor": "31cf5a487b7a71",
+    "setting": "maximal",
+    "group": 13,
+    "source": 0,
+    "owner": 1,
+    "gene": "CCL5",
+    "area": "19771169127693539417/94271345220648960000"
+  },
+  {
+    "corridor": "31cf5a487b7a71",
+    "setting": "maximal",
+    "group": 15,
+    "source": 0,
+    "owner": 1,
+    "gene": "PCNA",
+    "area": "635894819223388628131/1276591133196288000000"
+  },
+  {
+    "corridor": "31cf5a487b7a71",
+    "setting": "maximal",
+    "group": 22,
+    "source": 0,
+    "owner": 1,
+    "gene": "C1orf162",
+    "area": "640392840759969426209/1276591133196288000000"
+  },
+  {
+    "corridor": "32265c0356f738",
+    "setting": "maximal",
+    "group": 0,
+    "source": 0,
+    "owner": 1,
+    "gene": "PTGDS",
+    "area": "854051387971699434841/6127637439342182400000"
+  },
+  {
+    "corridor": "32265c0356f738",
+    "setting": "maximal",
+    "group": 1,
+    "source": 1,
+    "owner": 0,
+    "gene": "CPA3",
+    "area": "149869561307150376767/1021272906557030400000"
+  },
+  {
+    "corridor": "32265c0356f738",
+    "setting": "maximal",
+    "group": 3,
+    "source": 0,
+    "owner": 1,
+    "gene": "SLAMF7",
+    "area": "2498529249538663692163/5106364532785152000000"
+  },
+  {
+    "corridor": "32265c0356f738",
+    "setting": "maximal",
+    "group": 4,
+    "source": 0,
+    "owner": 1,
+    "gene": "INMT",
+    "area": "143597902224252980321/109422097131110400000"
+  },
+  {
+    "corridor": "32265c0356f738",
+    "setting": "maximal",
+    "group": 5,
+    "source": 0,
+    "owner": 1,
+    "gene": "CPA3",
+    "area": "5000367148683647567731/6127637439342182400000"
+  },
+  {
+    "corridor": "32265c0356f738",
+    "setting": "maximal",
+    "group": 6,
+    "source": 0,
+    "owner": 1,
+    "gene": "CPA3",
+    "area": "1467840425865981586969/5106364532785152000000"
+  },
+  {
+    "corridor": "3b7efddbce9a7b",
+    "setting": "maximal",
+    "group": 1,
+    "source": 1,
+    "owner": 0,
+    "gene": "FBN1",
+    "area": "87978023820763212523/189124612325376000000"
+  },
+  {
+    "corridor": "3b7efddbce9a7b",
+    "setting": "maximal",
+    "group": 4,
+    "source": 0,
+    "owner": 1,
+    "gene": "LTBP2",
+    "area": "527278549909124901907/1702121510928384000000"
+  },
+  {
+    "corridor": "3b7efddbce9a7b",
+    "setting": "maximal",
+    "group": 5,
+    "source": 1,
+    "owner": 0,
+    "gene": "LTBP2",
+    "area": "245576052384405553849/680848604371353600000"
+  },
+  {
+    "corridor": "3b7efddbce9a7b",
+    "setting": "maximal",
+    "group": 8,
+    "source": 1,
+    "owner": 0,
+    "gene": "PTGDS",
+    "area": "1968529600559558089/4986684114048000000"
+  },
+  {
+    "corridor": "3b7efddbce9a7b",
+    "setting": "maximal",
+    "group": 10,
+    "source": 1,
+    "owner": 0,
+    "gene": "C7",
+    "area": "635720962946229967/712383444864000000"
+  },
+  {
+    "corridor": "3b7efddbce9a7b",
+    "setting": "maximal",
+    "group": 11,
+    "source": 1,
+    "owner": 0,
+    "gene": "PMP22",
+    "area": "1710431883638901286561/2042545813114060800000"
+  },
+  {
+    "corridor": "3bd2d054beb95f",
+    "setting": "baseline",
+    "group": 8,
+    "source": 0,
+    "owner": 1,
+    "gene": "PCOLCE",
+    "area": "9124112619888841/26052880269312000000"
+  },
+  {
+    "corridor": "3bd2d054beb95f",
+    "setting": "maximal",
+    "group": 1,
+    "source": 1,
+    "owner": 0,
+    "gene": "CCL5",
+    "area": "7935065924946169/150768983040000000"
+  },
+  {
+    "corridor": "3bd2d054beb95f",
+    "setting": "maximal",
+    "group": 6,
+    "source": 1,
+    "owner": 0,
+    "gene": "INMT",
+    "area": "2230690380776267281/52105760538624000000"
+  },
+  {
+    "corridor": "3bd2d054beb95f",
+    "setting": "maximal",
+    "group": 8,
+    "source": 0,
+    "owner": 1,
+    "gene": "PCOLCE",
+    "area": "9124112619888841/52105760538624000000"
+  },
+  {
+    "corridor": "028ca836ef82d0",
+    "setting": "maximal",
+    "group": 1,
+    "source": 0,
+    "owner": 1,
+    "gene": "KCNMA1",
+    "area": "358084709760522995041/2269495347904512000000"
+  },
+  {
+    "corridor": "03ae83b2198cae",
+    "setting": "maximal",
+    "group": 0,
+    "source": 1,
+    "owner": 0,
+    "gene": "VCAN",
+    "area": "1025949246662144912851/8170183252456243200000"
+  },
+  {
+    "corridor": "03ae83b2198cae",
+    "setting": "maximal",
+    "group": 5,
+    "source": 1,
+    "owner": 0,
+    "gene": "VWF",
+    "area": "1258677619731782561/19946736456192000000"
+  },
+  {
+    "corridor": "03ae83b2198cae",
+    "setting": "maximal",
+    "group": 6,
+    "source": 1,
+    "owner": 0,
+    "gene": "OGN",
+    "area": "57231070557148876441/141843459244032000000"
+  },
+  {
+    "corridor": "1f8547af98ff5f",
+    "setting": "maximal",
+    "group": 1,
+    "source": 1,
+    "owner": 0,
+    "gene": "CNN1",
+    "area": "4603735015392578114449/20425458131140608000000"
+  },
+  {
+    "corridor": "4debbb89032b3f",
+    "setting": "maximal",
+    "group": 2,
+    "source": 1,
+    "owner": 0,
+    "gene": "KCNMA1",
+    "area": "84414975531562895159/306381871967109120000"
+  },
+  {
+    "corridor": "4debbb89032b3f",
+    "setting": "maximal",
+    "group": 4,
+    "source": 1,
+    "owner": 0,
+    "gene": "ADAMTS1",
+    "area": "5443665482736431203969/15319093598355456000000"
+  },
+  {
+    "corridor": "71ba4370a723ae",
+    "setting": "baseline",
+    "group": 7,
+    "source": 1,
+    "owner": 0,
+    "gene": "VCAN",
+    "area": "6360593972512764986959/20425458131140608000000"
+  },
+  {
+    "corridor": "71ba4370a723ae",
+    "setting": "maximal",
+    "group": 7,
+    "source": 1,
+    "owner": 0,
+    "gene": "VCAN",
+    "area": "1047674875029369409/6513220067328000000"
+  },
+  {
+    "corridor": "71ba4370a723ae",
+    "setting": "maximal",
+    "group": 13,
+    "source": 1,
+    "owner": 0,
+    "gene": "CAVIN2",
+    "area": "2128603478199805489/15760384360448000000"
+  },
+  {
+    "corridor": "71ba4370a723ae",
+    "setting": "maximal",
+    "group": 15,
+    "source": 1,
+    "owner": 0,
+    "gene": "ADAMTS1",
+    "area": "801850330392405527449/1276591133196288000000"
+  }
+]

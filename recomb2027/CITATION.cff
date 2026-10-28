@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Cite the accompanying research manuscript; this extension is an author-review candidate."
+title: "Exact Joint Boundary Deformation in Ordered Spatial Transcriptomics Corridors"
+authors:
+  - family-names: Peram
+    given-names: Arnav
+version: 0.2.0a2
+date-released: 2026-10-28
+type: software

@@ -1,0 +1,14 @@
+{
+  "method": "Proseg",
+  "version": "3.2.0",
+  "upstream": "https://github.com/dcjones/proseg",
+  "binary_distribution": "https://api.anaconda.org/download/bioconda/rust-proseg/3.2.0/linux-64/rust-proseg-3.2.0-hec9b1f2_0.conda",
+  "package_sha256": "796898b9712790168d13a976dd951d2ec64de54d2631dc703e6f649caae64534",
+  "binary_sha256": "14793e492010e7a1f2a09a9f7c1076edccce205eeab7a5fb11fa57cf0e9f7336",
+  "system": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "execution_date": "2026-10-28",
+  "scope": "one existing development donor, two clipped crops; no independent reference truth",
+  "failed_default": "Feature-selection EmptyInput on roi_01 with default factorization for both native Parquet and equivalent CSV. Adaptation --no-factorization applied to both crops.",
+  "replicates": 1,
+  "stochastic": "No seed option exposed; exact stochastic reproduction is not claimed."
+}

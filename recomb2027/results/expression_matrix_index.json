@@ -1,0 +1,1963 @@
+{
+  "observed_gene_universe": [
+    "ACE2",
+    "ACKR1",
+    "ACTA2",
+    "ACTG2",
+    "ADAM28",
+    "ADAMTS1",
+    "ADGRE1",
+    "ADGRL4",
+    "ADH1C",
+    "ADIPOQ",
+    "AGR3",
+    "AHSP",
+    "AIF1",
+    "ALAS2",
+    "ALDH1A3",
+    "AMY2A",
+    "ANGPT2",
+    "ANPEP",
+    "APCDD1",
+    "APOA5",
+    "APOBEC3A",
+    "APOLD1",
+    "AQP3",
+    "AQP8",
+    "AQP9",
+    "AR",
+    "ARFGEF3",
+    "ASCL1",
+    "ASPN",
+    "BAMBI",
+    "BANK1",
+    "BASP1",
+    "BCL2L11",
+    "BMX",
+    "C15orf48",
+    "C1orf162",
+    "C1orf194",
+    "C20orf85",
+    "C6orf118",
+    "C7",
+    "CAPN8",
+    "CAV1",
+    "CAVIN1",
+    "CAVIN2",
+    "CCDC39",
+    "CCDC78",
+    "CCL19",
+    "CCL5",
+    "CCNB2",
+    "CCR2",
+    "CCR7",
+    "CD14",
+    "CD163",
+    "CD19",
+    "CD1A",
+    "CD1C",
+    "CD1E",
+    "CD2",
+    "CD247",
+    "CD27",
+    "CD274",
+    "CD28",
+    "CD34",
+    "CD3D",
+    "CD3E",
+    "CD4",
+    "CD5L",
+    "CD68",
+    "CD69",
+    "CD79A",
+    "CD83",
+    "CD86",
+    "CD8A",
+    "CD93",
+    "CDH16",
+    "CDK1",
+    "CENPF",
+    "CFAP53",
+    "CFB",
+    "CFHR1",
+    "CFHR3",
+    "CFTR",
+    "CLCA1",
+    "CLCA2",
+    "CLEC10A",
+    "CLEC14A",
+    "CLEC4E",
+    "CLECL1",
+    "CLIC6",
+    "CNN1",
+    "COCH",
+    "COL17A1",
+    "COL5A2",
+    "CPA3",
+    "CRHBP",
+    "CRISPLD2",
+    "CSF2RA",
+    "CSF3",
+    "CTLA4",
+    "CTSK",
+    "CXCL10",
+    "CXCL2",
+    "CXCL6",
+    "CXCL9",
+    "CXCR4",
+    "CYP1A1",
+    "CYP2A7",
+    "CYP2B6",
+    "CYP2F1",
+    "CYP3A4",
+    "CYP4B1",
+    "CYTIP",
+    "DERL3",
+    "DES",
+    "DIRAS3",
+    "DNAAF1",
+    "DNASE1L3",
+    "DPEP1",
+    "DPT",
+    "DST",
+    "DUSP2",
+    "ECSCR",
+    "EDN1",
+    "EDNRB",
+    "EGFL7",
+    "EGFR",
+    "EHF",
+    "ELF5",
+    "EPCAM",
+    "ERBB2",
+    "ERG",
+    "ESR1",
+    "FAS",
+    "FBLN1",
+    "FBN1",
+    "FCER1A",
+    "FCGR1A",
+    "FCGR3A",
+    "FCN1",
+    "FGFBP1",
+    "FGFBP2",
+    "FGL2",
+    "FHL2",
+    "FKBP11",
+    "FOXI1",
+    "FOXJ1",
+    "FOXP3",
+    "FSTL3",
+    "FXYD2",
+    "GATA2",
+    "GATM",
+    "GDF15",
+    "GEM",
+    "GHRL",
+    "GLIPR1",
+    "GLYATL1",
+    "GNG11",
+    "GNLY",
+    "GPC1",
+    "GPC3",
+    "GPR183",
+    "GPRC5A",
+    "GPX2",
+    "GYPA",
+    "GYPB",
+    "GZMA",
+    "GZMK",
+    "HAMP",
+    "HAVCR2",
+    "HES4",
+    "HIGD1B",
+    "HLA-DQB2",
+    "HMGCS2",
+    "HPGDS",
+    "HPX",
+    "IGF1",
+    "IGSF6",
+    "IL1R2",
+    "IL1RL1",
+    "IL2RA",
+    "IL3RA",
+    "IL7R",
+    "INMT",
+    "INS",
+    "IRF8",
+    "KCNK3",
+    "KCNMA1",
+    "KIT",
+    "KLK11",
+    "KLRB1",
+    "KLRC1",
+    "KNG1",
+    "KRT20",
+    "KRT7",
+    "LAG3",
+    "LAMP3",
+    "LGI4",
+    "LGR5",
+    "LIF",
+    "LILRA4",
+    "LILRB2",
+    "LILRB4",
+    "LPL",
+    "LTBP2",
+    "LY86",
+    "LYVE1",
+    "MALL",
+    "MAMDC2",
+    "MCEMP1",
+    "MCF2L",
+    "MDM2",
+    "MEDAG",
+    "MEF2C",
+    "MEST",
+    "MET",
+    "MFAP5",
+    "MKI67",
+    "MLANA",
+    "MLPH",
+    "MMRN1",
+    "MMRN2",
+    "MNDA",
+    "MPEG1",
+    "MRC1",
+    "MS4A1",
+    "MS4A2",
+    "MS4A4A",
+    "MS4A6A",
+    "MTRNR2L11",
+    "MYC",
+    "MYH11",
+    "MYLK",
+    "MZB1",
+    "NAT8",
+    "NKG7",
+    "NPDC1",
+    "NTN4",
+    "OGN",
+    "PCNA",
+    "PCOLCE",
+    "PCP4",
+    "PCSK2",
+    "PDGFRA",
+    "PDGFRB",
+    "PDPN",
+    "PEBP4",
+    "PECAM1",
+    "PGR",
+    "PLA2G7",
+    "PLAC9",
+    "PLCG2",
+    "PLD4",
+    "PLIN4",
+    "PMP22",
+    "PPARG",
+    "PPP1R1A",
+    "PPP1R1B",
+    "PPY",
+    "PRDM1",
+    "PRF1",
+    "PRG4",
+    "PROX1",
+    "PTGDS",
+    "PTN",
+    "PTPRC",
+    "RAMP2",
+    "RAPGEF3",
+    "RBP5",
+    "RGS16",
+    "RIDA",
+    "RND1",
+    "RTKN2",
+    "S100A1",
+    "S100A12",
+    "SCGB2A1",
+    "SCGN",
+    "SELE",
+    "SELL",
+    "SEMA3C",
+    "SERPINB2",
+    "SERPINB3",
+    "SERPINB9",
+    "SFRP2",
+    "SFRP4",
+    "SFTA2",
+    "SH2D3C",
+    "SLAMF1",
+    "SLAMF7",
+    "SLC18A2",
+    "SLC22A8",
+    "SLC26A2",
+    "SLC4A1",
+    "SMIM24",
+    "SMYD2",
+    "SNAI1",
+    "SNCA",
+    "SNCG",
+    "SNTN",
+    "SOX18",
+    "SOX2",
+    "SPDEF",
+    "SPI1",
+    "SPIB",
+    "SRPX",
+    "STC2",
+    "STEAP4",
+    "TBX3",
+    "TCF15",
+    "TCF4",
+    "TCIM",
+    "TCL1A",
+    "TENT5C",
+    "TFPI",
+    "THAP2",
+    "THBS2",
+    "THY1",
+    "TIMP4",
+    "TM4SF18",
+    "TM4SF4",
+    "TMC5",
+    "TMEM100",
+    "TMEM52B",
+    "TNC",
+    "TNFRSF13B",
+    "TNFRSF17",
+    "TOP2A",
+    "TRAC",
+    "TREM2",
+    "TSPAN19",
+    "UBE2C",
+    "UPK3B",
+    "VCAN",
+    "VSIG4",
+    "VWA5A",
+    "VWF"
+  ],
+  "models": [
+    {
+      "corridor": "00d44a60e91246",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153267,
+        153268
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "00d44a60e91246",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153267,
+        153268
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "01daeeb3d8d695",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153182,
+        153183
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "01daeeb3d8d695",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153182,
+        153183
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "028ca836ef82d0",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103132,
+        106656
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "028ca836ef82d0",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103132,
+        106656
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "02d9a53ef82968",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153131,
+        153136
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "02d9a53ef82968",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153131,
+        153136
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "03ae83b2198cae",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103119,
+        103146
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "03ae83b2198cae",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103119,
+        103146
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "03e467c3015f6a",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102315,
+        102325
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "03e467c3015f6a",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102315,
+        102325
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "10ff8893e7f431",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102330,
+        103120,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "10ff8893e7f431",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102330,
+        103120,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "142d24a9c1c8a6",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153958,
+        153959
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "142d24a9c1c8a6",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153958,
+        153959
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "14d2599d4e5171",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102330,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "14d2599d4e5171",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102330,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "1b7c0635fe67b4",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102330,
+        103120,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "1b7c0635fe67b4",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102330,
+        103120,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "1e248a5ab9316b",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103149,
+        103151
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "1e248a5ab9316b",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103149,
+        103151
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "1f8547af98ff5f",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103135,
+        103138
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "1f8547af98ff5f",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103135,
+        103138
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2bb62b675f6e6a",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153139,
+        153143
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2bb62b675f6e6a",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153139,
+        153143
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2d321535d93169",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153964,
+        153965
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2d321535d93169",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153964,
+        153965
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2dc8286e944ea6",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153257,
+        153286
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2dc8286e944ea6",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153257,
+        153286
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2e608d44e7a46c",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103136,
+        103137
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2e608d44e7a46c",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103136,
+        103137
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2f8357efef18c4",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153958,
+        153959
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2f8357efef18c4",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153958,
+        153959
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2fa06b2ccb3a51",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153952,
+        153958
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "2fa06b2ccb3a51",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153952,
+        153958
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "31cf5a487b7a71",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        51096,
+        51097
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "31cf5a487b7a71",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        51096,
+        51097
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "32265c0356f738",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153132,
+        153140
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "32265c0356f738",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153132,
+        153140
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "3b7efddbce9a7b",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153124,
+        153133
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "3b7efddbce9a7b",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153124,
+        153133
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "3bd2d054beb95f",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153129,
+        153131
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "3bd2d054beb95f",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153129,
+        153131
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "3d714546e20970",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103135,
+        103138
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "3d714546e20970",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103135,
+        103138
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "4017ad12866374",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103142,
+        103147
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "4017ad12866374",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103142,
+        103147
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "4037abe9fea38e",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153124,
+        153133
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "4037abe9fea38e",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153124,
+        153133
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "451bff30357502",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103132,
+        106656
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "451bff30357502",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103132,
+        106656
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "4c4f466415dd22",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153131,
+        153135,
+        153138
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "4c4f466415dd22",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153131,
+        153135,
+        153138
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "4debbb89032b3f",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103124,
+        103125
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "4debbb89032b3f",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103124,
+        103125
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "4e7c5bf618b010",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153183,
+        153184
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "4e7c5bf618b010",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153183,
+        153184
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "587560238ab4d3",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102330,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "587560238ab4d3",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102330,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "618658f493e6e2",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103145,
+        103147
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "618658f493e6e2",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103145,
+        103147
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "71ba4370a723ae",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102287,
+        103112
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "71ba4370a723ae",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102287,
+        103112
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "748b3e768a847b",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102330,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "748b3e768a847b",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102330,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "74d3dd9b1eca33",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103136,
+        103138
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "74d3dd9b1eca33",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103136,
+        103138
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "7f5bc4dec18cec",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102315,
+        102318,
+        102325
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "7f5bc4dec18cec",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102315,
+        102318,
+        102325
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "839d02011bd3d8",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102330,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "839d02011bd3d8",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102330,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "83bbb6c7f2dd22",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102315,
+        102325
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "83bbb6c7f2dd22",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102315,
+        102325
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "9bee7d8841eb84",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        103129,
+        103132,
+        106656
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "9bee7d8841eb84",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        103129,
+        103132,
+        106656
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "a0987140ecb03c",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153124,
+        153125,
+        153133
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "a0987140ecb03c",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153124,
+        153125,
+        153133
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "c22580b0103361",
+      "roi": "roi_02",
+      "setting": "baseline",
+      "cells": [
+        102330,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "c22580b0103361",
+      "roi": "roi_02",
+      "setting": "maximal",
+      "cells": [
+        102330,
+        103121
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "c8f8188430d092",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153955,
+        153959,
+        153965
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "c8f8188430d092",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153955,
+        153959,
+        153965
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "d64a2a80fc9f78",
+      "roi": "roi_01",
+      "setting": "baseline",
+      "cells": [
+        153124,
+        153125,
+        153133
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "corridor": "d64a2a80fc9f78",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cells": [
+        153124,
+        153125,
+        153133
+      ],
+      "budgets_um2": [
+        "0",
+        "1/20",
+        "1/10",
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ]
+    }
+  ],
+  "optimized_rows": 14384,
+  "fixed_positive_rows": 18096,
+  "sparse_rows": 32480,
+  "absent_entry_rule": "For a listed model/cell/budget and listed observed gene, absent CSV entries have count exactly zero under that model. This says nothing about undetected RNA or unmeasured genes.",
+  "conditioning": "Separate matrices per corridor and geometric setting; no averaging or union over overlapping corridors.",
+  "count_scope": "Observed counts within supplied crops; exterior-to-corridor counts fixed. Border-clipped cells are not claimed complete whole-cell profiles.",
+  "raster_label_semantics": {
+    "0": "reference background/unassigned compartment",
+    "-1": "unknown exterior candidate"
+  }
+}

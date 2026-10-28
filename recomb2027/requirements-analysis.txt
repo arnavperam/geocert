@@ -1,0 +1,3 @@
+# Only for source-crop extraction and raster arrays. The exact query wheel has no runtime dependencies.
+numpy>=2.0
+pandas>=2.2

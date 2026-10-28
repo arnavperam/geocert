@@ -1,0 +1,22 @@
+{
+  "origin": "Post-review exhaustive audit, specified before pair-area outcomes; not a preregistered biological study.",
+  "universe": "All 42 retained corridors, baseline and inherited maximal geometry; all pairs of distinct individually movable transcript groups.",
+  "move": "One observed transcript pinned to any individually feasible owner different from its source; all other unpinned transcripts may move as collateral.",
+  "no_weights": "One explicit transcript per move; no binary-encoded bundles.",
+  "comparators": {
+    "marginal": "max of the two exact singleton costs; a sound lower bound on joint cost, never a realizability guarantee.",
+    "additive": "sum of exact singleton costs plus explicit common feasibility; an inner budget approximation for these source-feasible models."
+  },
+  "budgets": [
+    "0",
+    "1/20",
+    "1/10",
+    "1/4",
+    "1/2",
+    "1",
+    "2",
+    "4"
+  ],
+  "selection": "No pair, gene, model or outcome filtering; nonmovable groups excluded by the stated move definition.",
+  "scope": "Development data from one donor, overlapping local corridor families; no error-prediction, whole-cell or downstream biological claim."
+}

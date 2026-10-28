@@ -1,0 +1,1501 @@
+{
+  "source_files": {
+    "roi_01": {
+      "masks.npz": "a2d88f46d0b120f843d7caca1389806ca7dbc2bb7e755c75095baf28b3df169b",
+      "transcripts.parquet": "e46ad6139dcc5035c3606f84c721f9114f5e2576c67fdcc706b116092e47afc0",
+      "metadata.json": "b8ae2367436a7ce4dfa40b81c754abb725c36737aa154d0d3d69c47a08ad3680"
+    },
+    "roi_02": {
+      "masks.npz": "f4083f7c0e63d6a376e53f3bfbadf927f125013692eb7fb289bb96f4c1a6a5e2",
+      "transcripts.parquet": "d77f0d97f0768bffb296b138b609ddefed54d5f7f74d5fd9091dc3875d1eec47",
+      "metadata.json": "2f6b9af89b2aa0ade5ee39cfd8b437e2235cc4d9e488713f3dce7bfdc7079b54"
+    }
+  },
+  "protocol_sha256": "a2dff1dea37e6de65145436de16f911ca75ee0ef7e823fd3582ab48e51e89aaa",
+  "scope": "Connected source-cell masks wholly inside each supplied crop; counts include all retained Q20 measured-gene RNAs. This is the existing one-donor development input, not globally validated cell completeness.",
+  "census": {
+    "adjacent_pair_records": 50,
+    "eligible_pair_records": 39,
+    "genes_below_count_floor": 1092,
+    "secondary_all_count_contrasts": 13,
+    "secondary_local_queries": 10,
+    "primary_all_count_contrasts": 54,
+    "primary_fixed_outside_corridor": 19,
+    "primary_local_queries": 35,
+    "excluded_boundary_or_disconnected_pair": 11,
+    "secondary_fixed_outside_corridor": 3
+  },
+  "roi_summary": {
+    "roi_01": {
+      "contained_connected_cells": [
+        51002,
+        51003,
+        51004,
+        51006,
+        51093,
+        51094,
+        51095,
+        51096,
+        51097,
+        51098,
+        51099,
+        51100,
+        51101,
+        51102,
+        51103,
+        51131,
+        51132,
+        51133,
+        51248,
+        52573,
+        52574,
+        153108,
+        153109,
+        153110,
+        153123,
+        153124,
+        153125,
+        153127,
+        153128,
+        153129,
+        153130,
+        153131,
+        153132,
+        153133,
+        153134,
+        153135,
+        153136,
+        153137,
+        153138,
+        153139,
+        153140,
+        153141,
+        153142,
+        153143,
+        153144,
+        153145,
+        153146,
+        153147,
+        153148,
+        153179,
+        153184,
+        153205,
+        153206,
+        153207,
+        153242,
+        153243,
+        153244,
+        153245,
+        153253,
+        153254,
+        153255,
+        153256,
+        153257,
+        153258,
+        153259,
+        153260,
+        153265,
+        153266,
+        153267,
+        153268,
+        153270,
+        153285,
+        153955,
+        153956,
+        153958,
+        153961,
+        153962,
+        153963,
+        153965
+      ],
+      "border_cells": [
+        51005,
+        51008,
+        51009,
+        51010,
+        51252,
+        153121,
+        153126,
+        153178,
+        153180,
+        153181,
+        153182,
+        153183,
+        153198,
+        153200,
+        153202,
+        153204,
+        153246,
+        153247,
+        153269,
+        153271,
+        153286,
+        153287,
+        153288,
+        153877,
+        153952,
+        153957,
+        153959,
+        153960,
+        153964
+      ],
+      "contained_disconnected_cells": [
+        153199
+      ],
+      "retained_rna": 5847
+    },
+    "roi_02": {
+      "contained_connected_cells": [
+        102286,
+        102287,
+        102288,
+        102289,
+        102290,
+        102313,
+        102315,
+        102316,
+        102317,
+        102318,
+        102322,
+        102325,
+        102329,
+        102330,
+        102331,
+        102379,
+        102380,
+        102381,
+        102382,
+        102383,
+        102384,
+        102386,
+        103111,
+        103112,
+        103113,
+        103114,
+        103115,
+        103116,
+        103117,
+        103118,
+        103119,
+        103120,
+        103121,
+        103122,
+        103123,
+        103124,
+        103125,
+        103127,
+        103128,
+        103129,
+        103131,
+        103132,
+        103133,
+        103134,
+        103135,
+        103136,
+        103137,
+        103138,
+        103139,
+        103140,
+        103141,
+        103142,
+        103143,
+        103144,
+        103145,
+        103146,
+        103147,
+        103148,
+        103149,
+        103150,
+        103151,
+        103153,
+        103154,
+        103155,
+        103157,
+        103879,
+        103933,
+        103934,
+        106659,
+        160742,
+        160743,
+        160789,
+        160790,
+        160791
+      ],
+      "border_cells": [
+        102293,
+        102306,
+        102312,
+        102314,
+        102320,
+        102327,
+        102332,
+        102333,
+        102334,
+        102378,
+        102385,
+        102387,
+        102388,
+        102396,
+        102398,
+        102431,
+        102433,
+        103110,
+        103126,
+        103130,
+        103152,
+        103156,
+        103880,
+        106656,
+        106658,
+        160747,
+        160792
+      ],
+      "contained_disconnected_cells": [],
+      "retained_rna": 1523
+    }
+  },
+  "queries": [
+    {
+      "chart_id": "4c4f466415dd22",
+      "roi": "roi_01",
+      "cells": [
+        153131,
+        153138
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "CCL5",
+      "counts": [
+        6,
+        5
+      ],
+      "sign": 1,
+      "source_margin": 1,
+      "fixed_counts": [
+        5,
+        5
+      ],
+      "local_indices": [
+        0,
+        16
+      ],
+      "stratum": "secondary"
+    },
+    {
+      "chart_id": "4c4f466415dd22",
+      "roi": "roi_01",
+      "cells": [
+        153131,
+        153138
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "LTBP2",
+      "counts": [
+        5,
+        2
+      ],
+      "sign": 1,
+      "source_margin": 3,
+      "fixed_counts": [
+        5,
+        1
+      ],
+      "local_indices": [
+        6
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "4c4f466415dd22",
+      "roi": "roi_01",
+      "cells": [
+        153131,
+        153138
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "PTPRC",
+      "counts": [
+        3,
+        2
+      ],
+      "sign": 1,
+      "source_margin": 1,
+      "fixed_counts": [
+        3,
+        0
+      ],
+      "local_indices": [
+        14,
+        15
+      ],
+      "stratum": "secondary"
+    },
+    {
+      "chart_id": "4c4f466415dd22",
+      "roi": "roi_01",
+      "cells": [
+        153138,
+        153135
+      ],
+      "owner_indices": [
+        1,
+        2
+      ],
+      "gene": "CCL5",
+      "counts": [
+        5,
+        2
+      ],
+      "sign": 1,
+      "source_margin": 3,
+      "fixed_counts": [
+        5,
+        1
+      ],
+      "local_indices": [
+        0,
+        16
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "4c4f466415dd22",
+      "roi": "roi_01",
+      "cells": [
+        153138,
+        153135
+      ],
+      "owner_indices": [
+        1,
+        2
+      ],
+      "gene": "CPA3",
+      "counts": [
+        0,
+        6
+      ],
+      "sign": -1,
+      "source_margin": 6,
+      "fixed_counts": [
+        0,
+        5
+      ],
+      "local_indices": [
+        5
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "c8f8188430d092",
+      "roi": "roi_01",
+      "cells": [
+        153955,
+        153965
+      ],
+      "owner_indices": [
+        1,
+        2
+      ],
+      "gene": "C7",
+      "counts": [
+        3,
+        2
+      ],
+      "sign": 1,
+      "source_margin": 1,
+      "fixed_counts": [
+        2,
+        1
+      ],
+      "local_indices": [
+        10,
+        17
+      ],
+      "stratum": "secondary"
+    },
+    {
+      "chart_id": "c8f8188430d092",
+      "roi": "roi_01",
+      "cells": [
+        153955,
+        153965
+      ],
+      "owner_indices": [
+        1,
+        2
+      ],
+      "gene": "CD34",
+      "counts": [
+        3,
+        2
+      ],
+      "sign": 1,
+      "source_margin": 1,
+      "fixed_counts": [
+        3,
+        1
+      ],
+      "local_indices": [
+        16
+      ],
+      "stratum": "secondary"
+    },
+    {
+      "chart_id": "c8f8188430d092",
+      "roi": "roi_01",
+      "cells": [
+        153955,
+        153965
+      ],
+      "owner_indices": [
+        1,
+        2
+      ],
+      "gene": "CD93",
+      "counts": [
+        6,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 6,
+      "fixed_counts": [
+        5,
+        0
+      ],
+      "local_indices": [
+        8
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "c8f8188430d092",
+      "roi": "roi_01",
+      "cells": [
+        153955,
+        153965
+      ],
+      "owner_indices": [
+        1,
+        2
+      ],
+      "gene": "TFPI",
+      "counts": [
+        5,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 5,
+      "fixed_counts": [
+        3,
+        0
+      ],
+      "local_indices": [
+        19,
+        20
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "c8f8188430d092",
+      "roi": "roi_01",
+      "cells": [
+        153955,
+        153965
+      ],
+      "owner_indices": [
+        1,
+        2
+      ],
+      "gene": "VWF",
+      "counts": [
+        9,
+        6
+      ],
+      "sign": 1,
+      "source_margin": 3,
+      "fixed_counts": [
+        8,
+        5
+      ],
+      "local_indices": [
+        3,
+        5,
+        6
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "d64a2a80fc9f78",
+      "roi": "roi_01",
+      "cells": [
+        153125,
+        153124
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "LTBP2",
+      "counts": [
+        0,
+        5
+      ],
+      "sign": -1,
+      "source_margin": 5,
+      "fixed_counts": [
+        0,
+        3
+      ],
+      "local_indices": [
+        0,
+        5,
+        6
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "d64a2a80fc9f78",
+      "roi": "roi_01",
+      "cells": [
+        153124,
+        153133
+      ],
+      "owner_indices": [
+        1,
+        2
+      ],
+      "gene": "FBN1",
+      "counts": [
+        0,
+        5
+      ],
+      "sign": -1,
+      "source_margin": 5,
+      "fixed_counts": [
+        0,
+        4
+      ],
+      "local_indices": [
+        1
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "d64a2a80fc9f78",
+      "roi": "roi_01",
+      "cells": [
+        153124,
+        153133
+      ],
+      "owner_indices": [
+        1,
+        2
+      ],
+      "gene": "LTBP2",
+      "counts": [
+        5,
+        1
+      ],
+      "sign": 1,
+      "source_margin": 4,
+      "fixed_counts": [
+        3,
+        0
+      ],
+      "local_indices": [
+        0,
+        5,
+        6
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "10ff8893e7f431",
+      "roi": "roi_02",
+      "cells": [
+        102330,
+        103121
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "VWF",
+      "counts": [
+        5,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 5,
+      "fixed_counts": [
+        4,
+        0
+      ],
+      "local_indices": [
+        2
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "1b7c0635fe67b4",
+      "roi": "roi_02",
+      "cells": [
+        102330,
+        103121
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "OGN",
+      "counts": [
+        4,
+        1
+      ],
+      "sign": 1,
+      "source_margin": 3,
+      "fixed_counts": [
+        3,
+        1
+      ],
+      "local_indices": [
+        6
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "1b7c0635fe67b4",
+      "roi": "roi_02",
+      "cells": [
+        102330,
+        103121
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "VWF",
+      "counts": [
+        5,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 5,
+      "fixed_counts": [
+        3,
+        0
+      ],
+      "local_indices": [
+        8,
+        9
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "4037abe9fea38e",
+      "roi": "roi_01",
+      "cells": [
+        153124,
+        153133
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "FBN1",
+      "counts": [
+        0,
+        5
+      ],
+      "sign": -1,
+      "source_margin": 5,
+      "fixed_counts": [
+        0,
+        4
+      ],
+      "local_indices": [
+        1
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "4037abe9fea38e",
+      "roi": "roi_01",
+      "cells": [
+        153124,
+        153133
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "LTBP2",
+      "counts": [
+        5,
+        1
+      ],
+      "sign": 1,
+      "source_margin": 4,
+      "fixed_counts": [
+        3,
+        0
+      ],
+      "local_indices": [
+        0,
+        7,
+        8
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "587560238ab4d3",
+      "roi": "roi_02",
+      "cells": [
+        102330,
+        103121
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "OGN",
+      "counts": [
+        4,
+        1
+      ],
+      "sign": 1,
+      "source_margin": 3,
+      "fixed_counts": [
+        4,
+        0
+      ],
+      "local_indices": [
+        5
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "587560238ab4d3",
+      "roi": "roi_02",
+      "cells": [
+        102330,
+        103121
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "VWF",
+      "counts": [
+        5,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 5,
+      "fixed_counts": [
+        4,
+        0
+      ],
+      "local_indices": [
+        7
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "748b3e768a847b",
+      "roi": "roi_02",
+      "cells": [
+        102330,
+        103121
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "OGN",
+      "counts": [
+        4,
+        1
+      ],
+      "sign": 1,
+      "source_margin": 3,
+      "fixed_counts": [
+        3,
+        1
+      ],
+      "local_indices": [
+        3
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "00d44a60e91246",
+      "roi": "roi_01",
+      "cells": [
+        153268,
+        153267
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "PRDM1",
+      "counts": [
+        3,
+        2
+      ],
+      "sign": 1,
+      "source_margin": 1,
+      "fixed_counts": [
+        2,
+        2
+      ],
+      "local_indices": [
+        5
+      ],
+      "stratum": "secondary"
+    },
+    {
+      "chart_id": "02d9a53ef82968",
+      "roi": "roi_01",
+      "cells": [
+        153131,
+        153136
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "CCL5",
+      "counts": [
+        6,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 6,
+      "fixed_counts": [
+        5,
+        0
+      ],
+      "local_indices": [
+        0
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "02d9a53ef82968",
+      "roi": "roi_01",
+      "cells": [
+        153131,
+        153136
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "CD93",
+      "counts": [
+        5,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 5,
+      "fixed_counts": [
+        3,
+        0
+      ],
+      "local_indices": [
+        7,
+        21
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "02d9a53ef82968",
+      "roi": "roi_01",
+      "cells": [
+        153131,
+        153136
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "LTBP2",
+      "counts": [
+        5,
+        4
+      ],
+      "sign": 1,
+      "source_margin": 1,
+      "fixed_counts": [
+        4,
+        3
+      ],
+      "local_indices": [
+        1,
+        8
+      ],
+      "stratum": "secondary"
+    },
+    {
+      "chart_id": "02d9a53ef82968",
+      "roi": "roi_01",
+      "cells": [
+        153131,
+        153136
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "MRC1",
+      "counts": [
+        5,
+        1
+      ],
+      "sign": 1,
+      "source_margin": 4,
+      "fixed_counts": [
+        4,
+        1
+      ],
+      "local_indices": [
+        20
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "02d9a53ef82968",
+      "roi": "roi_01",
+      "cells": [
+        153131,
+        153136
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "PDGFRA",
+      "counts": [
+        2,
+        4
+      ],
+      "sign": -1,
+      "source_margin": 2,
+      "fixed_counts": [
+        2,
+        3
+      ],
+      "local_indices": [
+        14
+      ],
+      "stratum": "secondary"
+    },
+    {
+      "chart_id": "2bb62b675f6e6a",
+      "roi": "roi_01",
+      "cells": [
+        153139,
+        153143
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "CCL5",
+      "counts": [
+        1,
+        4
+      ],
+      "sign": -1,
+      "source_margin": 3,
+      "fixed_counts": [
+        1,
+        3
+      ],
+      "local_indices": [
+        0
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "31cf5a487b7a71",
+      "roi": "roi_01",
+      "cells": [
+        51097,
+        51096
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "CD1C",
+      "counts": [
+        7,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 7,
+      "fixed_counts": [
+        5,
+        0
+      ],
+      "local_indices": [
+        2,
+        4
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "31cf5a487b7a71",
+      "roi": "roi_01",
+      "cells": [
+        51097,
+        51096
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "CXCR4",
+      "counts": [
+        5,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 5,
+      "fixed_counts": [
+        4,
+        0
+      ],
+      "local_indices": [
+        6
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "31cf5a487b7a71",
+      "roi": "roi_01",
+      "cells": [
+        51097,
+        51096
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "TRAC",
+      "counts": [
+        4,
+        1
+      ],
+      "sign": 1,
+      "source_margin": 3,
+      "fixed_counts": [
+        3,
+        1
+      ],
+      "local_indices": [
+        9
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "32265c0356f738",
+      "roi": "roi_01",
+      "cells": [
+        153140,
+        153132
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "CPA3",
+      "counts": [
+        4,
+        3
+      ],
+      "sign": 1,
+      "source_margin": 1,
+      "fixed_counts": [
+        2,
+        2
+      ],
+      "local_indices": [
+        1,
+        5,
+        6
+      ],
+      "stratum": "secondary"
+    },
+    {
+      "chart_id": "3b7efddbce9a7b",
+      "roi": "roi_01",
+      "cells": [
+        153124,
+        153133
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "FBN1",
+      "counts": [
+        0,
+        5
+      ],
+      "sign": -1,
+      "source_margin": 5,
+      "fixed_counts": [
+        0,
+        4
+      ],
+      "local_indices": [
+        1
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "3b7efddbce9a7b",
+      "roi": "roi_01",
+      "cells": [
+        153124,
+        153133
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "LTBP2",
+      "counts": [
+        5,
+        1
+      ],
+      "sign": 1,
+      "source_margin": 4,
+      "fixed_counts": [
+        3,
+        0
+      ],
+      "local_indices": [
+        0,
+        4,
+        5
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "3bd2d054beb95f",
+      "roi": "roi_01",
+      "cells": [
+        153129,
+        153131
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "CCL5",
+      "counts": [
+        1,
+        6
+      ],
+      "sign": -1,
+      "source_margin": 5,
+      "fixed_counts": [
+        1,
+        3
+      ],
+      "local_indices": [
+        1,
+        2,
+        3
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "3bd2d054beb95f",
+      "roi": "roi_01",
+      "cells": [
+        153129,
+        153131
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "DST",
+      "counts": [
+        6,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 6,
+      "fixed_counts": [
+        3,
+        0
+      ],
+      "local_indices": [
+        5,
+        13,
+        23
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "3bd2d054beb95f",
+      "roi": "roi_01",
+      "cells": [
+        153129,
+        153131
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "FBN1",
+      "counts": [
+        4,
+        1
+      ],
+      "sign": 1,
+      "source_margin": 3,
+      "fixed_counts": [
+        3,
+        0
+      ],
+      "local_indices": [
+        17,
+        21
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "3bd2d054beb95f",
+      "roi": "roi_01",
+      "cells": [
+        153129,
+        153131
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "INMT",
+      "counts": [
+        4,
+        3
+      ],
+      "sign": 1,
+      "source_margin": 1,
+      "fixed_counts": [
+        4,
+        2
+      ],
+      "local_indices": [
+        6
+      ],
+      "stratum": "secondary"
+    },
+    {
+      "chart_id": "3bd2d054beb95f",
+      "roi": "roi_01",
+      "cells": [
+        153129,
+        153131
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "LTBP2",
+      "counts": [
+        8,
+        5
+      ],
+      "sign": 1,
+      "source_margin": 3,
+      "fixed_counts": [
+        7,
+        4
+      ],
+      "local_indices": [
+        11,
+        15
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "3bd2d054beb95f",
+      "roi": "roi_01",
+      "cells": [
+        153129,
+        153131
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "MRC1",
+      "counts": [
+        0,
+        5
+      ],
+      "sign": -1,
+      "source_margin": 5,
+      "fixed_counts": [
+        0,
+        4
+      ],
+      "local_indices": [
+        4
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "3bd2d054beb95f",
+      "roi": "roi_01",
+      "cells": [
+        153129,
+        153131
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "PTPRC",
+      "counts": [
+        2,
+        3
+      ],
+      "sign": -1,
+      "source_margin": 1,
+      "fixed_counts": [
+        2,
+        2
+      ],
+      "local_indices": [
+        14
+      ],
+      "stratum": "secondary"
+    },
+    {
+      "chart_id": "03ae83b2198cae",
+      "roi": "roi_02",
+      "cells": [
+        103146,
+        103119
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "ACTA2",
+      "counts": [
+        0,
+        5
+      ],
+      "sign": -1,
+      "source_margin": 5,
+      "fixed_counts": [
+        0,
+        4
+      ],
+      "local_indices": [
+        2
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "03ae83b2198cae",
+      "roi": "roi_02",
+      "cells": [
+        103146,
+        103119
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "OGN",
+      "counts": [
+        0,
+        10
+      ],
+      "sign": -1,
+      "source_margin": 10,
+      "fixed_counts": [
+        0,
+        9
+      ],
+      "local_indices": [
+        6
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "14d2599d4e5171",
+      "roi": "roi_02",
+      "cells": [
+        102330,
+        103121
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "OGN",
+      "counts": [
+        4,
+        1
+      ],
+      "sign": 1,
+      "source_margin": 3,
+      "fixed_counts": [
+        4,
+        0
+      ],
+      "local_indices": [
+        1
+      ],
+      "stratum": "primary"
+    },
+    {
+      "chart_id": "14d2599d4e5171",
+      "roi": "roi_02",
+      "cells": [
+        102330,
+        103121
+      ],
+      "owner_indices": [
+        0,
+        1
+      ],
+      "gene": "VWF",
+      "counts": [
+        5,
+        0
+      ],
+      "sign": 1,
+      "source_margin": 5,
+      "fixed_counts": [
+        4,
+        0
+      ],
+      "local_indices": [
+        3
+      ],
+      "stratum": "primary"
+    }
+  ]
+}

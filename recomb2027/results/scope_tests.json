@@ -1,0 +1,7 @@
+{
+  "exact_union_set_checks": 30,
+  "unsafe_operations_rejected": 22,
+  "native_cli_scope_and_binding_verified": true,
+  "family_changes_detected": 3,
+  "failures": 0
+}

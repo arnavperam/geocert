@@ -1,0 +1,12 @@
+{
+  "models": 84,
+  "independently_recomputed_score_spectra": 1798,
+  "full_target_patterns": 5182,
+  "unique_pinned_cut_queries": 2222,
+  "verified_interval_rows": 14384,
+  "unique_minimum_boundaries_reconstructed": 324,
+  "stored_root_flow_proofs_replayed": 1176,
+  "failures": 0,
+  "seconds": 14.13186530500002,
+  "independence": "different optimizer and target enumeration; shared geometry primitives and source ingestion; internal code-path validation"
+}

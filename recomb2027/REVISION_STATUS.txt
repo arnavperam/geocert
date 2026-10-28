@@ -1,0 +1,18 @@
+REGISTRATION DECISION: Exact Joint Deformation and Conditional Count Bounds in Ordered Cell Corridors.
+Use ABSTRACT.txt. No registration or submission has been performed.
+Abstract deadline: October 29, 2026, 04:59 America/Phoenix.
+
+IMPLEMENTED IN 0.2.0a2
+1. Restored full core theorem and proof, with graph-cut context and explicit novelty boundary.
+2. Corrected local certificate scope in API, exports, title and paper; reproduced 178 varying conditional entries and 19/51 cells in multiple corridors. Unsupported geometric composition is rejected. One-corridor-at-a-time set unions have separately identified semantics.
+3. Exhaustive joint-pair audit: 732 queries, independently checked by integer min-cut. Baseline 22/80 pairs infeasible despite singleton feasibility; 23/58 feasible pairs share cost. All denominators retained. This is a post-review development analysis, not external validation.
+4. Preserved null marginal-count result: zero baseline improvements; five enlarged-family rows only. Every old endpoint is retained.
+5. Executed Proseg 3.2.0 on two real development crops. Default factorization failed on the small first crop; adapted no-factorization runs completed. Full commands, provenance, exclusions and raw results are retained. No accuracy claim follows from source-owner disagreement.
+6. Typeset main and supplement; removed internal author-review notes and external proof dependency; raster and matched-generator calibration are supplementary diagnostics.
+7. Added MIT software license, versioned wheel, documented runnable source and public review branch. Existing releases remain untouched.
+
+STILL OPEN
+No second independent donor, anatomically calibrated corridor family, independent transcript ownership truth, whole-cell coherent uncertainty model, validated DE/FDR guarantee, general planar unit-transcript hardness, or whole-slide benchmark. Acceptance and historical priority remain external judgments. The broader multi-platform experimental program is unfinished.
+
+COMPLETE ARTIFACT
+README.md has run instructions. docs/CERTIFICATE_SCOPE.md documents API migration. results/revision_test_run.json records all 12 passing scripts. results/joint_assignment_audit/ retains the complete pair experiment. results/proseg/ retains actual external-method execution. Original joint-deformation records are under results/original_joint_deformation/.

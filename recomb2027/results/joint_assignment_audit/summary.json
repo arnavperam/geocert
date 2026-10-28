@@ -1,0 +1,739 @@
+{
+  "protocol_sha256": "b98b5484aafd12c973011f9a49ee936d6051e3df8a0a992f016c7cd212b6e248",
+  "tables": [
+    {
+      "setting": "baseline",
+      "models": 42,
+      "models_with_pairs": 8,
+      "moves": 48,
+      "pairs": 80,
+      "jointly_feasible": 58,
+      "incompatible": 22,
+      "joint_above_marginal": 51,
+      "joint_equals_marginal": 7,
+      "shared_cost_saving": 23,
+      "same_gene_pairs": 1,
+      "models_with_incompatibility": 7,
+      "models_with_cost_saving": 7
+    },
+    {
+      "setting": "maximal",
+      "models": 42,
+      "models_with_pairs": 26,
+      "moves": 171,
+      "pairs": 652,
+      "jointly_feasible": 567,
+      "incompatible": 85,
+      "joint_above_marginal": 519,
+      "joint_equals_marginal": 48,
+      "shared_cost_saving": 144,
+      "same_gene_pairs": 22,
+      "models_with_incompatibility": 17,
+      "models_with_cost_saving": 21
+    }
+  ],
+  "budget_table": [
+    {
+      "setting": "baseline",
+      "budget": "0",
+      "pairs": 80,
+      "individually_admitted": 0,
+      "jointly_admitted": 0,
+      "marginal_false_admissions": 0,
+      "additive_admitted": 0,
+      "additive_misses": 0,
+      "marginal_incompatible": 0
+    },
+    {
+      "setting": "baseline",
+      "budget": "1/20",
+      "pairs": 80,
+      "individually_admitted": 11,
+      "jointly_admitted": 10,
+      "marginal_false_admissions": 1,
+      "additive_admitted": 10,
+      "additive_misses": 0,
+      "marginal_incompatible": 1
+    },
+    {
+      "setting": "baseline",
+      "budget": "1/10",
+      "pairs": 80,
+      "individually_admitted": 16,
+      "jointly_admitted": 15,
+      "marginal_false_admissions": 1,
+      "additive_admitted": 15,
+      "additive_misses": 0,
+      "marginal_incompatible": 1
+    },
+    {
+      "setting": "baseline",
+      "budget": "1/4",
+      "pairs": 80,
+      "individually_admitted": 29,
+      "jointly_admitted": 22,
+      "marginal_false_admissions": 7,
+      "additive_admitted": 22,
+      "additive_misses": 0,
+      "marginal_incompatible": 4
+    },
+    {
+      "setting": "baseline",
+      "budget": "1/2",
+      "pairs": 80,
+      "individually_admitted": 38,
+      "jointly_admitted": 30,
+      "marginal_false_admissions": 8,
+      "additive_admitted": 30,
+      "additive_misses": 0,
+      "marginal_incompatible": 6
+    },
+    {
+      "setting": "baseline",
+      "budget": "1",
+      "pairs": 80,
+      "individually_admitted": 58,
+      "jointly_admitted": 40,
+      "marginal_false_admissions": 18,
+      "additive_admitted": 39,
+      "additive_misses": 1,
+      "marginal_incompatible": 14
+    },
+    {
+      "setting": "baseline",
+      "budget": "2",
+      "pairs": 80,
+      "individually_admitted": 75,
+      "jointly_admitted": 46,
+      "marginal_false_admissions": 29,
+      "additive_admitted": 46,
+      "additive_misses": 0,
+      "marginal_incompatible": 21
+    },
+    {
+      "setting": "baseline",
+      "budget": "4",
+      "pairs": 80,
+      "individually_admitted": 80,
+      "jointly_admitted": 58,
+      "marginal_false_admissions": 22,
+      "additive_admitted": 57,
+      "additive_misses": 1,
+      "marginal_incompatible": 22
+    },
+    {
+      "setting": "maximal",
+      "budget": "0",
+      "pairs": 652,
+      "individually_admitted": 0,
+      "jointly_admitted": 0,
+      "marginal_false_admissions": 0,
+      "additive_admitted": 0,
+      "additive_misses": 0,
+      "marginal_incompatible": 0
+    },
+    {
+      "setting": "maximal",
+      "budget": "1/20",
+      "pairs": 652,
+      "individually_admitted": 20,
+      "jointly_admitted": 18,
+      "marginal_false_admissions": 2,
+      "additive_admitted": 18,
+      "additive_misses": 0,
+      "marginal_incompatible": 1
+    },
+    {
+      "setting": "maximal",
+      "budget": "1/10",
+      "pairs": 652,
+      "individually_admitted": 43,
+      "jointly_admitted": 35,
+      "marginal_false_admissions": 8,
+      "additive_admitted": 35,
+      "additive_misses": 0,
+      "marginal_incompatible": 3
+    },
+    {
+      "setting": "maximal",
+      "budget": "1/4",
+      "pairs": 652,
+      "individually_admitted": 96,
+      "jointly_admitted": 67,
+      "marginal_false_admissions": 29,
+      "additive_admitted": 65,
+      "additive_misses": 2,
+      "marginal_incompatible": 7
+    },
+    {
+      "setting": "maximal",
+      "budget": "1/2",
+      "pairs": 652,
+      "individually_admitted": 259,
+      "jointly_admitted": 154,
+      "marginal_false_admissions": 105,
+      "additive_admitted": 148,
+      "additive_misses": 6,
+      "marginal_incompatible": 24
+    },
+    {
+      "setting": "maximal",
+      "budget": "1",
+      "pairs": 652,
+      "individually_admitted": 435,
+      "jointly_admitted": 315,
+      "marginal_false_admissions": 120,
+      "additive_admitted": 304,
+      "additive_misses": 11,
+      "marginal_incompatible": 54
+    },
+    {
+      "setting": "maximal",
+      "budget": "2",
+      "pairs": 652,
+      "individually_admitted": 583,
+      "jointly_admitted": 490,
+      "marginal_false_admissions": 93,
+      "additive_admitted": 482,
+      "additive_misses": 8,
+      "marginal_incompatible": 79
+    },
+    {
+      "setting": "maximal",
+      "budget": "4",
+      "pairs": 652,
+      "individually_admitted": 650,
+      "jointly_admitted": 547,
+      "marginal_false_admissions": 103,
+      "additive_admitted": 543,
+      "additive_misses": 4,
+      "marginal_incompatible": 85
+    }
+  ],
+  "native_count_verification": {
+    "rows": 14384,
+    "statuses": {
+      "exact": 14384
+    },
+    "questions": 1798,
+    "local_gene_multiplicity": {
+      "2": 166,
+      "1": 1584,
+      "3": 48
+    },
+    "row_interval_widths": {
+      "0": 12597,
+      "1": 1679,
+      "2": 94,
+      "3": 14
+    }
+  },
+  "model_counts": [
+    {
+      "corridor": "4c4f466415dd22",
+      "setting": "baseline",
+      "moves": 6,
+      "pairs": 15
+    },
+    {
+      "corridor": "4c4f466415dd22",
+      "setting": "maximal",
+      "moves": 12,
+      "pairs": 66
+    },
+    {
+      "corridor": "a0987140ecb03c",
+      "setting": "baseline",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "a0987140ecb03c",
+      "setting": "maximal",
+      "moves": 6,
+      "pairs": 15
+    },
+    {
+      "corridor": "c8f8188430d092",
+      "setting": "baseline",
+      "moves": 4,
+      "pairs": 6
+    },
+    {
+      "corridor": "c8f8188430d092",
+      "setting": "maximal",
+      "moves": 19,
+      "pairs": 171
+    },
+    {
+      "corridor": "d64a2a80fc9f78",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "d64a2a80fc9f78",
+      "setting": "maximal",
+      "moves": 9,
+      "pairs": 36
+    },
+    {
+      "corridor": "10ff8893e7f431",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "10ff8893e7f431",
+      "setting": "maximal",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "1b7c0635fe67b4",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "1b7c0635fe67b4",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "7f5bc4dec18cec",
+      "setting": "baseline",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "7f5bc4dec18cec",
+      "setting": "maximal",
+      "moves": 2,
+      "pairs": 1
+    },
+    {
+      "corridor": "9bee7d8841eb84",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "9bee7d8841eb84",
+      "setting": "maximal",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "142d24a9c1c8a6",
+      "setting": "baseline",
+      "moves": 6,
+      "pairs": 15
+    },
+    {
+      "corridor": "142d24a9c1c8a6",
+      "setting": "maximal",
+      "moves": 10,
+      "pairs": 45
+    },
+    {
+      "corridor": "4037abe9fea38e",
+      "setting": "baseline",
+      "moves": 6,
+      "pairs": 15
+    },
+    {
+      "corridor": "4037abe9fea38e",
+      "setting": "maximal",
+      "moves": 10,
+      "pairs": 45
+    },
+    {
+      "corridor": "4e7c5bf618b010",
+      "setting": "baseline",
+      "moves": 5,
+      "pairs": 10
+    },
+    {
+      "corridor": "4e7c5bf618b010",
+      "setting": "maximal",
+      "moves": 10,
+      "pairs": 45
+    },
+    {
+      "corridor": "3d714546e20970",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "3d714546e20970",
+      "setting": "maximal",
+      "moves": 2,
+      "pairs": 1
+    },
+    {
+      "corridor": "4017ad12866374",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "4017ad12866374",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "451bff30357502",
+      "setting": "baseline",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "451bff30357502",
+      "setting": "maximal",
+      "moves": 2,
+      "pairs": 1
+    },
+    {
+      "corridor": "587560238ab4d3",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "587560238ab4d3",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "748b3e768a847b",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "748b3e768a847b",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "83bbb6c7f2dd22",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "83bbb6c7f2dd22",
+      "setting": "maximal",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "c22580b0103361",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "c22580b0103361",
+      "setting": "maximal",
+      "moves": 3,
+      "pairs": 3
+    },
+    {
+      "corridor": "00d44a60e91246",
+      "setting": "baseline",
+      "moves": 4,
+      "pairs": 6
+    },
+    {
+      "corridor": "00d44a60e91246",
+      "setting": "maximal",
+      "moves": 5,
+      "pairs": 10
+    },
+    {
+      "corridor": "01daeeb3d8d695",
+      "setting": "baseline",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "01daeeb3d8d695",
+      "setting": "maximal",
+      "moves": 4,
+      "pairs": 6
+    },
+    {
+      "corridor": "02d9a53ef82968",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "02d9a53ef82968",
+      "setting": "maximal",
+      "moves": 9,
+      "pairs": 36
+    },
+    {
+      "corridor": "2bb62b675f6e6a",
+      "setting": "baseline",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "2bb62b675f6e6a",
+      "setting": "maximal",
+      "moves": 4,
+      "pairs": 6
+    },
+    {
+      "corridor": "2d321535d93169",
+      "setting": "baseline",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "2d321535d93169",
+      "setting": "maximal",
+      "moves": 8,
+      "pairs": 28
+    },
+    {
+      "corridor": "2dc8286e944ea6",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "2dc8286e944ea6",
+      "setting": "maximal",
+      "moves": 7,
+      "pairs": 21
+    },
+    {
+      "corridor": "2f8357efef18c4",
+      "setting": "baseline",
+      "moves": 3,
+      "pairs": 3
+    },
+    {
+      "corridor": "2f8357efef18c4",
+      "setting": "maximal",
+      "moves": 4,
+      "pairs": 6
+    },
+    {
+      "corridor": "2fa06b2ccb3a51",
+      "setting": "baseline",
+      "moves": 5,
+      "pairs": 10
+    },
+    {
+      "corridor": "2fa06b2ccb3a51",
+      "setting": "maximal",
+      "moves": 11,
+      "pairs": 55
+    },
+    {
+      "corridor": "31cf5a487b7a71",
+      "setting": "baseline",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "31cf5a487b7a71",
+      "setting": "maximal",
+      "moves": 6,
+      "pairs": 15
+    },
+    {
+      "corridor": "32265c0356f738",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "32265c0356f738",
+      "setting": "maximal",
+      "moves": 6,
+      "pairs": 15
+    },
+    {
+      "corridor": "3b7efddbce9a7b",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "3b7efddbce9a7b",
+      "setting": "maximal",
+      "moves": 6,
+      "pairs": 15
+    },
+    {
+      "corridor": "3bd2d054beb95f",
+      "setting": "baseline",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "3bd2d054beb95f",
+      "setting": "maximal",
+      "moves": 3,
+      "pairs": 3
+    },
+    {
+      "corridor": "028ca836ef82d0",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "028ca836ef82d0",
+      "setting": "maximal",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "03ae83b2198cae",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "03ae83b2198cae",
+      "setting": "maximal",
+      "moves": 3,
+      "pairs": 3
+    },
+    {
+      "corridor": "03e467c3015f6a",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "03e467c3015f6a",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "14d2599d4e5171",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "14d2599d4e5171",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "1e248a5ab9316b",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "1e248a5ab9316b",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "1f8547af98ff5f",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "1f8547af98ff5f",
+      "setting": "maximal",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "2e608d44e7a46c",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "2e608d44e7a46c",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "4debbb89032b3f",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "4debbb89032b3f",
+      "setting": "maximal",
+      "moves": 2,
+      "pairs": 1
+    },
+    {
+      "corridor": "618658f493e6e2",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "618658f493e6e2",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "71ba4370a723ae",
+      "setting": "baseline",
+      "moves": 1,
+      "pairs": 0
+    },
+    {
+      "corridor": "71ba4370a723ae",
+      "setting": "maximal",
+      "moves": 3,
+      "pairs": 3
+    },
+    {
+      "corridor": "74d3dd9b1eca33",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "74d3dd9b1eca33",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "839d02011bd3d8",
+      "setting": "baseline",
+      "moves": 0,
+      "pairs": 0
+    },
+    {
+      "corridor": "839d02011bd3d8",
+      "setting": "maximal",
+      "moves": 0,
+      "pairs": 0
+    }
+  ],
+  "seconds": 41.519067782001,
+  "interpretation": "Joint local assignments exhibit compatibility and shared-deformation interactions; this does not imply useful marginal gene-count improvements or calibrated biological uncertainty."
+}

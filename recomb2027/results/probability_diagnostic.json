@@ -1,0 +1,92 @@
+{
+  "model": "finite ownership profile Gibbs, probabilities proportional to exp(-lambda*minimum_deformation + unary reward)",
+  "not_continuous_boundary_posterior": true,
+  "states": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "energies": [
+    "0",
+    "288/125",
+    "288/125",
+    "0"
+  ],
+  "enumerated_profile_probabilities": [
+    0.4546038879446101,
+    0.04539611205538985,
+    0.04539611205538985,
+    0.4546038879446101
+  ],
+  "runs": [
+    {
+      "seed": 1701,
+      "draws": 2500,
+      "configuration_Gumbel_frequency": [
+        0.4548,
+        0.0428,
+        0.0436,
+        0.4588
+      ],
+      "unary_Gumbel_cut_frequency": [
+        0.4944,
+        0.008,
+        0.0044,
+        0.4932
+      ],
+      "configuration_TV": 0.004392224110779736,
+      "unary_TV": 0.07839222411077977
+    },
+    {
+      "seed": 1702,
+      "draws": 2500,
+      "configuration_Gumbel_frequency": [
+        0.4524,
+        0.0476,
+        0.0332,
+        0.4668
+      ],
+      "unary_Gumbel_cut_frequency": [
+        0.5004,
+        0.0104,
+        0.0048,
+        0.4844
+      ],
+      "configuration_TV": 0.014399999999999986,
+      "unary_TV": 0.07559222411077973
+    },
+    {
+      "seed": 1703,
+      "draws": 2500,
+      "configuration_Gumbel_frequency": [
+        0.4464,
+        0.0472,
+        0.042,
+        0.4644
+      ],
+      "unary_Gumbel_cut_frequency": [
+        0.496,
+        0.0072,
+        0.0108,
+        0.486
+      ],
+      "configuration_TV": 0.011599999999999978,
+      "unary_TV": 0.07279222411077974
+    }
+  ],
+  "seconds": 0.9478979129999061,
+  "interpretation": "Configuration-level Gumbel is the standard exact-distribution identity in ideal arithmetic; unary Gumbel perturbations generally have a different distribution. Observed frequencies are numerical Monte Carlo diagnostics."
+}

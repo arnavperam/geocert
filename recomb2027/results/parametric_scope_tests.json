@@ -1,0 +1,33 @@
+{
+  "leftmost_cell_nested_cut_checks": 120,
+  "middle_cell_counterexample": [
+    {
+      "reward": 0,
+      "owners": [
+        0,
+        2
+      ],
+      "bits": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "reward": 1,
+      "owners": [
+        1,
+        1
+      ],
+      "bits": [
+        0,
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "failures": 0,
+  "scope": "The standard monotone-terminal conditions apply to extremal-cell nonnegative count rewards after scaling. Arbitrary middle-cell scores are not automatically covered; no optimized parametric-flow implementation is claimed."
+}

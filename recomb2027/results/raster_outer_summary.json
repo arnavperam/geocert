@@ -1,0 +1,88 @@
+{
+  "model": "supremum displacement of a common source-label transport, with independent candidate-owner relaxation; L-infinity physical norm",
+  "count_scope": "Only measured retained RNA in the two supplied crops; outside RNA not modeled.",
+  "not_the_area_budget_model": true,
+  "table": [
+    {
+      "roi": "roi_01",
+      "radius_um": "0",
+      "RNA": 5847,
+      "ambiguous_RNA": 0,
+      "outside_context_windows": 0,
+      "cell_gene_entries": 3246,
+      "nontrivial_intervals": 0,
+      "candidate_edges": 5847
+    },
+    {
+      "roi": "roi_01",
+      "radius_um": "1/4",
+      "RNA": 5847,
+      "ambiguous_RNA": 818,
+      "outside_context_windows": 25,
+      "cell_gene_entries": 5555,
+      "nontrivial_intervals": 3582,
+      "candidate_edges": 9467
+    },
+    {
+      "roi": "roi_01",
+      "radius_um": "1/2",
+      "RNA": 5847,
+      "ambiguous_RNA": 1652,
+      "outside_context_windows": 70,
+      "cell_gene_entries": 8249,
+      "nontrivial_intervals": 7079,
+      "candidate_edges": 15406
+    },
+    {
+      "roi": "roi_01",
+      "radius_um": "1",
+      "RNA": 5847,
+      "ambiguous_RNA": 3116,
+      "outside_context_windows": 173,
+      "cell_gene_entries": 12967,
+      "nontrivial_intervals": 12496,
+      "candidate_edges": 28814
+    },
+    {
+      "roi": "roi_02",
+      "radius_um": "0",
+      "RNA": 1523,
+      "ambiguous_RNA": 0,
+      "outside_context_windows": 0,
+      "cell_gene_entries": 747,
+      "nontrivial_intervals": 0,
+      "candidate_edges": 1523
+    },
+    {
+      "roi": "roi_02",
+      "radius_um": "1/4",
+      "RNA": 1523,
+      "ambiguous_RNA": 125,
+      "outside_context_windows": 6,
+      "cell_gene_entries": 1303,
+      "nontrivial_intervals": 759,
+      "candidate_edges": 2259
+    },
+    {
+      "roi": "roi_02",
+      "radius_um": "1/2",
+      "RNA": 1523,
+      "ambiguous_RNA": 289,
+      "outside_context_windows": 15,
+      "cell_gene_entries": 2054,
+      "nontrivial_intervals": 1675,
+      "candidate_edges": 3339
+    },
+    {
+      "roi": "roi_02",
+      "radius_um": "1",
+      "RNA": 1523,
+      "ambiguous_RNA": 582,
+      "outside_context_windows": 42,
+      "cell_gene_entries": 3303,
+      "nontrivial_intervals": 3106,
+      "candidate_edges": 6411
+    }
+  ],
+  "seconds": 0.6445902020000176
+}

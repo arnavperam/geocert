@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geocert-expression"
+version = "0.2.0a2"
+description = "Exact joint deformation and corridor-conditioned gene-count certificates"
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{name = "Arnav Peram"}]
+dependencies = []
+
+[project.scripts]
+geocert-expression = "geocert_expression.cli:main"
+
+[tool.setuptools]
+packages = ["geocert_expression"]
+
+[tool.setuptools.package-data]
+geocert_expression = ["_engine/*.py", "examples/*.json"]

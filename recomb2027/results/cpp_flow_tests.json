@@ -1,0 +1,9 @@
+{
+  "exhaustive_graph_optima": 100,
+  "huge_capacity_graphs": 10,
+  "native_optional_objectives": 252,
+  "independent_flow_certificate_check": true,
+  "failures": 0,
+  "seconds_excluding_compilation": 11.183999652001148,
+  "scope": "standard arbitrary-precision Dinic, fresh flows; no dynamic residual reuse or state-of-the-art maxflow speed claim"
+}

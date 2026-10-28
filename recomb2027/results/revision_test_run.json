@@ -1,0 +1,86 @@
+[
+  {
+    "test": "tests/test_binding.py",
+    "returncode": 0,
+    "seconds": 0.107,
+    "stdout": "{'deliberate_changes_rejected': 8, 'positive_minimum_deformation_handled': True, 'failures': 0}\n",
+    "stderr": ""
+  },
+  {
+    "test": "tests/test_budget.py",
+    "returncode": 0,
+    "seconds": 11.669,
+    "stdout": "{\n  \"models\": 60,\n  \"full_owner_vectors_checked\": 4350,\n  \"exact_score_minima_checked\": 183,\n  \"budget_enclosures_checked\": 398,\n  \"penalized_exact_cuts\": 600,\n  \"incomplete_spectra_rejected\": 60,\n  \"deliberate_gap\": {\n    \"exact_maximum\": 3,\n    \"penalty_bound\": 4\n  },\n  \"composition_check\": true,\n  \"failures\": 0,\n  \"seconds\": 11.537130112999876\n}\n",
+    "stderr": ""
+  },
+  {
+    "test": "tests/test_composition.py",
+    "returncode": 0,
+    "seconds": 0.53,
+    "stdout": "{\n  \"instances\": 120,\n  \"independent_owner_combinations\": 10216,\n  \"budget_checks\": 3237,\n  \"local_geometric_embeddings\": 107,\n  \"failures\": 0,\n  \"seconds\": 0.4284672819994739,\n  \"scope\": \"disjoint modules with certified compatible cores; not stitching the overlapping native corridors\",\n  \"hardness_scope\": \"succinct binary-encoded integer transcript multiplicities; not a hardness proof for fixed-label planar unit-transcript segmentation\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "test": "tests/test_cpp_flow.py",
+    "returncode": 0,
+    "seconds": 14.761,
+    "stdout": "{\n  \"exhaustive_graph_optima\": 100,\n  \"huge_capacity_graphs\": 10,\n  \"native_optional_objectives\": 252,\n  \"independent_flow_certificate_check\": true,\n  \"failures\": 0,\n  \"seconds_excluding_compilation\": 11.183999652001148,\n  \"scope\": \"standard arbitrary-precision Dinic, fresh flows; no dynamic residual reuse or state-of-the-art maxflow speed claim\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "test": "tests/test_evaluation.py",
+    "returncode": 0,
+    "seconds": 0.059,
+    "stdout": "{'aligned_example': {'RNA_records': 3, 'regions': 2, 'misassigned_RNA': 1, 'pooled_AUROC': 1.0, 'simultaneous_region_coverage': 2, 'fraction': 1.0, 'wilson95': [0.34238022750665303, 1.0], 'mean_interval_width': 0.6666666666666666, 'scope': 'Supplied aligned truth only; pooled AUROC has dependent within-region transcripts. Region confidence interval requires independent region units.'}, 'FWER_bridge': {'threshold': '1/50', 'reject': [True, False], 'guarantee': 'FWER <= beta only under the documented coverage and valid-p-value assumptions; this function does not establish those premises'}, 'malformed_or_inapplicable_inputs_rejected': 3, 'failures': 0}\n",
+    "stderr": ""
+  },
+  {
+    "test": "tests/test_joint.py",
+    "returncode": 0,
+    "seconds": 9.558,
+    "stdout": "{'models': 20, 'joint_outcome_minima': 185, 'all_optimal_owner_domains': 100, 'marginal_joint_counterexample': True, 'failures': 0}\n",
+    "stderr": ""
+  },
+  {
+    "test": "tests/test_parametric_scope.py",
+    "returncode": 0,
+    "seconds": 0.22,
+    "stdout": "{'leftmost_cell_nested_cut_checks': 120, 'middle_cell_counterexample': [{'reward': 0, 'owners': [0, 2], 'bits': [1, 1, 0, 0]}, {'reward': 1, 'owners': [1, 1], 'bits': [0, 1, 0, 1]}], 'failures': 0, 'scope': 'The standard monotone-terminal conditions apply to extremal-cell nonnegative count rewards after scaling. Arbitrary middle-cell scores are not automatically covered; no optimized parametric-flow implementation is claimed.'}\n",
+    "stderr": ""
+  },
+  {
+    "test": "tests/test_proseg.py",
+    "returncode": 0,
+    "seconds": 0.705,
+    "stdout": "",
+    "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.545s\n\nOK\n"
+  },
+  {
+    "test": "tests/test_raster.py",
+    "returncode": 0,
+    "seconds": 0.32,
+    "stdout": "{'dimensions_tested': [2, 3], 'transport_membership_checks': 601, 'zero_radius_identity': True, 'failures': 0}\n",
+    "stderr": ""
+  },
+  {
+    "test": "tests/test_relaxation.py",
+    "returncode": 0,
+    "seconds": 0.07,
+    "stdout": "{'instances': 120, 'budget_key_checks': 2282, 'feasible_assignments': 2892, 'failures': 0}\n",
+    "stderr": ""
+  },
+  {
+    "test": "tests/test_resources.py",
+    "returncode": 0,
+    "seconds": 10.519,
+    "stdout": "{'models': 20, 'full_owner_patterns': 1450, 'exact_two_budget_spectra': 80, 'rational_two_resource_bounds': 480, 'failures': 0}\n",
+    "stderr": ""
+  },
+  {
+    "test": "tests/test_scope.py",
+    "returncode": 0,
+    "seconds": 0.207,
+    "stdout": "/tmp/tmp30w1kd2x/output.json\n{'exact_union_set_checks': 30, 'unsafe_operations_rejected': 22, 'native_cli_scope_and_binding_verified': True, 'family_changes_detected': 3, 'failures': 0}\n",
+    "stderr": ""
+  }
+]

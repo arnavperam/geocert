@@ -1,0 +1,109 @@
+{
+  "manifest_entries": 316,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "mode": "core",
+  "cpp": true,
+  "stages": [
+    {
+      "script": "tests/test_budget.py",
+      "returncode": 0,
+      "seconds": 11.280725687000086,
+      "compared": [
+        "budget_tests.json",
+        "dual_gap.json"
+      ]
+    },
+    {
+      "script": "tests/test_joint.py",
+      "returncode": 0,
+      "seconds": 9.216006474001915,
+      "compared": [
+        "joint_tests.json",
+        "joint_presence_example.json"
+      ]
+    },
+    {
+      "script": "tests/test_binding.py",
+      "returncode": 0,
+      "seconds": 0.09635757499927422,
+      "compared": [
+        "binding_tests.json"
+      ]
+    },
+    {
+      "script": "tests/test_resources.py",
+      "returncode": 0,
+      "seconds": 5.523486182999477,
+      "compared": [
+        "resource_tests.json"
+      ]
+    },
+    {
+      "script": "tests/test_composition.py",
+      "returncode": 0,
+      "seconds": 0.3527372569988074,
+      "compared": [
+        "composition_tests.json"
+      ]
+    },
+    {
+      "script": "tests/test_parametric_scope.py",
+      "returncode": 0,
+      "seconds": 0.20714872800090234,
+      "compared": [
+        "parametric_scope_tests.json"
+      ]
+    },
+    {
+      "script": "tests/test_relaxation.py",
+      "returncode": 0,
+      "seconds": 0.060925030997168506,
+      "compared": [
+        "relaxation_tests.json"
+      ]
+    },
+    {
+      "script": "tests/test_evaluation.py",
+      "returncode": 0,
+      "seconds": 0.0366593799990369,
+      "compared": [
+        "evaluation_tests.json"
+      ]
+    },
+    {
+      "script": "tests/test_scope.py",
+      "returncode": 0,
+      "seconds": 0.15705279499889002,
+      "compared": [
+        "scope_tests.json"
+      ]
+    },
+    {
+      "script": "tests/test_cpp_flow.py",
+      "returncode": 0,
+      "seconds": 13.253920817001926,
+      "compared": [
+        "cpp_flow_tests.json"
+      ]
+    }
+  ],
+  "scientific_files_matched": 12,
+  "matched_paths": [
+    "budget_tests.json",
+    "dual_gap.json",
+    "joint_tests.json",
+    "joint_presence_example.json",
+    "binding_tests.json",
+    "resource_tests.json",
+    "composition_tests.json",
+    "parametric_scope_tests.json",
+    "relaxation_tests.json",
+    "evaluation_tests.json",
+    "scope_tests.json",
+    "cpp_flow_tests.json"
+  ],
+  "source_manifest_unchanged_after_replay": true,
+  "complete": true,
+  "seconds": 40.761872050999955,
+  "scope": "Internal same-environment reproduction from a checksum-verified disposable copy. Full mode regenerates all84 native models. Analysis-dependency source/raster studies and the3-run streaming timing census are separate."
+}

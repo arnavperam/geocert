@@ -1,0 +1,13 @@
+{
+  "version": "expression-certificates-development-1",
+  "protocol_origin": "Recovered plan from interrupted attempt; no native interval outcomes had been produced before this recovery.",
+  "native_universe": "All 42 existing corridors, baseline and inherited maximal geometry; no additional favorable-case selection.",
+  "query_universe": "Every gene observed in a corridor crossed with every included cell. Exterior retained crop counts fixed. Repeated corridors are not independent samples.",
+  "budgets_square_micrometres": ["0", "1/20", "1/10", "1/4", "1/2", "1", "2", "4"],
+  "lagrange_multipliers": ["0", "1/16", "1/4", "1", "4", "16", "64"],
+  "exact_refinement": "Enumerate scored groups only and minimize collateral completion by source-feasible pin closure; cap 100000 target patterns.",
+  "synthetic_test_seeds": [1000, 1059],
+  "synthetic_calibration": {"training_seed": 900001, "calibration_seed": 900002, "test_seed": 900003, "alpha": "1/10", "training_models": 30, "calibration_models": 99, "test_models": 200},
+  "whole_raster_relaxation": "Separate maximum label-transport displacement model; not the corridor summed-area family.",
+  "claims": "No empirical native calibration, independent donor validation, DE/FDR, or literature firstness inferred from exact optimization."
+}

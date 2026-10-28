@@ -1,0 +1,9 @@
+{
+  "dimensions_tested": [
+    2,
+    3
+  ],
+  "transport_membership_checks": 601,
+  "zero_radius_identity": true,
+  "failures": 0
+}

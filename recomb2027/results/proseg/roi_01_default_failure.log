@@ -1,0 +1,6 @@
+Using 2 threads
+Finished reading input
+
+thread 'main' (25) panicked at src/sampler/featureselection.rs:308:54:
+called `Result::unwrap()` on an `Err` value: EmptyInput
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

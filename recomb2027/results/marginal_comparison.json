@@ -1,0 +1,103 @@
+{
+  "protocol": "post-census attribution on every existing count question; no geometry/budget selection",
+  "scope": "marginal model is a sound outer envelope; additive-feasible model is an inner approximation and cannot certify exclusion",
+  "table": [
+    {
+      "setting": "baseline",
+      "questions": 7192,
+      "joint_tighter_than_sound_marginals": 0,
+      "additive_inner_misses_attainable_endpoint": 0
+    },
+    {
+      "setting": "maximal",
+      "questions": 7192,
+      "joint_tighter_than_sound_marginals": 5,
+      "additive_inner_misses_attainable_endpoint": 0
+    }
+  ],
+  "target_patterns": 2358,
+  "changed_questions": [
+    {
+      "corridor": "c8f8188430d092",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cell_id": 153955,
+      "cell_index": 1,
+      "gene": "CAVIN1",
+      "budget_um2": "1",
+      "source_count": 1,
+      "lower": 1,
+      "upper": 2,
+      "marginal_lower": 1,
+      "marginal_upper": 3,
+      "additive_inner_lower": 1,
+      "additive_inner_upper": 2
+    },
+    {
+      "corridor": "2fa06b2ccb3a51",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cell_id": 153952,
+      "cell_index": 0,
+      "gene": "TNFRSF17",
+      "budget_um2": "1/4",
+      "source_count": 4,
+      "lower": 3,
+      "upper": 5,
+      "marginal_lower": 2,
+      "marginal_upper": 5,
+      "additive_inner_lower": 3,
+      "additive_inner_upper": 5
+    },
+    {
+      "corridor": "2fa06b2ccb3a51",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cell_id": 153958,
+      "cell_index": 1,
+      "gene": "TNFRSF17",
+      "budget_um2": "1/4",
+      "source_count": 1,
+      "lower": 0,
+      "upper": 2,
+      "marginal_lower": 0,
+      "marginal_upper": 3,
+      "additive_inner_lower": 0,
+      "additive_inner_upper": 2
+    },
+    {
+      "corridor": "32265c0356f738",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cell_id": 153140,
+      "cell_index": 0,
+      "gene": "CPA3",
+      "budget_um2": "1",
+      "source_count": 4,
+      "lower": 3,
+      "upper": 5,
+      "marginal_lower": 2,
+      "marginal_upper": 5,
+      "additive_inner_lower": 3,
+      "additive_inner_upper": 5
+    },
+    {
+      "corridor": "32265c0356f738",
+      "roi": "roi_01",
+      "setting": "maximal",
+      "cell_id": 153132,
+      "cell_index": 1,
+      "gene": "CPA3",
+      "budget_um2": "1",
+      "source_count": 3,
+      "lower": 2,
+      "upper": 4,
+      "marginal_lower": 2,
+      "marginal_upper": 5,
+      "additive_inner_lower": 2,
+      "additive_inner_upper": 4
+    }
+  ],
+  "seconds": 20.343737991000125,
+  "failures": 0
+}

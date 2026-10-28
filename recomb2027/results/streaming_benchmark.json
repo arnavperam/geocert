@@ -1,0 +1,81 @@
+{
+  "scope": "C++ candidate-bound accumulation including text input and output; excludes candidate extraction, geometry, inference, and network I/O.",
+  "cross_language_entries_checked": 12668,
+  "runs": [
+    {
+      "RNA_records": 100000,
+      "repetition": 0,
+      "wall_seconds": 0.10446674900003927,
+      "maximum_RSS_KiB": 6656,
+      "output_sha256": "c5ab5c878255f2357e5c60167958eaba156ed95ff37b6bf11dcf4c4be959119a",
+      "input_bytes": 2015750,
+      "output_bytes": 840509,
+      "stdout": "records=100000 entries=64000"
+    },
+    {
+      "RNA_records": 100000,
+      "repetition": 1,
+      "wall_seconds": 0.05078420700010611,
+      "maximum_RSS_KiB": 6656,
+      "output_sha256": "c5ab5c878255f2357e5c60167958eaba156ed95ff37b6bf11dcf4c4be959119a",
+      "input_bytes": 2015750,
+      "output_bytes": 840509,
+      "stdout": "records=100000 entries=64000"
+    },
+    {
+      "RNA_records": 100000,
+      "repetition": 2,
+      "wall_seconds": 0.04677581299984013,
+      "maximum_RSS_KiB": 6656,
+      "output_sha256": "c5ab5c878255f2357e5c60167958eaba156ed95ff37b6bf11dcf4c4be959119a",
+      "input_bytes": 2015750,
+      "output_bytes": 840509,
+      "stdout": "records=100000 entries=64000"
+    },
+    {
+      "RNA_records": 1000000,
+      "repetition": 0,
+      "wall_seconds": 0.32143195300000116,
+      "maximum_RSS_KiB": 6656,
+      "output_sha256": "2463cefa4fa12b2dc61ad0ec06a3372726badeb796a3c1d1df2ae263d29fe5dc",
+      "input_bytes": 20237500,
+      "output_bytes": 984509,
+      "stdout": "records=1000000 entries=64000"
+    },
+    {
+      "RNA_records": 1000000,
+      "repetition": 1,
+      "wall_seconds": 0.3411920679998275,
+      "maximum_RSS_KiB": 6656,
+      "output_sha256": "2463cefa4fa12b2dc61ad0ec06a3372726badeb796a3c1d1df2ae263d29fe5dc",
+      "input_bytes": 20237500,
+      "output_bytes": 984509,
+      "stdout": "records=1000000 entries=64000"
+    },
+    {
+      "RNA_records": 1000000,
+      "repetition": 2,
+      "wall_seconds": 0.34293909200005146,
+      "maximum_RSS_KiB": 6656,
+      "output_sha256": "2463cefa4fa12b2dc61ad0ec06a3372726badeb796a3c1d1df2ae263d29fe5dc",
+      "input_bytes": 20237500,
+      "output_bytes": 984509,
+      "stdout": "records=1000000 entries=64000"
+    }
+  ],
+  "table": [
+    {
+      "RNA_records": 100000,
+      "median_wall_seconds": 0.05078420700010611,
+      "max_RSS_MiB": 6.5
+    },
+    {
+      "RNA_records": 1000000,
+      "median_wall_seconds": 0.3411920679998275,
+      "max_RSS_MiB": 6.5
+    }
+  ],
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "no_whole_slide_runtime_claim": true
+}

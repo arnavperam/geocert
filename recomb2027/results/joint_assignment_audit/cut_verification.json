@@ -1,0 +1,7 @@
+{
+  "method": "independent event-compiled integer-capacity min-cut replay with max-flow/min-cut equality and primal/dual certificate checks",
+  "pairs_sha256": "fa78baa2eee944e5fd6d5b9f7c10581bd65e5bbaabb05e74dae8d715e0691069",
+  "checked": 732,
+  "failures": 0,
+  "seconds": 2.8715692589994433
+}

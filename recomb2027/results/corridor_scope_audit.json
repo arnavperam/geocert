@@ -1,0 +1,26 @@
+{
+  "input_rows": 14384,
+  "distinct_cell_gene_setting_budget_keys": 11392,
+  "keys_with_different_conditional_intervals": 178,
+  "differences_by_setting": {
+    "baseline": 74,
+    "maximal": 104
+  },
+  "roi_qualified_cells": 51,
+  "cells_in_multiple_corridors": 19,
+  "maximum_corridors_per_cell": 7,
+  "source_file_hashes": {
+    "data/source_crops/roi_01/masks.npz": "a2d88f46d0b120f843d7caca1389806ca7dbc2bb7e755c75095baf28b3df169b",
+    "data/source_crops/roi_01/metadata.json": "b8ae2367436a7ce4dfa40b81c754abb725c36737aa154d0d3d69c47a08ad3680",
+    "data/source_crops/roi_01/transcripts.parquet": "e46ad6139dcc5035c3606f84c721f9114f5e2576c67fdcc706b116092e47afc0",
+    "data/source_crops/roi_02/masks.npz": "f4083f7c0e63d6a376e53f3bfbadf927f125013692eb7fb289bb96f4c1a6a5e2",
+    "data/source_crops/roi_02/metadata.json": "2f6b9af89b2aa0ade5ee39cfd8b437e2235cc4d9e488713f3dce7bfdc7079b54",
+    "data/source_crops/roi_02/transcripts.parquet": "d77f0d97f0768bffb296b138b609ddefed54d5f7f74d5fd9091dc3875d1eec47"
+  },
+  "reference_id": "e142744898eaf351c45d1fec37e9c9fe92625cbc908bb21d029d146139e0df96",
+  "original_endpoint_values_unchanged": true,
+  "union_sparse_rows": 16953,
+  "union_full_domain_rows": 273360,
+  "interpretation": "Different conditional families can have different exact intervals. Union chooses one corridor family at a time; it does not permit simultaneous corridor edits or unrestricted whole-cell boundary changes.",
+  "study_rerun": false
+}

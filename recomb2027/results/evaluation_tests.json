@@ -1,0 +1,26 @@
+{
+  "aligned_example": {
+    "RNA_records": 3,
+    "regions": 2,
+    "misassigned_RNA": 1,
+    "pooled_AUROC": 1.0,
+    "simultaneous_region_coverage": 2,
+    "fraction": 1.0,
+    "wilson95": [
+      0.34238022750665303,
+      1.0
+    ],
+    "mean_interval_width": 0.6666666666666666,
+    "scope": "Supplied aligned truth only; pooled AUROC has dependent within-region transcripts. Region confidence interval requires independent region units."
+  },
+  "FWER_bridge": {
+    "threshold": "1/50",
+    "reject": [
+      true,
+      false
+    ],
+    "guarantee": "FWER <= beta only under the documented coverage and valid-p-value assumptions; this function does not establish those premises"
+  },
+  "malformed_or_inapplicable_inputs_rejected": 3,
+  "failures": 0
+}

@@ -1,0 +1,19 @@
+{
+  "main_pages": 11,
+  "main_body_pages": 9,
+  "separate_title_abstract_pages": 1,
+  "bibliography_pages": 1,
+  "supplement_pages": 8,
+  "format": "US Letter, 10pt article, 1 inch margins",
+  "undefined_reference_warnings": false,
+  "visual_review": "all pages rendered at 100dpi and inspected as contact sheets; no clipping or layout defects observed",
+  "abstract_word_count": 225,
+  "hashes": {
+    "main.tex": "205d68bb30b8218a21027dd092bc86e52aed434804e5208fad2d824941d60ce9",
+    "main.pdf": "37f4c987ffb6f18a389cbf1d72db78c847a9d1c3abb69b94d225fa4b67da1565",
+    "supplement.tex": "a67b3f0bdd0be97165bce38cc92be34b25928f0953e33ab7b17edc63bdaab633",
+    "supplement.pdf": "e518f41fa1721c6c3a802dac39e09f0ff8480dde76f030b9733e8e1e8b65e243",
+    "ABSTRACT.txt": "69ce8c99ba1f6860fac7421a0559e1bddb511388442ccabe96293daeb09af52b"
+  },
+  "final_reference_spacing_review": "Recompiled after bibliography spacing corrections; final reference page rendered and inspected."
+}

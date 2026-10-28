@@ -1,0 +1,939 @@
+{
+  "roi_id": "roi_02",
+  "selection": {
+    "roi_id": "roi_02",
+    "tile_x": 50,
+    "tile_y": 12,
+    "bounds_um": [
+      10000.0,
+      2400.0,
+      10200.0,
+      2600.0
+    ],
+    "cell_centroid_count": 87,
+    "transcripts_file": "roi_02_transcripts.parquet",
+    "eligible_sorted_index_zero_based": 104
+  },
+  "data_role": "development, one lung donor",
+  "pixel_size_um": 0.21250001266598778,
+  "bbox_pixels": [
+    47058,
+    11294,
+    48000,
+    12236
+  ],
+  "transform": [
+    [
+      4.7058820724487305,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.7058820724487305,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "source_rows": 1977,
+  "qc_gene_rows": 1523,
+  "qc_originally_assigned": 804,
+  "qc_originally_unassigned": 719,
+  "observed_cell_labels": 101,
+  "label_to_cell_id": {
+    "102286": "jdbkbcgk-1",
+    "102287": "jdbkdpcm-1",
+    "102288": "jdbkekhm-1",
+    "102289": "jdblaacf-1",
+    "102290": "jdblhgdh-1",
+    "102293": "jdbmoopj-1",
+    "102306": "jdcbhmgl-1",
+    "102312": "jdceginn-1",
+    "102313": "jdcemdkm-1",
+    "102314": "jdcemeoj-1",
+    "102315": "jdcempgh-1",
+    "102316": "jdcfbehb-1",
+    "102317": "jdcfbfch-1",
+    "102318": "jdcffpae-1",
+    "102320": "jdcghcgj-1",
+    "102322": "jdcigofh-1",
+    "102325": "jdcjgjfp-1",
+    "102327": "jdckblae-1",
+    "102329": "jdckmkcd-1",
+    "102330": "jdcledfb-1",
+    "102331": "jdcmpihj-1",
+    "102332": "jdcmpjnp-1",
+    "102333": "jdcndbcl-1",
+    "102334": "jdcnejng-1",
+    "102378": "jddocgao-1",
+    "102379": "jddodkmo-1",
+    "102380": "jddopcjl-1",
+    "102381": "jddpenmj-1",
+    "102382": "jddpeobp-1",
+    "102383": "jdeaalnp-1",
+    "102384": "jdeablih-1",
+    "102385": "jdeaialk-1",
+    "102386": "jdebeflc-1",
+    "102387": "jdebmjon-1",
+    "102388": "jdeccfgg-1",
+    "102396": "jdeenlek-1",
+    "102398": "jdefahhk-1",
+    "102431": "jdeomgab-1",
+    "102433": "jdepking-1",
+    "103110": "jefamjhg-1",
+    "103111": "jefammip-1",
+    "103112": "jefbdgcm-1",
+    "103113": "jefbfdcd-1",
+    "103114": "jefbggck-1",
+    "103115": "jefbibhi-1",
+    "103116": "jefcblal-1",
+    "103117": "jefcmflo-1",
+    "103118": "jefdmkjb-1",
+    "103119": "jefekago-1",
+    "103120": "jefeloje-1",
+    "103121": "jeffejie-1",
+    "103122": "jefgamdi-1",
+    "103123": "jefgcbjb-1",
+    "103124": "jefggddb-1",
+    "103125": "jefghdnd-1",
+    "103126": "jefgkipc-1",
+    "103127": "jefgnlpg-1",
+    "103128": "jefigead-1",
+    "103129": "jefilhdc-1",
+    "103130": "jefkdidn-1",
+    "103131": "jefkgodl-1",
+    "103132": "jefkkoeb-1",
+    "103133": "jefkmagm-1",
+    "103134": "jefkomho-1",
+    "103135": "jefkpedk-1",
+    "103136": "jeflecpj-1",
+    "103137": "jefljnaj-1",
+    "103138": "jeflkcfm-1",
+    "103139": "jefllgme-1",
+    "103140": "jeflobcj-1",
+    "103141": "jefmagpo-1",
+    "103142": "jefmbain-1",
+    "103143": "jefmimgp-1",
+    "103144": "jefnabgi-1",
+    "103145": "jefndkkm-1",
+    "103146": "jefnfelp-1",
+    "103147": "jefohmhe-1",
+    "103148": "jefoplfm-1",
+    "103149": "jefpmghh-1",
+    "103150": "jefpngho-1",
+    "103151": "jegafddc-1",
+    "103152": "jegbbkjm-1",
+    "103153": "jegboneh-1",
+    "103154": "jegclbfk-1",
+    "103155": "jegcogel-1",
+    "103156": "jegdhkig-1",
+    "103157": "jegeikkh-1",
+    "103879": "jfhfchia-1",
+    "103880": "jfhfnjjo-1",
+    "103933": "jfiipigi-1",
+    "103934": "jfijjann-1",
+    "106656": "jjepgglg-1",
+    "106658": "jjfaabia-1",
+    "106659": "jjfadkef-1",
+    "160742": "ogmodmke-1",
+    "160743": "ogmogcpm-1",
+    "160747": "ogmpcgjc-1",
+    "160789": "ognnbjad-1",
+    "160790": "ognnhand-1",
+    "160791": "ognnjnje-1",
+    "160792": "ognonjbm-1"
+  },
+  "audit": {
+    "rows": 1977,
+    "bbox_pixels": [
+      47058,
+      11294,
+      48000,
+      12236
+    ],
+    "primary_convention": "floor",
+    "nearest_half_up_definition": "floor(pixel_coordinate + 0.5)",
+    "nearest_even_definition": "numpy.rint; ties to even integer",
+    "coordinate_direction": "physical micrometres to global pixels; mask[y,x]",
+    "invalid_coordinate_rows": 0,
+    "unknown_source_owner_rows": 0,
+    "unknown_source_owner_examples": [],
+    "source_unassigned_rows": 917,
+    "qc_gene_rows": 1523,
+    "near_boundary_definition": "any different cell label within Chebyshev distance 1 pixel; complete 3x3 required",
+    "variants": {
+      "floor": {
+        "inside_crop_rows": 1977,
+        "outside_crop_finite_rows": 0,
+        "comparable_owner_rows": 1977,
+        "owner_matches": 1977,
+        "owner_mismatches": 0,
+        "owner_agreement_fraction": 1.0,
+        "near_boundary_rows": 121,
+        "owner_mismatches_near_boundary": 0,
+        "owner_mismatches_away_from_boundary": 0,
+        "owner_mismatches_boundary_context_unknown": 0,
+        "qc_gene_comparable_rows": 1523,
+        "qc_gene_owner_mismatches": 0,
+        "nuclear_overlap_comparable_rows": 1977,
+        "nuclear_overlap_mismatches": 0,
+        "qc_gene_nuclear_overlap_mismatches": 0,
+        "nucleus_associated_owner_comparable_rows": 419,
+        "nucleus_associated_owner_mismatches": 0,
+        "owner_mismatch_examples": []
+      },
+      "nearest_half_up": {
+        "inside_crop_rows": 1975,
+        "outside_crop_finite_rows": 2,
+        "comparable_owner_rows": 1975,
+        "owner_matches": 1945,
+        "owner_mismatches": 30,
+        "owner_agreement_fraction": 0.9848101265822785,
+        "near_boundary_rows": 145,
+        "owner_mismatches_near_boundary": 30,
+        "owner_mismatches_away_from_boundary": 0,
+        "owner_mismatches_boundary_context_unknown": 0,
+        "qc_gene_comparable_rows": 1521,
+        "qc_gene_owner_mismatches": 28,
+        "nuclear_overlap_comparable_rows": 1975,
+        "nuclear_overlap_mismatches": 58,
+        "qc_gene_nuclear_overlap_mismatches": 46,
+        "nucleus_associated_owner_comparable_rows": 413,
+        "nucleus_associated_owner_mismatches": 0,
+        "owner_mismatch_examples": [
+          {
+            "row_position": 63,
+            "transcript_id": "281651070377446",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 102288,
+            "mask_cell_id": "jdbkekhm-1",
+            "continuous_pixel_xy": [
+              47693.917193985544,
+              11618.549399392214
+            ],
+            "sampled_pixel_xy": [
+              47694,
+              11619
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 84,
+            "transcript_id": "281651070379307",
+            "source_cell_id": "jdbkbcgk-1",
+            "source_label": 102286,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47679.47326102294,
+              11370.80355018843
+            ],
+            "sampled_pixel_xy": [
+              47679,
+              11371
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 125,
+            "transcript_id": "281651070384456",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 102288,
+            "mask_cell_id": "jdbkekhm-1",
+            "continuous_pixel_xy": [
+              47696.964068803936,
+              11674.631657078862
+            ],
+            "sampled_pixel_xy": [
+              47697,
+              11675
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 132,
+            "transcript_id": "281651070384511",
+            "source_cell_id": "jefpmghh-1",
+            "source_label": 103149,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47769.951196806505,
+              11763.34603598225
+            ],
+            "sampled_pixel_xy": [
+              47770,
+              11763
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 241,
+            "transcript_id": "281651070393375",
+            "source_cell_id": "jdbkbcgk-1",
+            "source_label": 102286,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47671.605614433065,
+              11384.578825102653
+            ],
+            "sampled_pixel_xy": [
+              47672,
+              11385
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 348,
+            "transcript_id": "281651070402585",
+            "source_cell_id": "jefbdgcm-1",
+            "source_label": 103112,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47750.98520528991,
+              11559.94646170875
+            ],
+            "sampled_pixel_xy": [
+              47751,
+              11560
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 596,
+            "transcript_id": "281651070420062",
+            "source_cell_id": "jddodkmo-1",
+            "source_label": 102379,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47158.95858616568,
+              11696.497464599088
+            ],
+            "sampled_pixel_xy": [
+              47159,
+              11696
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 604,
+            "transcript_id": "281651070420271",
+            "source_cell_id": "jdbkbcgk-1",
+            "source_label": 102286,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47676.044952403754,
+              11376.510121539468
+            ],
+            "sampled_pixel_xy": [
+              47676,
+              11377
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 644,
+            "transcript_id": "281651070424234",
+            "source_cell_id": "jdcfbfch-1",
+            "source_label": 102317,
+            "mask_label": 102316,
+            "mask_cell_id": "jdcfbehb-1",
+            "continuous_pixel_xy": [
+              47096.58726635389,
+              11477.745179843623
+            ],
+            "sampled_pixel_xy": [
+              47097,
+              11478
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 660,
+            "transcript_id": "281651070425222",
+            "source_cell_id": "jddodkmo-1",
+            "source_label": 102379,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47156.564284837805,
+              11701.374532323098
+            ],
+            "sampled_pixel_xy": [
+              47157,
+              11701
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 689,
+            "transcript_id": "281651070425764",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 102287,
+            "mask_cell_id": "jdbkdpcm-1",
+            "continuous_pixel_xy": [
+              47693.981532217,
+              11505.654185533058
+            ],
+            "sampled_pixel_xy": [
+              47694,
+              11506
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 690,
+            "transcript_id": "281651070425767",
+            "source_cell_id": "jefpmghh-1",
+            "source_label": 103149,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47715.11664125137,
+              11702.576278574998
+            ],
+            "sampled_pixel_xy": [
+              47715,
+              11703
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 765,
+            "transcript_id": "281651070433463",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 102320,
+            "mask_cell_id": "jdcghcgj-1",
+            "continuous_pixel_xy": [
+              47198.67825291585,
+              11337.274140422232
+            ],
+            "sampled_pixel_xy": [
+              47199,
+              11337
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 829,
+            "transcript_id": "281651070436728",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 160742,
+            "mask_cell_id": "ogmodmke-1",
+            "continuous_pixel_xy": [
+              47195.32806929201,
+              11446.614666993264
+            ],
+            "sampled_pixel_xy": [
+              47195,
+              11447
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 844,
+            "transcript_id": "281651070436986",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 103933,
+            "mask_cell_id": "jfiipigi-1",
+            "continuous_pixel_xy": [
+              47844.7673688177,
+              11445.703591679921
+            ],
+            "sampled_pixel_xy": [
+              47845,
+              11446
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 924,
+            "transcript_id": "281651070442213",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 103149,
+            "mask_cell_id": "jefpmghh-1",
+            "continuous_pixel_xy": [
+              47725.80597884953,
+              11748.135788727086
+            ],
+            "sampled_pixel_xy": [
+              47726,
+              11748
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 979,
+            "transcript_id": "281651070444793",
+            "source_cell_id": "jddodkmo-1",
+            "source_label": 102379,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47182.79590092134,
+              11648.009416018613
+            ],
+            "sampled_pixel_xy": [
+              47183,
+              11648
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 1073,
+            "transcript_id": "281651070450433",
+            "source_cell_id": "jefpmghh-1",
+            "source_label": 103149,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47765.98060880788,
+              11735.397967795143
+            ],
+            "sampled_pixel_xy": [
+              47766,
+              11735
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 1104,
+            "transcript_id": "281651070453224",
+            "source_cell_id": "jefammip-1",
+            "source_label": 103111,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47772.71774075925,
+              11483.719444193412
+            ],
+            "sampled_pixel_xy": [
+              47773,
+              11484
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 1107,
+            "transcript_id": "281651070455116",
+            "source_cell_id": "jdcbhmgl-1",
+            "source_label": 102306,
+            "mask_label": 102314,
+            "mask_cell_id": "jdcemeoj-1",
+            "continuous_pixel_xy": [
+              47064.698481489904,
+              11312.98071356141
+            ],
+            "sampled_pixel_xy": [
+              47065,
+              11313
+            ],
+            "near_boundary": true
+          }
+        ]
+      },
+      "nearest_even": {
+        "inside_crop_rows": 1975,
+        "outside_crop_finite_rows": 2,
+        "comparable_owner_rows": 1975,
+        "owner_matches": 1945,
+        "owner_mismatches": 30,
+        "owner_agreement_fraction": 0.9848101265822785,
+        "near_boundary_rows": 145,
+        "owner_mismatches_near_boundary": 30,
+        "owner_mismatches_away_from_boundary": 0,
+        "owner_mismatches_boundary_context_unknown": 0,
+        "qc_gene_comparable_rows": 1521,
+        "qc_gene_owner_mismatches": 28,
+        "nuclear_overlap_comparable_rows": 1975,
+        "nuclear_overlap_mismatches": 58,
+        "qc_gene_nuclear_overlap_mismatches": 46,
+        "nucleus_associated_owner_comparable_rows": 413,
+        "nucleus_associated_owner_mismatches": 0,
+        "owner_mismatch_examples": [
+          {
+            "row_position": 63,
+            "transcript_id": "281651070377446",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 102288,
+            "mask_cell_id": "jdbkekhm-1",
+            "continuous_pixel_xy": [
+              47693.917193985544,
+              11618.549399392214
+            ],
+            "sampled_pixel_xy": [
+              47694,
+              11619
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 84,
+            "transcript_id": "281651070379307",
+            "source_cell_id": "jdbkbcgk-1",
+            "source_label": 102286,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47679.47326102294,
+              11370.80355018843
+            ],
+            "sampled_pixel_xy": [
+              47679,
+              11371
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 125,
+            "transcript_id": "281651070384456",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 102288,
+            "mask_cell_id": "jdbkekhm-1",
+            "continuous_pixel_xy": [
+              47696.964068803936,
+              11674.631657078862
+            ],
+            "sampled_pixel_xy": [
+              47697,
+              11675
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 132,
+            "transcript_id": "281651070384511",
+            "source_cell_id": "jefpmghh-1",
+            "source_label": 103149,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47769.951196806505,
+              11763.34603598225
+            ],
+            "sampled_pixel_xy": [
+              47770,
+              11763
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 241,
+            "transcript_id": "281651070393375",
+            "source_cell_id": "jdbkbcgk-1",
+            "source_label": 102286,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47671.605614433065,
+              11384.578825102653
+            ],
+            "sampled_pixel_xy": [
+              47672,
+              11385
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 348,
+            "transcript_id": "281651070402585",
+            "source_cell_id": "jefbdgcm-1",
+            "source_label": 103112,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47750.98520528991,
+              11559.94646170875
+            ],
+            "sampled_pixel_xy": [
+              47751,
+              11560
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 596,
+            "transcript_id": "281651070420062",
+            "source_cell_id": "jddodkmo-1",
+            "source_label": 102379,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47158.95858616568,
+              11696.497464599088
+            ],
+            "sampled_pixel_xy": [
+              47159,
+              11696
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 604,
+            "transcript_id": "281651070420271",
+            "source_cell_id": "jdbkbcgk-1",
+            "source_label": 102286,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47676.044952403754,
+              11376.510121539468
+            ],
+            "sampled_pixel_xy": [
+              47676,
+              11377
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 644,
+            "transcript_id": "281651070424234",
+            "source_cell_id": "jdcfbfch-1",
+            "source_label": 102317,
+            "mask_label": 102316,
+            "mask_cell_id": "jdcfbehb-1",
+            "continuous_pixel_xy": [
+              47096.58726635389,
+              11477.745179843623
+            ],
+            "sampled_pixel_xy": [
+              47097,
+              11478
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 660,
+            "transcript_id": "281651070425222",
+            "source_cell_id": "jddodkmo-1",
+            "source_label": 102379,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47156.564284837805,
+              11701.374532323098
+            ],
+            "sampled_pixel_xy": [
+              47157,
+              11701
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 689,
+            "transcript_id": "281651070425764",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 102287,
+            "mask_cell_id": "jdbkdpcm-1",
+            "continuous_pixel_xy": [
+              47693.981532217,
+              11505.654185533058
+            ],
+            "sampled_pixel_xy": [
+              47694,
+              11506
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 690,
+            "transcript_id": "281651070425767",
+            "source_cell_id": "jefpmghh-1",
+            "source_label": 103149,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47715.11664125137,
+              11702.576278574998
+            ],
+            "sampled_pixel_xy": [
+              47715,
+              11703
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 765,
+            "transcript_id": "281651070433463",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 102320,
+            "mask_cell_id": "jdcghcgj-1",
+            "continuous_pixel_xy": [
+              47198.67825291585,
+              11337.274140422232
+            ],
+            "sampled_pixel_xy": [
+              47199,
+              11337
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 829,
+            "transcript_id": "281651070436728",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 160742,
+            "mask_cell_id": "ogmodmke-1",
+            "continuous_pixel_xy": [
+              47195.32806929201,
+              11446.614666993264
+            ],
+            "sampled_pixel_xy": [
+              47195,
+              11447
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 844,
+            "transcript_id": "281651070436986",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 103933,
+            "mask_cell_id": "jfiipigi-1",
+            "continuous_pixel_xy": [
+              47844.7673688177,
+              11445.703591679921
+            ],
+            "sampled_pixel_xy": [
+              47845,
+              11446
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 924,
+            "transcript_id": "281651070442213",
+            "source_cell_id": "UNASSIGNED",
+            "source_label": 0,
+            "mask_label": 103149,
+            "mask_cell_id": "jefpmghh-1",
+            "continuous_pixel_xy": [
+              47725.80597884953,
+              11748.135788727086
+            ],
+            "sampled_pixel_xy": [
+              47726,
+              11748
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 979,
+            "transcript_id": "281651070444793",
+            "source_cell_id": "jddodkmo-1",
+            "source_label": 102379,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47182.79590092134,
+              11648.009416018613
+            ],
+            "sampled_pixel_xy": [
+              47183,
+              11648
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 1073,
+            "transcript_id": "281651070450433",
+            "source_cell_id": "jefpmghh-1",
+            "source_label": 103149,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47765.98060880788,
+              11735.397967795143
+            ],
+            "sampled_pixel_xy": [
+              47766,
+              11735
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 1104,
+            "transcript_id": "281651070453224",
+            "source_cell_id": "jefammip-1",
+            "source_label": 103111,
+            "mask_label": 0,
+            "mask_cell_id": "UNASSIGNED",
+            "continuous_pixel_xy": [
+              47772.71774075925,
+              11483.719444193412
+            ],
+            "sampled_pixel_xy": [
+              47773,
+              11484
+            ],
+            "near_boundary": true
+          },
+          {
+            "row_position": 1107,
+            "transcript_id": "281651070455116",
+            "source_cell_id": "jdcbhmgl-1",
+            "source_label": 102306,
+            "mask_label": 102314,
+            "mask_cell_id": "jdcemeoj-1",
+            "continuous_pixel_xy": [
+              47064.698481489904,
+              11312.98071356141
+            ],
+            "sampled_pixel_xy": [
+              47065,
+              11313
+            ],
+            "near_boundary": true
+          }
+        ]
+      }
+    },
+    "floor_vs_nearest": {
+      "nearest_half_up": {
+        "common_inside_rows": 1975,
+        "different_mask_owner_rows": 30,
+        "qc_gene_different_mask_owner_rows": 28
+      },
+      "nearest_even": {
+        "common_inside_rows": 1975,
+        "different_mask_owner_rows": 30,
+        "qc_gene_different_mask_owner_rows": 28
+      }
+    },
+    "floor_full_agreement_on_supplied_rows": true
+  },
+  "source_archive_sha256": "f274590902f9162295d292e540b631ba37c03574a8db754a5c27f101c8c94ef1",
+  "source_transcripts_sha256": "481a9b87e3390e4251c8f9a20ef800e692b51536458942b84f694ea99f262965",
+  "source_url": "https://www.10xgenomics.com/datasets/preview-data-ffpe-human-lung-cancer-with-xenium-multimodal-cell-segmentation-1-standard",
+  "license": "CC BY 4.0; 10x Genomics; derived crop and declared filtering"
+}

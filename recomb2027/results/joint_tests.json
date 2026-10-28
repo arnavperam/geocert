@@ -1,0 +1,7 @@
+{
+  "models": 20,
+  "joint_outcome_minima": 185,
+  "all_optimal_owner_domains": 100,
+  "marginal_joint_counterexample": true,
+  "failures": 0
+}

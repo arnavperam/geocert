@@ -1,0 +1,15 @@
+{
+  "models": 60,
+  "full_owner_vectors_checked": 4350,
+  "exact_score_minima_checked": 183,
+  "budget_enclosures_checked": 398,
+  "penalized_exact_cuts": 600,
+  "incomplete_spectra_rejected": 60,
+  "deliberate_gap": {
+    "exact_maximum": 3,
+    "penalty_bound": 4
+  },
+  "composition_check": true,
+  "failures": 0,
+  "seconds": 11.537130112999876
+}

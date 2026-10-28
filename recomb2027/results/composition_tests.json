@@ -1,0 +1,10 @@
+{
+  "instances": 120,
+  "independent_owner_combinations": 10216,
+  "budget_checks": 3237,
+  "local_geometric_embeddings": 107,
+  "failures": 0,
+  "seconds": 0.4284672819994739,
+  "scope": "disjoint modules with certified compatible cores; not stitching the overlapping native corridors",
+  "hardness_scope": "succinct binary-encoded integer transcript multiplicities; not a hardness proof for fixed-label planar unit-transcript segmentation"
+}
