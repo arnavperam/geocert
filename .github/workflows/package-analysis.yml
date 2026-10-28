@@ -1,0 +1,29 @@
+name: Package analysis source
+
+on:
+  push:
+    branches: [evaluation/breast-transfer]
+    paths: ['.github/workflows/package-analysis.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create immutable source snapshot
+        run: |
+          git rev-parse HEAD > source-commit.txt
+          git archive --format=zip HEAD -o geocert-analysis-source.zip
+          sha256sum geocert-analysis-source.zip > source-sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: geocert-analysis-source
+          path: |
+            geocert-analysis-source.zip
+            source-commit.txt
+            source-sha256.txt
+          retention-days: 14
