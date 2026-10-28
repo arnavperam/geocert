@@ -1,0 +1,60 @@
+[
+  {
+    "roi": "roi_01",
+    "mode": "fixed_xy",
+    "returncode": 101,
+    "seconds": 0.03572719999999663,
+    "stdout": "Using 2 threads\nFinished reading input\n",
+    "stderr": "\nthread 'main' (6816) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proseg-3.2.0/src/sampler/featureselection.rs:308:54:\ncalled `Result::unwrap()` on an `Err` value: EmptyInput\nstack backtrace:\n   0: __rustc::rust_begin_unwind\n   1: core::panicking::panic_fmt\n   2: core::result::unwrap_failed\n   3: proseg::sampler::featureselection::select_features\n   4: <proseg::sampler::transcripts::TranscriptDataset>::select_unfactored_genes\n   5: proseg::main\nnote: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.\n",
+    "command": [
+      "/home/runner/.cargo/bin/proseg",
+      "--xenium",
+      "--nthreads",
+      "2",
+      "--output-spatialdata",
+      "spatial.zarr",
+      "--output-transcript-metadata",
+      "transcripts.csv.gz",
+      "--output-cell-metadata",
+      "cells.csv.gz",
+      "--output-gene-metadata",
+      "genes.csv.gz",
+      "--output-counts",
+      "counts.mtx.gz",
+      "--output-cell-polygons",
+      "polygons.geojson.gz",
+      "--ignore-z-coord",
+      "--voxel-layers",
+      "1",
+      "--no-diffusion",
+      "/home/runner/work/geocert/geocert/results/proseg_locked/roi_01_input.csv.gz"
+    ]
+  },
+  {
+    "roi": "roi_01",
+    "mode": "default",
+    "returncode": 101,
+    "seconds": 0.03486944899998434,
+    "stdout": "Using 2 threads\nFinished reading input\n",
+    "stderr": "\nthread 'main' (6819) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proseg-3.2.0/src/sampler/featureselection.rs:308:54:\ncalled `Result::unwrap()` on an `Err` value: EmptyInput\nstack backtrace:\n   0: __rustc::rust_begin_unwind\n   1: core::panicking::panic_fmt\n   2: core::result::unwrap_failed\n   3: proseg::sampler::featureselection::select_features\n   4: <proseg::sampler::transcripts::TranscriptDataset>::select_unfactored_genes\n   5: proseg::main\nnote: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.\n",
+    "command": [
+      "/home/runner/.cargo/bin/proseg",
+      "--xenium",
+      "--nthreads",
+      "2",
+      "--output-spatialdata",
+      "spatial.zarr",
+      "--output-transcript-metadata",
+      "transcripts.csv.gz",
+      "--output-cell-metadata",
+      "cells.csv.gz",
+      "--output-gene-metadata",
+      "genes.csv.gz",
+      "--output-counts",
+      "counts.mtx.gz",
+      "--output-cell-polygons",
+      "polygons.geojson.gz",
+      "/home/runner/work/geocert/geocert/results/proseg_locked/roi_01_input.csv.gz"
+    ]
+  }
+]
