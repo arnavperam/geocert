@@ -1,0 +1,67 @@
+name: Inspect external input
+
+on:
+  push:
+    branches: [research/expression-certificates]
+    paths: ['.github/workflows/external-input.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Fetch fixed source and inspect metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          import urllib.request, hashlib, json, zipfile
+          from pathlib import Path
+          out=Path('external-input');out.mkdir()
+          record='https://zenodo.org/api/records/20180722'
+          meta=json.load(urllib.request.urlopen(record,timeout=90))
+          (out/'record.json').write_text(json.dumps(meta,indent=2))
+          filename='BC_10x_xenium_sdata.zarr.zip'
+          item=next(f for f in meta['files'] if f['key']==filename)
+          url=item['links']['self']
+          urllib.request.urlretrieve(url,'dataset.zip')
+          raw=Path('dataset.zip').read_bytes()
+          md5=hashlib.md5(raw).hexdigest()
+          assert md5=='a5ca435ab9ddbbd4ed6ea701e1389ba9',md5
+          protocol={
+            'purpose':'external transportability, not anatomical ground-truth validation',
+            'source_record':20180722,'source_md5':md5,
+            'evaluation_rule':'Use all co-registered retained transcripts and cell labels in the provided breast crop; no gene or outcome filtering. Preserve nuclei if label identity is established. No outcome-based corridor selection.',
+            'fallback':'If coordinates, transformations or ownership cannot be verified, stop the external computation and report the incompatibility.',
+            'model':'Fixed-resolution arbitrary-topology candidate-label relaxation; rasterized polygons are a derived model, not original Xenium assignment masks.',
+            'planned_sensitivity':'Reference raster spacings 0.5 and 1 micrometre, allowed Chebyshev distance 1 micrometre, changed-area budgets 0, 0.5, 1, 2, 4 square micrometres. Record all affected count entries and exact relaxation widths.',
+            'frozen_before':'Downloading and examining expression or optimization outcomes',
+            'ground_truth':'No true segmentation or calibration claim. Source counts are not true counts.'}
+          (out/'protocol.json').write_text(json.dumps(protocol,indent=2))
+          license=meta.get('metadata',{}).get('license',{})
+          report={'license':license,'files':[],'json_metadata':{}}
+          with zipfile.ZipFile('dataset.zip') as z:
+            for i in z.infolist():
+              report['files'].append({'path':i.filename,'bytes':i.file_size})
+              if i.filename.endswith(('.zattrs','.zgroup','.zarray','zarr.json')) and i.file_size<200000:
+                try: report['json_metadata'][i.filename]=json.loads(z.read(i))
+                except (ValueError,UnicodeError):pass
+            if str(license.get('id','')).lower() in ('cc-by-4.0','cc0-1.0'):
+              with zipfile.ZipFile(out/'analysis_elements.zip','w',zipfile.ZIP_DEFLATED) as d:
+                for i in z.infolist():
+                  if not i.is_dir() and '/images/' not in i.filename:
+                    d.writestr(i.filename,z.read(i))
+          (out/'inspection.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({'md5':md5,'license':license,'entries':len(report['files']),'artifact_bytes':sum(p.stat().st_size for p in out.iterdir())}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: external-breast-input
+          path: external-input/
+          retention-days: 7
