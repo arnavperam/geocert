@@ -1,0 +1,10 @@
+{
+  "record": "PUBLICATION_RECORD.json, frozen publication package",
+  "original_record_sha256": "222c6e2b7bf5450f889643856e9a71a72781c44d3d7452d31e59aabd0ab5c81d",
+  "correction": {
+    "field": "pdf_check[name=main].availability_present",
+    "recorded": false,
+    "correct": true
+  },
+  "evidence": "The published manuscript page 10 contains the repository URL and frozen source revision; the false field was a metadata-check error. The original record and ZIP remain unchanged."
+}

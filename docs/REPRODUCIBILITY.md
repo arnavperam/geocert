@@ -30,6 +30,11 @@ The paper's main comparison uses equal hard-implication SCC contraction. The ful
 
 ## Artifact boundaries
 
-This public repository contains the current exact workflow and its derived native inputs. It is not the complete historical development archive or a fresh raw-Parquet extraction. The frozen RC2 archive is identified by hash in `docs/RELEASE_PROVENANCE.json`; numerical studies, source-mask crops and previous exploratory implementations remain in that separately distributed artifact. The exact algorithms, CLI, test code, and three data files included here are byte-identical to RC2.
+This public repository contains the current exact workflow and its derived native inputs. It is not the complete historical development archive or a fresh raw-Parquet extraction. The frozen RC2 archive is identified by hash in `docs/RELEASE_PROVENANCE.json`; numerical studies and previous exploratory implementations remain in the full companion linked by `docs/ARTIFACT_MAP.md`. The raw-format source crops used by the new readout audit are also in `data/native/`. The exact algorithms, CLI, test code, and three data files included here are byte-identical to RC2.
 
 The checksum manifest covers committed release files, excluding itself. Run outputs are intentionally ignored. Do not overwrite recorded scientific outputs when comparing new measurements; store new results under `run/`.
+
+
+## Reader revision
+
+The readout scripts and exact scope are documented in `docs/ARTIFACT_MAP.md`. No core algorithm, original model, observation or penalty changed. The census is a post-hoc measurement analysis on the same development data. The historical companion preserves the original package bytes and replay claims.

@@ -1,0 +1,39 @@
+{
+  "cells": 5,
+  "blocks": 16,
+  "groups": 96,
+  "stage": "complete",
+  "seconds": 10.409497717000022,
+  "peak_rss_kib": 127504,
+  "compile_seconds": 9.911807146000001,
+  "stats": {
+    "groups": 96,
+    "sites": 96,
+    "boundaries": 4,
+    "owner_bits": 384,
+    "implications": 2718,
+    "forced_bits": 192,
+    "positive_terms": 565,
+    "negative_terms": 613,
+    "propagated_cones": 3456,
+    "slabs": 4106,
+    "raw_layers": 19371,
+    "compile_seconds": 9.911632122000128
+  },
+  "objective": "-937/25",
+  "area": "263/25",
+  "min_gaps": [
+    "3/5",
+    "3/5",
+    "3/5"
+  ],
+  "binding_min_gaps": 3,
+  "flow_vertices": null,
+  "returncode": 0,
+  "wall_seconds": 11.347245520999877,
+  "wall_limit_seconds": 40,
+  "resource_limited": false,
+  "scope": "single fresh process per designed case; compilation included in wall limit; long corridor with repeated opposing preferences, heterogeneous slopes, binding min-gap settings",
+  "solve_and_reconstruction_seconds": 0.3964584770001238,
+  "metadata_note": "phase time includes solver/reconstruction, not the subsequent direct check; total algorithm time includes all checks. Null flow_vertices was not measured in this diagnostic."
+}

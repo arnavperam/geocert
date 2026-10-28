@@ -1,0 +1,14 @@
+{
+  "cells": 5,
+  "blocks": 64,
+  "groups": 384,
+  "stage": "compiling",
+  "seconds": 3.826000011031283e-06,
+  "peak_rss_kib": 122768,
+  "returncode": -9,
+  "wall_seconds": 40.00562587400009,
+  "wall_limit_seconds": 40,
+  "resource_limited": true,
+  "scope": "single fresh process per designed case; compilation included in wall limit; long corridor with repeated opposing preferences, heterogeneous slopes, binding min-gap settings",
+  "metadata_note": "phase time includes solver/reconstruction, not the subsequent direct check; total algorithm time includes all checks. Null flow_vertices was not measured in this diagnostic."
+}
