@@ -1,0 +1,100 @@
+NEXT STUDY DESIGN - DRAFT TO FREEZE BEFORE NEW OUTCOME INSPECTION
+
+Primary target
+Conditional observed-count intervals for a declared geometric error family,
+followed by a separately justified calibration/coverage claim. Primary comparison:
+interval width at matched empirical coverage against sound singleton enclosures.
+The calibration target, exclusion policy and baseline outputs must be fixed first.
+
+Sampling and separation
+Use donor/slide identifiers as independent units. Keep training, calibration and
+evaluation donors disjoint. Overlapping corridors, gene queries and penalties are
+dependent outputs, not biological replicates. Record all candidate regions and
+reasons for rejection, including non-ordered topology. Report retained coverage of
+the tissue. Do not turn post-hoc selected corridors into a claimed held-out cohort.
+
+Matched geometry
+Prefer registered measurements of the same cells using independently delineated
+membranes or expert annotations. Serial sections can change cells and geometry;
+they require a correspondence model and are not interchangeable paired truth.
+Fit slope/band/endpoint rules on training data. Define a nested uncertainty family
+and a score for the least family member containing the reference geometry. Treat
+out-of-family geometry as a failed containment, not as a discarded easy case.
+Area budgets alone do not correct misspecified slopes, topology or nuclear pins.
+
+Conformal budget option
+With a frozen valid nonconformity score and exchangeable calibration units, use
+rank ceil((n+1)*(1-alpha)). A nonfinite threshold triggers abstention. At alpha=.05,
+fewer than 19 calibration units cannot yield a finite distribution-free threshold
+by this standard unrandomized order statistic. That is not a power calculation.
+If simultaneous within-donor protection is wanted, define the donor score using
+the relevant maximum before calibration. A donor-level marginal guarantee does
+not establish conditional coverage for every cell type, gene or platform.
+The supplied utility only computes this quantile; no biological score was fitted.
+
+Ground-truth hierarchy and controls
+1. Mosaics/reporters: validate probes and independent cell/clone identification.
+   Reporter transcripts provide partial labels; cells sharing a reporter remain
+   indistinguishable. Control extracellular material and transfer/phagocytosis.
+2. Sex-mismatched material: independently establish donor/host identity. Control
+   sex-chromosome changes, dropout and atypical expression. XIST is documented in
+   male cancers and is not an automatic error label. Sex labels do not distinguish
+   individual same-sex cells.
+3. Xenografts: validate species specificity and hybrid-reference ambiguity with
+   controls. Cross-species labels are partial ownership labels. Same-species cell
+   swaps remain invisible. Account for ambient and engulfed RNA.
+4. Simulation: start from realistic masks/3D geometry and a declared transcript
+   generation model, with true owners retained. Keep simulation fitting separate
+   from evaluation. Ordered-corridor toy tests in this release are not that study.
+5. Mutually exclusive markers: choose panels from independent evidence and report
+   this as a proxy. Genuine co-expression must not be deleted by the evaluation's
+   definition of truth. Do not use the same marker rule to define and validate cells.
+
+Baseline tasks
+- Sound single-RNA thresholds: already implemented under the same constraints.
+- Distance to boundary: error-ranking baseline; distance alone is not a certified
+  area-cost bound without regularity/clearance assumptions.
+- Proseg/Baysor/BIDCell/Segger: segmentation/assignment outputs, matched inputs and
+  provenance; assess accuracy on available labels rather than pretending they
+  natively return the same deterministic budget interval.
+- ResolVI: probabilistic correction/representation; compare appropriate counts,
+  ranking and calibration endpoints with identical test labels and splits.
+- ovrlpy: vertical-overlap diagnostic; evaluate its intended task separately.
+Pin releases, parameters, data accessions, compute budgets and failure policies.
+
+Metrics and replication
+Report interval coverage AND width versus budget; measure actual family coverage.
+Report empirical failures when geometry lies outside the family. AUROC/AUPRC need
+credible positive and negative labels and a declared population. Include singleton
+and distance baselines. Confidence intervals must reflect donor/slide dependence;
+the current one-donor results do not support biological replication intervals.
+Statistical DE/FDR requires a separate test with biological replicates and a
+specified multiple-testing procedure. Robust linear-count signs are only a
+descriptive intermediate result. For co-expression or LR analyses, distinguish
+joint attainability, detection, biological expression and actual signaling.
+
+Interpretation of a published biological claim
+Select claims and endpoints before looking at favorable results. A feasible
+boundary that reproduces an expression pattern shows model-conditioned fragility,
+not that segmentation error caused the published observation. A preserved count
+under a calibrated family is evidence of robustness to that family, not proof of
+the underlying cell identity or biological mechanism.
+
+Engineering acceptance gates
+Define a coherent full-tissue uncertainty family before claiming local stitching.
+Prove projection containment and cost accounting for any relaxation. Preserve
+molecule identity, shared boundaries and global budget allocation. Test sparse
+matrix interchange on small validated examples before SpatialData/napari wrappers.
+Benchmark rational bit lengths, compiler cost, memory, failures and query reuse.
+A fast C++ max-flow alone does not give general geometry or million-cell capacity.
+
+Verified starting literature (not an exhaustive priority search)
+TISSUE: https://doi.org/10.1038/s41592-024-02184-y
+ResolVI: https://doi.org/10.1038/s41592-026-03212-9
+Spatial segmentation benchmark: https://doi.org/10.1038/s41592-026-03272-x
+XIST in male cancers: https://doi.org/10.1016/j.cels.2022.10.002
+Species mapping caution: https://doi.org/10.1038/s41467-024-47454-7
+Example public xenotransplant accession: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE242270
+That accession is a candidate to inspect, not downloaded or validated ground truth
+for this method. It includes different spatial technology and is not claimed to
+meet the molecule-level paired-geometry protocol without further examination.

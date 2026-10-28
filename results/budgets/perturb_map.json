@@ -1,0 +1,28 @@
+{
+  "scope": "Synthetic low-order perturb-and-MAP diagnostic; no posterior calibration claim.",
+  "samples": 2000,
+  "seed": 20261028,
+  "quantization": "1/1000000",
+  "feasible_owner_vectors": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "unperturbed_energy": [
+    1,
+    0
+  ],
+  "gibbs_non_source_probability": 0.2689414213699951,
+  "perturb_map_non_source_frequency": 0.3415,
+  "wilson_95_interval_for_sampler_frequency": [
+    0.321038650206326,
+    0.3625690537818312
+  ],
+  "empirical_total_variation_from_gibbs": 0.07255857863000492,
+  "all_sampled_configurations_geometrically_verified": true
+}

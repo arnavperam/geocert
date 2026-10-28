@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "random_count_models": 16,
+  "random_contrast_models": 4,
+  "budget_comparisons": 162,
+  "complete_owner_states": 81,
+  "optimal_vectors_checked": 33,
+  "native_gene_cell_frontiers": 38,
+  "calibration_utility_checks": 4,
+  "foreign_path_rejections": 2,
+  "unknown_gene_rejections": 1,
+  "dual_gap_example": {
+    "budget": "3/50",
+    "exact_interval": [
+      0,
+      0
+    ],
+    "best_integer_dual_interval": [
+      0,
+      1
+    ],
+    "complete_dual_path": true,
+    "tie_multiplier": "128/7"
+  },
+  "unsupported_budget_optimum": {
+    "budget": "1/16",
+    "maximum": 1
+  },
+  "all_optima_at_tie": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ]
+}

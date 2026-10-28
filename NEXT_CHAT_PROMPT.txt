@@ -1,0 +1,62 @@
+Continue the GeoCert-ST research project from the attached complete source ZIP.
+Read START_HERE.txt and docs/budgets/Count_Intervals_Theory.pdf first. The requested
+goal is a calibrated, useful spatial-transcriptomics robustness method, but the
+archive implements only the conditional local certified-count foundation.
+
+Do not restart from a vague plan, repeat previous reviews as endorsements, or
+declare the seven-pillar vision achieved. Inspect code/results and do new work.
+Do not invent donors, microscopy, ground truth, calibrations, benchmark runs,
+timings, author actions, public links or acceptance probabilities.
+
+CURRENT EXACT CAPABILITIES
+Ownerwise continuous cost representation; source-feasible pinned shortcut;
+count/linear-contrast hard-budget frontiers via targeted owner enumeration;
+sound rational cut bounds with witnesses and gaps; complete supported paths by
+repeated cuts; standard residual DAG representation of all penalized optima.
+The new gene-count analysis uses every original native corridor and setting.
+
+NEXT HIGH-VALUE STEPS
+1. Audit the new hard-budget proofs and code. In particular distinguish a dual
+   bound from an attained endpoint, verify offsets/outside counts, source premises,
+   count integer rounding, all-optima projection, and supported-path completeness.
+2. Review the five improvements over the sound singleton comparator and the zero
+   baseline improvements. Investigate meaningful multigene contrasts prospectively;
+   do not choose a claim by searching for favorable retrospective endpoints.
+3. Lock a study protocol BEFORE inspecting new outcomes. Acquire independent
+   matched measurements with cell identity and geometry correspondence; split by
+   donor/slide rather than by overlapping corridor. Fit geometric settings on
+   training data and calibrate on independent units. Count out-of-family cases.
+4. Assess geometric-family coverage, not just solver correctness. A perfect cut
+   cannot contain true counts if the assumed family excludes the true geometry.
+5. Build ground-truth/proxy baselines according to docs/budgets/NEXT_STUDY_PROTOCOL.txt.
+   Record ambiguous transcripts and donor-level replication. Marker leakage is
+   evidence, not a definition of misassignment.
+6. Integrate reviewed results into a self-contained paper. The existing 10-page
+   manuscript remains the previous submission candidate. The new research note
+   is an extension, not an automatically approved replacement. Respect any already
+   registered title/abstract and conference rules.
+
+IMPORTANT CORRECTIONS TO THE DREAM PROPOSAL
+- Theorem 3 supports penalized unary objectives. It alone does not make arbitrary
+  hard-budget optima one-cut solvable. There is an executed strict duality gap.
+- GGT nesting requires monotonicity conditions; it does not follow for all count
+  objectives. Current path code uses repeated exact cuts.
+- Picard-Queyranne is established theory. Its DAG covers all penalized optima,
+  not all feasible continuous boundaries or all hard-budget assignments.
+- Profiling boundaries into D*(c) is not marginalizing a continuous prior.
+  Low-order perturb-and-MAP is generally not exact Gibbs sampling; a diagnostic
+  here measures a clear discrepancy on a two-state geometric example.
+- Planar multiway cut with fixed terminal count is polynomial. A general
+  nonplanar three-label hardness result is not a reduction for this geometry.
+- Tree adjacency, star-shaped cells and 3D surfaces have not been solved here.
+- TISSUE and other uncertainty-aware spatial methods exist; priority is unproved.
+- XIST can be expressed in male cancers. Species/reporter labels require controls
+  and generally do not identify the exact owner among same-species/same-clone cells.
+- Robust count/contrast bounds are not statistical DE significance, FDR control,
+  proof of cell identity, or evidence of ligand-receptor signaling.
+
+DELIVERABLE EXPECTATIONS
+Preserve the reviewed code and original artifacts. Make new work concrete and
+reproducible, give all results including failures, separate implemented results
+from protocols/conjectures, and return a refreshed complete handoff with exact
+commands and file identities. Do not merge or submit without the author's action.

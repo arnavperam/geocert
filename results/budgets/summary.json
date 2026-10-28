@@ -1,0 +1,19 @@
+{
+  "models": 84,
+  "statistics": {
+    "singleton_queries": 2060,
+    "gene_models": 2832,
+    "combinations_checked": 3077,
+    "max_combinations_per_gene_model": 8,
+    "cell_gene_functions": 6326,
+    "dual_soundness_checks": 32506,
+    "probes_with_strict_dual_gap": 0,
+    "grid_intervals": 31630,
+    "grid_nontrivial_intervals": 1331,
+    "grid_exact_dual_endpoints": 31630,
+    "grid_joint_tighter_than_singleton": 5,
+    "variable_cell_gene_functions": 401,
+    "cut_calls": 2857
+  },
+  "seconds": 115.26530314100091
+}

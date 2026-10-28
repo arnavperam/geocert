@@ -1,5 +1,31 @@
 # GeoCert-ST
 
+## New: conditional expression-count intervals
+
+This research extension answers a local hard-budget question: what minimum and
+maximum observed count can a gene have in a chosen cell when summed interface
+deformation is at most delta? Read [START_HERE.txt](START_HERE.txt) and the
+[theory/results note](docs/budgets/Count_Intervals_Theory.pdf).
+
+```sh
+python tests/test_budget_counts.py
+python geocert_counts.py interval --corridor 4037abe9fea38e --cell 153124 --gene PECAM1 --budget 1 --output run/count.json
+python geocert_counts.py verify run/count.json
+python experiments/budget_census.py --output-dir run/budgets
+```
+
+Use `--method dual` for cut-based outer bounds with witness gaps. The exact method
+uses target-gene enumeration plus the proved source-feasible pinned algorithm.
+It refuses enumeration beyond its cap. The native census supplies 6,326 local
+cell-gene interval functions; these are one-donor dependent model queries, not
+new biological replicates. Five evaluated intervals tighten the sound singleton
+baseline, all in the relaxed family. No baseline-grid tightening is observed.
+
+The geometry and budgets remain uncalibrated. A deterministic enclosure is not a
+statistical confidence interval, DE significance result, or corrected ownership.
+The `certified-counts` draft extends `reader-revision`; it is not a tagged release. The preceding submission manuscript remains included unchanged. Continue from
+[NEXT_CHAT_PROMPT.txt](NEXT_CHAT_PROMPT.txt) for the unfinished research program.
+
 Exact joint deformation costs for continuous RNA-ownership sensitivity.
 
 Companion code for **Exact Joint Deformation Costs for Continuous RNA-Ownership Sensitivity**, by Arnav Peram. The method represents the minimum integrated deformation for every feasible ownership vector in a local ordered-cell corridor. It includes a direct owner-layer construction and an exact critical-mesh height reference.
@@ -11,7 +37,7 @@ Python 3.12 or 3.13 is sufficient. The current exact workflow uses only the Pyth
 ```sh
 git clone https://github.com/arnavperam/geocert.git
 cd geocert
-git checkout reader-revision
+git checkout certified-counts
 python3 -m venv .venv
 . .venv/bin/activate
 python geocert.py verify-manifest
@@ -68,7 +94,7 @@ companion archive, dependencies and interpretation limits.
 
 This is a research implementation for model-conditioned assignment sensitivity, not an estimator of corrected anatomical ownership. The inputs are selected local corridors from one development donor. Boundaries are ordered graphs, and the geometric uncertainty settings are not anatomically calibrated. The theorem covers nonadditive geometric deformation and unary molecular costs; it does not automatically solve arbitrary higher-order molecular objectives or hard-budget problems.
 
-The `reader-revision` draft adds gene-count analysis and revised manuscripts to the unchanged version 1.0.0 exact core. The [provenance record](docs/RELEASE_PROVENANCE.json) identifies the frozen predecessor and the documentation-only correction. The complete historical companion is now reachable through [the artifact map](docs/ARTIFACT_MAP.md); `python tools/fetch_companion.py` reconstructs its checksum-verified ZIP from two stored binary parts. The published `v1.0.0` tag remains unchanged.
+The preceding `reader-revision` draft adds gene-count analysis and revised manuscripts to the unchanged version 1.0.0 exact core. The [provenance record](docs/RELEASE_PROVENANCE.json) identifies the frozen predecessor and the documentation-only correction. The complete historical companion is now reachable through [the artifact map](docs/ARTIFACT_MAP.md); `python tools/fetch_companion.py` reconstructs its checksum-verified ZIP from two stored binary parts. The published `v1.0.0` tag remains unchanged.
 
 ## Citation and rights
 

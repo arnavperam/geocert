@@ -10,6 +10,7 @@ on:
       - 'experiments/**'
       - 'results/readout/**'
       - 'geocert.py'
+      - 'geocert_counts.py'
       - 'SHA256SUMS.txt'
       - '.github/workflows/check.yml'
   pull_request:
@@ -34,6 +35,9 @@ jobs:
           python geocert.py verify-manifest
           python tests/test_scc.py
           python tests/test_prefix_bound.py
+          python tests/test_budget_counts.py
+          python geocert_counts.py interval --corridor 4037abe9fea38e --cell 153124 --gene PECAM1 --budget 1 --output run/count.json
+          python geocert_counts.py verify run/count.json
           python geocert.py showcase --output run/showcase.json
           python geocert.py benchmark --repetitions 1 --scc --output-dir run/comparison
 
@@ -53,3 +57,17 @@ jobs:
         run: |
           python experiments/build_readout_inputs.py --source-root . --output run/readout_inputs.json
           python -c "import json; a=json.load(open('run/readout_inputs.json')); b=json.load(open('data/readout_inputs.json')); a.pop('parser'); b.pop('parser'); assert a == b"
+
+  budget-census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Recompute all count frontiers and enclosure comparisons
+        run: |
+          python experiments/budget_census.py --output-dir run/budgets
+          python -c "import gzip,json; a=json.load(open('run/budgets/native_frontiers.json')); b=json.load(gzip.open('results/budgets/native_frontiers.json.gz','rt')); assert a == b"
+          python -c "from pathlib import Path; assert Path('run/budgets/native_intervals.csv').read_bytes() == Path('results/budgets/native_intervals.csv').read_bytes()"
+          python experiments/perturb_map_diagnostic.py --samples 2000 --output run/perturb_map.json

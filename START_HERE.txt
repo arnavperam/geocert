@@ -1,0 +1,112 @@
+GEOCERT-ST: CERTIFIED-COUNT EXTENSION AND COMPLETE CHAT HANDOFF
+
+Status: executed research extension for author review. It is not a claim that the
+multi-donor, calibrated, whole-slide research program is complete. No conference
+registration or submission was performed. The original v1.0.0 tag stays fixed.
+
+READ THESE FIRST
+1. docs/budgets/Count_Intervals_Theory.pdf - definitions, proofs, executed results,
+   a source-mask-to-certificate figure, and corrections to the proposed agenda.
+2. NEXT_CHAT_PROMPT.txt - concrete continuation instructions and scientific gates.
+3. docs/budgets/NEXT_STUDY_PROTOCOL.txt - calibration, ground truth and benchmarks.
+4. manuscript/main.pdf and manuscript/supplement.pdf - the preceding ten-page
+   theory-first submission draft. They have not been silently rewritten around
+   the new count claims. Their sources and figures are included.
+
+WHAT WAS BUILT AND RUN
+- core/budget_counts.py: exact targeted gene-owner enumeration, minimum cost for
+  every attainable count, hard-budget intervals for every delta, Lagrangian outer
+  bounds with exact integer rounding, boundary witnesses and separate gaps.
+- core/optimal_cuts.py: the standard Picard-Queyranne residual DAG for ALL optimal
+  penalized cuts, projection to owner bits, possible owners, bounded enumeration.
+- core/calibration.py: a split-conformal quantile utility with abstention and
+  calibration/evaluation identifier checks. No biological calibration was fitted.
+- IntegerContrast: signed integer unary count contrasts using the same algorithms.
+  Robust contrast signs do not establish statistical differential expression/FDR.
+- geocert_counts.py: executable native-model query and deterministic replay API.
+- experiments/budget_census.py: complete same-data native analysis with a sound
+  singleton-threshold enclosure as comparator, including every null result.
+- experiments/perturb_map_diagnostic.py: executed synthetic demonstration that
+  local Gumbel perturbations plus exact MAP need not sample the exact Gibbs law.
+
+RESULTS YOU MAY QUOTE WITH THEIR SCOPE
+84 unchanged models = 42 selected local corridors x two geometric settings.
+One donor, two original crops. No additional platform, donor or ground truth.
+2,832 model-gene cases; 3,077 target-owner combinations; maximum eight per case.
+6,326 local cell-gene interval functions, of which 401 can vary within the family.
+31,630 intervals on illustrative budgets 0, 1/4, 1, 4, 16 square micrometres.
+1,331 nondegenerate intervals; all endpoint bounds match exact enumeration.
+32,506 bound checks including frontier thresholds and intervening midpoints.
+2,857 cut calls for the variable targets; fixed targets use feasibility directly.
+Five improvements over the singleton enclosure, all relaxed-family rows in three
+corridors. Zero baseline-grid improvements. These are dependent query counts.
+
+The native gene count problems are sparse and easy for targeted enumeration.
+Do not represent the thousands of output rows as thousands of biological samples,
+or as proof that the complete graph compiler is necessary for these queries.
+
+AN IMPORTANT NEGATIVE THEORETICAL RESULT
+Two RNA sites have minimum costs at counts 0, 1, 2 of 0, 1/16, 7/64.
+At delta=3/50, the exact interval is [0,0], but the BEST integer-rounded dual
+interval is [0,1]. At delta=1/16, count one is budget-optimal but never wins any
+penalty. The dual is sound; exactness requires witness agreement or another proof.
+
+REPRODUCE (PYTHON 3.12 OR 3.13; STANDARD LIBRARY FOR EXACT COMPUTATION)
+python geocert.py verify-manifest
+python tests/test_budget_counts.py
+python geocert_counts.py interval --corridor 4037abe9fea38e --cell 153124 --gene PECAM1 --budget 1 --output run/count.json
+python geocert_counts.py verify run/count.json
+python geocert_counts.py interval --corridor 4037abe9fea38e --cell 153124 --gene PECAM1 --budget 1 --method dual --output run/dual.json
+python experiments/budget_census.py --output-dir run/budgets
+python experiments/perturb_map_diagnostic.py --samples 2000
+
+The raw-crop check additionally needs NumPy and PyArrow. Figure generation needs
+NumPy and Matplotlib. No scientific library is needed for the exact interval API.
+The census takes around two minutes in the execution environment; that is a local
+observation, not a repeated hardware-controlled performance benchmark.
+
+WHERE THE EVIDENCE LIVES
+results/budgets/native_frontiers.json.gz - all count minima and boundary witnesses.
+  Read with gzip.open(..., 'rt') then json.load. The compressed file is small;
+  its content is about 12 MB. The reproduction script also emits plain JSON.
+results/budgets/native_intervals.csv - complete five-budget table, dual bounds,
+  singleton bounds, feasible penalty witnesses and count-detection statuses.
+results/budgets/tests.json - generated-model, native-scalar and counterexample checks.
+results/budgets/showcase_exact.json and showcase_dual.json - full example records.
+results/budgets/perturb_map.json - Monte Carlo diagnostic, separate from biology.
+data/native/ - supplied transcript crops, masks, metadata and source attribution.
+data/readout_inputs.json - verified crop-level Q20 counts for relevant cells.
+docs/DATA_PROVENANCE.md - source dataset and extraction provenance.
+
+FULL HISTORICAL ARTIFACT, INCLUDED OFFLINE
+The two files artifacts/publication_companion.zip.part01 and .part02 concatenate
+to the unchanged prior full ZIP, SHA256:
+c786d48ce8925c5e5fe45dd4a96a7782edc5ba61377d2f833e9ddd0c9c53ba60
+tools/fetch_companion.py can fetch and verify it if needed. The files already in
+this archive also allow an entirely offline concatenation. The historical ZIP
+contains archive/reviewed_research_archive.zip inside its release root, preserving
+earlier raw extraction, numerical studies, timing censuses and audit artifacts.
+
+WHAT REMAINS UNBUILT OR UNPROVED
+- Learned/calibrated geometric families and realistic error budgets.
+- New donors, tissue/platform breadth, orthogonal transcript ownership labels.
+- Held-out interval coverage, error AUROC, statistical DE/FDR or LR conclusions.
+- Matched ground-truth comparisons to Proseg, Baysor, ResolVI, BIDCell, Segger,
+  ovrlpy; they have different output objects and need task-specific comparisons.
+- General planar or 3D geometry, a geometry-specific hardness proof, global
+  relaxation/stitching guarantees, Rust/C++, dynamic flows or whole-slide scaling.
+- A licensed pip/conda distribution, SpatialData import, napari/Explorer overlays.
+- A published biological claim overturned or rescued by independent evidence.
+
+CLAIM BOUNDARIES
+The cost is minimum deformation for a complete owner vector. The new targeted
+enumeration additionally minimizes over all assignments with a specified count.
+Only the released observed-gene vocabulary is covered; unknown genes are rejected
+rather than treated as unmeasured zeros. All counts condition on a corridor and
+its settings; outside assignments stay
+fixed. Overlapping local corridors are not a coherent whole-tissue family.
+Delta is an area budget. Mu is an optimization dual variable, not a learned prior
+rate. Deterministic intervals have no nominal probability without calibration.
+AI assisted software, analysis and writing; human proof review and full authorship
+responsibility remain necessary. No software license was chosen on the author's
+behalf. Do not claim historical firstness or guaranteed acceptance.
