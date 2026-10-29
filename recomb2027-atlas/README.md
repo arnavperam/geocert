@@ -4,7 +4,7 @@ Exact cell-by-gene count intervals under a shared segmentation-deformation budge
 
 Code and data for **Certified Expression Intervals under Shared Segmentation Uncertainty**, by Arnav Peram. Version 1.1.0 combines continuous assignment costs, an exact count-chain dynamic program and compatible boundary patches.
 
-[Paper](manuscript/main.pdf) · [Supplement](manuscript/supplement.pdf) · [Fixed scientific source](https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas)
+[Paper](manuscript/main.pdf) · [Supplement](manuscript/supplement.pdf) · [Fixed scientific source](https://github.com/arnavperam/geocert/tree/f1e5dbb29c96d6b014508ce7f1eb1abcfb490190/recomb2027-atlas)
 
 A result is conditional on the recorded atlas: patch seams, uncovered boundaries, junction neighborhoods and nuclear owners stay fixed. The method measures sensitivity of retained observed counts; it does not estimate corrected anatomical assignments.
 

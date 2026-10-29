@@ -1,25 +1,45 @@
 {
   "title": "Certified Expression Intervals under Shared Segmentation Uncertainty",
-  "version": "1.1.0",
-  "revision_date": "2026-10-28",
-  "scientific_source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
-  "scientific_code_files_matched": 71,
+  "revision_date": "2026-10-29",
+  "scientific_source_commit": "f1e5dbb29c96d6b014508ce7f1eb1abcfb490190",
+  "base_core_files_unchanged": 71,
   "main_title_pages": 1,
   "main_body_pages": 10,
   "main_reference_pages": 2,
-  "supplement_pages": 16,
-  "abstract_words": 230,
+  "supplement_pages": 21,
+  "paper_size": "US Letter",
+  "body_font_pt": 10,
+  "margins_inches": 1,
+  "normal_main_figure_label_minimum_pt": 10,
+  "abstract_words": 238,
+  "abstract_only_sha256": "d07205888d01bcbca0f402057facd7b6c52f478d2d1b79977cad2b6b855aade1",
   "abstract_matches_tex_public_txt_and_rendered_pdf": true,
-  "abstract_only_sha256": "52905149d049f7d26688def2b82dbfa8402d623d459b72195c9b52046eb64bd7",
-  "formal_mathematical_environments_unchanged": {
-    "main": true,
-    "supplement": true
+  "formal_mathematics": {
+    "original_main_blocks_preserved": 20,
+    "original_supplement_blocks_preserved": 12,
+    "finite_union_proposition_added": true
   },
   "visual_qa": {
     "main_pages_reviewed": 13,
-    "supplement_pages_reviewed": 16,
+    "supplement_pages_reviewed": 21,
     "clipping_or_overlap": false,
-    "figure_labels_readable": true
+    "figure_labels_readable": true,
+    "changed_pages_after_previous_full_review": {
+      "main": [
+        1,
+        2,
+        4,
+        8,
+        11
+      ],
+      "supplement": [
+        16,
+        18,
+        19,
+        20,
+        21
+      ]
+    }
   },
   "latex_checks": {
     "undefined_references_or_citations": false,
@@ -27,22 +47,16 @@
     "warnings": false
   },
   "scientific_checks": [
-    "Invariance fractions recomputed from both primary interval CSVs",
-    "Eight- and 17-budget tightening counts recomputed",
-    "Co-detection values checked against both joint-marker summaries",
-    "Proseg output-background percentages checked",
-    "Adaptive-fallback dominance not asserted"
-  ],
-  "corrections": [
-    "Rewrite abstract and narrative around exact count certification",
-    "Add three-panel geometry schematic",
-    "Clarify cut representation and direct count DP roles",
-    "Report invariance and joint-marker results in the main paper",
-    "Correct breast EPCAM/PECAM1 co-detection summary",
-    "Add affiliation and contact; consolidate interpretation limits"
+    "All union spectra and intervals reconstructed independently; continuous selected witnesses checked",
+    "Both new raw-source crop populations checked against original vendor files",
+    "Complete larger-region question censuses, min-plus compositions, traces and interval endpoints reconciled",
+    "Thirty-two deterministic scalar samples agree; selection chronology recorded",
+    "600 \u00b5m initial deadline and retry preserved; cumulative timing reported",
+    "Primary, width-specific, union and native-region denominators kept separate"
   ],
   "source_url_visibly_printed": true,
-  "registration_or_submission_performed": false,
+  "source_url_hyperlink_in_both_pdfs": true,
+  "easychair_actions_performed_by_this_workflow": false,
   "sha256": {
     "figures/atlas_reference.pdf": "a3cb38999948ec3a251520bfcdba423697a43e351e6ea322ecf7e3d80bbd637e",
     "figures/atlas_reference.png": "f9bd29e856261f2cfb52ab0a216e73a04603d3364f97a4e2bd14024b06f44239",
@@ -50,36 +64,26 @@
     "figures/cell_witness.png": "a0d747a811bdb0a6908ac2c20b0ea82b8a2fec109c05a047284d5df674985e67",
     "figures/chain_scaling.pdf": "aef2f2db3d5d5204a3421e0e22942af0cd571966b7b2aedf22aebdae8d193385",
     "figures/chain_scaling.png": "7a5147a4ccc9fe2b3290f9d1ff5048467233bf0a1cb98dace3be36dbd17bc458",
+    "figures/contiguous_regions.pdf": "67ccf40d09801bee4a74655fec3b90f4024b9a3ef5cdf9681f8a4647a6e6f474",
+    "figures/contiguous_regions.png": "716311d538285f9b0df8e07b87b2dd8f959321c84e8c5528922970ffa64e17dc",
     "figures/count_curve.pdf": "f82920c9cdada88c21a8f2c8e52c51a1ccee660b0bc169cbc17ef6c484f95fd6",
     "figures/count_curve.png": "b57d642b38e0703f8f6baf85dbdf4de24e3c2a6b291a47ea6454f3142086819a",
-    "figures/geometry_pipeline.pdf": "7cc2b4e37e72e2e5df6169b2b6884455961b423ec3256b105c43f5df00709998",
-    "figures/geometry_pipeline.png": "94a2a9062692a7c00b64d0294c8b9ca8303d42b52017414707cf0f3815466ca0",
+    "figures/geometry_pipeline.pdf": "05484502be2f03652d3f7d7e24290ded8018daa857096dceea7b72510fdd13b7",
+    "figures/geometry_pipeline.png": "aa2b96a741eac74a3347d34f0a94a115b1a1e26539524160c69f5fbea43210a2",
     "figures/reach_coverage.pdf": "652dc37b367308cdfe25a33a296cc03e7f171d78ba77c221c40589fd661987f1",
     "figures/reach_coverage.png": "b74a8460d36265b54ffb951b19964b4ae17dcf82455bd815ef27ca217f98a016",
     "figures/width_budget.pdf": "052b3353149eb0ece044121c0b8fe87c3ec08350021ff0848fc062ef9da9b17c",
     "figures/width_budget.png": "e01547e54bb26cf92c1f88e261b5d182a95a58bf12da15f850f9708f35e5af1c",
-    "main.pdf": "fecbe6b9f160eeedd9a2f464a3473243b6d0fc8056d7f053529cfdec337f6c53",
-    "main.tex": "d452eb17c0756503b9f481be4a526770c761a9a6fc3e08c05f962dd6d24b7b18",
+    "main.pdf": "f17ebdc02ab2e9bdf6a62c1d294628f97d57192acc82746097a926a3aa557b0b",
+    "main.tex": "204700b953198aead99be03fedee33a3ff4ff6f97e5040dc083a411a13f9ab23",
     "original_saturation_table.tex": "f252740a7c2fa583317ea804c1ef709f637402b248e538221d0645405ef2b374",
     "reach_budget_tables.tex": "46803f4508c137576ba86c1dd04efc1acd0fb3d6b27675a1b86b7d2c57226228",
     "reach_table.tex": "6d2465a080f7b7b2753e45a8dd6b6df1aeb528ddf682326074f6756fae1b0868",
     "references.tex": "715eeb8dd5526bf353a094468028e610902463a575c9d6e265932b14d35c6693",
-    "scripts/geometry_pipeline.py": "16fa4db263e4b7235edb080429339a9ce518733d0eb2e0e49f0127511eff34da",
+    "scripts/geometry_pipeline.py": "5eb2e65a3ffa380ca5b0f5c9519e97db20b6bcdd620a6df8342aa1d2ed8f2891",
     "scripts/reach_figures.py": "b133dbf1cd14b940eab968d1dcf01d1ee961577685bdc07c26f4dc64d493c021",
     "supp_references.tex": "9f00bb8ebeadc73be680af3ecc6801095bc04bf3e205f18b41f72eab4c8f9c85",
-    "supplement.pdf": "ecddc0db23c795a0ae7f0f62fc53b68ad91949343ab16437c910252a1d5f0e83",
-    "supplement.tex": "34994ab787d4aa1c73a14122bece89b373e098ffe21a914c52f7ba7c7b17fe99"
-  },
-  "abstract_scope_revision": {
-    "requested_edits": 3,
-    "body_and_reference_pages_pixel_identical": true,
-    "changed_pdf_pages": [
-      1
-    ],
-    "main_body_pages": 10,
-    "supplement_unchanged": true,
-    "abstract_text_matches_pdf_with_superscript_normalization": true,
-    "coverage_denominator": "all reference boundary edges incident to eligible cells",
-    "titlepage_visually_reviewed": true
+    "supplement.pdf": "dd9695b50fcf37ccef2bd253d1740d5a80f7bc691964ce2d98f420cc9d93e99f",
+    "supplement.tex": "f50f95fb9f194b48f6d5ef54c86d497432203ce0e1c06f5cef02f33dec3e204f"
   }
 }

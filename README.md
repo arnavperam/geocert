@@ -4,7 +4,7 @@ Exact cell–gene count intervals under a shared segmentation-deformation budget
 
 Code and data for **Certified Expression Intervals under Shared Segmentation Uncertainty**, by Arnav Peram.
 
-[Paper](recomb2027-atlas/manuscript/main.pdf) · [Supplement](recomb2027-atlas/manuscript/supplement.pdf) · [Reproduction instructions](recomb2027-atlas/README.md) · [Scientific source cited in the paper](https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas)
+[Paper](recomb2027-atlas/manuscript/main.pdf) · [Supplement](recomb2027-atlas/manuscript/supplement.pdf) · [Reproduction instructions](recomb2027-atlas/README.md) · [Scientific source cited in the paper](https://github.com/arnavperam/geocert/tree/f1e5dbb29c96d6b014508ce7f1eb1abcfb490190/recomb2027-atlas)
 
 GeoCert computes the smallest and largest observed transcript counts attainable within a declared boundary family and total deformation budget. Exact rational costs and attaining boundaries accompany the endpoints. The family holds patch seams, junction neighborhoods, uncovered boundaries and nuclear owners fixed; the intervals describe sensitivity within that family rather than anatomical ground truth.
 

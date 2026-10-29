@@ -1,36 +1,30 @@
 {
-  "candidate": "GeoCert Atlas 1.1.0",
-  "scientific_source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
-  "scientific_source_url": "https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas",
-  "scientific_archive": {
-    "sha256": "1b08829e7e80a1e966a1bc39920dc4509af99f79ffd11dadfaa71b8338ca59d5",
-    "bytes": 74715174,
-    "manifest_entries": 366,
-    "files": 367,
-    "source_guards_match": true
-  },
-  "source_public_anonymously_verified": true,
-  "scientific_implementation_and_results_unchanged_since_source_commit": true,
+  "candidate": "GeoCert RECOMB 2027",
+  "base_package_version": "1.1.0",
+  "revision_date": "2026-10-29",
+  "scientific_source_commit": "f1e5dbb29c96d6b014508ce7f1eb1abcfb490190",
+  "scientific_source_url": "https://github.com/arnavperam/geocert/tree/f1e5dbb29c96d6b014508ce7f1eb1abcfb490190/recomb2027-atlas",
+  "source_public": true,
+  "base_scientific_source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
+  "base_archive_sha256": "1b08829e7e80a1e966a1bc39920dc4509af99f79ffd11dadfaa71b8338ca59d5",
+  "base_core_files_unchanged": 71,
   "document_sha256": {
-    "main.pdf": "fecbe6b9f160eeedd9a2f464a3473243b6d0fc8056d7f053529cfdec337f6c53",
-    "supplement.pdf": "ecddc0db23c795a0ae7f0f62fc53b68ad91949343ab16437c910252a1d5f0e83"
+    "main.pdf": "f17ebdc02ab2e9bdf6a62c1d294628f97d57192acc82746097a926a3aa557b0b",
+    "supplement.pdf": "dd9695b50fcf37ccef2bd253d1740d5a80f7bc691964ce2d98f420cc9d93e99f"
   },
   "body_pages": 10,
-  "supplement_pages": 16,
-  "abstract_words": 230,
+  "supplement_pages": 21,
+  "abstract_words": 238,
+  "abstract_sha256": "d07205888d01bcbca0f402057facd7b6c52f478d2d1b79977cad2b6b855aade1",
   "abstract_matches_rendered_pdf": true,
-  "ci_scope": "Dedicated read-only workflow validates the public scientific archive and code; use actual GitHub Actions results for completion status.",
-  "document_corrections": [
-    "Rewrite abstract and narrative around exact count certification",
-    "Add three-panel geometry schematic",
-    "Clarify cut representation and direct count DP roles",
-    "Report invariance and joint-marker results in the main paper",
-    "Correct breast EPCAM/PECAM1 co-detection summary",
-    "Add affiliation and contact; consolidate interpretation limits",
-    "Qualify abstract invariance by movement range and coverage; identify breast format-test input and endpoint witnesses"
-  ],
-  "previous_document_commit": "b39a22ec0e6adb08461d71ee2bc4b4d8d02a0f7c",
-  "last_completed_scientific_ci": [
-    "https://github.com/arnavperam/geocert/actions/runs/40789881440"
-  ]
+  "extension_records_sha256": {
+    "extensions/atlas_union/results/summary.json": "62d8d76066bf20a62de7d42f52baf8573d472cc862ffc38336219c763a3b7484",
+    "extensions/atlas_union/results/independent_verification.json": "a7c230099ec2d9beed89c24bdb7bea83d4f6665e1752c4ee53b6a3686c056b6d",
+    "extensions/scaling/artifact_manifest.json": "b44b8a6de3ba633cdbc51eaa4a194269cbcbd3000a3516a0e6f9815e50acc2e0",
+    "extensions/scaling/results/contiguous_summary.json": "6a4c6bf7008e602d889266816ef30e7444165581af7fae0b85f397dec9cf692c",
+    "extensions/scaling/results/source_audit.json": "eb4a8ce24a00092371bafe4c90a26fe9b81dce4b3351f19b364437730b5d6ed0"
+  },
+  "ci_url": "https://github.com/arnavperam/geocert/actions/workflows/atlas-final.yml",
+  "ci_scope": "Original exact replay, finite-union recomputation and independent witness verification, restored contiguous-region census/composition/endpoint audits, independent scalar samples on both Python 3.12 and 3.13, and published document/data byte hashes. Consult the run for the current commit.",
+  "previous_document_commit": "c0f245a31393d01f4ef4e1ba556d7541b8a7964c"
 }

@@ -7,5 +7,5 @@ authors:
     given-names: Arnav
 version: 1.1.0
 repository-code: "https://github.com/arnavperam/geocert"
-url: "https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas"
+url: "https://github.com/arnavperam/geocert/tree/f1e5dbb29c96d6b014508ce7f1eb1abcfb490190/recomb2027-atlas"
 abstract: "Exact transcript-count intervals and attaining boundaries under a shared segmentation-deformation budget."

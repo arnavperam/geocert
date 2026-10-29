@@ -120,6 +120,11 @@ The run is exactly $u=r(t)$, with slopes $+1$ or $-1$ between its recorded raste
 \]
 The pixel size $p$ is read from the source coordinate transformation and retained as an exact rational value. An accepted ribbon has $v\in[-B,B]$, allowed displacement $|h(t)|\le3B/4$, $|h(t)-h(t')|\le|t-t'|$, and zero endpoint displacement. The RNA clearance is $\rho=10^{-6}/p$ in chart coordinates; it separates the two admissible ownership sides numerically. Together these settings define the geometric sensitivity family.
 
+\begin{figure}[t]\centering
+\includegraphics[width=.90\textwidth]{figures/atlas_reference.pdf}
+\caption{Reference labels and observed RNAs in a lung-crop excerpt. Lines mark editable source arcs; the scale bar is $10\,\mu\mathrm m$. Ribbons belong to one disjoint atlas. Their endpoint seams, junction neighborhoods and uncovered interfaces stay fixed.}\label{fig:supp-atlas}
+\end{figure}
+
 \subsection{Acceptance and nuclear constraints}
 Every piece of the left/right half-ribbon is clipped against intersecting native pixels using rational polygon arithmetic. Positive-area intersections must have the declared left/right source labels. Pairwise ribbon interiors must be disjoint. A geometric spatial index selects candidate pairs for the final rational intersection test. RNA coordinates are transformed through the exact chart and their nominal side must agree with the original source mask. A molecule may occur in at most one accepted patch.
 
@@ -222,6 +227,51 @@ Using changes prevents counting fixed exterior molecules more than once. Zero-re
 The outer baseline lets every individually affordable RNA choose a feasible owner independently. It can combine incompatible changes or overspend the budget; its interval is an outer bound. The additive inner baseline retains exact local feasibility, charges every changed RNA its singleton minimum (including collateral genes), and composes these costs. Under zero-cost source admissibility, this sum upper-bounds shared area, so budget feasibility is an inner approximation. The comparison therefore distinguishes over-permissive independent transfers from over-conservative additive costs.
 
 For co-detection, retain a two-dimensional score and compose vector spectra. Marginal endpoints need not coexist. The tested predicate is $N_{g_1}>0$ and $N_{g_2}>0$, classified as always, never or variable over the budgeted spectrum. The resulting classification describes the stability of observed co-detection under the chosen family.
+
+\subsection{Finite unions of complete atlas families}\label{sec:union}
+All member families use one reference partition, one retained observation set with fixed cell and gene identifiers, and the same changed-label physical-area functional. A member specifies its entire atlas, including fixed seams, uncovered regions, slope and nuclear constraints. For $\mathcal F_\cup=\bigcup_{a=1}^A\mathcal F_a$, every permissible partition is a member of at least one complete family.
+
+For a count query $N$, define $S_a(q)=\min\{D(f):f\in\mathcal F_a,\ N(f)=q\}$, with $+\infty$ for absent states. Then
+\[
+ S_\cup(q)=\min_a S_a(q).
+\]
+Indeed, any union realization lies in a member and costs at least that member's minimum for its count, proving the lower bound. A member attaining the least finite minimum supplies the reverse bound and its entire partition as a witness. Since the number of members is finite and finite member minima are attained, every finite union minimum is attained. The budget-feasible count set is the union of the member feasible-count sets. Its minimum and maximum are therefore the minimum lower endpoint and maximum upper endpoint of the nonempty members. All-empty members yield an empty union.
+
+Store each count's selected member identity together with the member's complete attaining trace. Tied minima are resolved by a fixed member order. The implementation combines spectra, never overlapping ribbons from different members. Thus each witness satisfies the original gluing theorem. Different count endpoints can select different members, just as marginal endpoints within one atlas can select different partitions. A joint marker or complete-matrix query must select a member for the entire query. If every member excludes an assignment vector, their union excludes that vector as well.
+
+The unified question census contains every cell--gene key with a positive source count or an editable observation in any member. A member missing a query contributes the singleton source count at zero area only when its atlas establishes that the count is fixed and its source partition is feasible at zero cost. A missing expected spectrum or an unresolved computation is an error, rather than evidence of invariance. Source counts and observation identifiers are checked across members before union. These checks distinguish fixed-count completion from silent changes of the measured population.
+
+The union census contains 3,766 lung and 25,446 breast questions, yielding 29,212 spectra and 496,604 interval rows on the 17-budget grid. At area $4\,\mu\mathrm m^2$, 2,905/3,766 lung counts (77.1\%) and 17,160/25,446 breast counts (67.4\%) are invariant. For comparison on the unchanged primary question census, the corresponding counts are 2,524/3,304 (76.4\%) and 15,143/22,976 (65.9\%). The first pair of fractions describes the complete union output; the second isolates interval changes for the original questions.
+
+For example, lung crop~1 cell~51003 has one source \textit{CAVIN2} transcript. The primary family keeps this count fixed, whereas the $0.5\,\mu\mathrm m$ support-halfwidth member attains count zero, matching the adapted Proseg count. Its complete atlas witness uses one changed patch with area approximately $0.001161\,\mu\mathrm m^2$; all other patches remain at their sources. Thus the union's gains include alternative patch selection as well as larger allowed movements.
+
+\begin{table}[ht]\centering
+\begin{tabular}{rrrrr}\toprule
+Area ($\mu\mathrm m^2$)&Lung invariant&Breast invariant&Lung widened&Breast widened\\\midrule
+0&3,304&22,976&0&0\\
+0.005&3,155&21,482&8&65\\
+0.01&3,102&20,976&9&82\\
+0.025&3,006&20,045&12&142\\
+0.05&2,924&19,126&15&202\\
+0.1&2,844&18,279&33&364\\
+0.15&2,784&17,734&42&462\\
+0.2&2,731&17,360&55&527\\
+0.25&2,710&17,097&77&838\\
+0.375&2,663&16,575&128&1,532\\
+0.5&2,629&16,293&169&1,979\\
+0.75&2,602&15,961&208&2,461\\
+1&2,582&15,762&230&2,747\\
+2&2,542&15,342&279&3,332\\
+4&2,524&15,143&298&3,595\\
+8&2,517&15,113&306&3,643\\
+16&2,517&15,113&306&3,643\\
+\bottomrule\end{tabular}
+\caption{Union certificates on the unchanged primary question census: 3,304 lung and 22,976 breast cell--gene keys. Invariant counts have singleton union intervals. Widened counts have at least one endpoint strictly beyond the primary interval at the same budget.}\label{tab:union-budgets}
+\end{table}
+
+After the member computations, merging requires $O(\sum_a K_a)$ rational comparisons for $K_a$ stored count states. There is no product over member states. Including the primary family gives $\mathcal F_{\mathrm{primary}}\subseteq\mathcal F_\cup$, so its feasible counts and fixed-key reference-count reach are preserved. A union may therefore widen intervals and reduce the number of certified singleton counts. Its reported invariance denominator and interval table are recomputed for the declared union census.
+
+For the union comparison, form each member's independent-molecule outer interval at the same budget, then take the smallest lower endpoint and largest upper endpoint across members. This envelope contains the exact union interval. We count a question once if the outer width reaches at least two anywhere on the 17-budget grid, and once as tightened if an exact endpoint is strictly inside the envelope at any grid budget. All tightened questions satisfy that eligibility rule. On the full union census, 29/102 lung and 791/2,076 breast questions tighten; on the primary census alone, the corresponding values are 28/101 and 783/2,058. These denominators describe the union outer interval, rather than the number of movable transcripts in an individual patch.
 
 \section{Data, extraction and complete experimental denominators}
 The lung inputs are two 200-micrometre crops of a public Xenium lung-cancer specimen, containing 7,370 retained Q20 measured-gene RNA records. The atlas is extracted directly from the source masks with complete reference-cell containment; it replaces the overlapping corridors of the earlier implementation.
@@ -349,7 +399,7 @@ Breast&EPCAM/PTPRC&48&2&46&4\\
 \end{table}
 
 \paragraph{Interpretation.}
-These experiments quantify sensitivity within the stated geometric family. Fixed seams and junctions restrict its reach, and its width and budget parameters have yet to be anatomically calibrated. The two crops per tissue and repeated budget queries provide computational replication, rather than an independent donor cohort. The breast crop provenance limits biological interpretation. The nuclear and Proseg comparisons measure alternative assignments; they provide neither transcript-level truth nor a segmentation-accuracy benchmark. Likewise, stable or removable co-detection alone does not identify a cell state, doublet or leakage.
+These experiments quantify sensitivity within the stated geometric family. Fixed seams and junctions restrict its reach, and its width and budget parameters have yet to be anatomically calibrated. The reference comparisons use two crops per tissue; repeated budget queries provide computational replication rather than an independent donor cohort. The breast crop provenance limits biological interpretation. The nuclear and Proseg comparisons measure alternative assignments; they provide neither transcript-level truth nor a segmentation-accuracy benchmark. Likewise, stable or removable co-detection alone does not identify a cell state, doublet or leakage.
 
 \FloatBarrier
 \section{Validation and resource measurements}
@@ -381,6 +431,11 @@ Independent scalar enumeration checks a deterministic hash-selected sample of up
 
 A single process per width computes its complete spectra with a 60-second local chain allowance. Timings for these simultaneous runs record their computational cost; the sequential repeated scaling experiment below measures runtime under a controlled schedule. All computations use the same ingested observations, masks and prepared atlas geometry.
 
+\subsection{Union reconstruction and witness checks}
+A separate implementation checks the common source hashes, retained RNA records, complete source counts and positive-or-editable question census across all members. It independently merges the validated component spectra and recomputes all 29,212 union spectra, 42,123 finite count states and 496,604 interval rows. It also checks all 2,254,727 member rows on the 17-budget grid, all 68 population/budget summaries and the three reference-reach totals.
+
+Each union count state carries one member identity. The checker validates 39,191 explicit whole-atlas traces and 2,932 fixed-count completions, including 18,762 distinct local boundary witnesses. Direct piecewise-linear checks verify slopes, bands, clearance, nuclear pins, endpoint seams and integrated rational area. Five deliberately invalid boundary mutations are rejected. All checks pass in 142.29 seconds in the recorded environment. The component minimum-area values are those validated in the primary and width analyses above; this new pass independently checks their union and attaining realizations.
+
 \subsection{Count-chain scaling}
 The fixed constructed family has flat source, slope one, equal flipped height $h=1/4$, site spacing $d=1/10$, clearance $1/1000$, a containing band and endpoints outside all tents. The minimum for $k\ge1$ changes is
 \[
@@ -401,6 +456,40 @@ RNA&Count levels&Mesh nodes&Height candidates&Visited states&Median total(s)\\\m
 
 The 128-RNA totals range from 40.189 to 42.704 seconds. Median mesh compilation is approximately 2.033 seconds and dynamic programming plus all witness output/checking approximately 40.152 seconds; separate medians need not sum exactly. The tested limits are 300,000 retained candidate heights, one million visited states, 60 seconds for preparation, 90 seconds for dynamic programming, and 160 seconds for a complete process. Requested single-thread environment variables are recorded, but the arithmetic is Python integer/Fraction work. Peak whole-process RSS at the largest size is approximately 205 MiB and includes imports. Raw process records contain the exact environment and wall/memory measurements.
 
+\subsection{Contiguous native-mask regions}
+We acquired the complete breast format-test source and fixed central squares with nominal sides $400$ and $600\,\mu\mathrm m$ from the raster dimensions before extracting their transcripts or computing counts (Figure~\ref{fig:contiguous-regions}). The $400\,\mu\mathrm m$ selection uses pixel bounds $[1955,3837)\times[823,2705)$, giving a $1882\times1882$-pixel region with actual side approximately $399.925\,\mu\mathrm m$. The $600\,\mu\mathrm m$ selection uses $[1484,4307)\times[353,3176)$, giving $2823\times2823$ pixels and an actual side of $599.888\,\mu\mathrm m$. These extend the contiguous computational footprint within the same format-test source. The regions overlap previous crops, so their cell totals are reported separately.
+
+An independent source audit imports no preparation adapter or GeoCert module. It verifies the archive and seven member hashes, rational pixel assignments for all 1,035,543 Q20 measured-gene source candidates, and both regions' prepared masks, retained RNA records and source counts. Both inputs pass, with zero source-owner disagreements.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=0.91\textwidth]{figures/contiguous_regions.pdf}
+\caption{Prespecified contiguous regions in the original breast format-test raster. Central squares with nominal sides $400\,\mu\mathrm m$ (blue, solid) and $600\,\mu\mathrm m$ (orange, dashed) were fixed from raster dimensions before transcript extraction. Pixel-aligned sides are approximately $399.925$ and $599.888\,\mu\mathrm m$; the source extent is $1230.800\times749.913\,\mu\mathrm m$. Outlines identify selected regions; computational status is reported in the text.}\label{fig:contiguous-regions}
+\end{figure}
+
+The completed $400\,\mu\mathrm m$ analysis contains 1,363 crop-contained connected cells and 226,983 retained Q20 measured-gene transcripts. The primary adaptive extraction rule produces 5,102 disjoint ribbons, containing 29,011 transcripts and covering 137,516 of 211,770 eligible incident edges (64.94\%). The unchanged chain backend computes 69,278 cell--gene spectra and 554,224 exact rows on the original eight-budget grid. The largest ribbon contains 50 RNAs and the largest local gene query has seven copies; 3,594 chain queries visit 7,039,980 height/count states. This region evaluates the primary family, separately from the five-family union above. There are no failed geometry checks or resource-limited local queries.
+
+The completed $600\,\mu\mathrm m$ analysis contains 3,171 complete cells, 470,293 retained transcripts and 11,748 primary-atlas ribbons. These contain 62,108 transcripts and cover 318,946 of 478,423 eligible incident edges (66.67\%). The exact enumeration backend computes 152,925 cell--gene spectra and 1,223,400 rows on the same eight-budget grid. A backend amendment recorded before this count computation permits enumeration only after an input check establishes at most 16 target copies per local gene, within a 65,536-pattern cap. The largest observed query has seven copies. The completed result has zero failed geometry checks and zero unresolved or resource-limited local queries.
+
+\begin{table}[ht]\centering
+\begin{tabular}{lrrrr}\toprule
+&\multicolumn{2}{c}{$400\,\mu\mathrm m$: chain}&\multicolumn{2}{c}{$600\,\mu\mathrm m$: enumeration}\\
+Stage&Wall (s)&RSS (MiB)&Wall (s)&RSS (MiB)\\\midrule
+Atlas extraction from masks&152.46&960.43&423.93&1,920.03\\
+Rational geometry validation&199.66&364.88&480.19&780.73\\
+Counts, witnesses and serialization&1,000.91&2,488.77&878.95&2,251.76\\\midrule
+Completed stages&1,353.03&---&1,783.07&---\\\bottomrule
+\end{tabular}
+\caption{Completed stages on the two prespecified regions. Wall times include startup and serialization; each stage runs in a fresh process. RSS is peak process memory including imports. The $600\,\mu\mathrm m$ column excludes an interrupted count attempt; its cumulative attempt cost is reported in the text. The regions use different exact backends.}\label{tab:contiguous-timing}
+\end{table}
+
+The $600\,\mu\mathrm m$ run initially exhausted its whole-run allowance during enumeration, after 1,321.07 seconds. A recorded amendment then allowed one count-only retry, capped at 1,200 seconds, using the same validated atlas, backend and local limits. The completed retry takes 892.04 seconds including its outer checks. Cumulative measured attempt time is therefore 2,213.11 seconds (36.89 minutes), including the interrupted work. This differs from the 1,783.07-second sum of successfully completed stages in Table~\ref{tab:contiguous-timing}. The failed attempt and amendment remain in the record. Source-crop preparation takes 12.44 and 20.74 seconds for the two regions; coverage accounting takes 1.02 and 2.38 seconds, respectively, separately from the completed-stage sums.
+
+Independent output audits take 19.65 and 33.69 seconds, separately from these run times. For the $400\,\mu\mathrm m$ region, the audit checks all 24,132 local spectra, 39,519 local witness records, 95,253 cell-state traces and 554,224 interval rows. For the $600\,\mu\mathrm m$ region, it checks 52,169 local spectra, 85,335 local witness records, 208,555 cell-state traces and all 1,223,400 rows. The audits independently reconstruct min-plus compositions and reconcile recorded witness ownership counts and areas. Local optimality is provided by the unchanged exact solvers, which also check continuous boundaries.
+
+Separate scalar Fraction enumeration checks 16 local multicopy queries per region, using a deterministic input-only hash rule and importing no production geometry or optimization routines. The $400\,\mu\mathrm m$ selection was fixed before production from 3,590 eligible queries with two--six target copies; the selected queries have two--four copies. The same pre-existing rule selects 16 of 7,438 eligible $600\,\mu\mathrm m$ queries after that production run, before inspecting its spectra; selected queries have two--six copies. The checks enumerate 92 and 152 target assignments and recover 38 and 33 finite count states, respectively. All 32 complete spectra match exactly, with no errors or resource limits under a 15-second per-query cap.
+
+The run uses Linux and Python 3.12.14 with numerical-library thread limits set to one, while unrelated work runs in the shared environment. The timings describe this workload under those conditions. The source archive hash, selection protocol, stage logs and output hashes accompany the results.
+
 \FloatBarrier
 \section{Reproduction, data rights and assistance}
 The prepared-input exact workflow uses Python's standard library. Geometry extraction, raster reference analysis and plotting additionally use the declared analysis dependencies. The main commands are:
@@ -415,8 +504,9 @@ python analysis/reach/report.py
 \end{verbatim}
 The README lists separate commands for each main table and figure, the original full count computations and each width-specific recomputation. Compressed result files are restored only after their stored and expanded checksums agree. Source packages retain all original and new spectra, witnesses, comparison keys, Proseg records, selection rules and reference masks. The archive records both exact numerical checks and the environments used for runtime measurements.
 
-The GeoCert software is released under the MIT License. Original 10x data retain CC BY 4.0 attribution and the breast format-test limitation. Proseg retains its upstream rights; its executable is not redistributed. Source code, inputs and exact results for the 1.1.0 companion are publicly archived at \url{https://github.com/arnavperam/geocert/tree/6581f628a5ac8fb83629f9e0dee0ffa4d685375d/recomb2027-atlas}. This immutable source revision is distinguished from the separately rebuilt PDF artifacts in the release record.
+The GeoCert software is released under the MIT License. Original 10x data retain CC BY 4.0 attribution and the breast format-test limitation. Proseg retains its upstream rights; its executable is not redistributed. Source code, inputs and exact results for the 1.1.0 companion are publicly archived at \url{https://github.com/arnavperam/geocert/tree/f1e5dbb29c96d6b014508ce7f1eb1abcfb490190/recomb2027-atlas}. This immutable source revision is distinguished from the separately rebuilt PDF artifacts in the release record.
 
 Generative AI assisted mathematical development, code, experiments, checking and drafting. The author is responsible for the submitted claims and their explanation. The validation sections specify the independent calculations and their shared inputs.
+\clearpage
 \input{supp_references.tex}
 \end{document}
