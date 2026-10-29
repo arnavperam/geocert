@@ -1,0 +1,228 @@
+{
+  "atlas_id": "b09a4b13ef12f50d3ef6714ac6f39a2898a6abfdf21035ab3002de2a23802a62",
+  "attained_count": 0,
+  "cell": 51003,
+  "continuous_witness_check": "passed",
+  "dataset": "lung",
+  "gene": "CAVIN2",
+  "member_atlas_path": "reach/lung/r0p5/data/atlas_roi_01.json",
+  "minimum_area_um2": "23161873698397813893721/19946736456192000000000000",
+  "model_id": "dc4267fdc3b4a46c5cfafad082d1f3f6d713e2af5dd0c06c417f64cad9c707ce",
+  "patch_witnesses": [
+    {
+      "boundaries": [
+        [
+          [
+            "0",
+            "15800474760747/1342177280000",
+            "0",
+            "0"
+          ],
+          [
+            "15800474760747/1342177280000",
+            "25767768433/2147483648",
+            "0",
+            "-152190254939/671088640000"
+          ],
+          [
+            "25767768433/2147483648",
+            "16409235780503/1342177280000",
+            "-152190254939/671088640000",
+            "0"
+          ],
+          [
+            "16409235780503/1342177280000",
+            "26",
+            "0",
+            "0"
+          ]
+        ]
+      ],
+      "cell_count_change": -1,
+      "left_gene_count": 0,
+      "owners": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "patch": {
+        "area_scale_um2": "549755813888/24349043525625",
+        "band_halfwidth_pixels": "39/16",
+        "cell_labels": [
+          51003,
+          0
+        ],
+        "clearance_pixels": "197379/41943040000",
+        "domain_pixels": [
+          0,
+          26
+        ],
+        "halfwidth_pixels": "13/4",
+        "id": "4818708c2a6797e5",
+        "length_edges": 26,
+        "nuclear_constraints": [],
+        "points": [
+          {
+            "gene": "CAPN8",
+            "global_x_um": "4580.421875",
+            "global_y_um": "2838.370361328125",
+            "source": 1,
+            "t": "81127583441/4294967296",
+            "transcript_id": "281689725098376",
+            "x": "4450437999/2147483648"
+          },
+          {
+            "gene": "EPCAM",
+            "global_x_um": "4580.22314453125",
+            "global_y_um": "2836.68603515625",
+            "source": 0,
+            "t": "13894232977/536870912",
+            "transcript_id": "281689725110987",
+            "x": "-2168993565/1073741824"
+          },
+          {
+            "gene": "CD8A",
+            "global_x_um": "4578.8974609375",
+            "global_y_um": "2839.303955078125",
+            "source": 0,
+            "t": "31447289141/4294967296",
+            "transcript_id": "281689725140509",
+            "x": "-1340595651/536870912"
+          },
+          {
+            "gene": "CAVIN2",
+            "global_x_um": "4579.5634765625",
+            "global_y_um": "2838.97607421875",
+            "source": 0,
+            "t": "25767768433/2147483648",
+            "transcript_id": "281689725226606",
+            "x": "-243499355/1073741824"
+          }
+        ],
+        "slope": "1",
+        "source_path_pixels": [
+          [
+            839,
+            189
+          ],
+          [
+            840,
+            189
+          ],
+          [
+            841,
+            189
+          ],
+          [
+            841,
+            188
+          ],
+          [
+            842,
+            188
+          ],
+          [
+            843,
+            188
+          ],
+          [
+            843,
+            187
+          ],
+          [
+            844,
+            187
+          ],
+          [
+            844,
+            186
+          ],
+          [
+            845,
+            186
+          ],
+          [
+            845,
+            185
+          ],
+          [
+            845,
+            184
+          ],
+          [
+            846,
+            184
+          ],
+          [
+            846,
+            183
+          ],
+          [
+            846,
+            182
+          ],
+          [
+            847,
+            182
+          ],
+          [
+            847,
+            181
+          ],
+          [
+            848,
+            181
+          ],
+          [
+            848,
+            180
+          ],
+          [
+            849,
+            180
+          ],
+          [
+            849,
+            179
+          ],
+          [
+            849,
+            178
+          ],
+          [
+            850,
+            178
+          ],
+          [
+            850,
+            177
+          ],
+          [
+            850,
+            176
+          ],
+          [
+            850,
+            175
+          ],
+          [
+            850,
+            174
+          ]
+        ],
+        "sx": 1,
+        "sy": -1,
+        "unmerged_nuclear_fragments": 0
+      },
+      "patch_id": "4818708c2a6797e5",
+      "physical_area_um2": "23161873698397813893721/19946736456192000000000000"
+    }
+  ],
+  "roi": "roi_01",
+  "schema": "geocert-atlas-union-1",
+  "scope": "One complete member atlas. All patches absent from this trace stay at their zero-displacement source.",
+  "setting": "0.5",
+  "source_count": 1,
+  "source_spectrum_path": "reach/lung/r0p5/results/cell_spectra.json"
+}

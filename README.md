@@ -24,6 +24,12 @@ python3 atlas_cli.py showcase --output run/showcase.json
 
 The example returns `[19, 23]` at 0.25 µm² and `[17, 23]` at 0.5 µm² for LDHB in cell 81 of breast format-test crop 1, together with a boundary attaining count 17. Keep Python assertions enabled. The [archive notes](recomb2027-atlas/ARCHIVE.md) describe checksum verification and extraction.
 
+## Compare complete atlas families
+
+The finite-family extension evaluates the primary atlas and four wider-support alternatives. Each endpoint comes from one complete member atlas and retains its boundary witness. The [extension instructions](recomb2027-atlas/extensions/atlas_union/README.md) reproduce all 496,604 interval rows and run a separate verifier.
+
+On the same comparison keys, the union attains 315 of 2,798 Proseg count changes, compared with 185 for the primary atlas. At 4 µm², 76.4% of the original lung count questions and 65.9% of the breast questions remain invariant under the expanded family. Both the primary and union results are reported in the paper.
+
 ## Reproduce the paper
 
 [Atlas 1.1.0](recomb2027-atlas/) contains the implementation, tests, protocols and checked input/results archive. Its [README](recomb2027-atlas/README.md) gives commands for the primary count tables, the four-width study, geometry checks and figures. [CI](https://github.com/arnavperam/geocert/actions/workflows/atlas-final.yml) checks the exact replay on Python 3.12 and 3.13.

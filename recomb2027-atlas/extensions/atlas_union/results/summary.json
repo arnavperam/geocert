@@ -1,0 +1,335 @@
+{
+  "budgets_um2": [
+    "0",
+    "1/200",
+    "1/100",
+    "1/40",
+    "1/20",
+    "1/10",
+    "3/20",
+    "1/5",
+    "1/4",
+    "3/8",
+    "1/2",
+    "3/4",
+    "1",
+    "2",
+    "4",
+    "8",
+    "16"
+  ],
+  "count_states": 42123,
+  "datasets": [
+    {
+      "baseline_questions": 3304,
+      "binding": {
+        "0.5": [
+          {
+            "atlas_id": "b09a4b13ef12f50d3ef6714ac6f39a2898a6abfdf21035ab3002de2a23802a62",
+            "editable_transcripts": 396,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 142,
+            "retained_transcripts": 5847,
+            "roi": "roi_01",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          },
+          {
+            "atlas_id": "b99b1f3c61beef3c1f8356a096262de97a1680dca5dc26a832c7d3aa80c6f916",
+            "editable_transcripts": 73,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 172,
+            "retained_transcripts": 1523,
+            "roi": "roi_02",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          }
+        ],
+        "1": [
+          {
+            "atlas_id": "efb435af93ded9acfa0c6d7110f52319d556861e7c40bd2747f157f5c272a565",
+            "editable_transcripts": 606,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 112,
+            "retained_transcripts": 5847,
+            "roi": "roi_01",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          },
+          {
+            "atlas_id": "23e281f06edb53894c32d32192963b41fd0ebd2261637463fe486de8c2d8d6da",
+            "editable_transcripts": 125,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 137,
+            "retained_transcripts": 1523,
+            "roi": "roi_02",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          }
+        ],
+        "2": [
+          {
+            "atlas_id": "8879908e21206c050585b3a0cbd84b2a17f1db7a5ff72b5efd831efcd4f789f4",
+            "editable_transcripts": 843,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 83,
+            "retained_transcripts": 5847,
+            "roi": "roi_01",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          },
+          {
+            "atlas_id": "faa0b4946207a61fac11eaa055829d4b053ba9b73b2570c2638936cbb7bab0b3",
+            "editable_transcripts": 214,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 102,
+            "retained_transcripts": 1523,
+            "roi": "roi_02",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          }
+        ],
+        "3": [
+          {
+            "atlas_id": "c2545b134f710c16c07bd6913b61a7508b89d570677628dc214360f5ffbdac47",
+            "editable_transcripts": 905,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 59,
+            "retained_transcripts": 5847,
+            "roi": "roi_01",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          },
+          {
+            "atlas_id": "a1ac0a167f901b3e5e3fbe83af236f33aad456503fb43b774a7715ef8e39eb0a",
+            "editable_transcripts": 246,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 76,
+            "retained_transcripts": 1523,
+            "roi": "roi_02",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          }
+        ],
+        "baseline": [
+          {
+            "atlas_id": "ffd6833d5755400b7932feb9c2544a7f132b9e58993d4e1f978e28a923071c53",
+            "editable_transcripts": 627,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 276,
+            "retained_transcripts": 5847,
+            "roi": "roi_01",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          },
+          {
+            "atlas_id": "8d03e299e445cd8594d856d5c797cef516cb835b0b8646fe553f12231b5ff772",
+            "editable_transcripts": 118,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 268,
+            "retained_transcripts": 1523,
+            "roi": "roi_02",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          }
+        ]
+      },
+      "common_reference_digest": "1747f8f7b4af2d2ea2387fc5a9169aef30f1bd2987abf3fefa42eb1177897c43",
+      "component_global_spectra_checked": 16645,
+      "component_global_traces_checked": 18877,
+      "count_states": 4764,
+      "dataset": "lung",
+      "ever_eligible_marginal_width_ge2": {
+        "baseline_questions": 101,
+        "union_questions": 102
+      },
+      "ever_tightened_questions": {
+        "baseline_questions": 28,
+        "union_questions": 29
+      },
+      "interval_rows": 64022,
+      "member_atlas_ids": {
+        "0.5": {
+          "roi_01": "b09a4b13ef12f50d3ef6714ac6f39a2898a6abfdf21035ab3002de2a23802a62",
+          "roi_02": "b99b1f3c61beef3c1f8356a096262de97a1680dca5dc26a832c7d3aa80c6f916"
+        },
+        "1": {
+          "roi_01": "efb435af93ded9acfa0c6d7110f52319d556861e7c40bd2747f157f5c272a565",
+          "roi_02": "23e281f06edb53894c32d32192963b41fd0ebd2261637463fe486de8c2d8d6da"
+        },
+        "2": {
+          "roi_01": "8879908e21206c050585b3a0cbd84b2a17f1db7a5ff72b5efd831efcd4f789f4",
+          "roi_02": "faa0b4946207a61fac11eaa055829d4b053ba9b73b2570c2638936cbb7bab0b3"
+        },
+        "3": {
+          "roi_01": "c2545b134f710c16c07bd6913b61a7508b89d570677628dc214360f5ffbdac47",
+          "roi_02": "a1ac0a167f901b3e5e3fbe83af236f33aad456503fb43b774a7715ef8e39eb0a"
+        },
+        "baseline": {
+          "roi_01": "ffd6833d5755400b7932feb9c2544a7f132b9e58993d4e1f978e28a923071c53",
+          "roi_02": "8d03e299e445cd8594d856d5c797cef516cb835b0b8646fe553f12231b5ff772"
+        }
+      },
+      "model_id": "dc4267fdc3b4a46c5cfafad082d1f3f6d713e2af5dd0c06c417f64cad9c707ce",
+      "new_questions": 462,
+      "union_questions": 3766
+    },
+    {
+      "baseline_questions": 22976,
+      "binding": {
+        "0.5": [
+          {
+            "atlas_id": "ad2f9bd966fcc7a11cd2d9c3d4debeb4c798fb4e7534e553dd7c4bbb3ee8bed9",
+            "editable_transcripts": 3305,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 546,
+            "retained_transcripts": 43366,
+            "roi": "breast_01",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          },
+          {
+            "atlas_id": "fe6ec51f5e2589836b049ff04a769ef859863103558cdf9bdc2da822c9d3d5af",
+            "editable_transcripts": 2233,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 448,
+            "retained_transcripts": 37816,
+            "roi": "breast_02",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          }
+        ],
+        "1": [
+          {
+            "atlas_id": "f306f7234187ed1d0c7b42055a23d2fce83e581f8e9eca453e56948bf0708875",
+            "editable_transcripts": 5192,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 433,
+            "retained_transcripts": 43366,
+            "roi": "breast_01",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          },
+          {
+            "atlas_id": "56aee13b824baca8380543ec53e209242390af2cb7d02510b4bb3e64def401f3",
+            "editable_transcripts": 3735,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 370,
+            "retained_transcripts": 37816,
+            "roi": "breast_02",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          }
+        ],
+        "2": [
+          {
+            "atlas_id": "d562738160a67b694f9f48190dc3c4a11efb4d8b05aeaa68d874f110be6874a9",
+            "editable_transcripts": 7683,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 320,
+            "retained_transcripts": 43366,
+            "roi": "breast_01",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          },
+          {
+            "atlas_id": "36797063dff4ca733cff411dc3af18f3b15596dce495687f2f33aa6da2b200a2",
+            "editable_transcripts": 5655,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 289,
+            "retained_transcripts": 37816,
+            "roi": "breast_02",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          }
+        ],
+        "3": [
+          {
+            "atlas_id": "db5858183f1e22a39764d3396aeb8f8e900575488e30ce115e4a21a8c05d858d",
+            "editable_transcripts": 7552,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 239,
+            "retained_transcripts": 43366,
+            "roi": "breast_01",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          },
+          {
+            "atlas_id": "448bf06fd34602287844e3e02355eacf0afa0edf70f4c49bb9dca73b7ca54bbd",
+            "editable_transcripts": 6798,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 242,
+            "retained_transcripts": 37816,
+            "roi": "breast_02",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          }
+        ],
+        "baseline": [
+          {
+            "atlas_id": "3fafa3afb52e7c34df50303d619221663df9dd076ee15bd7fdeb3f2a108e93f5",
+            "editable_transcripts": 4789,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 928,
+            "retained_transcripts": 43366,
+            "roi": "breast_01",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          },
+          {
+            "atlas_id": "d4cbdc49dfcac691016061f98e42042471a638e0f01845c5624c8eb2bc6284ff",
+            "editable_transcripts": 3473,
+            "geometry_audit_binding": "exact atlas content digest and original source hashes",
+            "patches": 780,
+            "retained_transcripts": 37816,
+            "roi": "breast_02",
+            "scope": "one verified fixed-seam atlas; untouched boundary portions remain fixed"
+          }
+        ]
+      },
+      "common_reference_digest": "f6c4cd66c33fba56c6b38c521f3db3a559ecdd00a585f5c061f77bf7530b1cb3",
+      "component_global_spectra_checked": 115986,
+      "component_global_traces_checked": 146174,
+      "count_states": 37359,
+      "dataset": "breast",
+      "ever_eligible_marginal_width_ge2": {
+        "baseline_questions": 2058,
+        "union_questions": 2076
+      },
+      "ever_tightened_questions": {
+        "baseline_questions": 783,
+        "union_questions": 791
+      },
+      "interval_rows": 432582,
+      "member_atlas_ids": {
+        "0.5": {
+          "breast_01": "ad2f9bd966fcc7a11cd2d9c3d4debeb4c798fb4e7534e553dd7c4bbb3ee8bed9",
+          "breast_02": "fe6ec51f5e2589836b049ff04a769ef859863103558cdf9bdc2da822c9d3d5af"
+        },
+        "1": {
+          "breast_01": "f306f7234187ed1d0c7b42055a23d2fce83e581f8e9eca453e56948bf0708875",
+          "breast_02": "56aee13b824baca8380543ec53e209242390af2cb7d02510b4bb3e64def401f3"
+        },
+        "2": {
+          "breast_01": "d562738160a67b694f9f48190dc3c4a11efb4d8b05aeaa68d874f110be6874a9",
+          "breast_02": "36797063dff4ca733cff411dc3af18f3b15596dce495687f2f33aa6da2b200a2"
+        },
+        "3": {
+          "breast_01": "db5858183f1e22a39764d3396aeb8f8e900575488e30ce115e4a21a8c05d858d",
+          "breast_02": "448bf06fd34602287844e3e02355eacf0afa0edf70f4c49bb9dca73b7ca54bbd"
+        },
+        "baseline": {
+          "breast_01": "3fafa3afb52e7c34df50303d619221663df9dd076ee15bd7fdeb3f2a108e93f5",
+          "breast_02": "d4cbdc49dfcac691016061f98e42042471a638e0f01845c5624c8eb2bc6284ff"
+        }
+      },
+      "model_id": "7eacfe80aa30dd4ab66d3cace6896b8c67c4b621602f4871c24dbb28c53a8598",
+      "new_questions": 2470,
+      "union_questions": 25446
+    }
+  ],
+  "independent_baseline": "Envelope of the five member-wise independent-molecule outer intervals at the same budget.",
+  "interval_rows": 496604,
+  "outputs": {
+    "budget_summary.csv": "0001df27286b551033f7c141e020a27185f990c2ea047e33dfdd7c8fb4fbf3bf",
+    "budget_summary.json": "1cfcd45b4a023d8da313b26f755ba223b8d7c1a95f08ce865538f4144be67ad2",
+    "input_manifest.json": "64a2228e9f418e7805b2c898888662017ace4d93ae20c31a16ba6f691f543f34",
+    "intervals.csv.gz": "14ff21b16a86dd99bb74e4c7e73d7e0de53f946de284ef756a1872e8b7bc39aa",
+    "reference_counts.csv.gz": "8e905472f66db12a9c16c66c4c093dd3a6648dd35a6431bef5f92dbb017c8bb3",
+    "reference_summary.csv": "bd6285db69c983970182946d7fb76ce96d0f25e9c3cb5589b400488a351b17fb",
+    "reference_summary.json": "bb221f4c8cb3b59ffb2e30940d7ad655b0b8c65e6047150be7d0b08f7f6336fa",
+    "union_spectra.json.gz": "222d398aa023c97d39a0b945e973ea68c9590f34abb8b580c13f4ed396e00cc0"
+  },
+  "population_definition": "Union census contains every source-positive or editable-in-any-member cell-gene key; baseline_questions retains the original primary census.",
+  "schema": "geocert-atlas-union-1",
+  "scope": "Finite union of five complete atlas families on the same reference and retained observations; every witness selects one whole member.",
+  "seconds": 102.43069865200232,
+  "settings": [
+    "baseline",
+    "0.5",
+    "1",
+    "2",
+    "3"
+  ]
+}

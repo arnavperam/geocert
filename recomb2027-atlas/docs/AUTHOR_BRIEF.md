@@ -61,3 +61,18 @@ The source-clipping shortcut needs the source to realize every source-owner and 
 4. Which parts are new claims versus known machinery? The specialized cost-preserving continuum reduction, exact critical-mesh count realization, and compatible physical composition are the results to assess. Cuts, coverage gadgets, shortest-path resource states and min-plus convolution are established foundations.
 
 AI contributed to mathematical development, algorithms, implementation, checking and writing. The named author must review, understand and take responsibility for the proofs, data interpretation and submission. A successful replay is not an independent human proof review or an acceptance guarantee.
+
+## Finite-family extension
+
+The five atlases share one reference partition, observed molecules and physical-area cost. A permitted partition belongs to one of those complete families. For each count q, its minimum union cost is therefore the minimum of the five member costs at q. An endpoint inherits the selected member's complete partition witness and atlas identity.
+
+The primary family is a member of the union, so every primary alternative remains available. Wider intervals are expected: at area 4 µm² on the original question census, invariant counts change from 84.1% to 76.4% in lung and from 77.1% to 65.9% in breast. Additional source-zero questions expand the full union census to 29,212; report that denominator separately.
+
+The comparison checks whether the exact reference count occurs in the spectrum, not merely between its endpoints. A spectrum can have missing interior integers. On fixed comparison keys, union reach is 315/2,798 for lung Proseg, 299/1,114 for lung nuclear expansion and 2,942/10,965 for breast nuclear expansion.
+
+Be able to answer these questions:
+
+1. Which atlas supplies this endpoint? The witness records one complete member and the compatible local traces within it.
+2. Can two endpoints from different members be combined? Each is a separate alternative; a joint question requires a joint predicate or vector spectrum within each member before taking the finite union.
+3. Does the union allow the widest movement over all primary edges? Each member retains its own coverage and displacement range. There is no single atlas with both maximum coverage and maximum displacement.
+4. What certifies the component optima? They are the original exact, checksum-bound spectra. The new verifier independently reconstructs the union and checks its selected continuous witnesses.

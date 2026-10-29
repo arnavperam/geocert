@@ -77,6 +77,19 @@ python analysis/reach/audit_proseg.py
 
 The study allows displacement caps up to approximately 2.23 µm. Wider supports reduce accepted boundary coverage and aggregate alternative-reference count reach under this extractor.
 
+## Finite union of the five atlases
+
+The current paper also evaluates these five complete atlas families as a finite union. Each count minimum selects one member, preserving its global partition and physical-area budget. The original primary results and the four width-specific results remain available separately.
+
+Run the extension from the repository checkout, with the extracted scientific package as its input:
+
+```sh
+python recomb2027-atlas/extensions/atlas_union/union.py --data-root atlas-replay/recomb2027-atlas --output-dir run/atlas-union
+python recomb2027-atlas/extensions/atlas_union/independent_verify.py --data-root atlas-replay/recomb2027-atlas --union-output run/atlas-union --output-dir run/atlas-union-check
+```
+
+The [extension README](extensions/atlas_union/README.md) defines the output census, exact count-membership checks and witness command. [Recorded spectra and interval tables](extensions/atlas_union/results/) contain 29,212 questions and 496,604 budget rows. The independent verification report binds the recorded output files by checksum.
+
 ## Tables and figures
 
 Raster analysis and figures need the optional analysis environment:

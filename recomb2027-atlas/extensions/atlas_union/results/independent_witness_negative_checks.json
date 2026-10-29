@@ -1,0 +1,22 @@
+{
+  "incorrect_area": {
+    "rejected": true,
+    "reason": "physical witness integral mismatch"
+  },
+  "incorrect_rna_owner": {
+    "rejected": true,
+    "reason": "owner clearance violated"
+  },
+  "incorrect_nuclear_owner": {
+    "rejected": true,
+    "reason": "structural group owner mismatch"
+  },
+  "moved_seam": {
+    "rejected": true,
+    "reason": "endpoint seam moved"
+  },
+  "discontinuous_boundary": {
+    "rejected": true,
+    "reason": "boundary discontinuity"
+  }
+}

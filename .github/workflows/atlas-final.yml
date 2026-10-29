@@ -92,6 +92,12 @@ jobs:
       - name: Audit imported Proseg identities, coordinates and count matrices
         working-directory: ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas
         run: python analysis/reach/audit_proseg.py
+      - name: Check finite-atlas union input contracts
+        run: python recomb2027-atlas/extensions/atlas_union/test_union.py
+      - name: Compute and independently verify the finite-atlas union
+        run: |
+          python recomb2027-atlas/extensions/atlas_union/union.py --data-root "${{ runner.temp }}/atlas-final-replay/recomb2027-atlas" --output-dir "${{ runner.temp }}/atlas-union"
+          python recomb2027-atlas/extensions/atlas_union/independent_verify.py --data-root "${{ runner.temp }}/atlas-final-replay/recomb2027-atlas" --union-output "${{ runner.temp }}/atlas-union" --output-dir "${{ runner.temp }}/atlas-union-verification"
       - name: Save exact-replay records
         if: always()
         uses: actions/upload-artifact@v4
@@ -110,3 +116,7 @@ jobs:
             ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/results/reach/forced_reduction_validation.json
             ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/results/reach/output_validation.json
             ${{ runner.temp }}/atlas-final-replay/recomb2027-atlas/results/reach/proseg_audit.json
+            ${{ runner.temp }}/atlas-union/summary.json
+            ${{ runner.temp }}/atlas-union/budget_summary.csv
+            ${{ runner.temp }}/atlas-union/reference_summary.csv
+            ${{ runner.temp }}/atlas-union-verification/*.json

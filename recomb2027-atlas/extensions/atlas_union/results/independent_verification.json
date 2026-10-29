@@ -1,0 +1,917 @@
+{
+  "status": "passed",
+  "geometry_exactness_scope": "Component geometry audits are shared inputs; atlas/source hashes and selected continuous witnesses are independently checked.",
+  "datasets": [
+    {
+      "dataset": "lung",
+      "union_questions": 3766,
+      "baseline_questions": 3304,
+      "minimum_area_states": 4764,
+      "source_files_hashed": 6,
+      "member_atlas_ids": [
+        {
+          "dataset": "lung",
+          "setting": "baseline",
+          "roi": "roi_01",
+          "atlas_id": "ffd6833d5755400b7932feb9c2544a7f132b9e58993d4e1f978e28a923071c53"
+        },
+        {
+          "dataset": "lung",
+          "setting": "baseline",
+          "roi": "roi_02",
+          "atlas_id": "8d03e299e445cd8594d856d5c797cef516cb835b0b8646fe553f12231b5ff772"
+        },
+        {
+          "dataset": "lung",
+          "setting": "0.5",
+          "roi": "roi_01",
+          "atlas_id": "b09a4b13ef12f50d3ef6714ac6f39a2898a6abfdf21035ab3002de2a23802a62"
+        },
+        {
+          "dataset": "lung",
+          "setting": "0.5",
+          "roi": "roi_02",
+          "atlas_id": "b99b1f3c61beef3c1f8356a096262de97a1680dca5dc26a832c7d3aa80c6f916"
+        },
+        {
+          "dataset": "lung",
+          "setting": "1",
+          "roi": "roi_01",
+          "atlas_id": "efb435af93ded9acfa0c6d7110f52319d556861e7c40bd2747f157f5c272a565"
+        },
+        {
+          "dataset": "lung",
+          "setting": "1",
+          "roi": "roi_02",
+          "atlas_id": "23e281f06edb53894c32d32192963b41fd0ebd2261637463fe486de8c2d8d6da"
+        },
+        {
+          "dataset": "lung",
+          "setting": "2",
+          "roi": "roi_01",
+          "atlas_id": "8879908e21206c050585b3a0cbd84b2a17f1db7a5ff72b5efd831efcd4f789f4"
+        },
+        {
+          "dataset": "lung",
+          "setting": "2",
+          "roi": "roi_02",
+          "atlas_id": "faa0b4946207a61fac11eaa055829d4b053ba9b73b2570c2638936cbb7bab0b3"
+        },
+        {
+          "dataset": "lung",
+          "setting": "3",
+          "roi": "roi_01",
+          "atlas_id": "c2545b134f710c16c07bd6913b61a7508b89d570677628dc214360f5ffbdac47"
+        },
+        {
+          "dataset": "lung",
+          "setting": "3",
+          "roi": "roi_02",
+          "atlas_id": "a1ac0a167f901b3e5e3fbe83af236f33aad456503fb43b774a7715ef8e39eb0a"
+        }
+      ]
+    },
+    {
+      "dataset": "breast",
+      "union_questions": 25446,
+      "baseline_questions": 22976,
+      "minimum_area_states": 37359,
+      "source_files_hashed": 8,
+      "member_atlas_ids": [
+        {
+          "dataset": "breast",
+          "setting": "baseline",
+          "roi": "breast_01",
+          "atlas_id": "3fafa3afb52e7c34df50303d619221663df9dd076ee15bd7fdeb3f2a108e93f5"
+        },
+        {
+          "dataset": "breast",
+          "setting": "baseline",
+          "roi": "breast_02",
+          "atlas_id": "d4cbdc49dfcac691016061f98e42042471a638e0f01845c5624c8eb2bc6284ff"
+        },
+        {
+          "dataset": "breast",
+          "setting": "0.5",
+          "roi": "breast_01",
+          "atlas_id": "ad2f9bd966fcc7a11cd2d9c3d4debeb4c798fb4e7534e553dd7c4bbb3ee8bed9"
+        },
+        {
+          "dataset": "breast",
+          "setting": "0.5",
+          "roi": "breast_02",
+          "atlas_id": "fe6ec51f5e2589836b049ff04a769ef859863103558cdf9bdc2da822c9d3d5af"
+        },
+        {
+          "dataset": "breast",
+          "setting": "1",
+          "roi": "breast_01",
+          "atlas_id": "f306f7234187ed1d0c7b42055a23d2fce83e581f8e9eca453e56948bf0708875"
+        },
+        {
+          "dataset": "breast",
+          "setting": "1",
+          "roi": "breast_02",
+          "atlas_id": "56aee13b824baca8380543ec53e209242390af2cb7d02510b4bb3e64def401f3"
+        },
+        {
+          "dataset": "breast",
+          "setting": "2",
+          "roi": "breast_01",
+          "atlas_id": "d562738160a67b694f9f48190dc3c4a11efb4d8b05aeaa68d874f110be6874a9"
+        },
+        {
+          "dataset": "breast",
+          "setting": "2",
+          "roi": "breast_02",
+          "atlas_id": "36797063dff4ca733cff411dc3af18f3b15596dce495687f2f33aa6da2b200a2"
+        },
+        {
+          "dataset": "breast",
+          "setting": "3",
+          "roi": "breast_01",
+          "atlas_id": "db5858183f1e22a39764d3396aeb8f8e900575488e30ce115e4a21a8c05d858d"
+        },
+        {
+          "dataset": "breast",
+          "setting": "3",
+          "roi": "breast_02",
+          "atlas_id": "448bf06fd34602287844e3e02355eacf0afa0edf70f4c49bb9dca73b7ca54bbd"
+        }
+      ]
+    }
+  ],
+  "budget_summary": [
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "0",
+      "questions": 3304,
+      "singleton": 3304,
+      "non_singleton": 0,
+      "summed_interval_width": 0,
+      "endpoint_changes_from_previous_budget": 0
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "1/200",
+      "questions": 3304,
+      "singleton": 3155,
+      "non_singleton": 149,
+      "summed_interval_width": 149,
+      "endpoint_changes_from_previous_budget": 149
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "1/100",
+      "questions": 3304,
+      "singleton": 3102,
+      "non_singleton": 202,
+      "summed_interval_width": 205,
+      "endpoint_changes_from_previous_budget": 55
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "1/40",
+      "questions": 3304,
+      "singleton": 3006,
+      "non_singleton": 298,
+      "summed_interval_width": 307,
+      "endpoint_changes_from_previous_budget": 101
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "1/20",
+      "questions": 3304,
+      "singleton": 2924,
+      "non_singleton": 380,
+      "summed_interval_width": 395,
+      "endpoint_changes_from_previous_budget": 88
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "1/10",
+      "questions": 3304,
+      "singleton": 2844,
+      "non_singleton": 460,
+      "summed_interval_width": 485,
+      "endpoint_changes_from_previous_budget": 88
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "3/20",
+      "questions": 3304,
+      "singleton": 2784,
+      "non_singleton": 520,
+      "summed_interval_width": 557,
+      "endpoint_changes_from_previous_budget": 71
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "1/5",
+      "questions": 3304,
+      "singleton": 2731,
+      "non_singleton": 573,
+      "summed_interval_width": 624,
+      "endpoint_changes_from_previous_budget": 67
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "1/4",
+      "questions": 3304,
+      "singleton": 2710,
+      "non_singleton": 594,
+      "summed_interval_width": 654,
+      "endpoint_changes_from_previous_budget": 29
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "3/8",
+      "questions": 3304,
+      "singleton": 2663,
+      "non_singleton": 641,
+      "summed_interval_width": 707,
+      "endpoint_changes_from_previous_budget": 51
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "1/2",
+      "questions": 3304,
+      "singleton": 2629,
+      "non_singleton": 675,
+      "summed_interval_width": 753,
+      "endpoint_changes_from_previous_budget": 45
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "3/4",
+      "questions": 3304,
+      "singleton": 2602,
+      "non_singleton": 702,
+      "summed_interval_width": 795,
+      "endpoint_changes_from_previous_budget": 42
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "1",
+      "questions": 3304,
+      "singleton": 2582,
+      "non_singleton": 722,
+      "summed_interval_width": 819,
+      "endpoint_changes_from_previous_budget": 24
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "2",
+      "questions": 3304,
+      "singleton": 2542,
+      "non_singleton": 762,
+      "summed_interval_width": 878,
+      "endpoint_changes_from_previous_budget": 57
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "4",
+      "questions": 3304,
+      "singleton": 2524,
+      "non_singleton": 780,
+      "summed_interval_width": 901,
+      "endpoint_changes_from_previous_budget": 23
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "8",
+      "questions": 3304,
+      "singleton": 2517,
+      "non_singleton": 787,
+      "summed_interval_width": 912,
+      "endpoint_changes_from_previous_budget": 11
+    },
+    {
+      "dataset": "lung",
+      "population": "baseline_common",
+      "budget_um2": "16",
+      "questions": 3304,
+      "singleton": 2517,
+      "non_singleton": 787,
+      "summed_interval_width": 912,
+      "endpoint_changes_from_previous_budget": 0
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "0",
+      "questions": 3766,
+      "singleton": 3766,
+      "non_singleton": 0,
+      "summed_interval_width": 0,
+      "endpoint_changes_from_previous_budget": 0
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "1/200",
+      "questions": 3766,
+      "singleton": 3616,
+      "non_singleton": 150,
+      "summed_interval_width": 150,
+      "endpoint_changes_from_previous_budget": 150
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "1/100",
+      "questions": 3766,
+      "singleton": 3562,
+      "non_singleton": 204,
+      "summed_interval_width": 207,
+      "endpoint_changes_from_previous_budget": 56
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "1/40",
+      "questions": 3766,
+      "singleton": 3465,
+      "non_singleton": 301,
+      "summed_interval_width": 310,
+      "endpoint_changes_from_previous_budget": 102
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "1/20",
+      "questions": 3766,
+      "singleton": 3381,
+      "non_singleton": 385,
+      "summed_interval_width": 400,
+      "endpoint_changes_from_previous_budget": 90
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "1/10",
+      "questions": 3766,
+      "singleton": 3298,
+      "non_singleton": 468,
+      "summed_interval_width": 493,
+      "endpoint_changes_from_previous_budget": 91
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "3/20",
+      "questions": 3766,
+      "singleton": 3232,
+      "non_singleton": 534,
+      "summed_interval_width": 571,
+      "endpoint_changes_from_previous_budget": 77
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "1/5",
+      "questions": 3766,
+      "singleton": 3177,
+      "non_singleton": 589,
+      "summed_interval_width": 640,
+      "endpoint_changes_from_previous_budget": 69
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "1/4",
+      "questions": 3766,
+      "singleton": 3154,
+      "non_singleton": 612,
+      "summed_interval_width": 673,
+      "endpoint_changes_from_previous_budget": 32
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "3/8",
+      "questions": 3766,
+      "singleton": 3101,
+      "non_singleton": 665,
+      "summed_interval_width": 732,
+      "endpoint_changes_from_previous_budget": 57
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "1/2",
+      "questions": 3766,
+      "singleton": 3054,
+      "non_singleton": 712,
+      "summed_interval_width": 791,
+      "endpoint_changes_from_previous_budget": 58
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "3/4",
+      "questions": 3766,
+      "singleton": 3013,
+      "non_singleton": 753,
+      "summed_interval_width": 847,
+      "endpoint_changes_from_previous_budget": 56
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "1",
+      "questions": 3766,
+      "singleton": 2986,
+      "non_singleton": 780,
+      "summed_interval_width": 878,
+      "endpoint_changes_from_previous_budget": 31
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "2",
+      "questions": 3766,
+      "singleton": 2928,
+      "non_singleton": 838,
+      "summed_interval_width": 955,
+      "endpoint_changes_from_previous_budget": 75
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "4",
+      "questions": 3766,
+      "singleton": 2905,
+      "non_singleton": 861,
+      "summed_interval_width": 983,
+      "endpoint_changes_from_previous_budget": 28
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "8",
+      "questions": 3766,
+      "singleton": 2894,
+      "non_singleton": 872,
+      "summed_interval_width": 998,
+      "endpoint_changes_from_previous_budget": 15
+    },
+    {
+      "dataset": "lung",
+      "population": "union_all",
+      "budget_um2": "16",
+      "questions": 3766,
+      "singleton": 2894,
+      "non_singleton": 872,
+      "summed_interval_width": 998,
+      "endpoint_changes_from_previous_budget": 0
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "0",
+      "questions": 22976,
+      "singleton": 22976,
+      "non_singleton": 0,
+      "summed_interval_width": 0,
+      "endpoint_changes_from_previous_budget": 0
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "1/200",
+      "questions": 22976,
+      "singleton": 21482,
+      "non_singleton": 1494,
+      "summed_interval_width": 1572,
+      "endpoint_changes_from_previous_budget": 1494
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "1/100",
+      "questions": 22976,
+      "singleton": 20976,
+      "non_singleton": 2000,
+      "summed_interval_width": 2159,
+      "endpoint_changes_from_previous_budget": 584
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "1/40",
+      "questions": 22976,
+      "singleton": 20045,
+      "non_singleton": 2931,
+      "summed_interval_width": 3276,
+      "endpoint_changes_from_previous_budget": 1088
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "1/20",
+      "questions": 22976,
+      "singleton": 19126,
+      "non_singleton": 3850,
+      "summed_interval_width": 4486,
+      "endpoint_changes_from_previous_budget": 1187
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "1/10",
+      "questions": 22976,
+      "singleton": 18279,
+      "non_singleton": 4697,
+      "summed_interval_width": 5712,
+      "endpoint_changes_from_previous_budget": 1186
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "3/20",
+      "questions": 22976,
+      "singleton": 17734,
+      "non_singleton": 5242,
+      "summed_interval_width": 6569,
+      "endpoint_changes_from_previous_budget": 841
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "1/5",
+      "questions": 22976,
+      "singleton": 17360,
+      "non_singleton": 5616,
+      "summed_interval_width": 7176,
+      "endpoint_changes_from_previous_budget": 597
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "1/4",
+      "questions": 22976,
+      "singleton": 17097,
+      "non_singleton": 5879,
+      "summed_interval_width": 7610,
+      "endpoint_changes_from_previous_budget": 431
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "3/8",
+      "questions": 22976,
+      "singleton": 16575,
+      "non_singleton": 6401,
+      "summed_interval_width": 8398,
+      "endpoint_changes_from_previous_budget": 777
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "1/2",
+      "questions": 22976,
+      "singleton": 16293,
+      "non_singleton": 6683,
+      "summed_interval_width": 8912,
+      "endpoint_changes_from_previous_budget": 501
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "3/4",
+      "questions": 22976,
+      "singleton": 15961,
+      "non_singleton": 7015,
+      "summed_interval_width": 9527,
+      "endpoint_changes_from_previous_budget": 597
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "1",
+      "questions": 22976,
+      "singleton": 15762,
+      "non_singleton": 7214,
+      "summed_interval_width": 9919,
+      "endpoint_changes_from_previous_budget": 389
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "2",
+      "questions": 22976,
+      "singleton": 15342,
+      "non_singleton": 7634,
+      "summed_interval_width": 10791,
+      "endpoint_changes_from_previous_budget": 833
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "4",
+      "questions": 22976,
+      "singleton": 15143,
+      "non_singleton": 7833,
+      "summed_interval_width": 11291,
+      "endpoint_changes_from_previous_budget": 472
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "8",
+      "questions": 22976,
+      "singleton": 15113,
+      "non_singleton": 7863,
+      "summed_interval_width": 11421,
+      "endpoint_changes_from_previous_budget": 121
+    },
+    {
+      "dataset": "breast",
+      "population": "baseline_common",
+      "budget_um2": "16",
+      "questions": 22976,
+      "singleton": 15113,
+      "non_singleton": 7863,
+      "summed_interval_width": 11425,
+      "endpoint_changes_from_previous_budget": 2
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "0",
+      "questions": 25446,
+      "singleton": 25446,
+      "non_singleton": 0,
+      "summed_interval_width": 0,
+      "endpoint_changes_from_previous_budget": 0
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "1/200",
+      "questions": 25446,
+      "singleton": 23937,
+      "non_singleton": 1509,
+      "summed_interval_width": 1587,
+      "endpoint_changes_from_previous_budget": 1509
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "1/100",
+      "questions": 25446,
+      "singleton": 23429,
+      "non_singleton": 2017,
+      "summed_interval_width": 2176,
+      "endpoint_changes_from_previous_budget": 586
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "1/40",
+      "questions": 25446,
+      "singleton": 22486,
+      "non_singleton": 2960,
+      "summed_interval_width": 3305,
+      "endpoint_changes_from_previous_budget": 1100
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "1/20",
+      "questions": 25446,
+      "singleton": 21561,
+      "non_singleton": 3885,
+      "summed_interval_width": 4521,
+      "endpoint_changes_from_previous_budget": 1193
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "1/10",
+      "questions": 25446,
+      "singleton": 20701,
+      "non_singleton": 4745,
+      "summed_interval_width": 5760,
+      "endpoint_changes_from_previous_budget": 1199
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "3/20",
+      "questions": 25446,
+      "singleton": 20149,
+      "non_singleton": 5297,
+      "summed_interval_width": 6624,
+      "endpoint_changes_from_previous_budget": 848
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "1/5",
+      "questions": 25446,
+      "singleton": 19767,
+      "non_singleton": 5679,
+      "summed_interval_width": 7239,
+      "endpoint_changes_from_previous_budget": 605
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "1/4",
+      "questions": 25446,
+      "singleton": 19491,
+      "non_singleton": 5955,
+      "summed_interval_width": 7686,
+      "endpoint_changes_from_previous_budget": 444
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "3/8",
+      "questions": 25446,
+      "singleton": 18950,
+      "non_singleton": 6496,
+      "summed_interval_width": 8494,
+      "endpoint_changes_from_previous_budget": 797
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "1/2",
+      "questions": 25446,
+      "singleton": 18607,
+      "non_singleton": 6839,
+      "summed_interval_width": 9070,
+      "endpoint_changes_from_previous_budget": 563
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "3/4",
+      "questions": 25446,
+      "singleton": 18202,
+      "non_singleton": 7244,
+      "summed_interval_width": 9759,
+      "endpoint_changes_from_previous_budget": 671
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "1",
+      "questions": 25446,
+      "singleton": 17960,
+      "non_singleton": 7486,
+      "summed_interval_width": 10194,
+      "endpoint_changes_from_previous_budget": 432
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "2",
+      "questions": 25446,
+      "singleton": 17437,
+      "non_singleton": 8009,
+      "summed_interval_width": 11173,
+      "endpoint_changes_from_previous_budget": 940
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "4",
+      "questions": 25446,
+      "singleton": 17160,
+      "non_singleton": 8286,
+      "summed_interval_width": 11757,
+      "endpoint_changes_from_previous_budget": 556
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "8",
+      "questions": 25446,
+      "singleton": 17114,
+      "non_singleton": 8332,
+      "summed_interval_width": 11909,
+      "endpoint_changes_from_previous_budget": 143
+    },
+    {
+      "dataset": "breast",
+      "population": "union_all",
+      "budget_um2": "16",
+      "questions": 25446,
+      "singleton": 17114,
+      "non_singleton": 8332,
+      "summed_interval_width": 11913,
+      "endpoint_changes_from_previous_budget": 2
+    }
+  ],
+  "reference_summary": [
+    {
+      "dataset": "breast",
+      "reference": "nuclear",
+      "changed_count_keys": 10965,
+      "baseline_attainable": 1773,
+      "union_attainable": 2942
+    },
+    {
+      "dataset": "lung",
+      "reference": "nuclear",
+      "changed_count_keys": 1114,
+      "baseline_attainable": 184,
+      "union_attainable": 299
+    },
+    {
+      "dataset": "lung",
+      "reference": "proseg",
+      "changed_count_keys": 2798,
+      "baseline_attainable": 185,
+      "union_attainable": 315
+    }
+  ],
+  "production_checks": [
+    {
+      "dataset": "lung",
+      "model_id": "dc4267fdc3b4a46c5cfafad082d1f3f6d713e2af5dd0c06c417f64cad9c707ce",
+      "spectra_checked": 3766,
+      "traces_checked": 4302,
+      "implicit_fixed_states_checked": 462,
+      "distinct_continuous_local_witnesses_checked": 1484
+    },
+    {
+      "dataset": "breast",
+      "model_id": "7eacfe80aa30dd4ab66d3cace6896b8c67c4b621602f4871c24dbb28c53a8598",
+      "spectra_checked": 25446,
+      "traces_checked": 34889,
+      "implicit_fixed_states_checked": 2470,
+      "distinct_continuous_local_witnesses_checked": 17278
+    }
+  ],
+  "interval_checks": [
+    {
+      "dataset": "lung",
+      "component_rows_recomputed": 282965,
+      "union_rows_recomputed": 64022,
+      "eligible_marginal_width_ge2": {
+        "union_all": 102,
+        "baseline_common": 101
+      },
+      "tightened_questions": {
+        "union_all": 29,
+        "baseline_common": 28
+      }
+    },
+    {
+      "dataset": "breast",
+      "component_rows_recomputed": 1971762,
+      "union_rows_recomputed": 432582,
+      "eligible_marginal_width_ge2": {
+        "union_all": 2076,
+        "baseline_common": 2058
+      },
+      "tightened_questions": {
+        "union_all": 791,
+        "baseline_common": 783
+      }
+    }
+  ],
+  "summary_checks": {
+    "budget_rows": 68,
+    "unbounded_reference_comparisons": 3
+  },
+  "seconds": 142.29423063200375,
+  "production_output_sha256": {
+    "budget_summary.csv": "0001df27286b551033f7c141e020a27185f990c2ea047e33dfdd7c8fb4fbf3bf",
+    "budget_summary.json": "1cfcd45b4a023d8da313b26f755ba223b8d7c1a95f08ce865538f4144be67ad2",
+    "input_manifest.json": "64a2228e9f418e7805b2c898888662017ace4d93ae20c31a16ba6f691f543f34",
+    "intervals.csv.gz": "14ff21b16a86dd99bb74e4c7e73d7e0de53f946de284ef756a1872e8b7bc39aa",
+    "reference_counts.csv.gz": "8e905472f66db12a9c16c66c4c093dd3a6648dd35a6431bef5f92dbb017c8bb3",
+    "reference_summary.csv": "bd6285db69c983970182946d7fb76ce96d0f25e9c3cb5589b400488a351b17fb",
+    "reference_summary.json": "bb221f4c8cb3b59ffb2e30940d7ad655b0b8c65e6047150be7d0b08f7f6336fa",
+    "summary.json": "62d8d76066bf20a62de7d42f52baf8573d472cc862ffc38336219c763a3b7484",
+    "union_spectra.json.gz": "222d398aa023c97d39a0b945e973ea68c9590f34abb8b580c13f4ed396e00cc0"
+  },
+  "production_output_binding": {
+    "checked_utc": "2026-10-29T00:35:56.654883+00:00",
+    "summary_output_manifest_matches": true,
+    "files": 9,
+    "scope": "Byte binding of frozen production artifacts following independent numerical and witness verification."
+  }
+}
