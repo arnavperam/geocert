@@ -1,0 +1,10 @@
+{
+  "recorded_unix": 1793235526.8402245,
+  "fixed_region_selection": "Unchanged: central 400 and 600 \u00b5m squares from raster extent",
+  "400_method": "chain",
+  "600_method": "Existing enumeration backend only if maximum local gene copies <=16 after geometry extraction and before count computation",
+  "reason": "Use an existing exact backend suitable for small per-gene copy counts; no scientific core modification",
+  "comparison_scope": "Separate computational measurements; different backends preclude a runtime scaling ratio",
+  "combined_processing_budget_seconds": 2700,
+  "output_integrity": "New 600 computation occurs outside the watched workspace; completed outputs are independently audited before packaging"
+}

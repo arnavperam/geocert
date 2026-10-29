@@ -29,6 +29,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Verify published document hashes
+        run: |
+          python - <<'PYCODE'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('recomb2027-atlas')
+          record = json.loads((root / 'release/PUBLICATION.json').read_text())
+          for name, digest in record['document_sha256'].items():
+              if hashlib.sha256((root / 'manuscript' / name).read_bytes()).hexdigest() != digest:
+                  raise ValueError(f'published document hash differs: {name}')
+          print('Published PDFs match their release record')
+          PYCODE
       - name: Verify scientific archive parts and extract
         run: >-
           python recomb2027-atlas/reassemble.py
@@ -94,10 +106,30 @@ jobs:
         run: python analysis/reach/audit_proseg.py
       - name: Check finite-atlas union input contracts
         run: python recomb2027-atlas/extensions/atlas_union/test_union.py
+      - name: Verify recorded union artifact hashes
+        run: |
+          python - <<'PYCODE'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('recomb2027-atlas/extensions/atlas_union/results')
+          record = json.loads((root / 'summary.json').read_text())
+          for name, digest in record['outputs'].items():
+              if hashlib.sha256((root / name).read_bytes()).hexdigest() != digest:
+                  raise ValueError(f'recorded union artifact hash differs: {name}')
+          print('All recorded union artifact hashes match')
+          PYCODE
       - name: Compute and independently verify the finite-atlas union
         run: |
           python recomb2027-atlas/extensions/atlas_union/union.py --data-root "${{ runner.temp }}/atlas-final-replay/recomb2027-atlas" --output-dir "${{ runner.temp }}/atlas-union"
           python recomb2027-atlas/extensions/atlas_union/independent_verify.py --data-root "${{ runner.temp }}/atlas-final-replay/recomb2027-atlas" --union-output "${{ runner.temp }}/atlas-union" --output-dir "${{ runner.temp }}/atlas-union-verification"
+      - name: Restore and audit larger-region results
+        run: |
+          python recomb2027-atlas/extensions/scaling/restore_artifacts.py --output-dir "${{ runner.temp }}/atlas-contiguous" --sizes 400 600
+          for region_side in 400 600; do
+            python recomb2027-atlas/extensions/scaling/audit_outputs.py --prepared-root "${{ runner.temp }}/atlas-contiguous/central${region_side}"
+            python recomb2027-atlas/extensions/scaling/independent_sample.py enumerate --base-root "${{ runner.temp }}/atlas-final-replay/recomb2027-atlas" --atlas "${{ runner.temp }}/atlas-contiguous/central${region_side}/data/atlas_breast_central_${region_side}.json" --selection "recomb2027-atlas/extensions/scaling/results/central${region_side}_sample_selection.json" --output "${{ runner.temp }}/scalar-${region_side}.json"
+            python recomb2027-atlas/extensions/scaling/independent_sample.py compare --atlas "${{ runner.temp }}/atlas-contiguous/central${region_side}/data/atlas_breast_central_${region_side}.json" --selection "recomb2027-atlas/extensions/scaling/results/central${region_side}_sample_selection.json" --reference "${{ runner.temp }}/scalar-${region_side}.json" --spectra "${{ runner.temp }}/atlas-contiguous/central${region_side}/results/patch_spectra.json" --output "${{ runner.temp }}/scalar-${region_side}-verification.json"
+          done
       - name: Save exact-replay records
         if: always()
         uses: actions/upload-artifact@v4
@@ -120,3 +152,5 @@ jobs:
             ${{ runner.temp }}/atlas-union/budget_summary.csv
             ${{ runner.temp }}/atlas-union/reference_summary.csv
             ${{ runner.temp }}/atlas-union-verification/*.json
+            ${{ runner.temp }}/atlas-contiguous/central*/results/output_reconciliation.json
+            ${{ runner.temp }}/scalar-*-verification.json

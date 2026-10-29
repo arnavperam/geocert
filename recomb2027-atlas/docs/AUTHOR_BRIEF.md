@@ -50,7 +50,7 @@ The source-clipping shortcut needs the source to realize every source-owner and 
 - The breast inputs are 10x format-test data, not a biological validation set.
 - Constant numbers of non-singleton intervals do not imply fixed endpoints. The original breast table has 61 further endpoint changes after 0.25 and three after 0.5 square micrometres.
 - Width sensitivity uses separately extracted atlases. They need not be nested: wider supports reject more arcs. The analysis measures the reach/coverage trade-off of this extraction rule, rather than estimating plausible membrane error.
-- Proseg outputs come from the other supplied revision: one adapted run per clipped lung crop, factorization disabled after failure. The new work verifies and analyzes these outputs; it does not call them fresh runs, truth, five-replicate evidence or held-out accuracy.
+- The Proseg comparison uses one recorded run per clipped lung crop, with factorization disabled after the initial failure. Transcript joins and count matrices are checked independently. These runs provide a reference reassignment, rather than an ownership-accuracy test.
 - Entrywise count reach does not imply the complete alternative assignment vector or its count matrix is simultaneously realizable.
 
 ## Four questions to answer aloud
@@ -76,3 +76,15 @@ Be able to answer these questions:
 2. Can two endpoints from different members be combined? Each is a separate alternative; a joint question requires a joint predicate or vector spectrum within each member before taking the finite union.
 3. Does the union allow the widest movement over all primary edges? Each member retains its own coverage and displacement range. There is no single atlas with both maximum coverage and maximum displacement.
 4. What certifies the component optima? They are the original exact, checksum-bound spectra. The new verifier independently reconstructs the union and checks its selected continuous witnesses.
+
+## Larger contiguous computation
+
+The central 400 µm square was fixed from the original raster extent before transcript or count outcomes. It has 1,363 complete cells and 226,983 retained molecules; the unchanged primary-atlas pipeline returns 69,278 spectra and 554,224 exact rows. Atlas extraction, rational geometry validation and counts/witness output took 22.55 minutes in one measured run, with a largest-stage RSS of 2.43 GiB.
+
+This result establishes a completed larger contiguous workload. The region overlaps earlier crops and remains the same vendor format-test specimen. Its cell count is not an independent cohort total. Per-ribbon independence alone does not establish linear whole-slide runtime: extraction ordering, overlap checks, geometric validation, local count work and output size also matter.
+
+The saved-output audit independently reconstructs the query census, min-plus compositions, witness counts/costs and every interval. Continuous witness checks and local optimality come from the exact solver; sixteen hash-selected multicopy queries additionally match independent scalar enumeration. The source audit separately checks every retained record against the original vendor files.
+
+The concentric 600 µm square has 3,171 complete cells and 470,293 retained molecules; exact enumeration returns 152,925 spectra and 1,223,400 interval rows. It uses the existing enumeration backend, selected after geometry validation established at most seven copies per local gene. The first attempt reached its global deadline during counts. A separately recorded count-only retry completed; cumulative measured attempt time is 36.89 minutes. Completed stages alone total 29.72 minutes, which excludes the interrupted work. These are separate measurements with different backends, rather than a runtime-scaling ratio.
+
+Sixteen additional 600 µm queries match independent scalar enumeration. Their identities were generated using the pre-existing input-only hash rule after production completed but before inspecting its spectra; the 400 µm sample was generated before production. Both complete output censuses and all interval rows pass the separate audits.

@@ -1,0 +1,264 @@
+{
+  "selection_rule": "Enumerate every (patch,gene) with 2 through 6 copies inclusive; order by SHA256 of UTF8 roi:patch:gene and take the first 16. Selection uses only the input atlas.",
+  "selected_at_utc": "2026-10-29T01:48:19.787495+00:00",
+  "atlas_file": "atlas_breast_central_600.json",
+  "atlas_file_sha256": "ba25f773b3afd6ff6093ecd3a5b9b1ca07e6a57a0bd49653a5977a55e0a48a57",
+  "atlas_id": "a5dc8eefc66a8d5e01670d0f08c89aeca6e6f7073f725211c7eacbcd7f848fec",
+  "roi": "breast_central_600",
+  "candidate_count": 7438,
+  "selected_before_production_spectra": false,
+  "selected_before_inspecting_production_spectra": true,
+  "selection_timing": "The same input-only hash rule established for central400 was applied after the central600 count run finished, before inspecting its production spectra.",
+  "reference_solver": "atlas.scalar_reference.spectrum; no production chain/cut imports",
+  "reference_source_sha256": "7b9381ccb82cf781c9c97fb8b6d13ce95d34fc6feac05ef5072885d018db3663",
+  "selection_sha256": "8554682dbdeff57b96b23ca0d9bd0f2894752b7cd9f174935ea063bea31f3185",
+  "per_query_limit_seconds": 15,
+  "results": [
+    {
+      "key": "breast_central_600:bbf26e4b79db0f88:SDC4",
+      "selection_sha256": "0002d19615ba987195619fbbf9d46e500ef73319a2e4162d403006cf5019a5f9",
+      "patch": "bbf26e4b79db0f88",
+      "gene": "SDC4",
+      "copies": 2,
+      "total_patch_points": 37,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "0": "0",
+        "1": "476333311355737540849/15760384360448000000000000",
+        "2": "105021175683384668783549413/1276591133196288000000000000"
+      },
+      "seconds": 0.011011114002030808
+    },
+    {
+      "key": "breast_central_600:eea432132393cafc:LDHB",
+      "selection_sha256": "000a78f51775b8dc46dca7248d3f14088b3077c3d33a386f80a5a4f1c7c5199c",
+      "patch": "eea432132393cafc",
+      "gene": "LDHB",
+      "copies": 2,
+      "total_patch_points": 20,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "0": "9161278123404526469953201/5106364532785152000000000000",
+        "1": "0"
+      },
+      "seconds": 0.002930031005234923
+    },
+    {
+      "key": "breast_central_600:8b66a910ae25e237:FLNB",
+      "selection_sha256": "000eaaf4b54ed43f53752acda5357460973d2d4d003847425c7983d87c5f3c04",
+      "patch": "8b66a910ae25e237",
+      "gene": "FLNB",
+      "copies": 2,
+      "total_patch_points": 11,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "0": "0"
+      },
+      "seconds": 0.0019547959964256734
+    },
+    {
+      "key": "breast_central_600:0bcdc1e1c26f29a5:HMGA1",
+      "selection_sha256": "00106bf28087ee31801a84e2d77c967e9e7e7afa8d5de15286cd82b1edd8cdf7",
+      "patch": "0bcdc1e1c26f29a5",
+      "gene": "HMGA1",
+      "copies": 2,
+      "total_patch_points": 20,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "0": "0"
+      },
+      "seconds": 0.0046939530002418905
+    },
+    {
+      "key": "breast_central_600:c026595e5bdfec94:LDHB",
+      "selection_sha256": "00137dad5969cd6c8e6c8fc37600267aef73dc5eb73d36ce13f32ae9e053038e",
+      "patch": "c026595e5bdfec94",
+      "gene": "LDHB",
+      "copies": 3,
+      "total_patch_points": 15,
+      "status": "computed",
+      "assignments_checked": 8,
+      "minima": {
+        "1": "0",
+        "2": "229846553292415935542698201/5106364532785152000000000000"
+      },
+      "seconds": 0.0032621030040900223
+    },
+    {
+      "key": "breast_central_600:e961b676327dbb43:SFRP1",
+      "selection_sha256": "0016daff216f6142cfb303107cbdeade6415475e62a6f47176ab45d7738cde30",
+      "patch": "e961b676327dbb43",
+      "gene": "SFRP1",
+      "copies": 2,
+      "total_patch_points": 28,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "0": "10022693870104685072209/138519003168000000000000",
+        "1": "0",
+        "2": "666073436308367115732649/4986684114048000000000000"
+      },
+      "seconds": 0.007947265999973752
+    },
+    {
+      "key": "breast_central_600:4c644f61b1998fd8:AQP1",
+      "selection_sha256": "001cb81e595fe6e314178724fea67be892145117b6d471988928bd43fb6088c4",
+      "patch": "4c644f61b1998fd8",
+      "gene": "AQP1",
+      "copies": 2,
+      "total_patch_points": 32,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "1": "0",
+        "2": "4266474242125909455198769/1276591133196288000000000000"
+      },
+      "seconds": 0.011586124004679732
+    },
+    {
+      "key": "breast_central_600:29fddd6cb9f20bbc:SFRP1",
+      "selection_sha256": "001ccdfbc66e21bdc0b249e54aa33e4081493c9ee35288671b4bc1fe5c0a849e",
+      "patch": "29fddd6cb9f20bbc",
+      "gene": "SFRP1",
+      "copies": 2,
+      "total_patch_points": 10,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "0": "0",
+        "1": "43155988601712449230773769/1276591133196288000000000000",
+        "2": "274506362184023616425874413/1276591133196288000000000000"
+      },
+      "seconds": 0.004341507999924943
+    },
+    {
+      "key": "breast_central_600:09a3587f13bf4916:FCER1G",
+      "selection_sha256": "00250c3c6a55a97d4f160b5f232fa4d59a90598dfe16ef9cf3bbfc0ec9585019",
+      "patch": "09a3587f13bf4916",
+      "gene": "FCER1G",
+      "copies": 2,
+      "total_patch_points": 11,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "0": "0"
+      },
+      "seconds": 0.003266350999183487
+    },
+    {
+      "key": "breast_central_600:980d9470c730ac67:AQP1",
+      "selection_sha256": "00252aa323bbfcc928483236f5eef742c7c23c40e5dd3493917850791626c94e",
+      "patch": "980d9470c730ac67",
+      "gene": "AQP1",
+      "copies": 2,
+      "total_patch_points": 19,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "2": "0"
+      },
+      "seconds": 0.006126435000624042
+    },
+    {
+      "key": "breast_central_600:df782a5c231e94e2:NARS",
+      "selection_sha256": "0025588021834022267f1f61772043ce76744a30bc0a178415a49bf9ecd444aa",
+      "patch": "df782a5c231e94e2",
+      "gene": "NARS",
+      "copies": 2,
+      "total_patch_points": 15,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "0": "27393780955165314367008769/1276591133196288000000000000",
+        "1": "0"
+      },
+      "seconds": 0.004772927000885829
+    },
+    {
+      "key": "breast_central_600:8ecd2e68c7547752:SFRP1",
+      "selection_sha256": "00260dcaa0ff28ab8383c57a990fd4cc47fd799a3032b5daceea9ad2f3b6e522",
+      "patch": "8ecd2e68c7547752",
+      "gene": "SFRP1",
+      "copies": 2,
+      "total_patch_points": 25,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "2": "0"
+      },
+      "seconds": 0.008433713999693282
+    },
+    {
+      "key": "breast_central_600:6ae241765840227b:AQP1",
+      "selection_sha256": "002a6e3388895e578fbb33289f4fd75decbd734bf05a9dac12d398830f63e8c5",
+      "patch": "6ae241765840227b",
+      "gene": "AQP1",
+      "copies": 4,
+      "total_patch_points": 29,
+      "status": "computed",
+      "assignments_checked": 16,
+      "minima": {
+        "0": "1416644123621934279748460929/20425458131140608000000000000",
+        "1": "0",
+        "2": "267001061738291434129/19479234820500000000000"
+      },
+      "seconds": 0.010069306001241785
+    },
+    {
+      "key": "breast_central_600:2b6d8c605da768fd:SFRP1",
+      "selection_sha256": "002c1aca2548393a844d89fa6f781d1590a9293f93a88da951fb3577a24422b9",
+      "patch": "2b6d8c605da768fd",
+      "gene": "SFRP1",
+      "copies": 6,
+      "total_patch_points": 28,
+      "status": "computed",
+      "assignments_checked": 64,
+      "minima": {
+        "4": "4321284884172162623161/1492107395072000000000000",
+        "5": "0"
+      },
+      "seconds": 0.00796001400158275
+    },
+    {
+      "key": "breast_central_600:b1caf1145ab92aa0:HMGA1",
+      "selection_sha256": "0038735252ab682fb28d0ca5b65ba6071e15c94d33a417725f43088fc6565539",
+      "patch": "b1caf1145ab92aa0",
+      "gene": "HMGA1",
+      "copies": 2,
+      "total_patch_points": 14,
+      "status": "computed",
+      "assignments_checked": 4,
+      "minima": {
+        "0": "2966754533967237205743769/1276591133196288000000000000",
+        "1": "0"
+      },
+      "seconds": 0.002101259997289162
+    },
+    {
+      "key": "breast_central_600:00791a378a638307:LDHB",
+      "selection_sha256": "003eaec6356529e27e5d8afae5930e33e610de6656daf2ed153594e929059593",
+      "patch": "00791a378a638307",
+      "gene": "LDHB",
+      "copies": 4,
+      "total_patch_points": 14,
+      "status": "computed",
+      "assignments_checked": 16,
+      "minima": {
+        "0": "55741448905199909369900947/212765188866048000000000000",
+        "1": "150142097451510872527426913/1276591133196288000000000000",
+        "2": "3115750349697388016908009/79786945824768000000000000",
+        "3": "0"
+      },
+      "seconds": 0.004454077999980655
+    }
+  ],
+  "counts": {
+    "computed": 16,
+    "resource_limit": 0,
+    "error": 0
+  }
+}

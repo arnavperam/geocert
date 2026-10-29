@@ -30,6 +30,10 @@ The finite-family extension evaluates the primary atlas and four wider-support a
 
 On the same comparison keys, the union attains 315 of 2,798 Proseg count changes, compared with 185 for the primary atlas. At 4 µm², 76.4% of the original lung count questions and 65.9% of the breast questions remain invariant under the expanded family. Both the primary and union results are reported in the paper.
 
+## Larger contiguous region
+
+The [contiguous-region experiments](recomb2027-atlas/extensions/scaling/README.md) process prespecified 400 and 600 µm squares from the breast format-test source. The larger region contains 3,171 complete cells and 470,293 retained transcripts, yielding 1,223,400 exact interval rows. Checked inputs, results and resource records include both computation attempts, with a separate audit of every endpoint.
+
 ## Reproduce the paper
 
 [Atlas 1.1.0](recomb2027-atlas/) contains the implementation, tests, protocols and checked input/results archive. Its [README](recomb2027-atlas/README.md) gives commands for the primary count tables, the four-width study, geometry checks and figures. [CI](https://github.com/arnavperam/geocert/actions/workflows/atlas-final.yml) checks the exact replay on Python 3.12 and 3.13.

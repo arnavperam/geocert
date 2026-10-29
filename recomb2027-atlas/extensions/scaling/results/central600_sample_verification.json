@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "scope": "Exact rational count spectra for 16 input-selected multicopy queries only",
+  "atlas_id": "a5dc8eefc66a8d5e01670d0f08c89aeca6e6f7073f725211c7eacbcd7f848fec",
+  "atlas_file_sha256": "ba25f773b3afd6ff6093ecd3a5b9b1ca07e6a57a0bd49653a5977a55e0a48a57",
+  "selection_sha256": "8554682dbdeff57b96b23ca0d9bd0f2894752b7cd9f174935ea063bea31f3185",
+  "reference_sha256": "27eccca1702432e7e3b55796e06628d3b1a8c00800ab5b71ff690094515a5462",
+  "production_spectra_sha256": "db3224065dea9e5deb1eff284034fe07ace993387afdb22dd8164986a1a73a82",
+  "counts": {
+    "matched": 16
+  },
+  "queries": [
+    {
+      "key": "breast_central_600:bbf26e4b79db0f88:SDC4",
+      "status": "matched",
+      "count_states": 3,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:eea432132393cafc:LDHB",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:8b66a910ae25e237:FLNB",
+      "status": "matched",
+      "count_states": 1,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:0bcdc1e1c26f29a5:HMGA1",
+      "status": "matched",
+      "count_states": 1,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:c026595e5bdfec94:LDHB",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 8
+    },
+    {
+      "key": "breast_central_600:e961b676327dbb43:SFRP1",
+      "status": "matched",
+      "count_states": 3,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:4c644f61b1998fd8:AQP1",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:29fddd6cb9f20bbc:SFRP1",
+      "status": "matched",
+      "count_states": 3,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:09a3587f13bf4916:FCER1G",
+      "status": "matched",
+      "count_states": 1,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:980d9470c730ac67:AQP1",
+      "status": "matched",
+      "count_states": 1,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:df782a5c231e94e2:NARS",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:8ecd2e68c7547752:SFRP1",
+      "status": "matched",
+      "count_states": 1,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:6ae241765840227b:AQP1",
+      "status": "matched",
+      "count_states": 3,
+      "assignments_checked": 16
+    },
+    {
+      "key": "breast_central_600:2b6d8c605da768fd:SFRP1",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 64
+    },
+    {
+      "key": "breast_central_600:b1caf1145ab92aa0:HMGA1",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_600:00791a378a638307:LDHB",
+      "status": "matched",
+      "count_states": 4,
+      "assignments_checked": 16
+    }
+  ]
+}

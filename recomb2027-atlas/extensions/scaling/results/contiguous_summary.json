@@ -1,0 +1,757 @@
+{
+  "scope": "Computational footprint within one breast format-test specimen; nested regions overlap and are not independent biological samples",
+  "timing": "Sum of extraction, rational geometry validation and exact count/witness stage fresh-process wall times; preparation, coverage and output audit separate",
+  "memory": "Maximum individual stage process RSS on a shared Linux host",
+  "measurements": {
+    "400": {
+      "nominal_side_um": 400,
+      "actual_side_um": 399.925023837389,
+      "backend": "chain",
+      "measurement": {
+        "status": "passed",
+        "stages": {
+          "extraction": {
+            "script": "build_atlas.py",
+            "status": "passed",
+            "error": null,
+            "exit_code": 0,
+            "started_unix": 1793234459.0406075,
+            "ended_unix": 1793234611.353149,
+            "wall_seconds": 152.31253850199573,
+            "user_cpu_seconds": 150.727882,
+            "system_cpu_seconds": 1.398804,
+            "peak_process_rss_kib": 983480,
+            "rss_semantics": "Linux ru_maxrss, this fresh process including imports and output serialization",
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1"
+            },
+            "elapsed_seconds": 152.45868595199863
+          },
+          "geometry_validation": {
+            "script": "verify_atlas.py",
+            "status": "passed",
+            "error": null,
+            "exit_code": 0,
+            "started_unix": 1793234611.5196447,
+            "ended_unix": 1793234811.0339334,
+            "wall_seconds": 199.51428669100278,
+            "user_cpu_seconds": 198.271268,
+            "system_cpu_seconds": 1.205045,
+            "peak_process_rss_kib": 373640,
+            "rss_semantics": "Linux ru_maxrss, this fresh process including imports and output serialization",
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1"
+            },
+            "elapsed_seconds": 199.66466455000045
+          },
+          "count_spectra": {
+            "script": "certify_cells.py",
+            "status": "passed",
+            "error": null,
+            "exit_code": 0,
+            "started_unix": 1793234811.1846516,
+            "ended_unix": 1793235811.9300034,
+            "wall_seconds": 1000.7453596170017,
+            "user_cpu_seconds": 989.346921,
+            "system_cpu_seconds": 11.116847,
+            "peak_process_rss_kib": 2548496,
+            "rss_semantics": "Linux ru_maxrss, this fresh process including imports and output serialization",
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1"
+            },
+            "elapsed_seconds": 1000.9093207050028
+          },
+          "coverage": {
+            "script": "coverage.py",
+            "status": "passed",
+            "error": null,
+            "exit_code": 0,
+            "started_unix": 1793235812.108244,
+            "ended_unix": 1793235813.036602,
+            "wall_seconds": 0.9283557360031409,
+            "user_cpu_seconds": 0.75937,
+            "system_cpu_seconds": 0.222194,
+            "peak_process_rss_kib": 272316,
+            "rss_semantics": "Linux ru_maxrss, this fresh process including imports and output serialization",
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1"
+            },
+            "elapsed_seconds": 1.022812837996753
+          }
+        },
+        "scope": "One genuine central contiguous breast format-test crop",
+        "execution_environment": "Shared Linux container; concurrent research work; each stage is a fresh sequential process",
+        "timing_semantics": "Stage wall time includes startup, imports, computation and output serialization; source preparation and final completeness verification are separate",
+        "memory_semantics": "Maximum stage process RSS in MiB, not aggregate shared-machine memory",
+        "source_scripts_sha256": {
+          "extraction": "a6a71a4bfa2497d78b92fd8627472bb0ee546d07badfcfb0c2bd1a2ebc71f725",
+          "geometry_validation": "0cebf35338cd5171850bf0ba62d4fba71c873281312a8c6daac5499dd96efcb2",
+          "count_spectra": "ef0cb73ef7735e21ed2e305afb1eabb94f98bb76f594a5d2fc3839464e86e143"
+        },
+        "total_timeout_seconds": 2400,
+        "roi": "breast_central_400",
+        "atlas_id": "1c8c3075052f698a1a93b6260f549e67e68626189d68de21c079dd494fb49087",
+        "complete_cells": 1363,
+        "retained_transcripts": 226983,
+        "ribbons": 5102,
+        "count_spectra": 69278,
+        "interval_rows": 554224,
+        "interval_statuses": {
+          "exact": 554224
+        },
+        "geometry_failures": 0,
+        "resource_limited_queries": 0,
+        "editable_transcripts": 29011,
+        "coverage": {
+          "roi": "breast_central_400",
+          "crop_contained_connected_reference_cells": 1363,
+          "all_incident_unique_edges": 211770,
+          "atlas_editable_unique_edges": 137516,
+          "all_incident_edge_fraction": 0.6493648769891864,
+          "cell_coverage_min": 0.1736842105263158,
+          "cell_coverage_median": 0.7135416666666666,
+          "cell_coverage_max": 0.9605263157894737,
+          "editable_cell_gene_multiplicity_histogram": {
+            "1": 20024,
+            "2": 5178,
+            "3": 2039,
+            "4": 1049,
+            "5": 563,
+            "6": 374,
+            "7": 242,
+            "8": 141,
+            "9": 74,
+            "10": 40,
+            "11": 31,
+            "12": 15,
+            "13": 7,
+            "14": 6,
+            "15": 3,
+            "16": 2,
+            "20": 1
+          }
+        },
+        "count_summary": {
+          "roi": "breast_central_400",
+          "complete_cells": 1363,
+          "positive_or_editable_cell_gene_keys": 69278,
+          "editable_cell_gene_keys": 29789,
+          "local_gene_spectra": 24132,
+          "local_variable_gene_spectra": 13831,
+          "count_method": "chain",
+          "chain_queries": 3594,
+          "chain_DP_states": 7039980,
+          "local_target_assignments": 31537,
+          "singleton_questions": 29011,
+          "maximum_gene_copies_per_patch": 7,
+          "maximum_patches_per_cell_gene": 9,
+          "maximum_cell_gene_observed_count": 77,
+          "interval_rows": 554224,
+          "by_budget": [
+            {
+              "budget_um2": "0",
+              "rows": 69278,
+              "non_singleton": 0,
+              "strictly_tighter_than_independent": 0,
+              "max_width": 0,
+              "source_detection_can_disappear": 0,
+              "source_zero_can_appear": 0
+            },
+            {
+              "budget_um2": "1/20",
+              "rows": 69278,
+              "non_singleton": 13080,
+              "strictly_tighter_than_independent": 433,
+              "max_width": 8,
+              "source_detection_can_disappear": 1428,
+              "source_zero_can_appear": 1446
+            },
+            {
+              "budget_um2": "1/10",
+              "rows": 69278,
+              "non_singleton": 15502,
+              "strictly_tighter_than_independent": 464,
+              "max_width": 9,
+              "source_detection_can_disappear": 1764,
+              "source_zero_can_appear": 1815
+            },
+            {
+              "budget_um2": "1/4",
+              "rows": 69278,
+              "non_singleton": 18395,
+              "strictly_tighter_than_independent": 317,
+              "max_width": 11,
+              "source_detection_can_disappear": 2208,
+              "source_zero_can_appear": 2314
+            },
+            {
+              "budget_um2": "1/2",
+              "rows": 69278,
+              "non_singleton": 18395,
+              "strictly_tighter_than_independent": 13,
+              "max_width": 12,
+              "source_detection_can_disappear": 2212,
+              "source_zero_can_appear": 2314
+            },
+            {
+              "budget_um2": "1",
+              "rows": 69278,
+              "non_singleton": 18395,
+              "strictly_tighter_than_independent": 0,
+              "max_width": 12,
+              "source_detection_can_disappear": 2212,
+              "source_zero_can_appear": 2314
+            },
+            {
+              "budget_um2": "2",
+              "rows": 69278,
+              "non_singleton": 18395,
+              "strictly_tighter_than_independent": 0,
+              "max_width": 12,
+              "source_detection_can_disappear": 2212,
+              "source_zero_can_appear": 2314
+            },
+            {
+              "budget_um2": "4",
+              "rows": 69278,
+              "non_singleton": 18395,
+              "strictly_tighter_than_independent": 0,
+              "max_width": 12,
+              "source_detection_can_disappear": 2212,
+              "source_zero_can_appear": 2314
+            }
+          ]
+        },
+        "pipeline_seconds": 1353.0326712070018,
+        "largest_stage_rss_mib": 2488.765625,
+        "output_sha256": {
+          "cell_spectra.json": "4c0703e8651b3ab5489b848fd23e4e2fc68b4648a900d9a8a2ca9f8fe671b236",
+          "patch_spectra.json": "f5efc803aeeebdb5f3a9e6c10af815e0a0e5d66755de537aba821981f543036a",
+          "cell_expression_intervals.csv": "12892ee4b462f66b12aded111d03c5c336445587aa98bfeca355dc31e15f1014",
+          "atlas_geometric_validation.json": "71cc90cabb22dd1ea26a86829d001397bc7a4efa65faa855d5af505fa969927b",
+          "coverage_summary.json": "e6128224e133bb01e4c89dbe73b11e0774f60e2ca5ac4e6fcbfad22f4de06651"
+        },
+        "outer_elapsed_seconds": 1358.5346418830013
+      },
+      "preparation": {
+        "roi": "breast_central_400",
+        "retained_transcripts": 226983,
+        "source_assignment_disagreements": 0,
+        "source_hashes": {
+          "masks.npz": "798708d17022f1a82f90fb00c7a6c2945df050bc1e3b578ceeed1de0d9d6f0a6",
+          "metadata.json": "2c8ffbde58de62fcaa32e44c54a92be9dec9c8dcc10bfa96465f42b5c15acb3d",
+          "transcripts.csv.gz": "a412dc4370536ca3d2126e338f0c0d27bd692d5b63f2fa55629b9b27635da7b9"
+        },
+        "preparation_seconds": 12.438154114002828,
+        "selection_protocol_sha256": "4ef3bbb04b6b80dad62c985aa9dd9d134bc0a44a15ff9e866c89b468f0568345"
+      },
+      "output_reconciliation": {
+        "status": "passed",
+        "local_gene_spectra": 24132,
+        "local_witnesses_checked": 39519,
+        "cell_gene_spectra": 69278,
+        "cell_state_traces_checked": 95253,
+        "interval_rows_checked": 554224,
+        "budgets_per_question": 8,
+        "seconds": 19.64979775899701,
+        "scope": "Complete local/cell census, structural owner bits, witness counts, independent scalar min-plus composition, trace costs and endpoints; local optimality is supplied by the exact local solver and geometric witnesses by its verifier"
+      }
+    },
+    "600": {
+      "nominal_side_um": 600,
+      "actual_side_um": 599.8875357560835,
+      "backend": "enumeration",
+      "measurement": {
+        "status": "passed",
+        "stages": {
+          "extraction": {
+            "script": "build_atlas.py",
+            "status": "passed",
+            "error": null,
+            "exit_code": 0,
+            "started_unix": 1793235838.0272205,
+            "ended_unix": 1793236261.7553315,
+            "wall_seconds": 423.7281068519951,
+            "user_cpu_seconds": 419.058487,
+            "system_cpu_seconds": 4.432511,
+            "peak_process_rss_kib": 1966108,
+            "rss_semantics": "Linux ru_maxrss, this fresh process including imports and output serialization",
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1"
+            },
+            "elapsed_seconds": 423.92674634500145
+          },
+          "geometry_validation": {
+            "script": "verify_atlas.py",
+            "status": "passed",
+            "error": null,
+            "exit_code": 0,
+            "started_unix": 1793236261.9609878,
+            "ended_unix": 1793236741.9668088,
+            "wall_seconds": 480.005832199,
+            "user_cpu_seconds": 478.197929,
+            "system_cpu_seconds": 1.6524869999999998,
+            "peak_process_rss_kib": 799472,
+            "rss_semantics": "Linux ru_maxrss, this fresh process including imports and output serialization",
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1"
+            },
+            "elapsed_seconds": 480.19483593800396
+          },
+          "count_spectra": {
+            "script": "certify_cells.py",
+            "status": "passed",
+            "error": null,
+            "exit_code": 0,
+            "started_unix": 1793237320.0853088,
+            "ended_unix": 1793238198.8510396,
+            "wall_seconds": 878.7657450240004,
+            "user_cpu_seconds": 865.383208,
+            "system_cpu_seconds": 12.943359,
+            "peak_process_rss_kib": 2305800,
+            "rss_semantics": "Linux ru_maxrss, this fresh process including imports and output serialization",
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1"
+            },
+            "elapsed_seconds": 878.9524282329949
+          },
+          "coverage": {
+            "script": "coverage.py",
+            "status": "passed",
+            "error": null,
+            "exit_code": 0,
+            "started_unix": 1793238199.0714412,
+            "ended_unix": 1793238201.3138313,
+            "wall_seconds": 2.2423887430049945,
+            "user_cpu_seconds": 1.776107,
+            "system_cpu_seconds": 0.529354,
+            "peak_process_rss_kib": 554792,
+            "rss_semantics": "Linux ru_maxrss, this fresh process including imports and output serialization",
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1"
+            },
+            "elapsed_seconds": 2.3794459140044637
+          }
+        },
+        "scope": "One genuine central contiguous breast format-test crop",
+        "execution_environment": "Shared Linux container; concurrent research work; each stage is a fresh sequential process",
+        "timing_semantics": "Stage wall time includes startup, imports, computation and output serialization; source preparation and final completeness verification are separate",
+        "memory_semantics": "Maximum stage process RSS in MiB, not aggregate shared-machine memory",
+        "source_scripts_sha256": {
+          "extraction": "a6a71a4bfa2497d78b92fd8627472bb0ee546d07badfcfb0c2bd1a2ebc71f725",
+          "geometry_validation": "0cebf35338cd5171850bf0ba62d4fba71c873281312a8c6daac5499dd96efcb2",
+          "count_spectra": "ef0cb73ef7735e21ed2e305afb1eabb94f98bb76f594a5d2fc3839464e86e143"
+        },
+        "count_method": "enumeration",
+        "runner_sha256": "fc38e083d97c5f8975a1241e162287131f78d927a6108c9e57e613401f7b49f3",
+        "stage_wrapper_sha256": "778d708d8626a5caf947cac311fb82cfe9ffbe36fea5d74cd284982325fe9f5a",
+        "total_timeout_seconds": 1200,
+        "previous_attempt": {
+          "status": "failed",
+          "stages": {
+            "extraction": {
+              "script": "build_atlas.py",
+              "status": "passed",
+              "error": null,
+              "exit_code": 0,
+              "started_unix": 1793235838.0272205,
+              "ended_unix": 1793236261.7553315,
+              "wall_seconds": 423.7281068519951,
+              "user_cpu_seconds": 419.058487,
+              "system_cpu_seconds": 4.432511,
+              "peak_process_rss_kib": 1966108,
+              "rss_semantics": "Linux ru_maxrss, this fresh process including imports and output serialization",
+              "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+              "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+              "cpu_affinity": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "thread_environment": {
+                "OMP_NUM_THREADS": "1",
+                "OPENBLAS_NUM_THREADS": "1",
+                "MKL_NUM_THREADS": "1",
+                "NUMEXPR_NUM_THREADS": "1"
+              },
+              "elapsed_seconds": 423.92674634500145
+            },
+            "geometry_validation": {
+              "script": "verify_atlas.py",
+              "status": "passed",
+              "error": null,
+              "exit_code": 0,
+              "started_unix": 1793236261.9609878,
+              "ended_unix": 1793236741.9668088,
+              "wall_seconds": 480.005832199,
+              "user_cpu_seconds": 478.197929,
+              "system_cpu_seconds": 1.6524869999999998,
+              "peak_process_rss_kib": 799472,
+              "rss_semantics": "Linux ru_maxrss, this fresh process including imports and output serialization",
+              "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+              "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+              "cpu_affinity": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "thread_environment": {
+                "OMP_NUM_THREADS": "1",
+                "OPENBLAS_NUM_THREADS": "1",
+                "MKL_NUM_THREADS": "1",
+                "NUMEXPR_NUM_THREADS": "1"
+              },
+              "elapsed_seconds": 480.19483593800396
+            }
+          },
+          "scope": "One genuine central contiguous breast format-test crop",
+          "execution_environment": "Shared Linux container; concurrent research work; each stage is a fresh sequential process",
+          "timing_semantics": "Stage wall time includes startup, imports, computation and output serialization; source preparation and final completeness verification are separate",
+          "memory_semantics": "Maximum stage process RSS in MiB, not aggregate shared-machine memory",
+          "source_scripts_sha256": {
+            "extraction": "a6a71a4bfa2497d78b92fd8627472bb0ee546d07badfcfb0c2bd1a2ebc71f725",
+            "geometry_validation": "0cebf35338cd5171850bf0ba62d4fba71c873281312a8c6daac5499dd96efcb2",
+            "count_spectra": "ef0cb73ef7735e21ed2e305afb1eabb94f98bb76f594a5d2fc3839464e86e143"
+          },
+          "count_method": "enumeration",
+          "runner_sha256": "2fe68e08abdc4f241e3e4208e2a13e09d1ad0172f6049423cfe6f3fb423e4349",
+          "stage_wrapper_sha256": "778d708d8626a5caf947cac311fb82cfe9ffbe36fea5d74cd284982325fe9f5a",
+          "total_timeout_seconds": 1321,
+          "backend_decision": {
+            "selected_unix": 1793236743.4667726,
+            "method": "enumeration",
+            "maximum_local_gene_copies": 7,
+            "permitted_maximum": 16,
+            "pattern_limit": 65536,
+            "rule": "Select the existing exact enumeration backend from local input multiplicity after geometry validation and before count outputs; require at most 16 copies per local gene",
+            "atlas_ids": [
+              "a5dc8eefc66a8d5e01670d0f08c89aeca6e6f7073f725211c7eacbcd7f848fec"
+            ]
+          },
+          "error": "TimeoutExpired: Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '/workspace/scratch/72ecd966d213/atlas_union/repo/recomb2027-atlas/extensions/scaling/stage_runner.py', '--script', '/workspace/scratch/72ecd966d213/final_evaluation_source/recomb2027-atlas/analysis/certify_cells.py', '--record', '/tmp/geocert_contiguous_600/count_spectra_resource.json']' timed out after 415.4026454679988 seconds",
+          "outer_elapsed_seconds": 1321.0673979560015
+        },
+        "global_deadline_interruptions": 1,
+        "pipeline_seconds_semantics": "Sum of the completed extraction, geometry and final count stages; interrupted attempt is additional and included in cumulative_measured_attempt_seconds",
+        "backend_decision": {
+          "selected_unix": 1793237319.9218442,
+          "method": "enumeration",
+          "maximum_local_gene_copies": 7,
+          "permitted_maximum": 16,
+          "pattern_limit": 65536,
+          "rule": "Select the existing exact enumeration backend from local input multiplicity after geometry validation and before count outputs; require at most 16 copies per local gene",
+          "atlas_ids": [
+            "a5dc8eefc66a8d5e01670d0f08c89aeca6e6f7073f725211c7eacbcd7f848fec"
+          ]
+        },
+        "roi": "breast_central_600",
+        "atlas_id": "a5dc8eefc66a8d5e01670d0f08c89aeca6e6f7073f725211c7eacbcd7f848fec",
+        "complete_cells": 3171,
+        "retained_transcripts": 470293,
+        "ribbons": 11748,
+        "count_spectra": 152925,
+        "interval_rows": 1223400,
+        "interval_statuses": {
+          "exact": 1223400
+        },
+        "geometry_failures": 0,
+        "resource_limited_queries": 0,
+        "editable_transcripts": 62108,
+        "coverage": {
+          "roi": "breast_central_600",
+          "crop_contained_connected_reference_cells": 3171,
+          "all_incident_unique_edges": 478423,
+          "atlas_editable_unique_edges": 318946,
+          "all_incident_edge_fraction": 0.6666610927986322,
+          "cell_coverage_min": 0.13934426229508196,
+          "cell_coverage_median": 0.7192307692307692,
+          "cell_coverage_max": 0.9626865671641791,
+          "editable_cell_gene_multiplicity_histogram": {
+            "1": 44771,
+            "2": 11158,
+            "3": 4172,
+            "4": 2186,
+            "5": 1184,
+            "6": 710,
+            "7": 468,
+            "8": 275,
+            "9": 151,
+            "10": 80,
+            "11": 48,
+            "12": 22,
+            "13": 12,
+            "14": 9,
+            "15": 3,
+            "16": 2,
+            "20": 1
+          }
+        },
+        "count_summary": {
+          "roi": "breast_central_600",
+          "complete_cells": 3171,
+          "positive_or_editable_cell_gene_keys": 152925,
+          "editable_cell_gene_keys": 65252,
+          "local_gene_spectra": 52169,
+          "local_variable_gene_spectra": 30026,
+          "count_method": "enumeration",
+          "chain_queries": 0,
+          "chain_DP_states": 0,
+          "local_target_assignments": 89783,
+          "singleton_questions": 62108,
+          "maximum_gene_copies_per_patch": 7,
+          "maximum_patches_per_cell_gene": 9,
+          "maximum_cell_gene_observed_count": 77,
+          "interval_rows": 1223400,
+          "by_budget": [
+            {
+              "budget_um2": "0",
+              "rows": 152925,
+              "non_singleton": 0,
+              "strictly_tighter_than_independent": 0,
+              "max_width": 0,
+              "source_detection_can_disappear": 0,
+              "source_zero_can_appear": 0
+            },
+            {
+              "budget_um2": "1/20",
+              "rows": 152925,
+              "non_singleton": 28791,
+              "strictly_tighter_than_independent": 849,
+              "max_width": 8,
+              "source_detection_can_disappear": 3393,
+              "source_zero_can_appear": 3521
+            },
+            {
+              "budget_um2": "1/10",
+              "rows": 152925,
+              "non_singleton": 34170,
+              "strictly_tighter_than_independent": 914,
+              "max_width": 9,
+              "source_detection_can_disappear": 4224,
+              "source_zero_can_appear": 4387
+            },
+            {
+              "budget_um2": "1/4",
+              "rows": 152925,
+              "non_singleton": 40318,
+              "strictly_tighter_than_independent": 644,
+              "max_width": 11,
+              "source_detection_can_disappear": 5198,
+              "source_zero_can_appear": 5453
+            },
+            {
+              "budget_um2": "1/2",
+              "rows": 152925,
+              "non_singleton": 40318,
+              "strictly_tighter_than_independent": 21,
+              "max_width": 12,
+              "source_detection_can_disappear": 5207,
+              "source_zero_can_appear": 5453
+            },
+            {
+              "budget_um2": "1",
+              "rows": 152925,
+              "non_singleton": 40318,
+              "strictly_tighter_than_independent": 0,
+              "max_width": 12,
+              "source_detection_can_disappear": 5207,
+              "source_zero_can_appear": 5453
+            },
+            {
+              "budget_um2": "2",
+              "rows": 152925,
+              "non_singleton": 40318,
+              "strictly_tighter_than_independent": 0,
+              "max_width": 12,
+              "source_detection_can_disappear": 5207,
+              "source_zero_can_appear": 5453
+            },
+            {
+              "budget_um2": "4",
+              "rows": 152925,
+              "non_singleton": 40318,
+              "strictly_tighter_than_independent": 0,
+              "max_width": 12,
+              "source_detection_can_disappear": 5207,
+              "source_zero_can_appear": 5453
+            }
+          ]
+        },
+        "pipeline_seconds": 1783.0740105160003,
+        "largest_stage_rss_mib": 2251.7578125,
+        "output_sha256": {
+          "cell_spectra.json": "abcc239be20ffe21aaee1e81da0b081e0ff5653ace81cf92e34e7781b0a15f69",
+          "patch_spectra.json": "db3224065dea9e5deb1eff284034fe07ace993387afdb22dd8164986a1a73a82",
+          "cell_expression_intervals.csv": "70567e77937efa8e77991a8a61ef1f71807703b28e5bf8c77fa19f8cc2d7da47",
+          "atlas_geometric_validation.json": "926634a6d47a86cb59e3a31c217977ff2c4ab93ce2ecd0c7ac76cf22472eb08a",
+          "coverage_summary.json": "66b00ad73625dc6f548ba81403baf4b6edb3385ac59f7d4fab8cb33fa44ca4d7"
+        },
+        "outer_elapsed_seconds": 892.0446625559998,
+        "cumulative_measured_attempt_seconds": 2213.1120605120013
+      },
+      "preparation": {
+        "roi": "breast_central_600",
+        "retained_transcripts": 470293,
+        "source_assignment_disagreements": 0,
+        "source_hashes": {
+          "masks.npz": "5ba826bc5f3963ceeeba3c87ee8e9df51e491e00181172714a0aa9945d01a6b5",
+          "metadata.json": "92c0bae04af3975cee8060546741007daa9598ec1ba29830888bee4665230512",
+          "transcripts.csv.gz": "13e7ecaa59aa46324634ed4577a12f2c9df013cb3441afcd91c9a2ddb58d87a7"
+        },
+        "preparation_seconds": 20.736590157001046,
+        "selection_protocol_sha256": "4ef3bbb04b6b80dad62c985aa9dd9d134bc0a44a15ff9e866c89b468f0568345"
+      },
+      "output_reconciliation": {
+        "status": "passed",
+        "local_gene_spectra": 52169,
+        "local_witnesses_checked": 85335,
+        "cell_gene_spectra": 152925,
+        "cell_state_traces_checked": 208555,
+        "interval_rows_checked": 1223400,
+        "budgets_per_question": 8,
+        "seconds": 33.69185731199832,
+        "scope": "Complete local/cell census, structural owner bits, witness counts, independent scalar min-plus composition, trace costs and endpoints; local optimality is supplied by the exact local solver and geometric witnesses by its verifier"
+      }
+    }
+  }
+}

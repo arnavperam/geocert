@@ -146,3 +146,7 @@ Software in this package is [MIT licensed](LICENSE). Source-derived 10x data ret
 Generative AI assisted mathematics, implementation, experiments, verification and drafting. The author is responsible for the work and its claims.
 
 The evidence is limited to the declared boundary families and recorded crops. Anatomical calibration, molecular ground truth, independent-donor biological validation and downstream inference remain unvalidated.
+
+## Larger contiguous computation
+
+The additional [400 and 600 µm regions](extensions/scaling/README.md) were selected from the original breast source extent before count outcomes were examined. The larger region has 3,171 complete cells and yields 152,925 count spectra and 1,223,400 exact interval rows. The extension includes the original-source adapter, independent source and output audits, checked inputs/results and measured stage resources. It uses the primary atlas and the same breast format-test specimen.

@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "scope": "Exact rational count spectra for 16 input-selected multicopy queries only",
+  "atlas_id": "1c8c3075052f698a1a93b6260f549e67e68626189d68de21c079dd494fb49087",
+  "atlas_file_sha256": "b6ef8b6c3ba2cd2fee3fde1cff17107e374452720ba0552fbf44723ab57a96b3",
+  "selection_sha256": "f34c2a91dd42921f407d609435b4d5526786cfa503698a6036d387999e017162",
+  "reference_sha256": "f69bad29d52931f6482f44315626584e260c73302b08b4875f83a9a1ffb2411c",
+  "production_spectra_sha256": "f5efc803aeeebdb5f3a9e6c10af815e0a0e5d66755de537aba821981f543036a",
+  "counts": {
+    "matched": 16
+  },
+  "queries": [
+    {
+      "key": "breast_central_400:dd8469a8bf854855:AQP1",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 8
+    },
+    {
+      "key": "breast_central_400:c6b5c330cb8c6a5f:ITM2C",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:3c3d4279b9a7f643:HMGA1",
+      "status": "matched",
+      "count_states": 3,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:90c096226b856c46:DSP",
+      "status": "matched",
+      "count_states": 1,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:8ffb97883415e184:EPCAM",
+      "status": "matched",
+      "count_states": 3,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:33dd225ca1af7e8b:ACTG2",
+      "status": "matched",
+      "count_states": 3,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:597e32de7296091e:SFRP1",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:75028ae5535d7c00:SERPINA3",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:e3a06d02599cc884:HMGA1",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:0e0fc2bb211022f6:FLNB",
+      "status": "matched",
+      "count_states": 1,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:6fab468fd76bb423:DSP",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:d087fa017694b150:LDHB",
+      "status": "matched",
+      "count_states": 5,
+      "assignments_checked": 16
+    },
+    {
+      "key": "breast_central_400:b4f202f992dd19c9:EPCAM",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:2f3e8c94ee4467c4:TOMM7",
+      "status": "matched",
+      "count_states": 2,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:170ade167050af51:ALDH1A3",
+      "status": "matched",
+      "count_states": 3,
+      "assignments_checked": 4
+    },
+    {
+      "key": "breast_central_400:1a6e99ee5b8e4bea:LDHB",
+      "status": "matched",
+      "count_states": 3,
+      "assignments_checked": 16
+    }
+  ]
+}

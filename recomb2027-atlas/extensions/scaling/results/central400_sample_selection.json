@@ -1,0 +1,140 @@
+{
+  "selection_rule": "Enumerate every (patch,gene) with 2 through 6 copies inclusive; order by SHA256 of UTF8 roi:patch:gene and take the first 16. Selection uses only the input atlas.",
+  "selected_before_production_spectra": true,
+  "selected_at_utc": "2026-10-29T00:55:29.205009+00:00",
+  "atlas_file_sha256": "b6ef8b6c3ba2cd2fee3fde1cff17107e374452720ba0552fbf44723ab57a96b3",
+  "atlas_id": "1c8c3075052f698a1a93b6260f549e67e68626189d68de21c079dd494fb49087",
+  "roi": "breast_central_400",
+  "candidate_count": 3590,
+  "selected": [
+    {
+      "key": "breast_central_400:dd8469a8bf854855:AQP1",
+      "selection_sha256": "000145baa05b12762736c29291c06843304a6050370056af013dbae7e84783a5",
+      "patch": "dd8469a8bf854855",
+      "gene": "AQP1",
+      "copies": 3,
+      "total_patch_points": 28
+    },
+    {
+      "key": "breast_central_400:c6b5c330cb8c6a5f:ITM2C",
+      "selection_sha256": "00025026024d5e98a822668d8d348725b228ee84e289c01e890ffe9aebed4783",
+      "patch": "c6b5c330cb8c6a5f",
+      "gene": "ITM2C",
+      "copies": 2,
+      "total_patch_points": 38
+    },
+    {
+      "key": "breast_central_400:3c3d4279b9a7f643:HMGA1",
+      "selection_sha256": "0041e142503ccf2f3396cb35b7d5e50fdb6c95f1df0e3a462648c671214f52f2",
+      "patch": "3c3d4279b9a7f643",
+      "gene": "HMGA1",
+      "copies": 2,
+      "total_patch_points": 6
+    },
+    {
+      "key": "breast_central_400:90c096226b856c46:DSP",
+      "selection_sha256": "005b86c089813cc1320b54296a0de7a7113cb5fdf10fadde0a79bdd60e655287",
+      "patch": "90c096226b856c46",
+      "gene": "DSP",
+      "copies": 2,
+      "total_patch_points": 20
+    },
+    {
+      "key": "breast_central_400:8ffb97883415e184:EPCAM",
+      "selection_sha256": "009715b207aa0b7dc5ccbeb0876a844790e31d5ebdaa5f22b7ef45652d5463f2",
+      "patch": "8ffb97883415e184",
+      "gene": "EPCAM",
+      "copies": 2,
+      "total_patch_points": 12
+    },
+    {
+      "key": "breast_central_400:33dd225ca1af7e8b:ACTG2",
+      "selection_sha256": "00ae373faebf6e95b427f78ac9111865dfb07565ca83669eb9020050d74060cc",
+      "patch": "33dd225ca1af7e8b",
+      "gene": "ACTG2",
+      "copies": 2,
+      "total_patch_points": 25
+    },
+    {
+      "key": "breast_central_400:597e32de7296091e:SFRP1",
+      "selection_sha256": "00b2437d42d174ca9f6adfbcfb3d24619125f6ed6079cd956d739bf42ea70b3e",
+      "patch": "597e32de7296091e",
+      "gene": "SFRP1",
+      "copies": 2,
+      "total_patch_points": 17
+    },
+    {
+      "key": "breast_central_400:75028ae5535d7c00:SERPINA3",
+      "selection_sha256": "00d0b2605eb912779f4a5dc56614b4426513d18dbb57a424d42d18b62941dac9",
+      "patch": "75028ae5535d7c00",
+      "gene": "SERPINA3",
+      "copies": 2,
+      "total_patch_points": 7
+    },
+    {
+      "key": "breast_central_400:e3a06d02599cc884:HMGA1",
+      "selection_sha256": "00d5432eab24285c6a3396c7080b2bb4d5632636b9048df28e7137df52efda1a",
+      "patch": "e3a06d02599cc884",
+      "gene": "HMGA1",
+      "copies": 2,
+      "total_patch_points": 6
+    },
+    {
+      "key": "breast_central_400:0e0fc2bb211022f6:FLNB",
+      "selection_sha256": "00e4a26bc1ed67534e8cd74899aee6dea2f29a52f7345363ba159ebfbd160783",
+      "patch": "0e0fc2bb211022f6",
+      "gene": "FLNB",
+      "copies": 2,
+      "total_patch_points": 30
+    },
+    {
+      "key": "breast_central_400:6fab468fd76bb423:DSP",
+      "selection_sha256": "00e9d7cccd497215b1a62fb34657e8a52502c6867d4cf1be1eca20ced0cb4067",
+      "patch": "6fab468fd76bb423",
+      "gene": "DSP",
+      "copies": 2,
+      "total_patch_points": 34
+    },
+    {
+      "key": "breast_central_400:d087fa017694b150:LDHB",
+      "selection_sha256": "00f54db5d6dc227a305e6db1be397a08a87f38c551edc88908a8c2a5ed89212d",
+      "patch": "d087fa017694b150",
+      "gene": "LDHB",
+      "copies": 4,
+      "total_patch_points": 23
+    },
+    {
+      "key": "breast_central_400:b4f202f992dd19c9:EPCAM",
+      "selection_sha256": "011b060238bdfc2767c37ad9e4a9ecba967187c045cc22113b8945395a8daf6c",
+      "patch": "b4f202f992dd19c9",
+      "gene": "EPCAM",
+      "copies": 2,
+      "total_patch_points": 8
+    },
+    {
+      "key": "breast_central_400:2f3e8c94ee4467c4:TOMM7",
+      "selection_sha256": "012d1fcb5206d992bed2d26c0ff175c7652e41e5150ebdb1d4b5450c35cff8b1",
+      "patch": "2f3e8c94ee4467c4",
+      "gene": "TOMM7",
+      "copies": 2,
+      "total_patch_points": 14
+    },
+    {
+      "key": "breast_central_400:170ade167050af51:ALDH1A3",
+      "selection_sha256": "013c13e54f64251d8a74292f3ca986c8023f1cd0469154b345b981b8e9b17a74",
+      "patch": "170ade167050af51",
+      "gene": "ALDH1A3",
+      "copies": 2,
+      "total_patch_points": 12
+    },
+    {
+      "key": "breast_central_400:1a6e99ee5b8e4bea:LDHB",
+      "selection_sha256": "0148f86ef40450b4f95c9977aa0eb83e860b5d4f6a6e7f64be87f25f3f11574a",
+      "patch": "1a6e99ee5b8e4bea",
+      "gene": "LDHB",
+      "copies": 4,
+      "total_patch_points": 32
+    }
+  ],
+  "atlas_file": "atlas_breast_central_400.json"
+}

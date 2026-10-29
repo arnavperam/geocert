@@ -1,0 +1,223 @@
+{
+  "format_version": 1,
+  "artifacts": {
+    "400": {
+      "filename": "geocert-central400-checked.zip",
+      "bytes": 42759454,
+      "sha256": "b9600c68c0053beddf15a4f856c866714e6e32e7b0435a731dbe6037e52df5e3",
+      "files_sha256": {
+        "count_spectra.log": "d07a11b27f962502fa16fb2d289ceb4e57ea20214293b261b297e6c8f09dce49",
+        "count_spectra_resource.json": "211b9a68aaf2e93a88d7ce4b290e9fd05b5e6f7b946eedb8d3c454a65119520f",
+        "coverage.log": "62f093d7d2afc41c0cb2bb3ec05e77a20728ab7fdd966f49190f9be1c93492b3",
+        "coverage_resource.json": "f590d55aa8d428632b76072c16dd681c6ea3de42079b346d5bec37fce1e2e689",
+        "data/atlas_breast_central_400.json": "b6ef8b6c3ba2cd2fee3fde1cff17107e374452720ba0552fbf44723ab57a96b3",
+        "data/observed_crop_counts.json": "58322fcd49e08a7668aa38e79b17d67ac1d77f5b7a38879f438e28a368c1b921",
+        "data/source_crops/breast_central_400/masks.npz": "798708d17022f1a82f90fb00c7a6c2945df050bc1e3b578ceeed1de0d9d6f0a6",
+        "data/source_crops/breast_central_400/metadata.json": "2c8ffbde58de62fcaa32e44c54a92be9dec9c8dcc10bfa96465f42b5c15acb3d",
+        "data/source_crops/breast_central_400/transcripts.csv.gz": "a412dc4370536ca3d2126e338f0c0d27bd692d5b63f2fa55629b9b27635da7b9",
+        "docs/ATLAS_PROTOCOL.json": "48414ae2de8f6c9847644584853fe3dbbd071b45dfbf0ceb46f6c1cd6f814992",
+        "extraction.log": "5285cb65b59e73a8a23eb3865f3af9693a0952d4b496bcf149626302f70e4683",
+        "extraction_resource.json": "ad410ef1635d60634638b3a809e2d67ca26b8051a582a47714af9ab2e34a8d04",
+        "geometry_validation.log": "d8ec69edd71189f1d4aebc726e6d82a272d2641eed60c10dd4ac2399720c915a",
+        "geometry_validation_resource.json": "62046ee428abff11a310eca0390d8e97894973475fe8057bbe1f66bd470a126a",
+        "measurement.json": "076171d6f2e907dd414d2c2102886fff486712489f83999550fca6276b1fbe84",
+        "measurement_progress.json": "b72a0dd15e4e68055550424000ef2a714b4e00f5014ad4712926c4419aea58f9",
+        "output_reconciliation.log": "5d91d1e46c59d2f918bfebad52654cb4c3dd74562e8bfcb82a4e472b442d653a",
+        "preparation_summary.json": "9411a7789056cacd0ccd0e39057329b3986ba2ae29981bcc37e7356f80e59451",
+        "provenance/environment.json": "e560276286ff54c95d48f848722ee55b8bb1d9e3be9df322e5b04fd3d64ba0a7",
+        "provenance/selection_protocol.json": "4ef3bbb04b6b80dad62c985aa9dd9d134bc0a44a15ff9e866c89b468f0568345",
+        "provenance/source_provenance.json": "951bcbf2d6c1cb50a3f5b3f7bf34a3086c682eeea76c1162bffd2108f96a93a6",
+        "results/atlas_extraction.json": "7756267c70dba70c8b952bfdff05ce92439e66e8938172916f233731cd3afc50",
+        "results/atlas_geometric_validation.json": "71cc90cabb22dd1ea26a86829d001397bc7a4efa65faa855d5af505fa969927b",
+        "results/cell_boundary_coverage.csv": "938fd5dd86deccd2d05115af8a547a02a8177639580048d69b6bcf0139aedd79",
+        "results/cell_expression_intervals.csv": "12892ee4b462f66b12aded111d03c5c336445587aa98bfeca355dc31e15f1014",
+        "results/cell_expression_summary.json": "05a31bb7e8da76fe71436a783f206cacec64f5cdc294e7d41768d63445b13a1e",
+        "results/cell_spectra.json": "4c0703e8651b3ab5489b848fd23e4e2fc68b4648a900d9a8a2ca9f8fe671b236",
+        "results/coverage_summary.json": "e6128224e133bb01e4c89dbe73b11e0774f60e2ca5ac4e6fcbfad22f4de06651",
+        "results/matrix_index.json": "3359b25d01f56fb3d62bf665f6a24e47c1e27784de4df0c71542b881eb7c7c47",
+        "results/output_reconciliation.json": "ae1e68f6a359429978ce8d57c343f0eb8af4af2a3b7a99741e5a68b04667ce28",
+        "results/patch_spectra.json": "f5efc803aeeebdb5f3a9e6c10af815e0a0e5d66755de537aba821981f543036a"
+      },
+      "status": "completed_and_reconciled",
+      "count_method": "chain",
+      "output_audit_script_sha256": "81a329cd579087ccbbc7627a06500ed7772d5c4df77671d4c0ddbfa2818f5084",
+      "parts": [
+        {
+          "filename": "geocert-central400-checked.zip.part01",
+          "bytes": 4194304,
+          "sha256": "cc95bbb04ab2292844699c76ac4cbd3de5be4e7809aa9615d2d48f8d4725e3a3"
+        },
+        {
+          "filename": "geocert-central400-checked.zip.part02",
+          "bytes": 4194304,
+          "sha256": "689d69c06cd89244bd4c7ec68511c68e8fcd739822ffbc7694e9f9faedccaaf1"
+        },
+        {
+          "filename": "geocert-central400-checked.zip.part03",
+          "bytes": 4194304,
+          "sha256": "8206ab6e4b6e28d10f8702f5a5094a9d56c7c29d71f5530375bccc9014df7bcb"
+        },
+        {
+          "filename": "geocert-central400-checked.zip.part04",
+          "bytes": 4194304,
+          "sha256": "500659947bb9186aa291b710c64f338ee7613adf527857b51246643e952bb7fd"
+        },
+        {
+          "filename": "geocert-central400-checked.zip.part05",
+          "bytes": 4194304,
+          "sha256": "136928d0e6593d5ead54c51d717a101158bc111a7ad105b69d4b94ea3dd8e369"
+        },
+        {
+          "filename": "geocert-central400-checked.zip.part06",
+          "bytes": 4194304,
+          "sha256": "fc9a110f995671927bf244b4b0da22b1c0f53078a8200f83b25072802bf9dc4c"
+        },
+        {
+          "filename": "geocert-central400-checked.zip.part07",
+          "bytes": 4194304,
+          "sha256": "f8bea866d6ff882c6e538f3fb9b82fb0d1c2bec74292efe696f8909b82c4b7df"
+        },
+        {
+          "filename": "geocert-central400-checked.zip.part08",
+          "bytes": 4194304,
+          "sha256": "6433268753af14c0229092525481fe8e00f5a4d0da8e49fe3f23699d8ac43042"
+        },
+        {
+          "filename": "geocert-central400-checked.zip.part09",
+          "bytes": 4194304,
+          "sha256": "a03e46e69124ac7ca853d5af15dd35b7a3d6a33ec3cad5817b8c92fb900d6f74"
+        },
+        {
+          "filename": "geocert-central400-checked.zip.part10",
+          "bytes": 4194304,
+          "sha256": "c3d1c8f70477b16d11471b1de5c99f39eff9386d8d3090542be17e51badcaf13"
+        },
+        {
+          "filename": "geocert-central400-checked.zip.part11",
+          "bytes": 816414,
+          "sha256": "84fa65bec9cfa01a49539fb733790d9a1d40e158d0ba7adb7e70901704c17293"
+        }
+      ]
+    },
+    "600": {
+      "filename": "geocert-central600-checked.zip",
+      "bytes": 57457816,
+      "sha256": "4ddb1b947c33fbeeb5e5e914db9d8084510a56f0cd93d57bc3da97078ce4386a",
+      "files_sha256": {
+        "backend_decision.json": "e047e19d8b8e5853bbcec403be5e9804a72f6af84771a59a23753be0a18067bc",
+        "count_spectra.log": "fbdfb73211de65aac28000b29213bfbd2fbb1b2ee4a68d1b177f15592216f720",
+        "count_spectra_resource.json": "e2f349e467c03fa0500dc596747e684b4739f00c94d086cbb07eceedf2843d75",
+        "coverage.log": "97f7901009a08616e0bb948fa2ec7141b1bd653d7286b1ea8618095935f4a905",
+        "coverage_resource.json": "d4e53a41f0f15b568731c17ce1d17290a0d0415948d8a1071e22ac04ef28f5b0",
+        "data/atlas_breast_central_600.json": "ba25f773b3afd6ff6093ecd3a5b9b1ca07e6a57a0bd49653a5977a55e0a48a57",
+        "data/observed_crop_counts.json": "6d8921f6c2396f7b9ac7af0f3f19fef9dd6c458bbf4ca25f01c48e427323cfd0",
+        "data/source_crops/breast_central_600/masks.npz": "5ba826bc5f3963ceeeba3c87ee8e9df51e491e00181172714a0aa9945d01a6b5",
+        "data/source_crops/breast_central_600/metadata.json": "92c0bae04af3975cee8060546741007daa9598ec1ba29830888bee4665230512",
+        "data/source_crops/breast_central_600/transcripts.csv.gz": "13e7ecaa59aa46324634ed4577a12f2c9df013cb3441afcd91c9a2ddb58d87a7",
+        "docs/ATLAS_PROTOCOL.json": "48414ae2de8f6c9847644584853fe3dbbd071b45dfbf0ceb46f6c1cd6f814992",
+        "measurement.json": "3c319edc75d059c6e7e88a8c4699b613a1a407297e580fab3462522904a3424e",
+        "measurement_progress.json": "e4bb4c0e3327269250dea629f476b580f44dab84c5d8a4de3a09baaf0952b6e9",
+        "output_reconciliation.log": "8a64a1e3ad3b30678585c594895aeca2ac2cd8604ef369d78ccb6b0de19c245d",
+        "preparation_summary.json": "7eca88b9ed6ab8e74730a74811ba259306a3fbe6eb29196ad3a70116315f3d52",
+        "previous_attempt/backend_decision.json": "0ac0ffabb809bfdc39a6008355b9479570e1e98966635c2a3fcfb0d770031fd8",
+        "previous_attempt/count_spectra.log": "a6b77e553ab54fa1049356dabaaaba63ef40b7fee86084962057ac40f5ef4ba1",
+        "previous_attempt/extraction.log": "ff7626562cbd62f0143c0425ffbcebebd8529e754e3dd03d0e8bc063a81bb5f5",
+        "previous_attempt/extraction_resource.json": "925b9f2fe6d0a734e7c02a3fa4c29e72247de4c7a8682e73f05bbc56ced31268",
+        "previous_attempt/geometry_validation.log": "3e2b6079409b3ed33171a9b6eec6e5bfd5c3cd4de7485ca613c2ec022b20553d",
+        "previous_attempt/geometry_validation_resource.json": "fa78d06ef89cec73309d5396ed2eb1a655223939d7b40edfc5451ae66e3460a9",
+        "previous_attempt/measurement.json": "8230e201fb5b1522b78cb29fee6829307058aa5ac37f21597e832f32160ab37f",
+        "previous_attempt/measurement_progress.json": "761203d2357586260dc7607fc8bfdc28f6782ad5b1518ab776985118c77efe4d",
+        "previous_attempt/preparation_summary.json": "7eca88b9ed6ab8e74730a74811ba259306a3fbe6eb29196ad3a70116315f3d52",
+        "provenance/environment.json": "e560276286ff54c95d48f848722ee55b8bb1d9e3be9df322e5b04fd3d64ba0a7",
+        "provenance/selection_protocol.json": "4ef3bbb04b6b80dad62c985aa9dd9d134bc0a44a15ff9e866c89b468f0568345",
+        "provenance/source_provenance.json": "951bcbf2d6c1cb50a3f5b3f7bf34a3086c682eeea76c1162bffd2108f96a93a6",
+        "results/atlas_extraction.json": "12e35bdc26a95b4478bc5bf405553919be4cbe4da8e5aa8fe1676143b7a0c6af",
+        "results/atlas_geometric_validation.json": "926634a6d47a86cb59e3a31c217977ff2c4ab93ce2ecd0c7ac76cf22472eb08a",
+        "results/cell_boundary_coverage.csv": "24a51ee3c1be65db71d5897e6d24c6c41a6536aa7e164761a0184a67b40ec2e4",
+        "results/cell_expression_intervals.csv": "70567e77937efa8e77991a8a61ef1f71807703b28e5bf8c77fa19f8cc2d7da47",
+        "results/cell_expression_summary.json": "bbe0c324f31f70476faafcecf46511fb3efd89a42999cd0fb9f7491e48fa4e9a",
+        "results/cell_spectra.json": "abcc239be20ffe21aaee1e81da0b081e0ff5653ace81cf92e34e7781b0a15f69",
+        "results/coverage_summary.json": "66b00ad73625dc6f548ba81403baf4b6edb3385ac59f7d4fab8cb33fa44ca4d7",
+        "results/matrix_index.json": "2ab18ec53f09737ba041360bb0738c90724047318427c7aeefcfefea521a2e84",
+        "results/output_reconciliation.json": "3421640f909e3fb84714ce9ee76739463f9ccefe4d9c5976a2260504e121a9ec",
+        "results/patch_spectra.json": "db3224065dea9e5deb1eff284034fe07ace993387afdb22dd8164986a1a73a82",
+        "retry_amendment.json": "b1b5957d714a45d686f287d71c30b29733114249f9e3a57df50a155762d7104e"
+      },
+      "parts": [
+        {
+          "filename": "geocert-central600-checked.zip.part01",
+          "bytes": 4194304,
+          "sha256": "9edcc353255cfa9596e43e42ba2065babc5902dc9c037284b73d7aac18e55727"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part02",
+          "bytes": 4194304,
+          "sha256": "cb3677f668ff86a3a43e7f09ab4dfe217294c5be8f3b38ad4e71c24d9dfa570a"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part03",
+          "bytes": 4194304,
+          "sha256": "5ac8e58b850d6a28d25e990e11d96ae040e77b58b3e925aaea5e6885e480a744"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part04",
+          "bytes": 4194304,
+          "sha256": "a0a46b59b084cd19ac4ef78ff82a7308ae5f700f0897844570d8eab98764968a"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part05",
+          "bytes": 4194304,
+          "sha256": "3a77c149ef5b27b6b086e7ffd7d24c5c930844508fc5d3bb5417d7c2cd626829"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part06",
+          "bytes": 4194304,
+          "sha256": "0849b150007a503bf27215437bacceaf38cd2fce6ef8a25ede1835bffc112d83"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part07",
+          "bytes": 4194304,
+          "sha256": "6dab622010e9b62d5bb0e04cb305657e446f803bad7a393b60c82d5599b22ba6"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part08",
+          "bytes": 4194304,
+          "sha256": "dc09a91530ff7f5b4621749f65e000776386e1d8761cd8f840dd931a5b1492c1"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part09",
+          "bytes": 4194304,
+          "sha256": "0fd5405b9a54719ef9b7e34af3e585af8d9810e5b8777b42ef7d7d82b38128cb"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part10",
+          "bytes": 4194304,
+          "sha256": "635e8565d044edd75ba6a52dffbb806e4b4db4ad12435d8657fd863af5cde637"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part11",
+          "bytes": 4194304,
+          "sha256": "dd28c52ffccd127b4010d495f239beee7f35b091e335e688d0d57c6151e4b3f3"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part12",
+          "bytes": 4194304,
+          "sha256": "2589e40f9c2634a1ace73b51a8df4461c55121e6a8d60bbfa3aa74ceb72b98c2"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part13",
+          "bytes": 4194304,
+          "sha256": "d9a0451d5fe8a02c6678721f975ca5f2da2457c3ff9c3db384260aa69efdb55b"
+        },
+        {
+          "filename": "geocert-central600-checked.zip.part14",
+          "bytes": 2931864,
+          "sha256": "7c4ddb4d821729e728db4bbef31b46133b90773ace662433e7c7de9716f24378"
+        }
+      ],
+      "status": "completed_and_reconciled",
+      "count_method": "enumeration",
+      "output_audit_script_sha256": "81a329cd579087ccbbc7627a06500ed7772d5c4df77671d4c0ddbfa2818f5084"
+    }
+  }
+}

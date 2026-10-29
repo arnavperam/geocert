@@ -7,6 +7,8 @@ and an upper fixed-owner interval. The final panel illustrates DP states.
 Run from any directory: python manuscript/scripts/geometry_pipeline.py
 """
 from pathlib import Path
+import os
+import tempfile
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -16,8 +18,8 @@ from matplotlib.patches import Polygon, FancyArrowPatch
 OUT = Path(__file__).resolve().parents[1] / 'figures'
 OUT.mkdir(parents=True, exist_ok=True)
 plt.rcParams.update({
-    'font.family': 'DejaVu Sans', 'font.size': 8.1,
-    'axes.labelsize': 8.3, 'xtick.labelsize': 7.3, 'ytick.labelsize': 7.3,
+    'font.family': 'DejaVu Sans', 'font.size': 10,
+    'axes.labelsize': 10, 'xtick.labelsize': 10, 'ytick.labelsize': 10,
     'pdf.fonttype': 42, 'ps.fonttype': 42, 'lines.solid_capstyle': 'round',
     'savefig.facecolor': 'white',
 })
@@ -27,8 +29,8 @@ fig = plt.figure(figsize=(6.5, 2.2))
 gs = fig.add_gridspec(1, 3, width_ratios=(1.65, 2.25, 1.85),
                       left=.025, right=.995, bottom=.18, top=.82, wspace=.32)
 a,b,c = [fig.add_subplot(gs[0,i]) for i in range(3)]
-for ax, title in zip((a,b,c), ('(a) Raster ribbon', '(b) Canonical boundary', '(c) Count-state chain')):
-    ax.set_title(title, fontsize=8.9, loc='left', pad=13, fontweight='bold', color=NAVY)
+for ax, title in zip((a,b,c), ('(a) Raster ribbon', '(b) Exact envelopes', '(c) Count states')):
+    ax.set_title(title, fontsize=10, loc='left', pad=13, fontweight='bold', color=NAVY)
 
 # A: an exact coordinate-monotone pixel staircase, s_x=s_y=1, p=1.
 t = np.linspace(0,6,1801)
@@ -48,13 +50,13 @@ nx,ny=shear(nt,nh)
 a.fill(nx,ny,color=GREEN,alpha=.62,ec=GREEN,lw=.6)
 for ti,hi in ((2,.55),(4,.75)):
     a.plot(*shear(ti,hi),'o',color=ORANGE,ms=3.7,mec='white',mew=.5,zorder=5)
-a.annotate('fixed rails', xy=shear(5.5,-B),xytext=(-.6,3.65),fontsize=7.7,
+a.annotate('fixed rails', xy=shear(5.5,-B),xytext=(-.6,3.65),fontsize=10,
            arrowprops={'arrowstyle':'-','color':BLUE,'lw':.6},color=BLUE)
-a.text(1.45,-.60,r'$h=+B$',color=BLUE,fontsize=7.5)
-a.text(-.82,1.12,r'$-B$',color=BLUE,fontsize=7.5)
-a.annotate('nucleus',xy=shear(3,1),xytext=(2.70,.05),fontsize=7.4,color=GREEN,
+a.text(1.45,-.60,r'$h=+B$',color=BLUE,fontsize=10)
+a.text(-.82,1.12,r'$-B$',color=BLUE,fontsize=10)
+a.annotate('nucleus',xy=shear(3,1),xytext=(2.70,.05),fontsize=10,color=GREEN,
            arrowprops={'arrowstyle':'-','color':GREEN,'lw':.6})
-a.annotate('RNA',xy=shear(4,.75),xytext=(3.35,2.15),fontsize=7.4,color=ORANGE,
+a.annotate('RNA',xy=shear(4,.75),xytext=(3.35,2.15),fontsize=10,color=ORANGE,
            arrowprops={'arrowstyle':'-','color':ORANGE,'lw':.6})
 a.set_xlim(-.9,3.95); a.set_ylim(-.85,3.95);a.set_aspect('equal');a.axis('off')
 
@@ -77,13 +79,14 @@ events=[0,2-.6/s,2,3-(.2/(2*s)),4,4+.8/s,6]
 for e in events:
     b.axvline(e,color=GRAY,lw=.45,ls=(0,(2,3)),zorder=-1)
     b.plot(e,np.interp(e,t,f),'o',ms=2.9,color=ORANGE,zorder=5)
-b.text(.14,.93,'straightened coordinates',fontsize=7.5,color=NAVY)
-b.text(4.72,.76,'$U$',color=GREEN,fontsize=8.5)
-b.text(1.1,-.48,'$L$',color=BLUE,fontsize=8.5)
-b.text(3.65,.24,'$f^*$',color=ORANGE,fontsize=9)
-b.text(.22,-.15,'$f^0=0$',color=GRAY,fontsize=7.5)
+b.text(.14,.93,'straightened chart',fontsize=10,color=NAVY)
+b.text(4.72,.76,'$U$',color=GREEN,fontsize=10)
+b.text(1.1,-.48,'$L$',color=BLUE,fontsize=10)
+b.text(3.65,.24,'$f^*$',color=ORANGE,fontsize=10)
+b.text(.22,-.15,'$f^0=0$',color=GRAY,fontsize=10)
 b.set(xlim=(-.05,6.1),ylim=(-.56,1.07),xticks=[0,2,4,6],yticks=[])
-b.set_xlabel('$t$',labelpad=-1);b.set_ylabel('$h$',rotation=0,labelpad=5)
+b.text(1.035, -.015, '$t$', transform=b.transAxes, ha='left', va='center')
+b.set_ylabel('$h$',rotation=0,labelpad=5)
 b.spines[['top','right','left']].set_visible(False);b.spines['bottom'].set_color(GRAY)
 b.tick_params(axis='x',length=2,color=GRAY,pad=1)
 
@@ -100,17 +103,24 @@ for j,hs in enumerate(heights):
 path=[0,.3,.6]
 c.plot([0,1,2],path,color=ORANGE,lw=1.7,zorder=3)
 c.scatter([0,1,2],path,s=18,c=ORANGE,edgecolors='white',linewidths=.45,zorder=4)
-c.text(.06,1.06,r'$F_j(h,q)$: area at count $q$',fontsize=8.0,color=NAVY)
-c.text(.05,.91,'critical heights',fontsize=7.2,color=BLUE)
-c.annotate('add RNA count',xy=(1,.3),xytext=(.82,-.36),fontsize=7.6,color=ORANGE,
+c.text(.06,1.17,r'Area $F_j(h,q)$',fontsize=10,color=NAVY)
+c.text(.05,1.00,'critical heights',fontsize=10,color=BLUE)
+c.text(1,-.36,'add RNA count',ha='center',fontsize=10,color=ORANGE)
+c.annotate('',xy=(1,.3),xytext=(1.7,-.23),
            arrowprops={'arrowstyle':'-','color':ORANGE,'lw':.65})
-c.text(-.07,-.13,'$t_{j-1}$',ha='center',fontsize=8)
-c.text(1,-.13,'$t_j$',ha='center',fontsize=8)
-c.text(2,-.13,'$t_{j+1}$',ha='center',fontsize=8)
-c.set(xlim=(-.2,2.15),ylim=(-.43,1.14));c.axis('off')
+c.text(-.07,-.13,'$t_{j-1}$',ha='center',fontsize=10)
+c.text(1,-.13,'$t_j$',ha='center',fontsize=10)
+c.text(2,-.13,'$t_{j+1}$',ha='center',fontsize=10)
+c.set(xlim=(-.2,2.26),ylim=(-.43,1.36));c.axis('off')
 # Shared understated footer establishes what the schematic teaches.
-fig.text(.5,.035,r'RNA requirements $\longrightarrow$ exact envelopes $\longrightarrow$ minimum area at every count',
-         fontsize=7.9,ha='center',color=NAVY)
-fig.savefig(OUT/'geometry_pipeline.pdf')
-fig.savefig(OUT/'geometry_pipeline.png',dpi=240)
+fig.text(.5,.035,r'RNA constraints $\longrightarrow$ exact envelopes $\longrightarrow$ minimum area by count',
+         fontsize=10,ha='center',color=NAVY)
+for extension in ('pdf', 'png'):
+    with tempfile.NamedTemporaryFile(suffix='.'+extension, delete=False) as temporary:
+        temporary_path = Path(temporary.name)
+    try:
+        fig.savefig(temporary_path, dpi=300)
+        os.replace(temporary_path, OUT / ('geometry_pipeline.'+extension))
+    finally:
+        temporary_path.unlink(missing_ok=True)
 plt.close(fig)

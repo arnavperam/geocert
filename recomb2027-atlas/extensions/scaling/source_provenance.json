@@ -1,0 +1,51 @@
+{
+  "url": "https://cf.10xgenomics.com/samples/xenium/2.0.0/Xenium_V1_human_Breast_2fov/Xenium_V1_human_Breast_2fov_outs.zip",
+  "bytes": 379018013,
+  "sha256": "cc1e987b06aa748a6b24d3d6f51fc0d6765daa4836c483f14ec4f1bd18b1779b",
+  "download_seconds": 13.120279907001532,
+  "source": "10x Genomics Xenium 2.0.0 breast 2-FOV format-test dataset",
+  "members": [
+    {
+      "name": "cells.zarr.zip",
+      "bytes": 5891872,
+      "sha256": "06a30091f862f990a227c14abbaf5ddc403607e958fbf26da55587cb201e2d02",
+      "zip_crc32": 3808473530
+    },
+    {
+      "name": "transcripts.parquet",
+      "bytes": 20923989,
+      "sha256": "ab76b8bc3c05de0bf36a8091b4f38bc54425c54b1ce69a897944d1ec19714cdb",
+      "zip_crc32": 1339275627
+    },
+    {
+      "name": "cells.parquet",
+      "bytes": 166771,
+      "sha256": "acffe492528de8bf2effcf8b759f97df4e1133108ddd97390dc4222ea7b69430",
+      "zip_crc32": 2619260588
+    },
+    {
+      "name": "experiment.xenium",
+      "bytes": 1701,
+      "sha256": "5951e6f328daff8b987ec8ffb68aaf7e7e02dfb1161e1c8a0de32c0b1529a245",
+      "zip_crc32": 937608483
+    },
+    {
+      "name": "gene_panel.json",
+      "bytes": 153362,
+      "sha256": "aef65acbe10e6837631ffb63ce978a4767d771bc3c603c868757122bb12257ee",
+      "zip_crc32": 1836225815
+    },
+    {
+      "name": "cell_boundaries.parquet",
+      "bytes": 700126,
+      "sha256": "fc2270113150d17fd5a5f7f56b3c9ab1c0563824fd6eb91116489b90cfca2a64",
+      "zip_crc32": 2968132324
+    },
+    {
+      "name": "nucleus_boundaries.parquet",
+      "bytes": 657067,
+      "sha256": "d0c9a1abc023c44e8b8952b2546dc454d1507578d4d42ac357a27857f8bf8abf",
+      "zip_crc32": 722303144
+    }
+  ]
+}

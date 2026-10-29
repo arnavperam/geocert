@@ -1,0 +1,38 @@
+{
+  "frozen_unix": 1793234321.8470502,
+  "selection": "Concentric central squares determined from full raster dimensions only, before extraction of new-region RNA or count outcomes",
+  "raster_shape_yx": [
+    3529,
+    5792
+  ],
+  "pixel_size_um": 0.21250001266598778,
+  "source_archive_sha256": "cc1e987b06aa748a6b24d3d6f51fc0d6765daa4836c483f14ec4f1bd18b1779b",
+  "regions": [
+    {
+      "nominal_side_um": 400,
+      "side_pixels": 1882,
+      "actual_side_um": 399.925023837389,
+      "bbox_pixels": [
+        1955,
+        823,
+        3837,
+        2705
+      ],
+      "roi": "breast_central_400"
+    },
+    {
+      "nominal_side_um": 600,
+      "side_pixels": 2823,
+      "actual_side_um": 599.8875357560835,
+      "bbox_pixels": [
+        1484,
+        353,
+        4307,
+        3176
+      ],
+      "roi": "breast_central_600"
+    }
+  ],
+  "order": "400 first; 600 only if total processing remains within 45 minutes; unfinished outcomes preserved",
+  "biological_scope": "Same 10x breast format-test 2-FOV dataset; additional contiguous footprint, not a new donor or whole slide"
+}
