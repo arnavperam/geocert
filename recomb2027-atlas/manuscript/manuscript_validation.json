@@ -11,8 +11,8 @@
   "body_font_pt": 10,
   "margins_inches": 1,
   "normal_main_figure_label_minimum_pt": 10,
-  "abstract_words": 238,
-  "abstract_only_sha256": "d07205888d01bcbca0f402057facd7b6c52f478d2d1b79977cad2b6b855aade1",
+  "abstract_words": 242,
+  "abstract_only_sha256": "2da6e6cc6c1a63982d4feb536de3cdb2ce3b2cbbdcbc88a5f9f8ceb982d5902e",
   "abstract_matches_tex_public_txt_and_rendered_pdf": true,
   "formal_mathematics": {
     "original_main_blocks_preserved": 20,
@@ -27,19 +27,13 @@
     "changed_pages_after_previous_full_review": {
       "main": [
         1,
-        2,
-        4,
-        8,
         11
       ],
       "supplement": [
-        16,
-        18,
-        19,
-        20,
-        21
+        19
       ]
-    }
+    },
+    "comparison_base_commit": "94ef1348aef5d3a48c8ea7c10ec14c95c71050a3"
   },
   "latex_checks": {
     "undefined_references_or_citations": false,
@@ -74,8 +68,8 @@
     "figures/reach_coverage.png": "b74a8460d36265b54ffb951b19964b4ae17dcf82455bd815ef27ca217f98a016",
     "figures/width_budget.pdf": "052b3353149eb0ece044121c0b8fe87c3ec08350021ff0848fc062ef9da9b17c",
     "figures/width_budget.png": "e01547e54bb26cf92c1f88e261b5d182a95a58bf12da15f850f9708f35e5af1c",
-    "main.pdf": "f17ebdc02ab2e9bdf6a62c1d294628f97d57192acc82746097a926a3aa557b0b",
-    "main.tex": "204700b953198aead99be03fedee33a3ff4ff6f97e5040dc083a411a13f9ab23",
+    "main.pdf": "a8ca31a078d4f3735c693eff8ef26ac52f521b2767f2c5847dd15e527832a68c",
+    "main.tex": "69a25030e65e6811bde4984ed38e363f1abb8dd5f88ed5e2b71e8ff95fb5bb82",
     "original_saturation_table.tex": "f252740a7c2fa583317ea804c1ef709f637402b248e538221d0645405ef2b374",
     "reach_budget_tables.tex": "46803f4508c137576ba86c1dd04efc1acd0fb3d6b27675a1b86b7d2c57226228",
     "reach_table.tex": "6d2465a080f7b7b2753e45a8dd6b6df1aeb528ddf682326074f6756fae1b0868",
@@ -83,7 +77,11 @@
     "scripts/geometry_pipeline.py": "5eb2e65a3ffa380ca5b0f5c9519e97db20b6bcdd620a6df8342aa1d2ed8f2891",
     "scripts/reach_figures.py": "b133dbf1cd14b940eab968d1dcf01d1ee961577685bdc07c26f4dc64d493c021",
     "supp_references.tex": "9f00bb8ebeadc73be680af3ecc6801095bc04bf3e205f18b41f72eab4c8f9c85",
-    "supplement.pdf": "dd9695b50fcf37ccef2bd253d1740d5a80f7bc691964ce2d98f420cc9d93e99f",
-    "supplement.tex": "f50f95fb9f194b48f6d5ef54c86d497432203ce0e1c06f5cef02f33dec3e204f"
+    "supplement.pdf": "c6d743846707fadbe6fb6dc0d6cedeb003c55dcf21c88a66b864658f80d80899",
+    "supplement.tex": "591dc9a17241895f931476d8c3a99acd0697d24197d96a68e65b4d217e39d85d"
+  },
+  "editorial_revision": {
+    "scope": "Clarify breast format-test region, exact backend selection, completed-stage timing and witness verification; preserve scientific results",
+    "scientific_code_data_and_formal_statements_unchanged": true
   }
 }

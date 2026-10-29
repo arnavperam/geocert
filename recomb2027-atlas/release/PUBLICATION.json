@@ -9,13 +9,13 @@
   "base_archive_sha256": "1b08829e7e80a1e966a1bc39920dc4509af99f79ffd11dadfaa71b8338ca59d5",
   "base_core_files_unchanged": 71,
   "document_sha256": {
-    "main.pdf": "f17ebdc02ab2e9bdf6a62c1d294628f97d57192acc82746097a926a3aa557b0b",
-    "supplement.pdf": "dd9695b50fcf37ccef2bd253d1740d5a80f7bc691964ce2d98f420cc9d93e99f"
+    "main.pdf": "a8ca31a078d4f3735c693eff8ef26ac52f521b2767f2c5847dd15e527832a68c",
+    "supplement.pdf": "c6d743846707fadbe6fb6dc0d6cedeb003c55dcf21c88a66b864658f80d80899"
   },
   "body_pages": 10,
   "supplement_pages": 21,
-  "abstract_words": 238,
-  "abstract_sha256": "d07205888d01bcbca0f402057facd7b6c52f478d2d1b79977cad2b6b855aade1",
+  "abstract_words": 242,
+  "abstract_sha256": "2da6e6cc6c1a63982d4feb536de3cdb2ce3b2cbbdcbc88a5f9f8ceb982d5902e",
   "abstract_matches_rendered_pdf": true,
   "extension_records_sha256": {
     "extensions/atlas_union/results/summary.json": "62d8d76066bf20a62de7d42f52baf8573d472cc862ffc38336219c763a3b7484",
@@ -26,5 +26,5 @@
   },
   "ci_url": "https://github.com/arnavperam/geocert/actions/workflows/atlas-final.yml",
   "ci_scope": "Original exact replay, finite-union recomputation and independent witness verification, restored contiguous-region census/composition/endpoint audits, independent scalar samples on both Python 3.12 and 3.13, and published document/data byte hashes. Consult the run for the current commit.",
-  "previous_document_commit": "c0f245a31393d01f4ef4e1ba556d7541b8a7964c"
+  "previous_document_commit": "94ef1348aef5d3a48c8ea7c10ec14c95c71050a3"
 }
