@@ -8,9 +8,9 @@
   "main_body_pages": 10,
   "main_reference_pages": 2,
   "supplement_pages": 16,
-  "abstract_words": 201,
+  "abstract_words": 230,
   "abstract_matches_tex_public_txt_and_rendered_pdf": true,
-  "abstract_only_sha256": "17c66548568ee4d430318b71ab7c03205d732fdcca9dda41acc88e76f28a8378",
+  "abstract_only_sha256": "52905149d049f7d26688def2b82dbfa8402d623d459b72195c9b52046eb64bd7",
   "formal_mathematical_environments_unchanged": {
     "main": true,
     "supplement": true
@@ -58,8 +58,8 @@
     "figures/reach_coverage.png": "b74a8460d36265b54ffb951b19964b4ae17dcf82455bd815ef27ca217f98a016",
     "figures/width_budget.pdf": "052b3353149eb0ece044121c0b8fe87c3ec08350021ff0848fc062ef9da9b17c",
     "figures/width_budget.png": "e01547e54bb26cf92c1f88e261b5d182a95a58bf12da15f850f9708f35e5af1c",
-    "main.pdf": "8b9d1f3a98090036090b787316bd179f191be0419ac28c0e500434e62604dcc9",
-    "main.tex": "46d1e6de77c27542b88f6c9ca068f9d06df34bf899c995c5d0a1fbfb1d785338",
+    "main.pdf": "fecbe6b9f160eeedd9a2f464a3473243b6d0fc8056d7f053529cfdec337f6c53",
+    "main.tex": "d452eb17c0756503b9f481be4a526770c761a9a6fc3e08c05f962dd6d24b7b18",
     "original_saturation_table.tex": "f252740a7c2fa583317ea804c1ef709f637402b248e538221d0645405ef2b374",
     "reach_budget_tables.tex": "46803f4508c137576ba86c1dd04efc1acd0fb3d6b27675a1b86b7d2c57226228",
     "reach_table.tex": "6d2465a080f7b7b2753e45a8dd6b6df1aeb528ddf682326074f6756fae1b0868",
@@ -69,5 +69,17 @@
     "supp_references.tex": "9f00bb8ebeadc73be680af3ecc6801095bc04bf3e205f18b41f72eab4c8f9c85",
     "supplement.pdf": "ecddc0db23c795a0ae7f0f62fc53b68ad91949343ab16437c910252a1d5f0e83",
     "supplement.tex": "34994ab787d4aa1c73a14122bece89b373e098ffe21a914c52f7ba7c7b17fe99"
+  },
+  "abstract_scope_revision": {
+    "requested_edits": 3,
+    "body_and_reference_pages_pixel_identical": true,
+    "changed_pdf_pages": [
+      1
+    ],
+    "main_body_pages": 10,
+    "supplement_unchanged": true,
+    "abstract_text_matches_pdf_with_superscript_normalization": true,
+    "coverage_denominator": "all reference boundary edges incident to eligible cells",
+    "titlepage_visually_reviewed": true
   }
 }

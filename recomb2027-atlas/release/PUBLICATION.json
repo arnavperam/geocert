@@ -12,12 +12,12 @@
   "source_public_anonymously_verified": true,
   "scientific_implementation_and_results_unchanged_since_source_commit": true,
   "document_sha256": {
-    "main.pdf": "8b9d1f3a98090036090b787316bd179f191be0419ac28c0e500434e62604dcc9",
+    "main.pdf": "fecbe6b9f160eeedd9a2f464a3473243b6d0fc8056d7f053529cfdec337f6c53",
     "supplement.pdf": "ecddc0db23c795a0ae7f0f62fc53b68ad91949343ab16437c910252a1d5f0e83"
   },
   "body_pages": 10,
   "supplement_pages": 16,
-  "abstract_words": 201,
+  "abstract_words": 230,
   "abstract_matches_rendered_pdf": true,
   "ci_scope": "Dedicated read-only workflow validates the public scientific archive and code; use actual GitHub Actions results for completion status.",
   "document_corrections": [
@@ -26,10 +26,11 @@
     "Clarify cut representation and direct count DP roles",
     "Report invariance and joint-marker results in the main paper",
     "Correct breast EPCAM/PECAM1 co-detection summary",
-    "Add affiliation and contact; consolidate interpretation limits"
+    "Add affiliation and contact; consolidate interpretation limits",
+    "Qualify abstract invariance by movement range and coverage; identify breast format-test input and endpoint witnesses"
   ],
-  "previous_document_commit": "ee1ea5a092b6713f2ede7c2b61ddd28866fefdc3",
+  "previous_document_commit": "b39a22ec0e6adb08461d71ee2bc4b4d8d02a0f7c",
   "last_completed_scientific_ci": [
-    "https://github.com/arnavperam/geocert/actions/runs/40785797641"
+    "https://github.com/arnavperam/geocert/actions/runs/40789881440"
   ]
 }
