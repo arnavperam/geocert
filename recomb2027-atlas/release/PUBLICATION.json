@@ -9,13 +9,13 @@
   "base_archive_sha256": "1b08829e7e80a1e966a1bc39920dc4509af99f79ffd11dadfaa71b8338ca59d5",
   "base_core_files_unchanged": 71,
   "document_sha256": {
-    "main.pdf": "a8ca31a078d4f3735c693eff8ef26ac52f521b2767f2c5847dd15e527832a68c",
-    "supplement.pdf": "c6d743846707fadbe6fb6dc0d6cedeb003c55dcf21c88a66b864658f80d80899"
+    "main.pdf": "36d071c374314be8e6f1b30c75a78cbd9c38330d7f0a39f1ae85600cbcbddd5e",
+    "supplement.pdf": "eaf7e9cdac06f02cd2b0dcac5ad7a1c9ee303581a5666771e3ba13c232fc6ff4"
   },
   "body_pages": 10,
   "supplement_pages": 21,
-  "abstract_words": 242,
-  "abstract_sha256": "2da6e6cc6c1a63982d4feb536de3cdb2ce3b2cbbdcbc88a5f9f8ceb982d5902e",
+  "abstract_words": 248,
+  "abstract_sha256": "4a351145a0ab12e08f3f00e82cdb8b458c06c896ff13e804d3a31d51c1510897",
   "abstract_matches_rendered_pdf": true,
   "extension_records_sha256": {
     "extensions/atlas_union/results/summary.json": "62d8d76066bf20a62de7d42f52baf8573d472cc862ffc38336219c763a3b7484",
@@ -26,5 +26,6 @@
   },
   "ci_url": "https://github.com/arnavperam/geocert/actions/workflows/atlas-final.yml",
   "ci_scope": "Original exact replay, finite-union recomputation and independent witness verification, restored contiguous-region census/composition/endpoint audits, independent scalar samples on both Python 3.12 and 3.13, and published document/data byte hashes. Consult the run for the current commit.",
-  "previous_document_commit": "94ef1348aef5d3a48c8ea7c10ec14c95c71050a3"
+  "previous_document_commit": "7c167a3c42d2fe333a22ae57aad193fbc1b3c371",
+  "title": "GeoCert: Certified Expression Intervals under Segmentation Uncertainty in Spatial Transcriptomics"
 }

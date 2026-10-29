@@ -13,7 +13,7 @@
   "normal_main_figure_label_minimum_pt": 10,
   "abstract_words": 248,
   "abstract_only_sha256": "4a351145a0ab12e08f3f00e82cdb8b458c06c896ff13e804d3a31d51c1510897",
-  "abstract_matches_tex_public_txt_and_rendered_pdf": false,
+  "abstract_matches_tex_public_txt_and_rendered_pdf": true,
   "formal_mathematics": {
     "original_main_blocks_preserved": 20,
     "original_supplement_blocks_preserved": 12,
@@ -26,14 +26,13 @@
     "figure_labels_readable": true,
     "changed_pages_after_previous_full_review": {
       "main": [
-        1,
-        11
+        1
       ],
       "supplement": [
-        19
+        1
       ]
     },
-    "comparison_base_commit": "94ef1348aef5d3a48c8ea7c10ec14c95c71050a3"
+    "comparison_base_commit": "7c167a3c42d2fe333a22ae57aad193fbc1b3c371"
   },
   "latex_checks": {
     "undefined_references_or_citations": false,
@@ -68,7 +67,7 @@
     "figures/reach_coverage.png": "b74a8460d36265b54ffb951b19964b4ae17dcf82455bd815ef27ca217f98a016",
     "figures/width_budget.pdf": "052b3353149eb0ece044121c0b8fe87c3ec08350021ff0848fc062ef9da9b17c",
     "figures/width_budget.png": "e01547e54bb26cf92c1f88e261b5d182a95a58bf12da15f850f9708f35e5af1c",
-    "main.pdf": "a8ca31a078d4f3735c693eff8ef26ac52f521b2767f2c5847dd15e527832a68c",
+    "main.pdf": "36d071c374314be8e6f1b30c75a78cbd9c38330d7f0a39f1ae85600cbcbddd5e",
     "main.tex": "72d4ad693b08c95d6c912528f2adbc5d5b209810e6920f53e367aa9d6f8b98bf",
     "original_saturation_table.tex": "f252740a7c2fa583317ea804c1ef709f637402b248e538221d0645405ef2b374",
     "reach_budget_tables.tex": "46803f4508c137576ba86c1dd04efc1acd0fb3d6b27675a1b86b7d2c57226228",
@@ -77,13 +76,13 @@
     "scripts/geometry_pipeline.py": "5eb2e65a3ffa380ca5b0f5c9519e97db20b6bcdd620a6df8342aa1d2ed8f2891",
     "scripts/reach_figures.py": "b133dbf1cd14b940eab968d1dcf01d1ee961577685bdc07c26f4dc64d493c021",
     "supp_references.tex": "9f00bb8ebeadc73be680af3ecc6801095bc04bf3e205f18b41f72eab4c8f9c85",
-    "supplement.pdf": "c6d743846707fadbe6fb6dc0d6cedeb003c55dcf21c88a66b864658f80d80899",
+    "supplement.pdf": "eaf7e9cdac06f02cd2b0dcac5ad7a1c9ee303581a5666771e3ba13c232fc6ff4",
     "supplement.tex": "781522aa7338b7f4a66b1b023550eaee3185fab3fcc5b439bf00aa46abc40813"
   },
   "editorial_revision": {
-    "scope": "Clarify breast format-test region, exact backend selection, completed-stage timing and witness verification; preserve scientific results",
+    "scope": "Rebuild PDFs with registered GeoCert title and two abstract precision corrections",
     "scientific_code_data_and_formal_statements_unchanged": true
   },
-  "pdf_rebuild_pending": true,
-  "pending_pdf_changes": "TeX sources and plain-text abstracts contain the final GeoCert title and two abstract precision corrections. Published PDFs retain the preceding wording."
+  "easychair_submission_number": 510,
+  "registration_match": "Title and abstract match the user-provided confirmation for submission 510"
 }
