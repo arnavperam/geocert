@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite the accompanying manuscript and identify the source revision used."
 type: software
-title: "GeoCert Atlas: Certified Expression Intervals under Shared Segmentation Uncertainty"
+title: "GeoCert: Certified Expression Intervals under Segmentation Uncertainty in Spatial Transcriptomics"
 authors:
   - family-names: Peram
     given-names: Arnav

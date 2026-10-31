@@ -27,3 +27,9 @@ Artifact workflow: `arnavperam/geocert`, run `40630851940`, commit `d677bd96768d
 Artifact SHA-256: `f53bee7d82a385a320c14a180049e66bf6f60963dda8d7a75574fda90c28febf`.
 
 Modifications consist of previously defined 200-µm crops, Q20 measured-gene filtering, count/coordinate extraction, geometry-only patch construction, exact spectra and analysis outputs. Original coordinates and source mask labels are retained. These data rights are separate from the as-yet-unselected software license.
+
+## Biological breast samples and context comparison
+
+The external validation extension uses the IDC and ILC samples from the public 10x [FFPE Human Breast with Pre-designed Panel release](https://www.10xgenomics.com/datasets/ffpe-human-breast-with-pre-designed-panel-1-standard), processed with XOA 1.0.2. The source page identifies two tumor donors and licenses the data under CC BY 4.0. Three disjoint 200 µm cores per donor were selected from cell centroids before querying expression. Their native DAPI-nucleus/15 µm-expansion masks are reference partitions, not anatomical truth. The donor of the earlier format-test dataset is unspecified, so it is not counted as an additional independent breast donor.
+
+The [extension catalog](../extensions/external_validation/sources.json) records URLs and SHA-256 values for the retrieved archive members, including the original lung source used for larger Proseg context windows. The [protocol and report](../extensions/external_validation/README.md) distinguish source-count verification, model-conditional exactness, alternative-segmenter agreement and the unavailable whole-cell manual reference.

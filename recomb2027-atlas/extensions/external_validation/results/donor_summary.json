@@ -1,0 +1,32 @@
+[
+  {
+    "donor": "IDC",
+    "cells": 659,
+    "RNAs": 97893,
+    "patches": 1531,
+    "queries": 32360,
+    "interval_rows": 258880,
+    "invariant_at4": 25749,
+    "eligible": 1271,
+    "tightened": 176,
+    "additive_missed": 58,
+    "covered_edges": 60905,
+    "eligible_edges": 79661,
+    "edge_coverage": 0.7645522903302745
+  },
+  {
+    "donor": "ILC",
+    "cells": 859,
+    "RNAs": 91659,
+    "patches": 1946,
+    "queries": 36409,
+    "interval_rows": 291272,
+    "invariant_at4": 30403,
+    "eligible": 829,
+    "tightened": 97,
+    "additive_missed": 37,
+    "covered_edges": 77277,
+    "eligible_edges": 101051,
+    "edge_coverage": 0.7647326597460689
+  }
+]

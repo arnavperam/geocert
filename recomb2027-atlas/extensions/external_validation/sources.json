@@ -1,0 +1,90 @@
+{
+  "IDC": {
+    "source_archive_url": "https://s3-us-west-2.amazonaws.com/10x.files/samples/xenium/1.0.2/Xenium_V1_FFPE_Human_Breast_IDC/Xenium_V1_FFPE_Human_Breast_IDC_outs.zip",
+    "members": [
+      {
+        "name": "cells.parquet",
+        "size": 10877630,
+        "sha256": "c781b2e61ec95079293b8c606b68a6e5be2952817f3b14b206db1deff81922c6",
+        "seconds": 8.517580032348633
+      },
+      {
+        "name": "gene_panel.json",
+        "size": 140122,
+        "sha256": "cd02196a9a887176c8adaee70cd9159101fe6fa5f868dd775e82bd31e852eaa5",
+        "seconds": 7.691590070724487
+      },
+      {
+        "name": "experiment.xenium",
+        "size": 1515,
+        "sha256": "256c5367b7c5c018a5e51a2f19a45b47b7e3f85073dfbbb4d51a8c69c11ac64c",
+        "seconds": 8.175219058990479
+      },
+      {
+        "name": "cells.zarr.zip",
+        "size": 908357422,
+        "sha256": "f94c2808cd4ed201cd98ba95963d4eb0fe78c58f5a001395410da422dc0d6252",
+        "seconds": 35.65788197517395
+      },
+      {
+        "name": "transcripts.parquet",
+        "size": 1360117080,
+        "sha256": "044f98aab46097ac82f3f16f1aee978782e49ec5c427fcc2682aea93a69d277f",
+        "seconds": 125.11055135726929
+      }
+    ],
+    "dataset_page": "https://www.10xgenomics.com/datasets/ffpe-human-breast-with-pre-designed-panel-1-standard"
+  },
+  "ILC": {
+    "source_archive_url": "https://s3-us-west-2.amazonaws.com/10x.files/samples/xenium/1.0.2/Xenium_V1_FFPE_Human_Breast_ILC/Xenium_V1_FFPE_Human_Breast_ILC_outs.zip",
+    "members": [
+      {
+        "name": "cells.parquet",
+        "size": 6625867,
+        "sha256": "e70ea280a0c72b422656e29ffda41cc0784b1797838c14af48391d7d67d601db",
+        "seconds": 8.406201362609863
+      },
+      {
+        "name": "gene_panel.json",
+        "size": 140122,
+        "sha256": "cd02196a9a887176c8adaee70cd9159101fe6fa5f868dd775e82bd31e852eaa5",
+        "seconds": 7.804839134216309
+      },
+      {
+        "name": "experiment.xenium",
+        "size": 1512,
+        "sha256": "23e6014a62bab2e6a7effb727e1066d7a84c4563d15881169da938ae40384169",
+        "seconds": 8.135514736175537
+      },
+      {
+        "name": "cells.zarr.zip",
+        "size": 581980442,
+        "sha256": "2605c90b05178967fb21522f44aa10d01f2567d79af04d13d2425d12703dd4de",
+        "seconds": 28.674041509628296
+      },
+      {
+        "name": "transcripts.parquet",
+        "size": 669147400,
+        "sha256": "3be3e0883f90ad2acf83fa06bdebcdcc083edc355c095ca93c41667a309025d6",
+        "seconds": 40.43351674079895
+      }
+    ],
+    "dataset_page": "https://www.10xgenomics.com/datasets/ffpe-human-breast-with-pre-designed-panel-1-standard"
+  },
+  "LUNG": {
+    "source_archive_url": "https://s3-us-west-2.amazonaws.com/10x.files/samples/xenium/2.0.0/Xenium_V1_humanLung_Cancer_FFPE/Xenium_V1_humanLung_Cancer_FFPE_outs.zip",
+    "dataset_page": "https://www.10xgenomics.com/datasets/preview-data-ffpe-human-lung-cancer-with-xenium-multimodal-cell-segmentation-1-standard",
+    "members": [
+      {
+        "name": "gene_panel.json",
+        "size": 209093,
+        "sha256": "1fc806282753d0ffdb04b8ad6176085088703b3ee4f45c7b64e6bf96e40f6203"
+      },
+      {
+        "name": "transcripts.parquet",
+        "size": 228291344,
+        "sha256": "481a9b87e3390e4251c8f9a20ef800e692b51536458942b84f694ea99f262965"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pyarrow": "26.0.0",
+    "zarr": "3.4.2",
+    "tifffile": "2026.10.15",
+    "shapely": "2.2.0",
+    "rasterio": "1.5.2",
+    "remotezip": "0.12.6",
+    "requests": "2.34.2",
+    "matplotlib": "3.10.8"
+  }
+}
