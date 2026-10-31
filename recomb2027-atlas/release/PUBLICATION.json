@@ -9,13 +9,13 @@
   "base_archive_sha256": "1b08829e7e80a1e966a1bc39920dc4509af99f79ffd11dadfaa71b8338ca59d5",
   "base_core_files_unchanged": 71,
   "document_sha256": {
-    "main.pdf": "448590b499d3656a43a41b05bc21f25745dd87456876cfa6922b300b1f2b60be",
+    "main.pdf": "62e13630204b744af0920030335f217a8ee623f1190c3d25137b92448d55b204",
     "supplement.pdf": "59066ed5a3fc8be24747e7c3d2cc5e6381a05645251ac07852d16c0b3fe2e758"
   },
   "body_pages": 10,
   "supplement_pages": 25,
-  "abstract_words": 248,
-  "abstract_sha256": "4a351145a0ab12e08f3f00e82cdb8b458c06c896ff13e804d3a31d51c1510897",
+  "abstract_words": 249,
+  "abstract_sha256": "d7c798bb9f1ccf5f607730d8f236e981c0e4ba898477b5dfac964f7fef20eeaf",
   "abstract_matches_rendered_pdf": true,
   "extension_records_sha256": {
     "extensions/atlas_union/results/summary.json": "62d8d76066bf20a62de7d42f52baf8573d472cc862ffc38336219c763a3b7484",
@@ -28,6 +28,6 @@
   },
   "ci_url": "https://github.com/arnavperam/geocert/actions/workflows/atlas-final.yml",
   "ci_scope": "Original exact replay, finite-union recomputation and independent witness verification, restored contiguous-region census/composition/endpoint audits, independent scalar samples on both Python 3.12 and 3.13, and published document/data byte hashes. Consult the run for the current commit. External donor workflow restores compact artifacts and checks all six geometries, exact spectra, witnesses and eight saved Proseg core comparisons.",
-  "previous_document_commit": "ab82b8842fbd9978f80723c69674124a8a71dea5",
+  "previous_document_commit": "1dc0b9121cb389edaac4dc938f85d5f41e3ad592",
   "title": "GeoCert: Certified Expression Intervals under Segmentation Uncertainty in Spatial Transcriptomics"
 }

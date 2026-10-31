@@ -11,8 +11,8 @@
   "body_font_pt": 10,
   "margins_inches": 1,
   "normal_main_figure_label_minimum_pt": 10,
-  "abstract_words": 248,
-  "abstract_only_sha256": "4a351145a0ab12e08f3f00e82cdb8b458c06c896ff13e804d3a31d51c1510897",
+  "abstract_words": 249,
+  "abstract_only_sha256": "d7c798bb9f1ccf5f607730d8f236e981c0e4ba898477b5dfac964f7fef20eeaf",
   "abstract_matches_tex_public_txt_and_rendered_pdf": true,
   "formal_mathematics": {
     "original_main_blocks_preserved": 20,
@@ -30,7 +30,14 @@
       25
     ],
     "clipping_or_overlap": false,
-    "new_tables_and_figures_within_their_sections": true
+    "new_tables_and_figures_within_their_sections": true,
+    "detailed_main_pages_reviewed": [
+      1,
+      8,
+      9,
+      10,
+      11
+    ]
   },
   "latex_checks": {
     "undefined_references_or_citations": false,
@@ -69,8 +76,8 @@
     "figures/reach_coverage.png": "b74a8460d36265b54ffb951b19964b4ae17dcf82455bd815ef27ca217f98a016",
     "figures/width_budget.pdf": "052b3353149eb0ece044121c0b8fe87c3ec08350021ff0848fc062ef9da9b17c",
     "figures/width_budget.png": "e01547e54bb26cf92c1f88e261b5d182a95a58bf12da15f850f9708f35e5af1c",
-    "main.pdf": "448590b499d3656a43a41b05bc21f25745dd87456876cfa6922b300b1f2b60be",
-    "main.tex": "ab865c182e54e77c6e218e56ef1bdb6b0fa62a883a8d41655256de35b0233bfb",
+    "main.pdf": "62e13630204b744af0920030335f217a8ee623f1190c3d25137b92448d55b204",
+    "main.tex": "2b03e7984ccaa0ec37fa6d77326aefefbf9da454a8f0d89e50df2e6b045857aa",
     "original_saturation_table.tex": "f252740a7c2fa583317ea804c1ef709f637402b248e538221d0645405ef2b374",
     "reach_budget_tables.tex": "46803f4508c137576ba86c1dd04efc1acd0fb3d6b27675a1b86b7d2c57226228",
     "reach_table.tex": "63d90ad104cd9e6e509f13e8e7a3331510e702c9777d09ecb5435b96de79f2b0",
@@ -83,10 +90,10 @@
     "supplement.tex": "fceeedc504157ca35da2a50dd1fe8b27c57397a04217a0c88ee83531969fc453"
   },
   "editorial_revision": {
-    "scope": "Biological donor replication and paired Proseg context experiments; concise Discussion; registered abstract retained",
+    "scope": "Move donor replication to Section 5.3, report percentages with geometric scope, replace abstract scaling sentence, shorten runtime paragraph",
     "core_algorithm_and_formal_statements_unchanged": true,
-    "new_analysis_inputs_and_results_added": true
+    "new_analysis_inputs_and_results_added": false
   },
   "easychair_submission_number": 510,
-  "registration_match": "Title and abstract match the user-provided confirmation for submission 510"
+  "registration_match": "Title unchanged; revised abstract awaits corresponding EasyChair update"
 }
