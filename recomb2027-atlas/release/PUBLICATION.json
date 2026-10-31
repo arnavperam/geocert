@@ -2,15 +2,15 @@
   "candidate": "GeoCert RECOMB 2027",
   "base_package_version": "1.1.0",
   "revision_date": "2026-10-31",
-  "scientific_source_commit": "829e723ab22c17db317992378b5577f5da8d3e3b",
-  "scientific_source_url": "https://github.com/arnavperam/geocert/tree/829e723ab22c17db317992378b5577f5da8d3e3b/recomb2027-atlas",
+  "scientific_source_commit": "3124a53bd712f08280b9aad2ae4c6146bd417775",
+  "scientific_source_url": "https://github.com/arnavperam/geocert/tree/3124a53bd712f08280b9aad2ae4c6146bd417775/recomb2027-atlas",
   "source_public": true,
   "base_scientific_source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
   "base_archive_sha256": "1b08829e7e80a1e966a1bc39920dc4509af99f79ffd11dadfaa71b8338ca59d5",
   "base_core_files_unchanged": 71,
   "document_sha256": {
-    "main.pdf": "f7e70ab3ac752d63be585903d32bfb5c1098870d052c040c5c5a3fcef7cebc64",
-    "supplement.pdf": "cc8c9722a3335472f8fc35760c217dd22a910788747387b73c544cffe157772a"
+    "main.pdf": "448590b499d3656a43a41b05bc21f25745dd87456876cfa6922b300b1f2b60be",
+    "supplement.pdf": "59066ed5a3fc8be24747e7c3d2cc5e6381a05645251ac07852d16c0b3fe2e758"
   },
   "body_pages": 10,
   "supplement_pages": 25,
@@ -28,6 +28,6 @@
   },
   "ci_url": "https://github.com/arnavperam/geocert/actions/workflows/atlas-final.yml",
   "ci_scope": "Original exact replay, finite-union recomputation and independent witness verification, restored contiguous-region census/composition/endpoint audits, independent scalar samples on both Python 3.12 and 3.13, and published document/data byte hashes. Consult the run for the current commit. External donor workflow restores compact artifacts and checks all six geometries, exact spectra, witnesses and eight saved Proseg core comparisons.",
-  "previous_document_commit": "a8f5a6fdbfdc5b4b6a249e365e03753d1e58bed8",
+  "previous_document_commit": "ab82b8842fbd9978f80723c69674124a8a71dea5",
   "title": "GeoCert: Certified Expression Intervals under Segmentation Uncertainty in Spatial Transcriptomics"
 }

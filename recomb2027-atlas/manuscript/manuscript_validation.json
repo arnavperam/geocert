@@ -1,7 +1,7 @@
 {
   "title": "GeoCert: Certified Expression Intervals under Segmentation Uncertainty in Spatial Transcriptomics",
   "revision_date": "2026-10-31",
-  "scientific_source_commit": "829e723ab22c17db317992378b5577f5da8d3e3b",
+  "scientific_source_commit": "3124a53bd712f08280b9aad2ae4c6146bd417775",
   "base_core_files_unchanged": 71,
   "main_title_pages": 1,
   "main_body_pages": 10,
@@ -69,8 +69,8 @@
     "figures/reach_coverage.png": "b74a8460d36265b54ffb951b19964b4ae17dcf82455bd815ef27ca217f98a016",
     "figures/width_budget.pdf": "052b3353149eb0ece044121c0b8fe87c3ec08350021ff0848fc062ef9da9b17c",
     "figures/width_budget.png": "e01547e54bb26cf92c1f88e261b5d182a95a58bf12da15f850f9708f35e5af1c",
-    "main.pdf": "f7e70ab3ac752d63be585903d32bfb5c1098870d052c040c5c5a3fcef7cebc64",
-    "main.tex": "ee3ae627eb2c0b342d51da497598e2c836b057bd9a210fef61949c03a3e01a01",
+    "main.pdf": "448590b499d3656a43a41b05bc21f25745dd87456876cfa6922b300b1f2b60be",
+    "main.tex": "ab865c182e54e77c6e218e56ef1bdb6b0fa62a883a8d41655256de35b0233bfb",
     "original_saturation_table.tex": "f252740a7c2fa583317ea804c1ef709f637402b248e538221d0645405ef2b374",
     "reach_budget_tables.tex": "46803f4508c137576ba86c1dd04efc1acd0fb3d6b27675a1b86b7d2c57226228",
     "reach_table.tex": "63d90ad104cd9e6e509f13e8e7a3331510e702c9777d09ecb5435b96de79f2b0",
@@ -79,8 +79,8 @@
     "scripts/geometry_pipeline.py": "41a4e7384e5b75d488a90964bfc4b097c00a89350d27a9e9e01fde2b85ff9aa8",
     "scripts/reach_figures.py": "b133dbf1cd14b940eab968d1dcf01d1ee961577685bdc07c26f4dc64d493c021",
     "supp_references.tex": "9f5db1d17c5f86212d2d314807af6b66cd0c7d8d2a8e7178bd2bba5f57342f4e",
-    "supplement.pdf": "cc8c9722a3335472f8fc35760c217dd22a910788747387b73c544cffe157772a",
-    "supplement.tex": "0dbbc3c3af5089032f208ada6491aa44785e0e7d4134c48b89ac1a6b1ed5df35"
+    "supplement.pdf": "59066ed5a3fc8be24747e7c3d2cc5e6381a05645251ac07852d16c0b3fe2e758",
+    "supplement.tex": "fceeedc504157ca35da2a50dd1fe8b27c57397a04217a0c88ee83531969fc453"
   },
   "editorial_revision": {
     "scope": "Biological donor replication and paired Proseg context experiments; concise Discussion; registered abstract retained",
