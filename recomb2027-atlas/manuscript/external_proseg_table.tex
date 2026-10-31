@@ -1,0 +1,57 @@
+\begin{table}[ht]\centering\small
+\begin{tabular}{lrrrrr}\toprule
+Core&Retained/input RNA&\multicolumn{2}{c}{Default factorization}&\multicolumn{2}{c}{No factorization}\\
+&&$200\,\mu\mathrm m$&$800\,\mu\mathrm m$&$200\,\mu\mathrm m$&$800\,\mu\mathrm m$\\\midrule
+LUNG 1&5,774/5,847&failed&19.5&42.5&19.4\\
+LUNG 2&1,482/1,523&86.5&60.7&89.8&62.1\\
+IDC 1&27,250/27,250&29.2&21.3&29.3&21.0\\
+IDC 2&45,198/45,198&24.2&14.8&24.0&15.1\\
+IDC 3&25,329/25,445&27.9&12.5&27.9&12.2\\
+ILC 1&22,791/22,791&27.7&16.6&28.8&16.6\\
+ILC 2&41,168/41,168&20.1&9.8&19.8&9.7\\
+ILC 3&27,700/27,700&27.1&13.8&28.2&14.0\\
+\bottomrule\end{tabular}
+\caption{Percentage of retained core transcripts assigned to background. Each row uses the intersection of core transcript identifiers across completed settings; the second column reports its size against the original core input. Input width describes the surrounding window, while evaluation always uses the central core.}\label{tab:context-background}
+\end{table}
+\begin{table}[ht]\centering\small
+\begin{tabular}{llrrrr}\toprule
+Core&Setting&Changed counts&Reach (\%)&With BG (\%)&Fixed RNA moves\\\midrule
+LUNG 1&200 / D&\multicolumn{4}{c}{Factorization failed}\\
+LUNG 1&200 / NF&2,262&7.2&68.0&2,777\\
+LUNG 1&800 / D&2,198&8.2&39.4&2,292\\
+LUNG 1&800 / NF&2,139&7.8&40.0&2,347\\
+LUNG 2&200 / D&513&5.1&90.4&683\\
+LUNG 2&200 / NF&504&5.2&95.4&684\\
+LUNG 2&800 / D&433&5.3&75.1&519\\
+LUNG 2&800 / NF&470&4.9&75.3&571\\
+IDC 1&200 / D&7,113&7.1&60.3&11,280\\
+IDC 1&200 / NF&7,048&6.9&61.3&11,226\\
+IDC 1&800 / D&6,496&7.9&45.7&9,572\\
+IDC 1&800 / NF&6,541&7.9&45.3&9,473\\
+IDC 2&200 / D&11,107&7.9&57.0&17,495\\
+IDC 2&200 / NF&11,094&7.8&56.4&17,549\\
+IDC 2&800 / D&10,059&9.2&37.0&14,560\\
+IDC 2&800 / NF&10,126&9.1&38.1&14,597\\
+IDC 3&200 / D&6,226&8.4&66.1&10,321\\
+IDC 3&200 / NF&6,363&7.8&66.0&10,286\\
+IDC 3&800 / D&5,660&9.8&33.8&7,794\\
+IDC 3&800 / NF&5,570&10.3&34.1&7,689\\
+ILC 1&200 / D&6,558&6.8&62.3&8,951\\
+ILC 1&200 / NF&6,662&6.6&62.9&9,073\\
+ILC 1&800 / D&5,729&8.0&41.1&6,897\\
+ILC 1&800 / NF&5,801&8.0&41.3&6,862\\
+ILC 2&200 / D&10,975&8.2&51.8&14,360\\
+ILC 2&200 / NF&11,021&8.5&50.9&14,446\\
+ILC 2&800 / D&9,699&9.6&27.7&11,234\\
+ILC 2&800 / NF&9,651&9.9&26.9&11,202\\
+ILC 3&200 / D&8,166&6.1&61.3&10,366\\
+ILC 3&200 / NF&8,240&5.9&62.6&10,626\\
+ILC 3&800 / D&7,227&7.2&35.5&7,768\\
+ILC 3&800 / NF&7,297&7.0&35.7&7,838\\
+\bottomrule\end{tabular}
+\caption{All paired Proseg settings. D: default factorization; NF: no factorization. Reach is the fraction of changed cell--gene counts individually attainable within the primary atlas at $4\,\mu\mathrm m^2$. With BG counts changed entries touched by at least one transfer to or from background; these may also involve cell-to-cell transfers. Fixed RNA moves count reassigned transcripts outside editable ribbons. Every completed full assignment lies outside the family. Each core uses a fixed set of cell--gene questions across its completed settings.}\label{tab:context-reach}
+\end{table}
+\FloatBarrier
+In the original lung cores, the matched no-factorization background fractions change from 42.5\% to 19.4\% and from 89.8\% to 62.1\% when surrounding tissue is included. Thus the extreme background rates in the small-crop comparison depend on the input context. Larger inputs still produce many changes outside the primary family (Table~\ref{tab:context-reach}). These results diagnose the comparison setting; they do not establish which assignments are anatomically correct or isolate context effects from stochastic variability.
+
+The public artifacts retain core transcript assignments for every completed run, the complete setting inventory, countwise comparisons and audit results. Replaying those extracts reproduces the tables; repeating Proseg itself is stochastic. Native transcript outputs were reconciled with the full output count matrices before the core extracts were saved.

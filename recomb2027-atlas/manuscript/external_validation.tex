@@ -1,0 +1,58 @@
+\section{Replication on biological breast tissue and segmentation context}\label{sec:external-validation}
+\subsection{Data and selection}
+We used the public 10x FFPE Human Breast with Pre-designed Panel dataset, processed with Xenium Onboard Analysis 1.0.2~\cite{biologicalbreast}. It contains an infiltrating ductal carcinoma sample with ductal carcinoma in situ and an invasive lobular carcinoma sample from two donors. Both are distinct tissue sources from the lung donor. The donor identity behind the earlier breast format-test input is unspecified, so we make no claim that it supplies an additional independent breast donor. The new sources use DAPI nuclear segmentation and vendor expansion by $15\,\mu\mathrm m$; their native cell masks define the reference partitions.
+
+For each donor, we formed three target locations using the 25th, 50th and 75th percentiles of cell-centroid $x$ and the median cell-centroid $y$. The nearest cell centroid to each target fixed a nominal $200\times200\,\mu\mathrm m$ core and an $800\times800\,\mu\mathrm m$ context window. Origins were rounded down to the native pixel grid. The selection used no gene identities, transcript counts or GeoCert outcomes. All six cores were retained. Their coordinates, source-member checksums and selection rules are recorded with the analysis.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=.95\textwidth]{figures/biological_regions.pdf}
+\caption{The six predefined breast tissue regions. Grey points show a regularly subsampled set of source cell centroids; solid boxes mark the analysis cores and dashed boxes the surrounding Proseg inputs. Each panel represents one donor.}\label{fig:biological-regions}
+\end{figure}
+
+The original cell and nucleus raster masks, physical coordinate transform and transcript identifiers were retained. We included every Q20 transcript targeting a measured gene in the selected regions. An independent pass through the original Parquet files reproduced all retained identifiers, coordinates, raster assignments and source counts. There were zero discrepancies between retained transcript owners and the native masks. Cells touching a core edge or lacking a connected valid reference region were excluded by the unchanged atlas eligibility rule.
+
+\FloatBarrier
+\subsection{Exact count intervals and matched approximations}
+The primary atlas uses the original ribbon-width ladder, slope, nuclear constraints and fixed seams, with the original eight area budgets. Questions cover positive or editable cell--gene pairs, retaining the fixed counts outside ribbons. Extraction and independent rational checks precede count computation. We used exact implication-pruned enumeration for local single-gene spectra; every spectrum completed. Separate scalar calculations reproduced all local minima, and Cartesian composition and explicit boundary checks verified every global spectrum and endpoint. The analysis therefore tests the existing model on new biological samples without changing its geometric assumptions.
+
+\begin{table}[ht]\centering
+\begin{tabular}{lrr}\toprule
+Quantity&Ductal donor&Lobular donor\\\midrule
+Complete eligible cells&659&859\\
+Retained core transcripts&97,893&91,659\\
+Boundary ribbons&1,531&1,946\\
+Covered eligible shared edges&76.5\%&76.5\%\\
+Cell--gene questions&32,360&36,409\\
+Invariant at $4\,\mu\mathrm m^2$&25,749 (79.6\%)&30,403 (83.5\%)\\
+Questions with outer width at least two&1,271&829\\
+Questions tightened by shared geometry&176 (13.8\%)&97 (11.7\%)\\
+Questions with an additive missed endpoint&58&37\\\bottomrule
+\end{tabular}
+\caption{Results across three predefined cores per donor. Invariance is conditional on the primary atlas's approximately $0.45\,\mu\mathrm m$ displacement cap and fixed uncovered boundaries. Eligibility, tightening and additive misses are counted once per cell--gene question across the eight budgets. Tightening affects 0.54\% and 0.27\% of all questions, respectively.}\label{tab:biological-replication}
+\end{table}
+
+The independent-molecule outer bound uses the same exact singleton transfer costs as the original analysis. The additive inner approximation retains assignment feasibility while replacing shared area by the sum of singleton costs, including collateral transfers. These comparisons separate the effects of shared geometry and shared deformation cost. A further distance-only outer bound counts molecules near raster boundary edges using the global displacement cap and a half-pixel allowance for representing each unit edge by its midpoint. It relaxes the ribbon, nuclear and area constraints; tightening against that looser bound alone is not evidence of a shared-cost effect.
+
+\begin{table}[ht]\centering
+\begin{tabular}{rrrrr}\toprule
+Budget ($\mu\mathrm m^2$)&\multicolumn{2}{c}{Ductal donor}&\multicolumn{2}{c}{Lobular donor}\\
+&Non-singleton&Tighter outer&Non-singleton&Tighter outer\\\midrule
+0&0&0&0&0\\
+0.05&5,082&94&4,551&40\\
+0.1&5,770&62&5,249&43\\
+0.25&6,611&38&6,006&17\\
+0.5&6,611&0&6,006&0\\
+1&6,611&0&6,006&0\\
+2&6,611&0&6,006&0\\
+4&6,611&0&6,006&0\\\bottomrule
+\end{tabular}
+\caption{Budget-specific counts in the two biological donors. The shared-geometry differences occur at smaller budgets; the singleton outer bounds coincide with the exact intervals from $0.5\,\mu\mathrm m^2$ onward on this grid.}
+\end{table}
+
+\FloatBarrier
+\subsection{Paired Proseg context analysis}
+For each breast core and both original lung crops, we ran Proseg 3.2.0 on the core alone and with $300\,\mu\mathrm m$ of surrounding tissue on each side. Default factorization and the earlier no-factorization setting were tested separately, keeping 200 burn-in iterations, 200 sampling iterations, 50 hill-climbing iterations and two threads. The default run on the first small lung crop again failed; it was retained as a failed setting rather than replaced. Each completed setting is one stochastic run, so differences are descriptive and include sampling variability.
+
+Comparisons use the same original core transcript identifiers retained by all completed settings for that core, with output cell identities joined to source identities. Background assignments override the reported cell index. We reconcile final transcript assignments from the native Proseg Parquet output with its sparse count matrix; optional CSV exports are not required for this check. All settings for a core use the union of their source and alternative cell--gene questions. Queries affected by an excluded editable transcript are marked unavailable rather than scored with a shifted full-transcript spectrum. We report cell-to-cell transfers and background transfers separately. Countwise inclusion in an interval is distinguished from realizability of the complete assignment vector.
+
+\input{external_proseg_table.tex}

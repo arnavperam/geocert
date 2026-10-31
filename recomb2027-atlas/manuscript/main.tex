@@ -3,7 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs,array,graphicx,xurl}
 \usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
+\usepackage{enumitem,placeins}
 \microtypesetup{protrusion=false}
 \setlist{nosep,leftmargin=*}
 \setlength{\parskip}{3pt}
@@ -31,54 +31,49 @@ A shared cell-boundary error can alter several expression counts together in ima
 
 \begin{figure}[t]\centering
 \includegraphics[width=\textwidth]{figures/geometry_pipeline.pdf}
-\caption{From a shared boundary to an exact count spectrum (schematic). A shear chart straightens the staircase interface. Molecular requirements generate Lipschitz envelopes; their clamp of the reference minimizes area. Critical heights yield a count-indexed path computation. Theorem~\ref{thm:glue} converts chart displacement to physical area and glues local witnesses.}\label{fig:geometry}
+\caption{From a shared boundary to an exact count spectrum (schematic): (a) a ribbon follows the raster interface; (b) a shear chart straightens it, and molecular requirements define Lipschitz envelopes whose clamp of the reference minimizes area; and (c) critical heights give a count-indexed path computation. Theorem~\ref{thm:glue} converts chart displacement to physical area and glues local witnesses.}\label{fig:geometry}
 \end{figure}
 
 \section{Introduction}
-Imaging-based spatial transcriptomics assigns detected molecules to cells through a segmentation. Which counts can change when a boundary moves? Several molecules may share one deformation or require incompatible boundaries. Independent molecule scores omit these dependencies, and separate local analyses can describe incompatible tissue partitions.
+In imaging-based spatial transcriptomics, detected molecules are assigned to cells using estimated segmentation boundaries~\cite{baysor,proseg}. Moving a shared boundary can transfer several molecules at once. For a sparsely expressed marker, that may change whether it is detected in a cell at all. These transfers are dependent: some share the cost of one deformation, while others require incompatible boundaries. Treating molecule assignments independently misses both effects.
 
-For a reference segmentation and an explicit deformation family, we compute the smallest and largest retained counts attainable within an area budget. Each answer contains a count interval, its geometric assumptions and attaining boundaries. A singleton certifies invariance within that family; a wider interval quantifies count sensitivity.
+GeoCert starts from a reference segmentation and a specified family of allowed deformations. For a given area budget, it finds the smallest and largest counts of each gene in a cell, together with boundaries that attain both endpoints. Equal endpoints certify invariance within that family. Otherwise, the witnesses show which molecular transfers can change the count.
 
-GeoCert preserves exact joint-assignment area while eliminating continuous boundary coordinates, then composes local changes into one tissue partition under one budget. Theorem~\ref{thm:cost} represents the full assignment-cost function $D^\star(c)$ by a rational cut, supporting general unary objectives and coupled interfaces. For one interface with point transcripts, Theorem~\ref{thm:chain} uses the same canonical minimum-area boundary to compute all attainable counts, including states missed by penalized cuts. Ribbon homeomorphisms make local witnesses globally compatible (Figure~\ref{fig:geometry}). A finite union of complete atlases admits alternative widths while retaining every primary-model deformation.
+Our method removes continuous boundary coordinates while preserving the minimum area for every molecular assignment. Theorem~\ref{thm:cost} represents this cost function by one rational graph for general unary objectives; Supplement~\S1 extends it to coupled interfaces. For point transcripts along one interface, Theorem~\ref{thm:chain} computes all attainable counts, including optima missed by penalized cuts. Ribbon homeomorphisms then combine local boundaries into one compatible tissue partition under a shared budget (Figure~\ref{fig:geometry}). A union of complete atlases permits alternative ribbon widths while retaining every primary-model deformation.
 
-\paragraph{Relationship to existing methods.}
-Baysor, Proseg, BIDCell and Segger estimate segmentation or transcript assignments~\cite{baysor,proseg,bidcell,segger}. ResolVI models downstream misassignment probabilistically~\cite{resolvi}; ovrlpy examines three-dimensional signal overlap~\cite{ovrlpy}. TISSUE constructs uncertainty intervals for predicted, unmeasured expression~\cite{tissue}. Our intervals instead range over geometric alternatives for already observed molecules. They complement these estimators by quantifying sensitivity to a specified family of geometric changes.
+\paragraph{Related work.}
+Baysor, Proseg, BIDCell and Segger estimate segmentations or transcript assignments~\cite{baysor,proseg,bidcell,segger}, whereas ResolVI models downstream misassignment probabilistically~\cite{resolvi} and TISSUE gives uncertainty intervals for predicted, unmeasured expression~\cite{tissue}. Related diagnostics include ovrlpy's analysis of three-dimensional signal overlap~\cite{ovrlpy}. GeoCert complements these approaches by computing how counts of already observed molecules can change under geometric alternatives to a reference segmentation.
 
-Convex segmentation and ordered-label cuts~\cite{hochbaum,ishikawa}, interacting-surface graphs~\cite{li,shah}, higher-order energy constructions~\cite{kz,kohli}, Lipschitz extensions~\cite{petrakis}, and difference-potential lattices~\cite{felsner} provide foundations. Submodularity alone is insufficient for a binary graph representation with auxiliary variables~\cite{zivny}. We prove the particular cost-preserving elimination below. Exact critical heights offer another realization of that reduction; count augmentation uses established resource-state dynamic programming~\cite{hassin}. Our contribution is the continuous assignment-cost identity and its compatible hard-budget realization.
+The construction draws on convex segmentation and ordered-label cuts~\cite{hochbaum,ishikawa}, interacting-surface graphs~\cite{li,shah}, higher-order energies~\cite{kz,kohli}, Lipschitz extensions~\cite{mcshane,whitney}, and difference-potential lattices~\cite{felsner}. Although submodularity alone does not guarantee a binary graph representation with auxiliaries~\cite{zivny}, we establish such a representation for the continuous assignment cost. Alongside this cut formulation, exact critical heights support resource-state dynamic programming~\cite{joksch} for hard budgets.
 
 
 
 \section{Exact elimination of continuous boundary costs}\label{sec:engine}
-We first establish the continuous assignment-cost identity for one moving interface, the building block of the evaluated atlas. Supplement~\S1 extends the construction to multiple ordered interfaces with heterogeneous slopes and minimum/maximum thickness constraints.
+We first fix the proposed transcript assignments and find the least deformation area needed to realize them. The assignments impose upper and lower requirements; their propagated envelopes determine feasibility and minimum displacement. We prove this for one moving interface. Supplement~\S1 extends the construction to ordered interfaces with heterogeneous slopes and minimum/maximum thickness constraints.
 
 \subsection{Requirements and feasible assignments}
-Let a boundary $f:I\to\mathbb R$ on a compact rational interval be $s$-Lipschitz, lie in $[\underline b,\overline b]$, and have fixed endpoints. The rational piecewise-affine reference $f^0$ obeys these geometric constraints. A site $i$ is a rectangle $[x_i^-,x_i^+]\times I_i$, including a point as a degenerate case. All sites in group $g(i)$ have one owner $c_g\in\{0,1\}$, with bit $b_g=\ind[c_g=0]$. Clearance $\rho>0$ requires
+Let $f:I\to\mathbb R$ be an $s$-Lipschitz boundary on a compact rational interval, with band $[\underline b,\overline b]$ and fixed endpoints, and let $f^0$ be a rational piecewise-affine reference satisfying the same constraints. To specify ownership on either side, we represent site $i$ by a rectangle $[x_i^-,x_i^+]\times I_i$, allowing degenerate points. Sites in group $g(i)$ share owner $c_g\in\{0,1\}$, encoded by $b_g=\ind[c_g=0]$, so clearance $\rho>0$ requires
 \begin{equation}
  b_{g(i)}=1\Rightarrow f(t)\ge\ell_i=x_i^++\rho,\qquad
  b_{g(i)}=0\Rightarrow f(t)\le u_i=x_i^--\rho\quad(t\in I_i).\label{eq:owners}
 \end{equation}
-Nuclear regions are fixed-label groups. They have the same geometric requirements and zero molecular reward. The reference can satisfy the geometry without satisfying every uncertain site's assignment requirement.
+Nuclear regions are fixed-label groups with the same geometric requirements and zero molecular reward. The reference satisfies the geometry but may violate uncertain-site assignment requirements.
 
 \begin{lemma}[Propagation on one interface]\label{lem:kernel}
 A lower interval requirement $f\ge\ell_i$ on $I_i$ implies
 $f(t)\ge\ell_i-s\dist(t,I_i)$ everywhere. An upper requirement analogously implies $f(t)\le u_i+s\dist(t,I_i)$.
 \end{lemma}
 \begin{proof}
-Apply the Lipschitz inequality between $t$ and the closest point of the closed interval $I_i$. The displayed bounds are attained by the corresponding tent profiles in the absence of other restrictions.
+The Lipschitz inequality between $t$ and its closest point in the closed interval $I_i$ gives both bounds. Without further restrictions, the corresponding tent profiles attain them.
 \end{proof}
 
-Forbid a lower activation if $\ell_i>\overline b$ or $\ell_i>f^0(e)+s\dist(e,I_i)$ at either endpoint $e$. Forbid an upper activation if $u_i<\underline b$ or $f^0(e)>u_i+s\dist(e,I_i)$. Add structural pins and
-\begin{equation}
- b_{g(i)}\Rightarrow b_{g(j)}\quad\hbox{when}\quad
- \ell_i-s\dist(I_i,I_j)>u_j .\label{eq:imp}
-\end{equation}
-This implication excludes simultaneous activation of the incompatible lower and upper requirements.
+We forbid a lower activation when $\ell_i>\overline b$ or $\ell_i>f^0(e)+s\dist(e,I_i)$ at either endpoint $e$, and an upper activation when $u_i<\underline b$ or $f^0(e)>u_i+s\dist(e,I_i)$. Along with structural pins, we impose $b_{g(i)}\Rightarrow b_{g(j)}$ whenever $\ell_i-s\dist(I_i,I_j)>u_j$, excluding incompatible lower and upper requirements.
 
 \begin{theorem}[Exact assignment feasibility]\label{thm:feas}
 The finite unary restrictions, implications and structural pins characterize the assignments realizable by the continuous family.
 \end{theorem}
 \begin{proof}
-Necessity follows from Lemma~\ref{lem:kernel}. For sufficiency, form the maximum $L$ of the active lower tents, the lower band and both endpoint lower cones. Form the minimum $U$ of the active upper tents, upper band and endpoint upper cones. The pair tests ensure every lower contribution is at most every upper contribution: $\dist(t,I_i)+\dist(t,I_j)\ge\dist(I_i,I_j)$. Unary tests handle bands and endpoints. Thus $L\le U$. Both envelopes are $s$-Lipschitz, satisfy bands and endpoint equality, and realize the selected requirements. They supply continuous feasible boundaries.
+Necessity follows from Lemma~\ref{lem:kernel}. For sufficiency, let $L$ be the maximum of the active lower tents, lower band and endpoint lower cones, and $U$ the corresponding minimum for upper requirements. Since $\dist(t,I_i)+\dist(t,I_j)\ge\dist(I_i,I_j)$, the pair tests place every lower contribution below every upper contribution. Unary tests handle bands and endpoints, so $L\le U$. Both envelopes are $s$-Lipschitz and satisfy the bands, endpoint equalities and selected requirements, giving continuous feasible boundaries.
 \end{proof}
 
 \subsection{Preserving every assignment's minimum area}
@@ -86,7 +81,7 @@ For complete owners $c$, write $\mathcal F(c)$ for the realizing boundaries and
 \begin{equation}
  D^\star(c)=\min_{f\in\mathcal F(c)}\int_I|f-f^0|\,dt,\qquad \min\varnothing=+\infty.\label{eq:dstar}
 \end{equation}
-The later chart supplies its physical-area conversion. Shared movement makes this function nonadditive across transcripts.
+The minimum $D^\star(c)$, converted to physical area in Section~\ref{sec:atlas}, is generally nonadditive across transcripts because one boundary movement can transfer several molecules.
 
 \begin{theorem}[Assignment-wise cost representation]\label{thm:cost}
 For rational input, one polynomial-size rational graph with assignment vertices $b(c)$, auxiliary vertices $y$, logical hard arcs and a known constant $\kappa$ satisfies
@@ -102,20 +97,20 @@ f^*(t)=\min\{U(t),\max\{L(t),f^0(t)\}\}\label{eq:clamp}
 \end{equation}
 is feasible. Every realization lies between $L$ and $U$, so this clamp is pointwise nearest to $f^0$ and minimizes its integrated displacement.
 
-The positive displacement is the maximum of activated functions $[\ell_i-s\dist(t,I_i)-f^0(t)]_+$. Negative displacement uses upper requirements and complementary bits. Retain fixed requirements and all uncertain-site requirements, including source-inconsistent ones. At feasible owners, positive and negative displacement cannot both occur at the same point. Split at affine-piece endpoints, source knots, zeros and pair crossings. On a slab, sort the positive heights $h_1\ge\cdots\ge h_k>0$, with $h_{k+1}=0$. If $S_j$ contains the activation labels of the first $j$ heights, then
+The positive displacement is the maximum of activated functions $[\ell_i-s\dist(t,I_i)-f^0(t)]_+$; negative displacement uses upper requirements and complementary bits. In forming these envelopes, we retain all fixed and uncertain-site requirements, including source-inconsistent ones. For feasible owners, these displacements cannot occur at the same point, so we integrate them separately. To integrate each piecewise-affine envelope, we partition at piece endpoints, source knots, zeros and pair crossings. Positive heights then have fixed order $h_1\ge\cdots\ge h_k>0$ on each slab, with $h_{k+1}=0$. If $S_j$ contains the first $j$ activation labels, then
 \begin{equation}
 \max_{i\ \mathrm{active}}h_i=\sum_{j=1}^k(h_j-h_{j+1})\ind[S_j\hbox{ has an active label}].\label{eq:layers}
 \end{equation}
-Integrate each nonnegative affine difference exactly. Standard OR helpers encode these weighted activation sets; the complementary polarity reverses the construction~\cite{kz,kohli}. Repeated group labels are a single bit. Mandatory terms become forced helpers or the constant $\kappa$. Minimizing auxiliaries therefore gives the integrated clamp for each fixed $b(c)$, proving~\eqref{eq:identity} before molecular costs are specified. Add unary costs by successive differences, shifting negative terms by a recorded constant. Scale rational capacities to integers. Set each numerical hard capacity above the sum of finite capacities \emph{after} the costs and $\lambda$ are chosen. A hard arc in the optimum certifies infeasibility; otherwise~\eqref{eq:clamp} reconstructs a realizing boundary.
+Integrating the nonnegative affine differences gives exact weights for standard OR helpers~\cite{kz,kohli}, with the construction reversed for complementary polarity. Repeated group labels share one bit; mandatory terms use forced helpers or $\kappa$. Minimizing auxiliaries therefore recovers the integrated clamp for each fixed $b(c)$, proving~\eqref{eq:identity} before molecular costs are chosen. We add unary costs by successive differences, recording a constant shift for negative terms, and scale rational capacities to integers. Each hard capacity exceeds the finite-capacity sum for the chosen costs and $\lambda$. An optimal cut through a hard arc certifies infeasibility; otherwise,~\eqref{eq:clamp} gives an attaining boundary.
 \end{proof}
 
-\paragraph{What elimination contributes.}
-For $M$ constant-piece excursion profiles, relative order changes $O(M^2)$ times. Each adjacent swap changes one prefix, giving $O(M^2+M)$ distinct activation helpers after merging. With $G$ groups and $N$ molecular/structural sites, the graph has $O(G+M^2+M)$ vertices and $O(G+N^2+M^2+M)$ arcs. Intersections and integrated weights have polynomial rational encoding. An event sweep~\cite{bentley} accumulates unchanged layer integrals lazily; its construction bound is detailed in Supplement~\S3. The contribution is the exact continuous minimum-area identity represented by these finite gadgets.
+\paragraph{Complexity and coupled interfaces.}
+With $M$ constant-piece excursion profiles, relative order changes $O(M^2)$ times. Each adjacent swap changes one prefix, so merging repeated helpers leaves $O(M^2+M)$ activation helpers. For $G$ groups and $N$ molecular/structural sites, the graph has $O(G+M^2+M)$ vertices and $O(G+N^2+M^2+M)$ arcs. Since intersections and integrated weights have polynomial rational encoding, an event sweep~\cite{bentley} can construct the graph in polynomial time, accumulating unchanged layer integrals lazily; Supplement~\S3 gives the full construction bound.
 
-The coupled extension propagates constraints through boundary-separation paths before forming its envelopes. Their componentwise min/max closure makes the clamp simultaneously feasible, preserving the same identity for every assignment of $m+1$ labels. Its graph-size and proof details are in Supplement~\S1. The cut representation supports general molecular objectives and coupled boundaries. For the scalar point-transcript atlas, Section~\ref{sec:counts} instead augments the canonical clamp's exact critical mesh with count states, solving hard budgets directly without a Lagrangian gap.
+For coupled interfaces, we first propagate constraints along boundary-separation paths. The resulting envelopes are closed under componentwise minimum and maximum, making the clamp simultaneously feasible and preserving the identity for assignments of $m+1$ labels (Supplement~\S1). This cut representation handles general molecular objectives and coupled boundaries. For the scalar point-transcript atlas, Section~\ref{sec:counts} instead adds count states to the clamp's exact critical mesh and solves hard budgets directly.
 
 \section{From local interfaces to one compatible tissue model}\label{sec:atlas}
-An \emph{atlas} specifies one compatible uncertainty model for the tissue: disjoint two-label ribbons around reference interfaces, with fixed endpoint traces and outer rails. Each RNA belongs to at most one ribbon; the rest of the partition stays fixed. Cell-count outputs for that atlas refer to this single family.
+Local count changes can be interpreted together only when their boundaries belong to one tissue partition. An \emph{atlas} consists of two-label ribbons around reference interfaces, with disjoint interiors, fixed endpoint traces and outer rails. The partition outside the ribbons stays fixed.
 
 Let $P_i$ be closed ribbons with pairwise disjoint interiors and injective charts $\Psi_i:I_i\times[-B_i,B_i]\to P_i$. The reference boundary is transverse coordinate zero, each half lies wholly in its stated reference label, and each RNA belongs to at most one ribbon. An allowed displacement $h_i$ is continuous, zero at both endpoints, and $|h_i|\le qB_i$ for $q<1$. Fixed regions have additional label constraints.
 
@@ -132,7 +127,7 @@ H_i(t,v)=\begin{cases}
 h_i(t)+v(B_i-h_i(t))/B_i,&v\ge0.
 \end{cases}\label{eq:homeo}
 \end{equation}
-The two positive slopes are bounded away from zero; both branches meet at $h_i(t)$ and have continuous explicit inverses. The map fixes rails and is identity at the interval endpoints. Conjugating $(t,v)\mapsto(t,H_i(t,v))$ by $\Psi_i$ gives a homeomorphism fixing the entire ribbon boundary. Extend by identity outside. Finitely many such maps and inverses agree on intersections, so they glue continuously and bijectively. Cell topology and fixed junction incidences are preserved. The changed-label region in one ribbon lies between zero and $h_i(t)$, with chart area $\int|h_i|$. Change of variables and disjoint interiors give the sum.
+Both slopes are positive and bounded away from zero. The branches meet at $h_i(t)$, have continuous explicit inverses, and fix the rails; at interval endpoints the map is the identity. Conjugating $(t,v)\mapsto(t,H_i(t,v))$ by $\Psi_i$ therefore gives a homeomorphism fixing the ribbon boundary. We extend it by the identity outside the ribbon. These finitely many maps and their inverses agree on intersections, so they glue to a global homeomorphism preserving cell topology and fixed junction incidences. Within each ribbon, the changed-label region lies between zero and $h_i(t)$ and has chart area $\int|h_i|$. The area formula follows by change of variables and disjointness of the interiors.
 \end{proof}
 
 \paragraph{Exact chart for a raster interface.}
@@ -140,28 +135,27 @@ For a coordinate-monotone raster-edge path choose $s_x,s_y\in\{-1,1\}$ and let $
 \begin{equation}
 \Psi_i(t,h)=\frac p2\big(s_x(t+r_i(t)+h),\ s_y(t-r_i(t)-h)\big),\qquad J_i=p^2/2,\label{eq:chart}
 \end{equation}
-up to the recorded origin. This shear preserves the staircase interface exactly, with constant Jacobian away from measure-zero corners. The optimization variable is displacement $h$, with zero source. Intersecting nuclear pixels impose exact conservative interval constraints that preserve their owners.
-
-This family accommodates arbitrary reference adjacency by fixing junction neighborhoods and uncovered perimeter portions. Its topology and coverage are explicit parts of the uncertainty model.
+up to the recorded origin. This shear preserves the staircase interface exactly and has constant Jacobian except at measure-zero corners, so we optimize displacement $h$ from the zero source in these coordinates. The admissible motion is further restricted by conservative interval constraints from intersecting nuclear pixels, preserving their owners, and by fixed junction neighborhoods and uncovered perimeter portions. These fixed regions allow arbitrary reference adjacency while defining the atlas's topology and coverage.
 
 
 
 \section{Hard budgets without assignment enumeration}\label{sec:counts}
+A penalized cut trades count against area, but some hard-budget optima are missed for every penalty (\S\ref{sec:penalties}). We therefore compute the least area needed for each count directly.
 For a retained count $N_{kg}(c)$, define the minimum-area spectrum
 \begin{equation}
 S_{kg}(q)=\min_{c:N_{kg}(c)=q}D^\star(c),\quad
 [L_{kg}(\delta),U_{kg}(\delta)]=\left[\min,\max\right]\{q:S_{kg}(q)\le\delta\}.\label{eq:interval}
 \end{equation}
-The notation means the smallest and largest elements of the displayed feasible-count set. Its interior need not contain every integer. A witness for each endpoint proves attainment; an empty set is reported separately.
+The endpoints are the smallest and largest feasible counts; intermediate integers need not all be feasible. We return an attaining boundary for each endpoint and report an empty feasible-count set separately.
 
 \subsection{Exact critical heights and a count chain}
-For one boundary, collect all propagated lower/upper requirement pieces, fixed geometric pieces and source pieces before selecting owners. A common mesh contains all piece endpoints and crossings, including source crossings and every point observation. At node $t_j$, retain their candidate values $V_j$ within forced envelopes and discard values violating any point's clearance gap or fixed constraint.
+For point transcripts along one boundary, we collect all propagated lower/upper requirement pieces, fixed geometric pieces and source pieces before choosing owners. Their endpoints and crossings, including source crossings and every point observation, define a common mesh. At node $t_j$, candidate values $V_j$ lie within forced envelopes and satisfy every point's clearance gap and fixed constraints.
 
 \begin{lemma}[Exact scalar critical mesh]\label{lem:mesh}
 Restricting nodal heights to these candidates, enforcing original adjacent slope and ownership constraints, and charging trapezoidal absolute displacement preserves $D^\star(c)$ for every feasible assignment.
 \end{lemma}
 \begin{proof}
-Between consecutive events all candidate pieces are affine and their ordering is fixed. The canonical clamp~\eqref{eq:clamp} selects one such piece and has constant-sign displacement. Its nodal candidates are retained and its trapezoidal area equals its exact integral. Conversely a feasible candidate-height path interpolates to a feasible continuous boundary: every constraint endpoint is in the mesh, and the intervening constraints are linear. The trapezoid upper-bounds that interpolant's absolute-displacement integral, which is at least $D^\star(c)$. The retained canonical minimizer attains equality.
+Between consecutive events, all candidate pieces are affine with fixed ordering. The clamp~\eqref{eq:clamp} follows one piece and has constant-sign displacement, so its retained nodal values have trapezoidal area equal to its exact integral. Conversely, any feasible candidate-height path interpolates to a feasible continuous boundary: the mesh contains every constraint endpoint, and constraints between them are linear. Its trapezoidal cost upper-bounds its absolute-displacement integral, which is at least $D^\star(c)$. Since the canonical minimizer is retained, equality is attained.
 \end{proof}
 
 \begin{samepage}
@@ -170,25 +164,25 @@ Assume one boundary, one point per free RNA group, arbitrary fixed structural in
 \end{theorem}
 \end{samepage}
 \begin{proof}
-A permitted height at a point's mesh node uniquely determines its owner, since the clearance gap was excluded. Count each observation once at that node. Let $z_j(h)$ be its local score and $a_j(h)=w_j|h-f^0(t_j)|$, where $w_j$ is half the sum of adjacent mesh lengths. Define
+A permitted height at a point's mesh node determines its owner uniquely because we excluded the clearance gap. We count each observation once at its node. Let $z_j(h)$ be the local score and $a_j(h)=w_j|h-f^0(t_j)|$, where $w_j$ is half the sum of adjacent mesh lengths. The recurrence is
 \begin{equation}
 F_j(h,q)=a_j(h)+\min_{u\in V_{j-1}:|u-h|\le s(t_j-t_{j-1})}
 F_{j-1}(u,q-z_j(h)).\label{eq:dp}
 \end{equation}
-Initialization accounts for fixed groups and the first node. The shortest-path induction gives the exact nodal minimum for every count. Lemma~\ref{lem:mesh} gives continuous equality, including unsupported penalty outcomes. For each predecessor count, allowed sorted predecessors form a sliding interval as $h$ increases. A monotone queue computes its minima in $O(H_{j-1}+H_j)$ operations. Sum over counts and nodes. Backpointers reconstruct candidates and hence attaining boundaries.
-If $P$ is the total affine-piece count, a full mesh has $O(P^2+P)$ nodes and $O(P)$ candidates per node; this and rational intersection arithmetic give polynomial preparation and encoding. For unit RNA scores, $W$ is bounded by the explicit molecule count. Binary-compressed multiplicities instead give a pseudo-polynomial count dependence. Free interval-valued RNA groups and arbitrary coupled height vectors require additional state and are outside this scalar result.
+We initialize with the fixed groups and first node. The usual shortest-path induction gives the exact nodal minimum for each count; Lemma~\ref{lem:mesh} identifies it with the continuous minimum, including outcomes missed by penalties. For each predecessor count, the allowed sorted predecessors form a sliding interval as $h$ increases. A monotone queue finds its minima in $O(H_{j-1}+H_j)$ operations. Summing over counts and nodes gives the runtime, and backpointers recover attaining boundaries.
+For $P$ affine pieces, the full mesh has $O(P^2+P)$ nodes and $O(P)$ candidates per node. Rational intersection arithmetic therefore gives polynomial preparation and encoding. With unit RNA scores, $W$ is bounded by the explicit molecule count; binary-compressed multiplicities give pseudo-polynomial dependence. Free interval-valued RNA groups and arbitrary coupled height vectors require further state and fall outside this scalar result.
 \end{proof}
 
-Resource-state shortest paths are standard~\cite{hassin}. Here the critical-mesh proof supplies exact continuous costs for each resource state, rather than treating a user-chosen mesh as exact. Single-copy queries use a cheaper corollary: when the source satisfies every source-owner and structural constraint at zero cost, propagate requested bits, keep unforced source bits, and reconstruct the clamp. Every costly requirement in that completion is forced in all feasible completions, so it is minimum-area. The count-chain theorem does not require this stronger source-assignment premise.
+Resource-state shortest paths are standard~\cite{joksch}; the critical-mesh lemma makes their costs exact for the continuous problem. Single-copy queries, however, need no count chain when the source satisfies every source-owner and structural constraint at zero cost: we propagate requested bits, retain unforced source bits, and reconstruct the clamp. This gives minimum area because every costly requirement is forced in all feasible completions, whereas the general theorem needs no such source-assignment assumption.
 
 \subsection{One area allowance for the entire atlas}
 For a fixed cell and gene, compute each incident patch's spectrum $S_i(d)$ in \emph{count changes} relative to its source. Let $n^0_{kg}$ include all retained RNA in that reference cell, including outside the ribbons. Then
 \begin{equation}
 S_{kg}(q)=\min_{d_1+\cdots+d_r=q-n^0_{kg}}\sum_{i=1}^r S_i(d_i).\label{eq:convolution}
 \end{equation}
-This is min-plus convolution. An attaining trace selects one witness per patch, and Theorem~\ref{thm:glue} gives a valid global partition. Conversely every allowed partition decomposes into patch states costing at least their local minima. These two directions prove~\eqref{eq:convolution}. Patches with no relevant gene can stay at their zero-cost source. A simple convolution takes $O(rW^2)$ operations. Thus scalar point-RNA patch atlases give polynomial exact single-cell/gene spectra despite arbitrary fixed reference adjacency.
+This min-plus convolution is exact in both directions. A minimizing trace selects one witness per patch, which Theorem~\ref{thm:glue} combines into a global partition. Conversely, every allowed partition decomposes into patch states costing at least their local minima. Patches without the relevant gene can stay at their zero-cost source. Direct convolution takes $O(rW^2)$ operations, giving polynomial exact single-cell/gene spectra for scalar point-RNA atlases with arbitrary fixed reference adjacency.
 
-No molecule or exterior count is duplicated, and $\delta$ is spent once. Every allowed full count matrix lies componentwise inside the table, but different rows' endpoints need not coexist. Joint marker questions require vector spectra or a joint predicate query, rather than multiplying marginal endpoint sets.
+Counting each molecule once and sharing budget $\delta$ across patches puts every allowed count matrix componentwise within the intervals. However, endpoints from different rows may require different partitions, so joint marker questions need vector spectra or a joint predicate instead of products of marginal endpoints.
 
 \subsection{Alternative complete atlases}
 Width-specific atlases can offer different feasible deformations. Their union preserves these alternatives without requiring their supports to be nested.
@@ -203,114 +197,121 @@ Every finite minimum inherits an attaining boundary and its member identity. At 
 \begin{proof}
 Each partition in the union belongs to a member and costs at least that member's minimum for its count. Conversely, a member attaining the least finite minimum supplies a partition in the union at that cost. Taking the extreme budget-feasible counts proves the endpoint identities.
 \end{proof}
-Merging costs $O(\sum_a|\operatorname{dom}S_a|)$ comparisons after member spectra are computed. Each witness selects one complete atlas, with its own compatible ribbons. Including the primary family preserves its feasible states and fixed-key reference-count reach. Joint predicates use the same member selection; mixing patches across members would define a different model.
+Taking the pointwise minimum costs $O(\sum_a|\operatorname{dom}S_a|)$ comparisons. Each witness retains one complete atlas and its compatible ribbons. Including the primary atlas preserves all its feasible states and every reference count it can attain on the same cell--gene pairs. Joint predicates likewise select a complete atlas; mixing patches from different atlases would define a different model.
 
-\subsection{Why a penalty path alone is insufficient}
-An exact cut yielding $m(\mu)=\min_c\{\mu D^\star(c)-N(c)\}$ gives
+\subsection{Limitations of Lagrangian penalties}\label{sec:penalties}
+By weak duality, an exact cut yielding $m(\mu)=\min_c\{\mu D^\star(c)-N(c)\}$ gives
 \begin{equation}
 U(\delta)\le\left\lfloor\mu\delta-m(\mu)\right\rfloor,\qquad\mu\ge0.\label{eq:dual}
 \end{equation}
-This is weak duality. Feasible witnesses give the opposite bound; a gap is retained unless exact refinement closes it. Applying the same argument to $-N$ bounds the lower endpoint.
+Feasible witnesses give the opposite bound, leaving a gap unless exact refinement closes it. Applying the same argument to $-N$ bounds the lower endpoint.
 
-A gap occurs even with eight \emph{distinct, explicit unit} transcripts. Take source zero on $[0,30]$, slope one, band $[-4,4]$, and clearance $1/10$. At longitudinal centers $5,15,25$, place clusters of $2,3,3$ RNAs. In a cluster of height $a=2,3,3$, respectively, point $j$ is $(t,x)=(\mathrm{center}+j/100,a-j/100-1/10)$. Clearance forces common ownership within each cluster; its first cone dominates, and cluster supports are disjoint. The exact count/area states are $(0,0),(2,4),(3,9),(5,13),(6,18),(8,22)$. At budget ten the maximum is three, whereas the best penalty upper bound is four: for $\mu\le1/3$, the count-eight state gives $B(\mu)\ge8-12\mu\ge4$; for $\mu\ge1/3$, the count-two state gives $B(\mu)\ge2+6\mu\ge4$. Equality holds at $1/3$. The count chain recovers the unsupported count-three state. The example uses no binary-encoded multiplicity.
+To see why this bound can be loose, consider eight \emph{distinct, explicit unit} transcripts with source zero on $[0,30]$, slope one, band $[-4,4]$, and clearance $1/10$. We place clusters of $2,3,3$ RNAs at longitudinal centers $5,15,25$. In a cluster of height $a=2,3,3$, respectively, point $j$ is $(t,x)=(\mathrm{center}+j/100,a-j/100-1/10)$. Clearance forces common ownership within each cluster; its first cone dominates, and cluster supports are disjoint. The exact count/area states are $(0,0),(2,4),(3,9),(5,13),(6,18),(8,22)$. At budget ten the maximum is three, whereas the best penalty upper bound is four: for $\mu\le1/3$, the count-eight state gives $B(\mu)\ge8-12\mu\ge4$; for $\mu\ge1/3$, the count-two state gives $B(\mu)\ge2+6\mu\ge4$. Thus the best penalty bound is four at $\mu=1/3$, while the count chain recovers the true optimum of three using only explicit unit transcripts.
 
 \section{Evaluation: count effects and geometric reach}\label{sec:eval}
-\subsection{Observed inputs and fixed extraction rules}
-Two lung crops contain 7,370 retained Q20 measured-gene records from one public Xenium specimen~\cite{data,xenium}. Eligible cells are connected and avoid crop borders. Interfaces between eligible cells or an eligible cell and background are traced into monotone arcs of four to 128 edges, with one frozen edge at each end. The primary atlas processes longer arcs first and tries chart support halfwidths $B=4,2,1,1/2$, accepting the first feasible width. Exact intersection tests certify side labels and disjoint interiors. The displacement band is $|h|\le3B/4$, slope limit one, and clearance $10^{-6}/p$. Nuclear fragments retain fixed owners; Supplement~\S2 specifies the extraction rules.
+We test whether shared geometry changes the counts, how ribbon width and budget affect them, and whether the counts and their witnesses can be verified at larger scales.
+\subsection{Data and atlas construction}
+The two lung crops contain 7,370 retained Q20 measured-gene records from one public Xenium specimen~\cite{data,xenium}. We retain connected cells away from crop borders and split their interfaces into monotone arcs. The primary atlas tries chart halfwidths $B=4,2,1,1/2$ in order, accepting disjoint ribbons with slope one, band $|h|\le3B/4$ and fixed nuclear owners (Supplement~\S2).
 
-The same rule is applied to two Xenium breast crops containing 81,182 retained RNAs, from the vendor's trimmed two-FOV format-test dataset~\cite{breasttest}. This second input tests transfer of the geometric construction and exact computation. Table~\ref{tab:scope} summarizes both atlases.
+Two breast crops from the vendor's trimmed two-FOV format-test dataset contain 81,182 retained RNAs~\cite{breasttest}. Applying the same rule tests transfer of the construction and computation; Table~\ref{tab:scope} summarizes both atlases.
 
-\begin{table}[ht]\centering
+\begin{table}[!htbp]\centering
 \begin{tabular}{lrr}\toprule
-Quantity&Lung crops&Breast crops (Xenium)\\\midrule
+Quantity&Lung crops&Breast format-test crops\\\midrule
 Retained RNA&7,370&81,182\\
 Crop-contained connected cells&153&467\\
 Disjoint ribbons&544&1,708\\
 RNA inside ribbons&745&8,262\\
 Editable incident-edge coverage&68.3\%&65.8\%\\
 Cell--gene spectra&3,304&22,976\\
-Original eight-budget interval rows&26,432&183,808\\\bottomrule
+\bottomrule
 \end{tabular}
-\caption{Primary-atlas size and coverage. All eligible reference cells contribute to coverage, including cells with no editable arc. Count spectra include positive or editable cell--gene pairs; RNA outside the ribbons contributes its fixed reference count.}\label{tab:scope}
+\caption{Primary-atlas coverage includes cells without editable arcs. Spectra cover positive or editable cell--gene pairs and include fixed RNA outside ribbons.}\label{tab:scope}
 \end{table}
 
-\subsection{Certified invariance and shared-boundary count changes}
-The exact spectra yield 210,240 interval rows on budgets $0,0.05,0.1,0.25,0.5,1,2,4\,\mu\mathrm m^2$. At budget $4$, 2,780/3,304 lung counts (84.1\%) and 17,717/22,976 breast counts (77.1\%) are certified invariant within the primary atlas. At budget $0.05$, these fractions are 88.9\% and 84.0\%. The remaining intervals quantify count variation and provide attaining boundaries. These totals include fixed counts outside editable ribbons.
+\FloatBarrier
+\subsection{Certified invariance and shared-boundary count changes}\label{sec:effects}
+At a $4\,\mu\mathrm m^2$ area budget, 84.1\% of lung and 77.1\% of breast cell--gene counts are invariant within the primary atlas, whose maximum displacement is about $0.45\,\mu\mathrm m$ (\S5.3). These fractions include counts fixed outside the editable ribbons. At $0.05\,\mu\mathrm m^2$, they rise to 88.9\% and 84.0\%. Supplement~\S6 gives the full counts for all eight budgets from zero to $4\,\mu\mathrm m^2$.
 
-A marginal outer bound allows every individually affordable transfer simultaneously. A feasibility-matched additive inner approximation instead charges the sum of singleton transfer areas. The first can overspend the common budget or combine incompatible choices; the second can omit affordable shared movement.
+There are two ways that treating molecules separately can distort these intervals. A marginal outer bound allows every individually affordable transfer, even when the transfers together exceed the budget or require incompatible boundaries. In the other direction, an additive inner approximation enforces feasibility but charges the sum of the individual transfer areas. It can overcharge when several molecules move with one boundary shift.
 
-A joint-count difference requires a question with at least two individually movable transcripts. We therefore also report question-level denominators: across the original budget grid, marginal width is at least two in 46 lung and 1,026 breast cell--gene questions. Exact geometry tightens 4/46 (8.7\%) and 203/1,026 (19.8\%), respectively, affecting 4/153 and 139/467 eligible cells. Across all questions, these fractions are 4/3,304 (0.12\%) and 203/22,976 (0.88\%). The corresponding tightened \emph{row} counts remain four and 228; additive-inner missed endpoints remain two and 68. On the finer 17-budget grid, the same spectra tighten 12/46 lung questions (26.1\%) and 361/1,026 breast questions (35.2\%), capturing differences that occur between the original budget samples (Supplement~\S7).
+We measure this dependence on cell--gene pairs whose marginal interval has width at least two somewhere on the original budget grid. Exact geometry tightens the bound for 4 of 46 lung pairs (8.7\%) and 203 of 1,026 breast pairs (19.8\%), affecting 4 of 153 lung cells and 139 of 467 breast cells. On the finer, 17-budget grid, these fractions rise to 26.1\% and 35.2\%, revealing differences between the original budget points (Supplement~\S7). The additive approximation also misses attainable endpoints (Supplement~\S6).
 
-In breast cell 81, LDHB has retained source count 22. At area $0.25\,\mu\mathrm m^2$, the exact interval is $[19,23]$ versus marginal $[17,23]$. At area $0.5$, it is $[17,23]$ versus additive-inner $[18,23]$. An attaining boundary transfers three LDHB molecules through one ribbon and two through another, plus one collateral KRT8 molecule. The physical areas are approximately $0.342327$ and $0.141713\,\mu\mathrm m^2$, totaling $0.484040$. This witness demonstrates both approximation failures within the same geometry (Figure~\ref{fig:witness}).
+Breast cell 81 shows what these errors mean for an individual count. It has 22 LDHB molecules in the reference segmentation. At $0.25\,\mu\mathrm m^2$, its exact interval is $[19,23]$, whereas the marginal bound gives $[17,23]$: removing five molecules costs too much. At $0.5\,\mu\mathrm m^2$, five removals become possible and the exact interval widens to $[17,23]$, but the additive approximation still gives $[18,23]$. The attaining boundary transfers three LDHB molecules through one ribbon and two through another, also transferring one KRT8 molecule (Figure~\ref{fig:witness}). The two deformations use about $0.34$ and $0.14\,\mu\mathrm m^2$, or $0.48\,\mu\mathrm m^2$ together, within the shared $0.5\,\mu\mathrm m^2$ budget.
 
-\begin{figure}[t]\centering
+\begin{figure}[!htbp]\centering
 \includegraphics[width=.93\textwidth]{figures/cell_witness.pdf}
 \caption{Original reference mask and a count-17 LDHB witness across two compatible patches. Crosses mark five transferred LDHB molecules; the plus marks collateral KRT8. Both changes spend one physical-area budget and coexist in the same partition.}\label{fig:witness}
 \end{figure}
 
 \paragraph{Joint marker co-detection.}
-A joint predicate can ask whether both EPCAM and PTPRC remain detected in one cell under the same deformation. At budget $0.25\,\mu\mathrm m^2$, five of seven initially co-detected lung cells and 46 of 48 breast cells retain co-detection throughout the primary atlas family; the remaining two in each dataset admit a witness that removes it. These primary-atlas joint certificates persist through budget $4$ (Supplement~\S8.4), illustrating how the same geometry answers a multi-gene question.
+We also ask whether EPCAM and PTPRC remain detected in the same cell under a common deformation. At $0.25\,\mu\mathrm m^2$, five of seven initially co-detected lung cells and 46 of 48 breast cells retain both markers throughout the primary atlas family. For the other two cells in each dataset, a witness removes co-detection. These joint certificates persist through budget $4$ (Supplement~\S8.4), showing how the geometry can answer a multi-gene question.
 
-\subsection{Budget-dependent variation and saturation}
+\FloatBarrier
+\subsection{Budget-dependent variation and saturation}\label{sec:saturation}
 The primary support cap $B\le4$ and pixel pitch $p\simeq0.2125\,\mu\mathrm m$ imply a maximum paired-coordinate displacement of
 \begin{equation}
  \|\Psi(t,h)-\Psi(t,0)\|_2\le\frac{3pB}{4\sqrt2}\le0.4508\,\mu\mathrm m.\label{eq:cap}
 \end{equation}
-Nuclear and endpoint constraints can further restrict this submicrometre allowance.
-
-From area $0.25$ onward, non-singleton totals remain 524 in lung and 5,259 in breast, although 61 breast intervals widen by $0.5$ and three more by $1$. The last endpoint thresholds are approximately 0.240525 and 0.573939, respectively. Area therefore controls attainable counts even after interval occupancy stabilizes; Supplement~\S6 gives the full budget tables.
+Nuclear and endpoint constraints may restrict this displacement further. From budget $0.25\,\mu\mathrm m^2$ onward, the numbers of non-singleton intervals stay at 524 in lung and 5,259 in breast. Their widths can still change: 61 breast intervals widen between $0.25$ and $0.5\,\mu\mathrm m^2$, and three more between $0.5$ and $1\,\mu\mathrm m^2$. The last endpoint changes occur at about $0.24\,\mu\mathrm m^2$ in lung and $0.57\,\mu\mathrm m^2$ in breast. Thus counting only how many intervals are non-singleton would miss part of the budget's effect (Supplement~\S6).
 
 \subsection{Wider ribbons: reach versus coverage}\label{sec:reach}
-Before computing width-study outcomes, we fixed support halfwidths $r=0.5,1,2,3\,\mu\mathrm m$ and 17 area budgets from 0 to 16. Each run keeps the original paths, ordering, nuclei, seams and slope. Its required chart halfwidth is $B=\lfloor4\sqrt2r/p\rfloor/4$, with no narrower fallback. These separately extracted atlases obey the same chart and gluing proof and isolate the effect of wider supports.
+To examine larger boundary movements, we fixed support halfwidths $r=0.5,1,2,3\,\mu\mathrm m$ and 17 area budgets from 0 to 16 before computing outcomes. Each run uses the original paths, ordering, nuclei, seams and slope, with required chart halfwidth $B=\lfloor4\sqrt2r/p\rfloor/4$ and no fallback to a narrower ribbon. These separately extracted atlases satisfy the same chart and gluing construction, isolating the effect of wider supports.
 
-At support 3, the displacement cap reaches $2.226\,\mu\mathrm m$, while coverage falls to 16.9\% in lung and 17.8\% in breast (Table~\ref{tab:reach}). Local gene multiplicity reaches 17 and last endpoint thresholds reach 4.878 and 13.783$\,\mu\mathrm m^2$. Third-cell interfaces and ribbon conflicts reject more wide supports. The adaptive extractor retains narrow ribbons where needed; fixed-width extraction disables this fallback.
+At $3\,\mu\mathrm m$ support, a boundary can move up to about $2.23\,\mu\mathrm m$, but coverage falls to 16.9\% in lung and 17.8\% in breast (Table~\ref{tab:reach}). Wider ribbons are more often rejected because they meet a third cell or overlap another ribbon. Where they fit, they admit more count changes: a single gene has up to 17 molecules in a ribbon, and the last endpoint changes occur at about $4.9$ and $13.8\,\mu\mathrm m^2$, respectively. The primary atlas retains narrower ribbons where needed; the fixed-width study requires the chosen width throughout.
 
 \input{reach_table.tex}
 
-All five families are evaluated on the same 17-budget grid. The supplement reports each family's interval occupancy, endpoint changes and joint-geometry effects at every budget.
-
+\FloatBarrier
 \subsection{Reach of independent reference assignments}
-An image-only reference assigns each RNA to the nearest labelled nuclear pixel within $5\,\mu\mathrm m$, or to background. A five-micrometre crop-edge guard avoids relying on unseen nuclei. We also analyze Proseg 3.2.0 executions~\cite{proseg} on both lung crops. The default factorization failed on the small first crop; one completed stochastic run per crop used factorization disabled, otherwise retaining upstream sampler settings. Proseg assigned 43.0\% and 90.1\% of returned molecules to background in the two crops. The comparison tests a broader reassignment regime than local boundary motion. Transcript joins and original-cell mapping were checked against both saved count matrices.
+We compare attainable counts with two independent references. The image-only baseline assigns each RNA to the nearest labelled nuclear pixel within $5\,\mu\mathrm m$, or to background, excluding a five-micrometre crop-edge strip to avoid unseen nuclei. We also analyze one completed Proseg 3.2.0 run per lung crop~\cite{proseg}; because default factorization failed on the smaller first crop, both runs disable it while retaining other upstream sampler settings. Proseg assigns 43.0\% and 90.1\% of returned molecules to background, so this reference tests a broader reassignment regime than local boundary motion. We verified transcript joins and original-cell mapping against both saved count matrices. In fresh, matched no-factorization runs, using $800\,\mu\mathrm m$ inputs changes the two core background fractions from 42.5\% to 19.4\% and from 89.8\% to 62.1\%. These single-run comparisons indicate sensitivity to surrounding tissue; all complete assignments remain outside the atlas (Supplement~\S10).
 
-All widths use the same eligible cell--gene comparison keys, excluding keys affected by reference-missing RNA in any member. This gives 2,798 changed Proseg entries, and 1,114 lung and 10,965 breast nuclear-reference changes. The primary and widest families attain the fractions in Table~\ref{tab:reach}; replacing the adaptive atlas with wider uniform supports reduces aggregate reach (Figure~\ref{fig:reach}).
+Every width uses the same cell--gene pairs, excluding pairs affected by a missing RNA in any reference comparison. Allowing larger local movements alone does not improve reach: the wider uniform atlases lose too much boundary coverage (Table~\ref{tab:reach}, Figure~\ref{fig:reach}).
 
-\begin{figure}[t]\centering
+\begin{figure}[!htbp]\centering
 \includegraphics[width=.90\textwidth]{figures/reach_coverage.pdf}
-\caption{Unbounded-budget count reach versus editable incident-edge coverage on fixed comparison keys. Labels give required support halfwidth in micrometres; A denotes the original adaptive-width atlas. Lines connect separately extracted families, rather than a nested sequence. Proseg is one adapted execution per clipped lung crop. }\label{fig:reach}
+\caption{Fraction of reference count changes attainable without an area cap, versus editable incident-edge coverage. Every width uses the same cell--gene pairs. Labels give support halfwidth in micrometres; A denotes the primary adaptive-width atlas. The separately extracted families need not be nested. Proseg uses one adapted run per lung crop.}\label{fig:reach}
 \end{figure}
 
-\subsection{Combining width alternatives}
-Within each crop, we apply Proposition~\ref{thm:union} to the primary atlas and the four fixed-width families, using the same observations, reference cells and area units. Each endpoint selects one complete member atlas. Table~\ref{tab:union-reach} shows the resulting increase in countwise reach: 130 additional Proseg changes in lung, 115 additional lung nuclear-reference changes and 1,169 additional breast nuclear-reference changes become attainable. These alternatives retain the primary atlas's narrow-ribbon deformations while admitting motions up to the widest member's $2.226\,\mu\mathrm m$ cap where its supports permit them.
+\FloatBarrier
+\subsection{Combining width alternatives}\label{sec:alternatives}
+The union of the five complete atlases preserves every primary-atlas deformation while admitting alternatives at larger widths (Proposition~\ref{thm:union}). This raises Proseg count reach from 6.6\% to 11.3\%; nuclear-reference reach rises to 26.8\% in both datasets (Table~\ref{tab:union-reach}). Each endpoint still comes from one complete atlas, with the same observations, reference cells and physical-area units. Where the widest ribbons fit, a witness can use displacements up to about $2.23\,\mu\mathrm m$.
 
-\begin{table}[ht]\centering
+\begin{table}[!htbp]\centering
 \begin{tabular}{lrrr}\toprule
-Reference&Changed keys&Primary attainable&Union attainable\\\midrule
+Reference&Changed counts&Primary attainable&Union attainable\\\midrule
 Lung: Proseg&2,798&185 (6.6\%)&315 (11.3\%)\\
 Lung: nuclear&1,114&184 (16.5\%)&299 (26.8\%)\\
 Breast: nuclear&10,965&1,773 (16.2\%)&2,942 (26.8\%)\\\bottomrule
 \end{tabular}
-\caption{Countwise attainability without an area cap, on identical comparison keys. The union chooses among five complete atlases and contains every primary-atlas state.}\label{tab:union-reach}
+\caption{Reference count changes attainable without an area cap, on the same cell--gene pairs. The union chooses among five complete atlases and contains every primary-atlas state.}\label{tab:union-reach}
 \end{table}
 
-On the same 3,304 lung and 22,976 breast questions used for the primary atlas, the union certifies 2,524 (76.4\%) and 15,143 (65.9\%) counts as invariant at area $4$, compared with the primary 84.1\% and 77.1\%. At this budget, 298 lung and 3,595 breast intervals widen. The full union census contains 29,212 questions and 496,604 rows across 17 budgets (Supplement~\S5). Across this grid, shared geometry tightens the envelope of member-wise independent-molecule bounds for 29/102 lung (28.4\%) and 791/2,076 breast (38.1\%) questions whose outer interval reaches width at least two.
+At $4\,\mu\mathrm m^2$, 76.4\% of the original lung counts and 65.9\% of the breast counts remain invariant across the union. Relative to the primary atlas, 298 lung and 3,595 breast intervals widen. Shared geometry also has a larger effect here: over the 17-budget grid, it tightens the independent-molecule bounds for 29 of 102 lung pairs (28.4\%) and 791 of 2,076 breast pairs (38.1\%) whose outer width reaches at least two. For this comparison, we compute the independent-molecule bounds within each complete atlas and then combine their ranges, just as we combine the exact spectra (Supplement~\S5).
 
-The union's intervals answer a broader sensitivity question than any one width setting. Gains reflect alternative patch selection as well as displacement range. Coverage remains member-specific: its largest local displacement and largest covered boundary fraction need not occur in the same atlas. Each complete reference assignment remains outside the union because every member excludes it. Attainable count entries can require different witnessing partitions.
+These gains reflect alternative patch selection as well as larger displacements. Coverage still depends on the selected member: the greatest local displacement and widest boundary coverage may occur in different atlases. Moreover, every member excludes each complete reference assignment, so the union excludes it too. Attaining individual reference counts can require different partitions.
 
-\subsection{Correctness and operating range}
-An independent scalar/Cartesian implementation reproduces all 210,240 primary interval rows. Width-study witnesses pass continuous checks, all compositions and interval rows are rechecked, and 246 hash-selected multicopy questions agree with independent scalar enumeration. These checks share prepared geometry; Proseg execution records are checked separately. A separate implementation reconstructs all 29,212 union spectra and 496,604 interval rows and checks their selected witnesses. The supplement gives the complete verification scope.
+\FloatBarrier
+\subsection{Correctness and operating range}\label{sec:verification}
+Independent implementations reproduced every primary interval and union spectrum and validated their attaining boundaries. The width study also verifies every witness and composition, with exhaustive scalar enumeration on a reproducibly selected sample of multi-transcript queries. These tests share prepared geometry; Supplement~\S9 distinguishes them from source-data and Proseg audits.
 
-To test count-chain scaling beyond small local gene multiplicities, three fresh processes per size solve an analytical equal-tent family, computing every count and checking its boundary. Median complete times for 16, 32, 64 and 128 explicit RNAs are 0.465, 1.574, 7.138 and 42.206 seconds. At 128, the method visits 605,632 height/count states and recovers all 129 levels of the closed-form spectrum without enumerating $2^{128}$ assignments (Supplement~\S9).
+Small single-gene queries rarely require the count chain's full capacity. We therefore also tested an analytical family with up to 128 explicit RNAs and a known minimum area for every count. Computing all counts and checking their boundaries took about 0.5 seconds at 16 RNAs and 42 seconds at 128 (three-run medians). The larger case recovers all 129 count levels without enumerating $2^{128}$ assignments (Supplement~\S9.3).
 
-On prespecified $400$ and $600\,\mu\mathrm m$ squares of the breast format-test data, the primary atlas produces 554,224 and 1,223,400 exact interval rows for 1,363 and 3,171 complete cells. The $400\,\mu\mathrm m$ run uses the count chain; the $600\,\mu\mathrm m$ run uses exact enumeration, with at most seven target copies per local gene. Completed extraction, geometry validation and count/witness stages take 22.55 and 29.72 minutes, respectively. Both backends check continuous attaining boundaries; independent output audits reconstruct every interval and reconcile recorded witness counts and areas. Supplement~\S9.4 gives full timing and verification details.
+In prespecified $400$ and $600\,\mu\mathrm m$ squares of the breast format-test data, we compute primary-atlas intervals for 1,363 and 3,171 complete cells. Extraction, geometry validation and count computation with witnesses took about 23 and 30 minutes, respectively. The smaller region uses the count chain; the larger uses exact enumeration because each gene has at most seven copies per ribbon. Both solvers validate continuous attaining boundaries. Independent audits recovered every interval and reconciled witness counts and areas (Supplement~\S9.4).
+
+\paragraph{Replication on biological breast samples.}
+We also applied the unchanged primary atlas to three predefined regions from each of two breast cancer donors, covering 1,518 complete cells~\cite{biologicalbreast}. Across the original eight budgets, shared geometry tightens independent-molecule bounds for 176 of 1,271 eligible ductal-sample questions and 97 of 829 lobular-sample questions; additive costs miss endpoints for 58 and 37 questions, respectively. Eligibility requires outer width at least two. The atlas covers about 76\% of eligible shared edges with the same $0.45\,\mu\mathrm m$ displacement cap. All source assignments and attaining witnesses pass independent checks (Supplement~\S10). These are biological tissue inputs with vendor nuclear-expansion segmentations, providing replication across samples rather than reference truth for boundary errors.
 
 \section{Discussion and availability}
-The reduction separates a molecular count question from the least continuous geometry realizing it. Critical heights retain exact minima under count constraints, while compatible ribbons make local witnesses jointly interpretable within a single reference partition. The LDHB example shows why independent transfer permissions and additive transfer costs can err in opposite directions. The width study separates local displacement from covered boundary length. A finite union retains the deformations of all five models and increases reference-count reach with inherited exact witnesses. Reporting the selected atlas alongside each endpoint makes that broader family explicit.
+GeoCert computes the least deformation area needed to obtain a given count. The LDHB example shows why transfers must be considered together: separately affordable transfers can exceed a shared budget, while several transfers can share the cost of one boundary movement.
 
-\paragraph{Limits.}
-The certificates are exact for the specified family. Each atlas member fixes seams and uncovered boundaries while preserving topology and nuclear ownership. Anatomical calibration of slopes, widths and budgets is a separate empirical task. The evaluation uses two lung crops from one donor, a breast format-test input intended for computational testing, and one adapted Proseg execution per clipped lung crop; these assess computation and sensitivity rather than assignment accuracy or downstream biological validity. Generalization across donors and whole-slide scaling remain open. Different interval endpoints may require different partitions, so multi-gene conclusions use joint queries. Extending hard-budget count computation to moving junctions and coupled interfaces is a natural next step.
+Ribbon width remains the main geometric restriction. Increasing the area budget eventually stops changing counts within narrow ribbons; wider ribbons permit larger movements but cover less boundary. The union recovers alternatives where they fit, with each witness identifying the complete atlas it uses.
+
+\paragraph{Scope and further work.}
+The family fixes seams and uncovered boundaries while preserving topology and nuclear ownership. The new donors test replication; anatomical calibration, assignment accuracy and whole-slide scaling remain open. Multi-gene conclusions require joint queries because endpoints may use different partitions. Moving junctions and hard-budget optimization for coupled interfaces need further work.
 
 \paragraph{Software and disclosure.}
-The MIT-licensed companion contains the atlas implementation, exact spectra, source crops, Proseg records and reproducible analyses. The source, inputs and results are at \url{https://github.com/arnavperam/geocert/tree/f1e5dbb29c96d6b014508ce7f1eb1abcfb490190/recomb2027-atlas}. The release record identifies the separately rebuilt manuscript and supplement. Source data retain 10x CC BY 4.0 attribution. Generative AI assisted mathematical development, algorithm design, implementation, experiments, verification and writing. The author is responsible for the claims and submission.
+Code (MIT license), inputs and results are at \url{https://github.com/arnavperam/geocert/tree/829e723ab22c17db317992378b5577f5da8d3e3b/recomb2027-atlas}. Source data retain 10x CC BY 4.0 attribution. Generative AI assisted mathematical development, algorithm design, implementation, experiments, verification and writing. The author is responsible for the claims and submission.
 
 \clearpage
 \input{references.tex}

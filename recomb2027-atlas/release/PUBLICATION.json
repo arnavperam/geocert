@@ -1,19 +1,19 @@
 {
   "candidate": "GeoCert RECOMB 2027",
   "base_package_version": "1.1.0",
-  "revision_date": "2026-10-29",
-  "scientific_source_commit": "f1e5dbb29c96d6b014508ce7f1eb1abcfb490190",
-  "scientific_source_url": "https://github.com/arnavperam/geocert/tree/f1e5dbb29c96d6b014508ce7f1eb1abcfb490190/recomb2027-atlas",
+  "revision_date": "2026-10-31",
+  "scientific_source_commit": "829e723ab22c17db317992378b5577f5da8d3e3b",
+  "scientific_source_url": "https://github.com/arnavperam/geocert/tree/829e723ab22c17db317992378b5577f5da8d3e3b/recomb2027-atlas",
   "source_public": true,
   "base_scientific_source_commit": "6581f628a5ac8fb83629f9e0dee0ffa4d685375d",
   "base_archive_sha256": "1b08829e7e80a1e966a1bc39920dc4509af99f79ffd11dadfaa71b8338ca59d5",
   "base_core_files_unchanged": 71,
   "document_sha256": {
-    "main.pdf": "36d071c374314be8e6f1b30c75a78cbd9c38330d7f0a39f1ae85600cbcbddd5e",
-    "supplement.pdf": "eaf7e9cdac06f02cd2b0dcac5ad7a1c9ee303581a5666771e3ba13c232fc6ff4"
+    "main.pdf": "f7e70ab3ac752d63be585903d32bfb5c1098870d052c040c5c5a3fcef7cebc64",
+    "supplement.pdf": "cc8c9722a3335472f8fc35760c217dd22a910788747387b73c544cffe157772a"
   },
   "body_pages": 10,
-  "supplement_pages": 21,
+  "supplement_pages": 25,
   "abstract_words": 248,
   "abstract_sha256": "4a351145a0ab12e08f3f00e82cdb8b458c06c896ff13e804d3a31d51c1510897",
   "abstract_matches_rendered_pdf": true,
@@ -22,10 +22,12 @@
     "extensions/atlas_union/results/independent_verification.json": "a7c230099ec2d9beed89c24bdb7bea83d4f6665e1752c4ee53b6a3686c056b6d",
     "extensions/scaling/artifact_manifest.json": "b44b8a6de3ba633cdbc51eaa4a194269cbcbd3000a3516a0e6f9815e50acc2e0",
     "extensions/scaling/results/contiguous_summary.json": "6a4c6bf7008e602d889266816ef30e7444165581af7fae0b85f397dec9cf692c",
-    "extensions/scaling/results/source_audit.json": "eb4a8ce24a00092371bafe4c90a26fe9b81dce4b3351f19b364437730b5d6ed0"
+    "extensions/scaling/results/source_audit.json": "eb4a8ce24a00092371bafe4c90a26fe9b81dce4b3351f19b364437730b5d6ed0",
+    "extensions/external_validation/results/verification.json": "b6ff81d52016a0b28b281d38a9721e4c087f0bb276457d533812f68fba7c4454",
+    "extensions/external_validation/artifacts/manifest.json": "ff12776550cff17b56e9435940107508a91c942ffb0149058ac1fb974afc9dae"
   },
   "ci_url": "https://github.com/arnavperam/geocert/actions/workflows/atlas-final.yml",
-  "ci_scope": "Original exact replay, finite-union recomputation and independent witness verification, restored contiguous-region census/composition/endpoint audits, independent scalar samples on both Python 3.12 and 3.13, and published document/data byte hashes. Consult the run for the current commit.",
-  "previous_document_commit": "7c167a3c42d2fe333a22ae57aad193fbc1b3c371",
+  "ci_scope": "Original exact replay, finite-union recomputation and independent witness verification, restored contiguous-region census/composition/endpoint audits, independent scalar samples on both Python 3.12 and 3.13, and published document/data byte hashes. Consult the run for the current commit. External donor workflow restores compact artifacts and checks all six geometries, exact spectra, witnesses and eight saved Proseg core comparisons.",
+  "previous_document_commit": "a8f5a6fdbfdc5b4b6a249e365e03753d1e58bed8",
   "title": "GeoCert: Certified Expression Intervals under Segmentation Uncertainty in Spatial Transcriptomics"
 }

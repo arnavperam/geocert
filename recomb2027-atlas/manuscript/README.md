@@ -1,19 +1,7 @@
-# Manuscript
+# Manuscript sources
 
-`main.tex` builds the paper; `supplement.tex` builds the appendix. The paper has a separate title page, 10 body pages and two reference pages.
+Build `main.tex` twice with pdfLaTeX for the paper, or `supplement.tex` twice for the supplementary material. All figures are included as vector PDFs. The manuscript has a separate title page, ten body pages and two reference pages; the supplement has 25 pages.
 
-```sh
-cd recomb2027-atlas/manuscript
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
-pdflatex -interaction=nonstopmode -halt-on-error supplement.tex
-```
+The title and abstract match registered RECOMB submission 510. This revision adds biological breast donor replication and paired Proseg context comparisons. The mathematical model and registered abstract are unchanged. The new details are in `external_validation.tex` and `external_proseg_table.tex`.
 
-The geometry schematic is generated with `python scripts/geometry_pipeline.py` and uses illustrative coordinates. To regenerate the reach plot from the restored scientific results:
-
-```sh
-python scripts/reach_figures.py --data-root /path/to/extracted/recomb2027-atlas
-```
-
-These presentation scripts use NumPy and Matplotlib. The exact algorithms, inputs and recorded results remain in the pinned scientific source identified by `../release/PUBLICATION.json`. The abstract in `../ABSTRACT.txt` matches the current paper.
+The complete analysis and input records are described in [the validation extension](../extensions/external_validation/README.md). `manuscript_validation.json` records the source and layout checks for these PDFs.

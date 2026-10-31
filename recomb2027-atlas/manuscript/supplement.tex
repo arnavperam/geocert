@@ -295,7 +295,7 @@ All incident reference edges&10,756&12,408&43,331&37,132\\\bottomrule
 
 The two lung crops have disjoint complete-cell identifiers, as do the two breast crops. Five eligible lung cells have no retained positive gene count and no editable relevant molecule; their rows are implicit zeros in the supplied matrix index. The interval CSV is sparse over every positive-source or editable cell--gene key. Absent entries are zero only within the explicitly recorded panel/observed-gene universe, retained observations and atlas identity. Thus a sparse zero refers to retained observed counts.
 
-All eight budgets $0,0.05,0.1,0.25,0.5,1,2,4\,\mu\mathrm m^2$ are reported. There are 3,304 lung and 22,976 breast cell--gene spectra, yielding 26,432 and 183,808 unique interval rows. One atlas per crop determines every interval and its compatible attaining boundary. Source counts outside editable ribbons remain part of every cell's count.
+All eight budgets $0,0.05,0.1,0.25,0.5,1,2,4\,\mu\mathrm m^2$ are reported. There are 3,304 lung and 22,976 breast cell--gene spectra, yielding 26,432 and 183,808 unique interval rows (210,240 in total). At budget $4\,\mu\mathrm m^2$, 2,780 lung counts (84.1\%) and 17,717 breast counts (77.1\%) are invariant. One atlas per crop determines every interval and its compatible attaining boundary. Counts include RNA outside editable ribbons.
 
 \subsection{Budget-specific simple-baseline comparisons}
 \begin{table}[ht]\centering
@@ -313,25 +313,27 @@ Area budget&Lung variable&Breast variable&\shortstack{Breast outer\\tightened}&\
 \caption{Counts out of 3,304 or 22,976 entries per budget. Lung outer improvements comprise four rows at 0.1; the two lung inner misses occur at 0.1 and 0.25. The differences concentrate at intermediate budgets, where shared area limits the combinations of affordable transfers.}
 \end{table}
 
-In breast crop 1, cell 81's LDHB source count is 22. Its minimum attaining count 17 is exactly
+In breast crop 1, cell 81's LDHB source count is 22. The minimum area attaining count 17 is exactly
 \[
  \frac{1977348833190267596699567429}{4085091626228121600000000000}
  \simeq0.48404026497\,\mu\mathrm m^2.
 \]
-The global trace changes three LDHB molecules through one patch and two through another, plus one collateral KRT8 molecule. A third incident LDHB patch remains unchanged. At budget 0.25 the exact interval is $[19,23]$ versus marginal $[17,23]$; at 0.5 it is $[17,23]$ versus additive-inner $[18,23]$. This example from the complete output shows how the two approximations fail in opposite directions.
+The global trace changes three LDHB molecules through one patch and two through another, plus one collateral KRT8 molecule. The two patch areas are approximately $0.342327$ and $0.141713\,\mu\mathrm m^2$; a third incident LDHB patch remains unchanged. At budget 0.25 the exact interval is $[19,23]$ versus marginal $[17,23]$; at 0.5 it is $[17,23]$ versus additive-inner $[18,23]$. This example from the complete output shows how the two approximations fail in opposite directions.
 
 \begin{figure}[ht]\centering\includegraphics[width=.90\textwidth]{figures/count_curve.pdf}
 \caption{The complete LDHB count-spectrum example under unchanged atlas geometry. Step changes follow exact rational minimum areas, rather than interpolation between sampled optimization outputs. The inner comparison can miss an attainable endpoint; the outer comparison can combine individually affordable but jointly over-budget changes.}
 \end{figure}
 
 
+\FloatBarrier
 \subsection{Question denominators and endpoint saturation}
-On the original eight budgets, 46 lung and 1,026 breast cell--gene questions have marginal width at least two for some budget. Exact geometry tightens four and 203 of these questions, affecting four of 153 lung cells and 139 of 467 breast cells. These question and cell denominators distinguish affected count entries from repeated budget rows. A question is counted once if at least one budget tightens an endpoint.
+On the original eight budgets, 46 lung and 1,026 breast cell--gene questions have marginal width at least two for some budget. Exact geometry tightens four and 203 of these questions, affecting four of 153 lung cells and 139 of 467 breast cells. Relative to all 3,304 lung and 22,976 breast questions, the tightened fractions are 0.12\% and 0.88\%. Counting a question once for each affected budget gives four lung and 228 breast rows with tighter outer bounds; the additive inner approximation misses two lung and 68 breast endpoints. A question is counted once in the question totals if at least one budget tightens an endpoint.
 
 \input{original_saturation_table.tex}
 
 In the original atlas the largest support halfwidth is four chart units. The chart displacement has Euclidean norm $p|h|/\sqrt2$, hence its maximum allowed value is $3pB/(4\sqrt2)\simeq0.4508\,\mu\mathrm m$. This is the geometric displacement cap of the primary atlas. The lung and breast spectra attain their extreme endpoints by areas approximately 0.240525 and 0.573939. Constant non-singleton totals from area 0.25 therefore indicate occupancy saturation earlier than complete endpoint saturation.
 
+\FloatBarrier
 \section{Physical-width sensitivity with fixed selection rules}
 The prospective analysis record fixes required support halfwidths $r=0.5,1,2,3\,\mu\mathrm m$, the original arc construction, run ordering, endpoint seams, slope one, nuclear constraints and clearance, and the area grid
 \[
@@ -491,6 +493,8 @@ Separate exact rational scalar enumeration checks 16 local multicopy queries per
 The run uses Linux and Python 3.12.14 with numerical-library thread limits set to one, while unrelated work runs in the shared environment. The timings describe this workload under those conditions. The source archive hash, selection protocol, stage logs and output hashes accompany the results.
 
 \FloatBarrier
+\input{external_validation.tex}
+\FloatBarrier
 \section{Reproduction, data rights and assistance}
 The prepared-input exact workflow uses Python's standard library. Geometry extraction, raster reference analysis and plotting additionally use the declared analysis dependencies. The main commands are:
 \begin{verbatim}
@@ -502,11 +506,11 @@ python analysis/reach/audit_proseg.py
 python analysis/reach/check_outputs.py
 python analysis/reach/report.py
 \end{verbatim}
-The README lists separate commands for each main table and figure, the original full count computations and each width-specific recomputation. Compressed result files are restored only after their stored and expanded checksums agree. Source packages retain all original and new spectra, witnesses, comparison keys, Proseg records, selection rules and reference masks. The archive records both exact numerical checks and the environments used for runtime measurements.
+The README gives commands for the tables, figures and full count analyses at each width. Restoring compressed results verifies both stored and expanded checksums. The archive includes spectra, witnesses, comparison pairs, Proseg records, selection rules, reference masks, numerical checks and runtime environments.
 
-The GeoCert software is released under the MIT License. Original 10x data retain CC BY 4.0 attribution and the breast format-test limitation. Proseg retains its upstream rights; its executable is not redistributed. Source code, inputs and exact results for the 1.1.0 companion are publicly archived at \url{https://github.com/arnavperam/geocert/tree/f1e5dbb29c96d6b014508ce7f1eb1abcfb490190/recomb2027-atlas}. This immutable source revision is distinguished from the separately rebuilt PDF artifacts in the release record.
+GeoCert is MIT-licensed. The 10x data retain CC BY 4.0 attribution and the breast format-test limitation; Proseg retains its upstream rights, and its executable is not redistributed. Code, inputs and exact results are archived at \url{https://github.com/arnavperam/geocert/tree/829e723ab22c17db317992378b5577f5da8d3e3b/recomb2027-atlas}. The release record distinguishes this immutable source revision from the separately rebuilt PDFs.
 
 Generative AI assisted mathematical development, code, experiments, checking and drafting. The author is responsible for the submitted claims and their explanation. The validation sections specify the independent calculations and their shared inputs.
-\clearpage
+\FloatBarrier
 \input{supp_references.tex}
 \end{document}
