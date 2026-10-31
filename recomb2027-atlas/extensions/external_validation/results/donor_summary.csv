@@ -1,0 +1,3 @@
+donor,cells,RNAs,patches,queries,interval_rows,invariant_at4,eligible,tightened,additive_missed,covered_edges,eligible_edges,edge_coverage
+IDC,659,97893,1531,32360,258880,25749,1271,176,58,60905,79661,0.7645522903302745
+ILC,859,91659,1946,36409,291272,30403,829,97,37,77277,101051,0.7647326597460689

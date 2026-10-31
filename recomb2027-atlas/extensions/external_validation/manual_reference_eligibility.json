@@ -1,0 +1,131 @@
+{
+  "status": "ineligible_for_whole_cell_ground_truth",
+  "examined_resource": "SPATCH manual segmentation release",
+  "article": "https://www.nature.com/articles/s41467-025-64292-3",
+  "article_section": "Evaluation of the single-cell segmentation; Fig. 4 caption",
+  "finding": "The peer-reviewed methods and figure caption explicitly describe nuclear boundary annotations. Labels bench-cell and website text do not establish whole-cell membrane boundaries.",
+  "decision": "Do not use these polygons as reference whole-cell transcript assignments, and do not report empirical coverage/calibration against them.",
+  "access": "Download portal, public annotation archive and Xenium JSONs inspected successfully. This is an annotation-semantics limitation, not a network-access failure.",
+  "files_inspected": [
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/COAD/manual_segmentation/mask1.json",
+      "sha256": "728c1212cbde7db86ed8f77962b993b1503ecb843220d3abe78b230fe6786158",
+      "objects": 1435,
+      "image_name": "xenium_random_COAD_1.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/COAD/manual_segmentation/mask2.json",
+      "sha256": "de2c364fbc4e69124abb61457d7ace0be0162759ae49f8df196444d9dac3be8e",
+      "objects": 1839,
+      "image_name": "xenium_random_COAD_2.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/COAD/manual_segmentation/mask3.json",
+      "sha256": "20f3cfeeb8527cf641d6e0da545035518a6ff5224dfacc357ac7b2942f0b311d",
+      "objects": 2631,
+      "image_name": "xenium_random_COAD_3.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/COAD/manual_segmentation/mask4.json",
+      "sha256": "ea3dba353fd1d7ca63ec68438d566f1cb2b4bdd6ba54ac51b7d87c39330db0df",
+      "objects": 2805,
+      "image_name": "\u5fae\u4fe1\u56fe\u7247_20241026230905.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/COAD/manual_segmentation/mask5.json",
+      "sha256": "2195656708a9b302a06fc9aa2656720651f57763851cd2cc643dfecc7f028150",
+      "objects": 1949,
+      "image_name": "xenium_random_COAD_5.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/HCC/manual_segmentation/mask1.json",
+      "sha256": "f1670adc9b6ac12a544d34527fb7f2073b3deec63f0a9728d1c55b4165d279f6",
+      "objects": 1114,
+      "image_name": "xenium_random_HCC_1.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/HCC/manual_segmentation/mask2.json",
+      "sha256": "9790d9e6a0a0ba31d2a16167b490919271833d09b680578441cecb7431a55505",
+      "objects": 1187,
+      "image_name": "xenium_random_HCC_2.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/HCC/manual_segmentation/mask3.json",
+      "sha256": "bd65f9a5f9da68a0243412cf85b750b0abd635fcfcd1531271abb61fa9d9a081",
+      "objects": 1153,
+      "image_name": "xenium_random_HCC_3.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/HCC/manual_segmentation/mask4.json",
+      "sha256": "447cca9b1e4d8035b466d408f3e07a215a5f7b441182ef2787eab5a4bf64f5b2",
+      "objects": 1172,
+      "image_name": "xenium_random_HCC_4.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/HCC/manual_segmentation/mask5.json",
+      "sha256": "fc82f91dc6af7f1ef0cb4a7ccddce3c9253593310daaf75367dd271b23b9e938",
+      "objects": 450,
+      "image_name": "xenium_random_HCC_5.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/OV/manual_segmentation/mask1.json",
+      "sha256": "303d4aed57897ac12471ef3335f0c57368ae7bac4fb0accdf91a73cb5d344f21",
+      "objects": 1591,
+      "image_name": "xenium_random_OV_1.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/OV/manual_segmentation/mask2.json",
+      "sha256": "9eca46b66b6035ae26a0ba4867100f2473880ee68d966aa8ded8452f05ae3f25",
+      "objects": 1289,
+      "image_name": "xenium_random_OV_2.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/OV/manual_segmentation/mask3.json",
+      "sha256": "8c0683a79fac65483e13327b8fc350184e0049f834dc3e3e1329cd849fd17020",
+      "objects": 1352,
+      "image_name": "xenium_random_OV_3.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/OV/manual_segmentation/mask4.json",
+      "sha256": "4e4da391072e6437b9343f2943862a03fecedc1568326a8638b6b20a283a63c9",
+      "objects": 1652,
+      "image_name": "xenium_random_OV_4.png",
+      "image_height": 2352,
+      "image_width": 2352
+    },
+    {
+      "path": "manual_reference/manual_segmentation/Xenium/OV/manual_segmentation/mask5.json",
+      "sha256": "e714ae4d1bc8c864f107445a2cbc60c727d7cf78041bf49ab354bec9df8670ab",
+      "objects": 1577,
+      "image_name": "xenium_random_OV_5.png",
+      "image_height": 2352,
+      "image_width": 2352
+    }
+  ]
+}

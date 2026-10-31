@@ -1,0 +1,6 @@
+{
+  "analysis": "Existing lung crop Proseg context sensitivity",
+  "added_after_external_extraction": true,
+  "selection": "Original published roi_01 and roi_02, unchanged. Add 300-um surrounding context on all sides, Q20 measured genes. Compare with core-only runs at identical Proseg settings and score fixed original core transcript IDs.",
+  "scope": "Diagnose sensitivity of the existing comparison to crop context; not an independent biological replication or new ground truth."
+}

@@ -1,0 +1,20 @@
+{
+  "excluded_preliminary_runs": [
+    {
+      "path": "analysis/IDC/idc_01/proseg_initial_input_changed/200_default/run.json",
+      "input_sha256": "8c9fdd3a9091b56573170a144be5cf1e5937087bc7f1ff4cebc66e98021da7f4",
+      "returncode": 0,
+      "seconds": 25.95990490913391
+    },
+    {
+      "path": "analysis/IDC/idc_01/proseg_initial_input_changed/200_no_factorization/run.json",
+      "input_sha256": "8c9fdd3a9091b56573170a144be5cf1e5937087bc7f1ff4cebc66e98021da7f4",
+      "returncode": 0,
+      "seconds": 22.094937801361084
+    }
+  ],
+  "reason": "The first idc_01 core inputs were rewritten during preparation. Both early core-only executions were excluded and rerun after inputs were frozen. The final comparisons use audited final inputs. The original receipts and native outputs are retained in the full evidence archive.",
+  "final_settings": 32,
+  "completed_settings": 31,
+  "retained_failed_setting": "LUNG/roi_01/200_default; factorization exit 101; no silent fallback"
+}

@@ -1,0 +1,31 @@
+{
+  "completed_utc": "2026-10-31T08:24:45.064093+00:00",
+  "failures": 0,
+  "biological_core_regions": 6,
+  "exact_checks": {
+    "independent_local_spectra": 11837,
+    "full_target_binary_patterns": 29158,
+    "local_witness_records": 19584,
+    "global_spectra": 68769,
+    "Cartesian_combinations": 87451,
+    "global_attaining_count_witnesses": 84254,
+    "unique_interval_rows": 550152
+  },
+  "rational_geometry_checks": {
+    "patches": 3477,
+    "raw_RNA_memberships": 189552,
+    "nuclear_fragments_rechecked": 62177
+  },
+  "original_source_checks": {
+    "raw_source_rows_reselected": 189552,
+    "mask_vendor_assignment_disagreements": 0
+  },
+  "proseg_planned_settings": 32,
+  "proseg_successful_native_matrix_audits": 31,
+  "retained_proseg_failure": "LUNG/roi_01/200_default factorization exit 101",
+  "optional_csv_export_truncated_native_output_audit_passed": 1,
+  "compact_artifact_replay": "passed from a freshly restored copy: all source bindings, six rational geometry audits, every local/global minimum and attaining witness, eight saved Proseg core comparisons and all donor/region/budget summaries",
+  "artifact_manifest_sha256": "ff12776550cff17b56e9435940107508a91c942ffb0149058ac1fb974afc9dae",
+  "manual_whole_cell_ground_truth": "unavailable: inspected annotations are nuclear boundaries",
+  "core_algorithm_changed": false
+}

@@ -1,0 +1,27 @@
+name: External donor validation
+on:
+  push:
+    paths:
+      - 'recomb2027-atlas/extensions/external_validation/**'
+      - '.github/workflows/external-validation.yml'
+  pull_request:
+    paths:
+      - 'recomb2027-atlas/extensions/external_validation/**'
+      - '.github/workflows/external-validation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.3.5
+      - name: Restore immutable validation inputs and outputs
+        run: python recomb2027-atlas/extensions/external_validation/restore_artifacts.py --output "${{ runner.temp }}/external-validation"
+      - name: Independently verify geometry, spectra, witnesses and saved core comparisons
+        run: python recomb2027-atlas/extensions/external_validation/replay.py --analysis "${{ runner.temp }}/external-validation"

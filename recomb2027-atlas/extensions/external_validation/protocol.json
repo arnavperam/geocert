@@ -1,0 +1,67 @@
+{
+  "recorded_utc": "2026-10-31T07:37:30.450576+00:00",
+  "code_commit": "a8f5a6fdbfdc5b4b6a249e365e03753d1e58bed8",
+  "primary_question": "Do exact shared-budget intervals and their difference from matched singleton/additive approximations replicate on independently sourced biological tissue?",
+  "datasets": [
+    "Xenium_V1_FFPE_Human_Breast_IDC",
+    "Xenium_V1_FFPE_Human_Breast_ILC"
+  ],
+  "donor_claim": "Two source tumor donors per vendor page, independent of lung. Independence from the existing breast format-test donor is unknown and will not be claimed.",
+  "selection": {
+    "nominal_analysis_side_um": 200,
+    "context_side_um": 800,
+    "centers": "For each source, form target points at the 25th, 50th and 75th percentiles of cell-centroid x and the median y. Choose the nearest cell centroid to each target, tie by source row order. Snap origin down to the 0.2125-um grid. Keep all three regions regardless of counts/outcomes; report any overlaps or source-edge truncation.",
+    "source_owner": "Native masks/1 with native masks/0 nuclear constraints; original transform, coordinates and IDs retained. Vendor transcript owners retained separately and discrepancies counted.",
+    "quality": "All measured-gene transcripts with qv>=20; no outcome-based gene selection."
+  },
+  "atlas": "Unmodified primary extractor: widths [4,2,1,0.5] pixels, displacement band 3/4, slope 1, fixed seams/nuclei; geometric validity and witnesses checked.",
+  "budgets_um2": [
+    "0",
+    "0.05",
+    "0.1",
+    "0.25",
+    "0.5",
+    "1",
+    "2",
+    "4"
+  ],
+  "comparisons": [
+    "exact intervals",
+    "geometry-matched independent single-molecule outer intervals",
+    "feasibility-matched additive inner intervals",
+    "Euclidean distance-counting outer interval at the primary global displacement cap, explicitly looser in geometry and area budget"
+  ],
+  "reporting": [
+    "all queries and outer-width>=2 eligible queries separately",
+    "per-donor and per-region results",
+    "invariance explicitly conditional on atlas coverage/displacement",
+    "all failures and incomplete spectra excluded from exact claims, retained in status"
+  ],
+  "proseg": {
+    "version": "3.2.0",
+    "regions": "Same 200-um cores, run on 200-um and 800-um windows. Evaluate identical retained transcript IDs in core and fixed source-cell identity mapping.",
+    "settings": "Default Xenium preset, 2 threads, burnin200/samples200/hillclimb50. No-factorization is a separately labelled matched sensitivity analysis, never silently substituted.",
+    "metrics": [
+      "retained/excluded core transcript IDs",
+      "core background fractions",
+      "cell-to-cell and background transfers separately",
+      "per-cell count inclusion and full assignment representability are distinct metrics"
+    ],
+    "interpretation": "Alternative segmentation comparisons; no ground-truth accuracy claim."
+  },
+  "manual_reference": {
+    "candidate": "SPATCH public manual segmentation annotations",
+    "eligibility": "Require documented annotation semantics, same-slide image/transcript coordinate registration, and whole-cell reference boundaries. Nuclear-only masks or uncertain registration will not be labelled whole-cell truth.",
+    "analysis": "If eligible, freeze selected regions and reference matching before reading GeoCert outcomes; measure reference correction representability, count containment and widths with out-of-family references included.",
+    "fallback": "Report a specific blocker if annotations are unavailable, require access approval, or cannot support whole-cell reference assignment."
+  },
+  "scope": "No new moving-junction geometry or claim of biological calibration from simulation. Registered abstract unchanged.",
+  "amendments": [
+    {
+      "recorded_utc": "2026-10-31T07:39:22.537361+00:00",
+      "before_atlas_and_count_queries": true,
+      "reason": "Downloaded archive contains native cell and nucleus raster masks. Use them directly rather than rasterizing polygon approximations. Regions remain selected from cell centroids, independently of expression.",
+      "replacement": "Reference owners from native masks/1, nuclei masks/0; isotropic source transform preserved exactly. Vendor transcript owners retained; differences counted."
+    }
+  ]
+}

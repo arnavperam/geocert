@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 message: "Please cite the accompanying manuscript and identify the source revision used."
 type: software
-title: "GeoCert Atlas: Certified Expression Intervals under Shared Segmentation Uncertainty"
+title: "GeoCert: Certified Expression Intervals under Segmentation Uncertainty in Spatial Transcriptomics"
 authors:
   - family-names: Peram
     given-names: Arnav
 version: 1.1.0
 repository-code: "https://github.com/arnavperam/geocert"
-url: "https://github.com/arnavperam/geocert/tree/f1e5dbb29c96d6b014508ce7f1eb1abcfb490190/recomb2027-atlas"
+url: "https://github.com/arnavperam/geocert/tree/3124a53bd712f08280b9aad2ae4c6146bd417775/recomb2027-atlas"
 abstract: "Exact transcript-count intervals and attaining boundaries under a shared segmentation-deformation budget."

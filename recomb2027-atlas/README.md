@@ -2,9 +2,9 @@
 
 Exact cell-by-gene count intervals under a shared segmentation-deformation budget.
 
-Code and data for **Certified Expression Intervals under Shared Segmentation Uncertainty**, by Arnav Peram. Version 1.1.0 combines continuous assignment costs, an exact count-chain dynamic program and compatible boundary patches.
+Code and data for **GeoCert: Certified Expression Intervals under Segmentation Uncertainty in Spatial Transcriptomics**, by Arnav Peram. Version 1.1.0 combines continuous assignment costs, an exact count-chain dynamic program and compatible boundary patches.
 
-[Paper](manuscript/main.pdf) · [Supplement](manuscript/supplement.pdf) · [Fixed scientific source](https://github.com/arnavperam/geocert/tree/f1e5dbb29c96d6b014508ce7f1eb1abcfb490190/recomb2027-atlas)
+[Paper](manuscript/main.pdf) · [Supplement](manuscript/supplement.pdf) · [Fixed scientific source](https://github.com/arnavperam/geocert/tree/3124a53bd712f08280b9aad2ae4c6146bd417775/recomb2027-atlas)
 
 A result is conditional on the recorded atlas: patch seams, uncovered boundaries, junction neighborhoods and nuclear owners stay fixed. The method measures sensitivity of retained observed counts; it does not estimate corrected anatomical assignments.
 
@@ -36,7 +36,7 @@ On Windows, use `.venv\Scripts\python.exe`. Keep assertions enabled; do not use 
 
 Large records are gzip-compressed to keep individual repository files manageable. Restoration checks the compressed and expanded SHA-256 identities and reconstructs shared input paths without platform-specific symlinks. It makes no network request. Allow approximately 1.2 GB for the expanded research records.
 
-The example is cell 81, LDHB, in breast format-test crop 1. Source count 22 has exact interval `[19,23]` at 0.25 µm² and `[17,23]` at 0.5 µm². Count 17 is attained at approximately 0.484040265 µm² by two compatible patch changes. The JSON gives exact rational area, five transferred LDHB observations and one collateral KRT8. The format-test dataset does not support biological conclusions from this example.
+The example is cell 81, LDHB, in breast format-test crop 1. Source count 22 has exact interval `[19,23]` at 0.25 µm² and `[17,23]` at 0.5 µm². Count 17 is attained at approximately 0.48 µm² by two compatible patch changes. The JSON gives exact rational area, five transferred LDHB observations and one collateral KRT8. The format-test dataset does not support biological conclusions from this example.
 
 ## Reproduce the primary count tables
 
@@ -89,6 +89,10 @@ python recomb2027-atlas/extensions/atlas_union/independent_verify.py --data-root
 ```
 
 The [extension README](extensions/atlas_union/README.md) defines the output census, exact count-membership checks and witness command. [Recorded spectra and interval tables](extensions/atlas_union/results/) contain 29,212 questions and 496,604 budget rows. The independent verification report binds the recorded output files by checksum.
+
+## Biological donor replication
+
+The [external validation study](extensions/external_validation/README.md) adds six predefined regions from two biological breast cancer donors, with 1,518 complete cells. Shared geometry tightens 176 of 1,271 eligible ductal-sample questions and 97 of 829 lobular-sample questions under the unchanged primary atlas. The same study compares Proseg on small cores and larger surrounding windows. Prepared crops, spectra, witnesses and saved core assignments support a separate exact replay.
 
 ## Tables and figures
 
@@ -145,7 +149,7 @@ Software in this package is [MIT licensed](LICENSE). Source-derived 10x data ret
 
 Generative AI assisted mathematics, implementation, experiments, verification and drafting. The author is responsible for the work and its claims.
 
-The evidence is limited to the declared boundary families and recorded crops. Anatomical calibration, molecular ground truth, independent-donor biological validation and downstream inference remain unvalidated.
+The evidence is limited to the declared boundary families and recorded crops. The two new breast samples test replication across biological inputs; anatomical calibration, molecular ground truth and downstream inference remain unvalidated.
 
 ## Larger contiguous computation
 

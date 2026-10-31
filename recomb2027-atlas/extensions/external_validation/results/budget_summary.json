@@ -1,0 +1,114 @@
+[
+  {
+    "donor": "IDC",
+    "budget_um2": "0",
+    "questions": 32360,
+    "non_singleton": 0,
+    "tightened": 0
+  },
+  {
+    "donor": "IDC",
+    "budget_um2": "1/20",
+    "questions": 32360,
+    "non_singleton": 5082,
+    "tightened": 94
+  },
+  {
+    "donor": "IDC",
+    "budget_um2": "1/10",
+    "questions": 32360,
+    "non_singleton": 5770,
+    "tightened": 62
+  },
+  {
+    "donor": "IDC",
+    "budget_um2": "1/4",
+    "questions": 32360,
+    "non_singleton": 6611,
+    "tightened": 38
+  },
+  {
+    "donor": "IDC",
+    "budget_um2": "1/2",
+    "questions": 32360,
+    "non_singleton": 6611,
+    "tightened": 0
+  },
+  {
+    "donor": "IDC",
+    "budget_um2": "1",
+    "questions": 32360,
+    "non_singleton": 6611,
+    "tightened": 0
+  },
+  {
+    "donor": "IDC",
+    "budget_um2": "2",
+    "questions": 32360,
+    "non_singleton": 6611,
+    "tightened": 0
+  },
+  {
+    "donor": "IDC",
+    "budget_um2": "4",
+    "questions": 32360,
+    "non_singleton": 6611,
+    "tightened": 0
+  },
+  {
+    "donor": "ILC",
+    "budget_um2": "0",
+    "questions": 36409,
+    "non_singleton": 0,
+    "tightened": 0
+  },
+  {
+    "donor": "ILC",
+    "budget_um2": "1/20",
+    "questions": 36409,
+    "non_singleton": 4551,
+    "tightened": 40
+  },
+  {
+    "donor": "ILC",
+    "budget_um2": "1/10",
+    "questions": 36409,
+    "non_singleton": 5249,
+    "tightened": 43
+  },
+  {
+    "donor": "ILC",
+    "budget_um2": "1/4",
+    "questions": 36409,
+    "non_singleton": 6006,
+    "tightened": 17
+  },
+  {
+    "donor": "ILC",
+    "budget_um2": "1/2",
+    "questions": 36409,
+    "non_singleton": 6006,
+    "tightened": 0
+  },
+  {
+    "donor": "ILC",
+    "budget_um2": "1",
+    "questions": 36409,
+    "non_singleton": 6006,
+    "tightened": 0
+  },
+  {
+    "donor": "ILC",
+    "budget_um2": "2",
+    "questions": 36409,
+    "non_singleton": 6006,
+    "tightened": 0
+  },
+  {
+    "donor": "ILC",
+    "budget_um2": "4",
+    "questions": 36409,
+    "non_singleton": 6006,
+    "tightened": 0
+  }
+]

@@ -1,12 +1,12 @@
 {
   "title": "GeoCert: Certified Expression Intervals under Segmentation Uncertainty in Spatial Transcriptomics",
-  "revision_date": "2026-10-29",
-  "scientific_source_commit": "f1e5dbb29c96d6b014508ce7f1eb1abcfb490190",
+  "revision_date": "2026-10-31",
+  "scientific_source_commit": "3124a53bd712f08280b9aad2ae4c6146bd417775",
   "base_core_files_unchanged": 71,
   "main_title_pages": 1,
   "main_body_pages": 10,
   "main_reference_pages": 2,
-  "supplement_pages": 21,
+  "supplement_pages": 25,
   "paper_size": "US Letter",
   "body_font_pt": 10,
   "margins_inches": 1,
@@ -20,19 +20,17 @@
     "finite_union_proposition_added": true
   },
   "visual_qa": {
-    "main_pages_reviewed": 13,
-    "supplement_pages_reviewed": 21,
+    "main_pages_reviewed_as_contact_sheet": 13,
+    "detailed_main_figure_and_last_page_reviewed": true,
+    "supplement_new_pages_reviewed": [
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
     "clipping_or_overlap": false,
-    "figure_labels_readable": true,
-    "changed_pages_after_previous_full_review": {
-      "main": [
-        1
-      ],
-      "supplement": [
-        1
-      ]
-    },
-    "comparison_base_commit": "7c167a3c42d2fe333a22ae57aad193fbc1b3c371"
+    "new_tables_and_figures_within_their_sections": true
   },
   "latex_checks": {
     "undefined_references_or_citations": false,
@@ -45,14 +43,18 @@
     "Complete larger-region question censuses, min-plus compositions, traces and interval endpoints reconciled",
     "Thirty-two deterministic scalar samples agree; selection chronology recorded",
     "600 \u00b5m initial deadline and retry preserved; cumulative timing reported",
-    "Primary, width-specific, union and native-region denominators kept separate"
+    "Primary, width-specific, union and native-region denominators kept separate",
+    "Six biological breast cores: all exact spectra and witnesses independently checked; 31 completed Proseg native outputs reconciled; compact saved evidence replay passed"
   ],
   "source_url_visibly_printed": true,
   "source_url_hyperlink_in_both_pdfs": true,
   "easychair_actions_performed_by_this_workflow": false,
   "sha256": {
+    "external_proseg_table.tex": "0e0b2a2ab23a35149823f8fb6478d5da4320348327cc9d5e0ab0889c86b65a63",
+    "external_validation.tex": "05c16b1cb7cc8c6894ad50a3a883dbc540e9d31c8971e10091c49d4fd994003e",
     "figures/atlas_reference.pdf": "a3cb38999948ec3a251520bfcdba423697a43e351e6ea322ecf7e3d80bbd637e",
     "figures/atlas_reference.png": "f9bd29e856261f2cfb52ab0a216e73a04603d3364f97a4e2bd14024b06f44239",
+    "figures/biological_regions.pdf": "d93050c0e2cf26784f638be3f4f18164d406625de38d8fdb5d67f80989c71e89",
     "figures/cell_witness.pdf": "323363e4e54b8e5d95f0013b44cc339edd3fece74f3b0bf51f7e9b5830c2005c",
     "figures/cell_witness.png": "a0d747a811bdb0a6908ac2c20b0ea82b8a2fec109c05a047284d5df674985e67",
     "figures/chain_scaling.pdf": "aef2f2db3d5d5204a3421e0e22942af0cd571966b7b2aedf22aebdae8d193385",
@@ -61,27 +63,29 @@
     "figures/contiguous_regions.png": "716311d538285f9b0df8e07b87b2dd8f959321c84e8c5528922970ffa64e17dc",
     "figures/count_curve.pdf": "f82920c9cdada88c21a8f2c8e52c51a1ccee660b0bc169cbc17ef6c484f95fd6",
     "figures/count_curve.png": "b57d642b38e0703f8f6baf85dbdf4de24e3c2a6b291a47ea6454f3142086819a",
-    "figures/geometry_pipeline.pdf": "05484502be2f03652d3f7d7e24290ded8018daa857096dceea7b72510fdd13b7",
-    "figures/geometry_pipeline.png": "aa2b96a741eac74a3347d34f0a94a115b1a1e26539524160c69f5fbea43210a2",
+    "figures/geometry_pipeline.pdf": "e1ac42157ab429e9df788367576bfb5b5ece9f5a4349a682cfdc7463825a8561",
+    "figures/geometry_pipeline.png": "e9e412caa40d9dcc774d27404d98239762294d15c3418b1a59fd53e6e5588724",
     "figures/reach_coverage.pdf": "652dc37b367308cdfe25a33a296cc03e7f171d78ba77c221c40589fd661987f1",
     "figures/reach_coverage.png": "b74a8460d36265b54ffb951b19964b4ae17dcf82455bd815ef27ca217f98a016",
     "figures/width_budget.pdf": "052b3353149eb0ece044121c0b8fe87c3ec08350021ff0848fc062ef9da9b17c",
     "figures/width_budget.png": "e01547e54bb26cf92c1f88e261b5d182a95a58bf12da15f850f9708f35e5af1c",
-    "main.pdf": "36d071c374314be8e6f1b30c75a78cbd9c38330d7f0a39f1ae85600cbcbddd5e",
-    "main.tex": "72d4ad693b08c95d6c912528f2adbc5d5b209810e6920f53e367aa9d6f8b98bf",
+    "main.pdf": "448590b499d3656a43a41b05bc21f25745dd87456876cfa6922b300b1f2b60be",
+    "main.tex": "ab865c182e54e77c6e218e56ef1bdb6b0fa62a883a8d41655256de35b0233bfb",
     "original_saturation_table.tex": "f252740a7c2fa583317ea804c1ef709f637402b248e538221d0645405ef2b374",
     "reach_budget_tables.tex": "46803f4508c137576ba86c1dd04efc1acd0fb3d6b27675a1b86b7d2c57226228",
-    "reach_table.tex": "6d2465a080f7b7b2753e45a8dd6b6df1aeb528ddf682326074f6756fae1b0868",
-    "references.tex": "715eeb8dd5526bf353a094468028e610902463a575c9d6e265932b14d35c6693",
-    "scripts/geometry_pipeline.py": "5eb2e65a3ffa380ca5b0f5c9519e97db20b6bcdd620a6df8342aa1d2ed8f2891",
+    "reach_table.tex": "63d90ad104cd9e6e509f13e8e7a3331510e702c9777d09ecb5435b96de79f2b0",
+    "references.tex": "3b4353ee25687ce8abb16b213b942de31f3d64eb206aa4e2f65ffe422abfccc8",
+    "scripts/biological_regions.py": "30e7c1421b1f948d4b116bd3bf4629b4c56df6feb6e6a811072f7bbe4c8573cc",
+    "scripts/geometry_pipeline.py": "41a4e7384e5b75d488a90964bfc4b097c00a89350d27a9e9e01fde2b85ff9aa8",
     "scripts/reach_figures.py": "b133dbf1cd14b940eab968d1dcf01d1ee961577685bdc07c26f4dc64d493c021",
-    "supp_references.tex": "9f00bb8ebeadc73be680af3ecc6801095bc04bf3e205f18b41f72eab4c8f9c85",
-    "supplement.pdf": "eaf7e9cdac06f02cd2b0dcac5ad7a1c9ee303581a5666771e3ba13c232fc6ff4",
-    "supplement.tex": "781522aa7338b7f4a66b1b023550eaee3185fab3fcc5b439bf00aa46abc40813"
+    "supp_references.tex": "9f5db1d17c5f86212d2d314807af6b66cd0c7d8d2a8e7178bd2bba5f57342f4e",
+    "supplement.pdf": "59066ed5a3fc8be24747e7c3d2cc5e6381a05645251ac07852d16c0b3fe2e758",
+    "supplement.tex": "fceeedc504157ca35da2a50dd1fe8b27c57397a04217a0c88ee83531969fc453"
   },
   "editorial_revision": {
-    "scope": "Rebuild PDFs with registered GeoCert title and two abstract precision corrections",
-    "scientific_code_data_and_formal_statements_unchanged": true
+    "scope": "Biological donor replication and paired Proseg context experiments; concise Discussion; registered abstract retained",
+    "core_algorithm_and_formal_statements_unchanged": true,
+    "new_analysis_inputs_and_results_added": true
   },
   "easychair_submission_number": 510,
   "registration_match": "Title and abstract match the user-provided confirmation for submission 510"
